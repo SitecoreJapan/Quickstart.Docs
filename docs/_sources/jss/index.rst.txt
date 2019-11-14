@@ -1,5 +1,5 @@
-Sitecore JavaScript Services クイックガイド
-=============================================
+Sitecore JavaScript Services
+=============================
 
 ここに Sitecore JavaScript Services に関する説明を入れる。
 

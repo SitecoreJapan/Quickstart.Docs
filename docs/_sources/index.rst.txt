@@ -9,7 +9,7 @@ Sitecore クイックスタート
 ここに導入に関する説明文を記載する。
 
 .. toctree::
-    :caption: トピック
+    :caption: 目次
     :titlesonly:
     :maxdepth: 1
 
