@@ -7,7 +7,10 @@
     :caption: 目次
     :titlesonly:
 
-    salesforcecrm01
-    dynamicscrm01
-    jss01
-    sxa01
+    sxa
+    jss
+    salesforcecrm
+    salesforcemc
+    dynamicscrm
+    sitecoredam
+    sitecorecmp

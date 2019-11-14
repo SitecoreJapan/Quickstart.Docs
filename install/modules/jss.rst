@@ -1,7 +1,7 @@
 Sitecore JavaScript Services
 ===============================
 
-ここに Sitecore モジュールのインストール
+Sitecore JavaScript Services 12.0.0 モジュールのインストール
 
 .. toctree::
     :caption: 目次

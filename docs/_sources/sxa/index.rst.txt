@@ -1,5 +1,5 @@
-Sitecore Experience Accelerator
-===============================
+Sitecore Experience Accelerator クイックガイド
+===============================================
 
 ここに Sitecore JavaScript Services に関する説明を入れる。
 

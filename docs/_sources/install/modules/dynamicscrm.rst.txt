@@ -1,5 +1,5 @@
-Salesforce CRM 
-===============================
+Sitecore Connect for Microsoft Dynamics 365 for Sales
+======================================================
 
 ここに Sitecore モジュールのインストール
 

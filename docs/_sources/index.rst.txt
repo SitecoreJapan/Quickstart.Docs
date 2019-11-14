@@ -14,12 +14,13 @@ Sitecore クイックスタート
     :maxdepth: 1
 
     install/index
+    guide/index
     sxa/index
     jss/index
     PowerShellExtentions/index
 
 
-Indices and tables
+索引とテーブル
 ==================
 
 * :ref:`genindex`
