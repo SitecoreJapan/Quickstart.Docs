@@ -3,13 +3,20 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to quick-start's documentation!
+Sitecore クイックスタート
 =======================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+ここに導入に関する説明文を記載する。
 
+.. toctree::
+    :caption: トピック
+    :titlesonly:
+    :maxdepth: 1
+
+    install/index
+    sxa/index
+    jss/index
+    PowerShellExtentions/index
 
 
 Indices and tables

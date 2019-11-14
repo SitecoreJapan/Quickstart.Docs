@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'quick-start'
+project = 'Sitecore クイックスタート'
 copyright = '2019, Sitecore Japan'
 author = 'Sitecore Japan'
 
