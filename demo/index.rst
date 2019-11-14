@@ -10,8 +10,6 @@
     habitathome
     habitatcorp
 
-サイト内のリンク :doc:`ここ</guide/index>`
-
 関連サイト
 ***********
 * `Github - Sitecore//Sitecore.HabitatHome.Platform <https://github.com/Sitecore/Sitecore.HabitatHome.Platform>`_
