@@ -1,4 +1,4 @@
-Sitecore PowerShell Extentions ヒント集
+Sitecore PowerShell Extentions
 =========================================
 
 ここに Sitecore JavaScript Services に関する説明を入れる。

@@ -6,19 +6,24 @@
 Sitecore クイックスタート
 =======================================
 
-ここに導入に関する説明文を記載する。
+Sitecore クイックスタートでは、インストールの手順、モジュールの追加、各種モジュールの活用方法などを評価することができるように各種情報を提供しています。
 
 .. toctree::
     :caption: 目次
     :titlesonly:
-    :maxdepth: 1
+    :numbered:
+    :maxdepth: 2
 
+    readme
     install/index
+    modules/index
     guide/index
+    demo/index
     sxa/index
     jss/index
     PowerShellExtentions/index
 
+.. note:: 特に記載がない場合は Sitecore Experience Platform 9.2 Initial Release を対象とした文書となっています。
 
 索引とテーブル
 ==================

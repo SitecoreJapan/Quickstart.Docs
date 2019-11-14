@@ -1,7 +1,9 @@
 Sitecore JavaScript Services
-=============================
+==================================
 
-ここに Sitecore JavaScript Services に関する説明を入れる。
+.. index:: Sitecore JavaScript Services
+
+本文書は Sitecore 9.3 リリース後に提供予定。
 
 .. toctree::
     :caption: 目次
