@@ -146,14 +146,12 @@ proxySettings        exm/eds/proxySettings
 
 .. image:: images/exm01.png
    :align: center
-   :width: 400px
    :alt: アイテムの選択
 
 アイテムを選択すると、メニューに `電子メール` のタブが追加され、`テスト接続` のアイコンが表示されます。これをクリックしてください。
 
 .. image:: images/exm02.png
    :align: center
-   :width: 400px
    :alt: テスト接続
 
 テスト結果として、Eメールサーバーは利用可能です、と表示されることで、メールサーバーとの接続を確認することができました。

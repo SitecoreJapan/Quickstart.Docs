@@ -82,7 +82,6 @@ Salesforce CRM と Sitecore を接続するためには、API を有効にして
 
 .. image:: images/sfcrm05.png
    :align: center
-   :width: 400px
    :alt: アプリケーション マネージャ
 
 * 右上に表示される「新規接続アプリケーション」をクリックします
@@ -123,10 +122,8 @@ CRM 項目のカスタマイズ（オプション）
 
 * 左側のメニューから「プラットフォームツール」－「オブジェクトおよび項目」－「オブジェクトマネージャ」を開く。
 
-
 .. image:: images/sfcrm12.png
    :align: center
-   :width: 400px
    :alt: 日本語リソース
 
 ここから `取引先責任者` と `活動` にカスタムフィールドを追加します。

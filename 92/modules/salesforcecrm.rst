@@ -82,7 +82,6 @@ Salesforce CRM と Sitecore を接続するためには、API を有効にして
 
 .. image:: images/sfcrm05.png
    :align: center
-   :width: 400px
    :alt: アプリケーション マネージャ
 
 * 右上に表示される「新規接続アプリケーション」をクリックします
@@ -126,7 +125,6 @@ CRM 項目のカスタマイズ（オプション）
 
 .. image:: images/sfcrm12.png
    :align: center
-   :width: 400px
    :alt: 日本語リソース
 
 ここから `取引先責任者` と `活動` にカスタムフィールドを追加します。
@@ -272,7 +270,6 @@ security token    セキュリティトークン
 
 .. image:: images/sfcrm10.png
    :align: center
-   :width: 400px
    :alt: セキュリティトークン
 
 * 「セキュリティトークンのリセット」のボタンをクリックしてください。セキュリティトークンはメールで届きます。
@@ -335,7 +332,6 @@ xConnect Collection Model の展開
 
 .. image:: images/sfcrm22.png
    :align: center
-   :width: 400px
    :alt: データ交換
 
 Connect for Salesforce Tenant をクリックします。
@@ -378,7 +374,6 @@ ConnectionString で設定をした接続文字列（上記の例では mysf ）
 
 .. image:: images/sfcrm28.png
    :align: center
-   :width: 400px
    :alt: トラブルシューティングツールの実行
 
 接続に成功した場合は、以下のようなダイアログが表示されます。
@@ -416,7 +411,6 @@ ConnectionString で設定をした接続文字列（上記の例では mysf ）
 
 .. image:: images/sfcrm32.png
    :align: center
-   :width: 400px
    :alt: トラブルシューティングツール
 
 設定が正しい場合は、以下のようにメッセージが表示されます。
@@ -452,7 +446,6 @@ Salesforce CRM の `取引先責任者` と `活動` の項目をカスタマイ
 
 .. image:: images/sfcrm35.png
    :align: center
-   :width: 400px
    :alt: Sitecore ID
 
 * アイテムのフィールド「管理」セクションにあるチェックボックスをチェックして保存してください。
@@ -474,7 +467,6 @@ Salesforce CRM と同期をさせる場合、初回に関しては Salesforce Co
 
 .. image:: images/sfcrm37.png
    :align: center
-   :width: 400px
    :alt: アイテムの選択
 
 * アイテムのフィールド `ソース バリュー を読み込めなくてもエラーにしない` をチェックします。
@@ -540,7 +532,6 @@ PII フィールドのインデックスを有効にする
 
 .. image:: images/sfcrm44.png
    :align: center
-   :width: 400px
    :alt: パイプラインバッチを実行
 
 実行をすると、ダイアログが表示されます。

@@ -14,7 +14,6 @@
 
 .. image:: images/index01.png
    :align: center
-   :width: 400px
    :alt: インデックス
 
 * `すべてを選択`している設定のまま、`生成` ボタンをクリックします
