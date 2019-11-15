@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.6. インデックスの再構築 &mdash; Sitecore クイックスタート  ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="3. モジュールのインストール" href="../modules/index.html" />
+    <link rel="prev" title="2.5. 日本語リソースのインポート" href="japanese.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Sitecore クイックスタート
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目次</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore クイックスタート</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../readme.html">1. はじめに</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2. インストールガイド</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sysreq.html">2.1. 必要システム</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools.html">2.2. 関連ツールのインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="solr.html">2.3. Solr のインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install.html">2.4. Sitecore Experience Platform のインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="japanese.html">2.5. 日本語リソースのインポート</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.6. インデックスの再構築</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">3. モジュールのインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guide/index.html">4. サイトコア オンライン マニュアル</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo/index.html">5. デモサイト</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#id1">索引とテーブル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">3. Sitecore Experience Accelerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">4. Sitecore JavaScript Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PowerShellExtentions/index.html">5. Sitecore PowerShell Extentions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sitecore クイックスタート</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Sitecore クイックスタート</a> &raquo;</li>
+        
+          <li><a href="index.html">2. インストールガイド</a> &raquo;</li>
+        
+      <li>2.6. インデックスの再構築</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/920/install/rebuild.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>2.6. インデックスの再構築<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>インデックスは随時再構築されますが、インストール後、大量のデータをインポートした後などは、手動でインデックスの再構築をすることを推奨しています。</p>
+<div class="section" id="id2">
+<h2>2.6.1. インデックスの更新<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p><cite>コントロールパネル</cite> を開きます</p></li>
+<li><p><cite>インデックス</cite> グループに用意されている <cite>Solr 管理スキーマを生成</cite> を開きます</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/index01.png"><img alt="インデックス" class="align-center" src="../../_images/index01.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p><cite>すべてを選択`している設定のまま、`生成</cite> ボタンをクリックします</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/index02.png"><img alt="選択" class="align-center" src="../../_images/index02.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>完了すると、以下のような画面になります。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/index03.png"><img alt="成功" class="align-center" src="../../_images/index03.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>続けて <cite>インデックスマネージャーを開く</cite> をクリックします</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/index01.png"><img alt="インデックス" class="align-center" src="../../_images/index01.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p><cite>すべて選択</cite> をチェックして、<cite>再構築</cite> ボタンをクリックします</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/index04.png"><img alt="インデックスマネージャー" class="align-center" src="../../_images/index04.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>インデックスが更新されました。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/index05.png"><img alt="再構築完了" class="align-center" src="../../_images/index05.png" style="width: 400px;" /></a>
+<p>これでインデックスは再構築されました。</p>
+</div>
+<div class="section" id="id3">
+<h2>2.6.2. リンクデータベースの更新<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>インデックスの更新以外にも、リンクデータベースの更新をしておくことで、既に入っているデータの事前処理を完了させることができます。</p>
+<ul class="simple">
+<li><p><cite>データベース</cite> グループにある <cite>リンクデータベースを再構築する</cite> をクリックします。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/index06.png"><img alt="リンクデータベース" class="align-center" src="../../_images/index06.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p><cite>core</cite> と <cite>master</cite> を選択して、<cite>再構築</cite> のボタンをクリックします。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/index07.png"><img alt="データベース選択" class="align-center" src="../../_images/index07.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>暫くすると、リンクデータベースの手続きが終わります。</p></li>
+</ul>
+<p>インストールはこれで完了です。目次に戻って次のに実施したい内容を確認してください。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../modules/index.html" class="btn btn-neutral float-right" title="3. モジュールのインストール" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="japanese.html" class="btn btn-neutral float-left" title="2.5. 日本語リソースのインポート" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sitecore Japan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

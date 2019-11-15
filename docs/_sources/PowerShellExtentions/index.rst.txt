@@ -6,4 +6,4 @@ Sitecore PowerShell Extentions
 .. toctree::
     :caption: 目次
     :titlesonly:
-
+    :numbered:

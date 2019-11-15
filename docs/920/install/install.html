@@ -1,0 +1,385 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.4. Sitecore Experience Platform のインストール &mdash; Sitecore クイックスタート  ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="2.5. 日本語リソースのインポート" href="japanese.html" />
+    <link rel="prev" title="2.3. Solr のインストール" href="solr.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Sitecore クイックスタート
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目次</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore クイックスタート</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../readme.html">1. はじめに</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2. インストールガイド</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sysreq.html">2.1. 必要システム</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools.html">2.2. 関連ツールのインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="solr.html">2.3. Solr のインストール</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.4. Sitecore Experience Platform のインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="japanese.html">2.5. 日本語リソースのインポート</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rebuild.html">2.6. インデックスの再構築</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">3. モジュールのインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../guide/index.html">4. サイトコア オンライン マニュアル</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo/index.html">5. デモサイト</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#id1">索引とテーブル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">3. Sitecore Experience Accelerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">4. Sitecore JavaScript Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../PowerShellExtentions/index.html">5. Sitecore PowerShell Extentions</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sitecore クイックスタート</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Sitecore クイックスタート</a> &raquo;</li>
+        
+          <li><a href="index.html">2. インストールガイド</a> &raquo;</li>
+        
+      <li>2.4. Sitecore Experience Platform のインストール</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/920/install/install.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sitecore-experience-platform">
+<h1>2.4. Sitecore Experience Platform のインストール<a class="headerlink" href="#sitecore-experience-platform" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Sitecore 9.2 以降では Sitecore Instllation Assistant というインストール支援ツールの提供を開始しました。これにより、必要なモジュールのダウンロードなど全てツールが展開をするため、簡単にインストールをすることができるようになりました。</p>
+<p>ここでは、すでに SQL Server 2017, Solr 7.5 がインストールされていることを前提として、このツールを利用してインストールを進めていきます。</p>
+<div class="section" id="sitecore">
+<h2>2.4.1. Sitecore のインストールプログラムの入手<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>今回は Sitecore Install Assistant を利用してインストールを進めていきます。このため、以下の Web サイトからインストールファイルをダウンロードしてください。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/92/Sitecore_Experience_Platform_92_Initial_Release.aspx">Sitecore Experience Platform 9.2 Initial Release</a></p></li>
+</ul>
+<p><cite>Download options for On Premises deployment</cite> のグループにある <cite>Graphical setup package for XP Single</cite> をダウンロードしてください。インストールファイルのダウンロードが完了した、ファイルを展開して次のステップに進みます。</p>
+</div>
+<div class="section" id="id1">
+<h2>2.4.2. モジュールのダウンロード<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>この手順に関しては、１つの環境で初回のみ実行してください。すでに Sitecore をインストールしている環境の場合は、モジュールはインストールしてあるため、スキップしてください。</p>
+<p>Sitecore Install Assistant を立ち上げます。これはダウンロードをしたファイルを展開してください。</p>
+<a class="reference internal image-reference" href="../../_images/sia01.png"><img alt="フォルダ" class="align-center" src="../../_images/sia01.png" style="width: 400px;" /></a>
+<p><cite>setup.exe</cite> を右クリックして、管理者としてをします。</p>
+<a class="reference internal image-reference" href="../../_images/sia15.png"><img alt="管理者として実行" class="align-center" src="../../_images/sia15.png" style="width: 400px;" /></a>
+<p>インストーラーが立ち上がると以下のような画面となります。</p>
+<a class="reference internal image-reference" href="../../_images/sia02.png"><img alt="起動画面" class="align-center" src="../../_images/sia02.png" style="width: 400px;" /></a>
+<p>Start のボタンをクリックすると、モジュールのインストール画面になります。</p>
+<a class="reference internal image-reference" href="../../_images/sia03.png"><img alt="モジュールインストール" class="align-center" src="../../_images/sia03.png" style="width: 400px;" /></a>
+<p>Install のボタンをクリックして、必要なモジュールをインストールしてください。</p>
+<a class="reference internal image-reference" href="../../_images/sia04.png"><img alt="インストール中" class="align-center" src="../../_images/sia04.png" style="width: 400px;" /></a>
+<p>インストールが完了すると、<cite>Next</cite> のボタンが有効になります。</p>
+<a class="reference internal image-reference" href="../../_images/sia05.png"><img alt="Next が有効に" class="align-center" src="../../_images/sia05.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="id2">
+<h2>2.4.3. インストールの開始<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>モジュールのインストールが完了すると、次は Sitecore のインストールとなります。</p>
+<div class="section" id="sitecore-settings">
+<h3>2.4.3.1. Sitecore Settings<a class="headerlink" href="#sitecore-settings" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>インストールをする際の設定を記載します。以下の項目を入力してください。以下の値は例となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 27%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>入力値</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Installation/Solution prefix</p></td>
+<td><p>92</p></td>
+<td><p>DB 名、サイト名で利用</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sitecore admin password</p></td>
+<td><p><a class="reference external" href="mailto:P&#37;&#52;&#48;ssw0rd">P<span>&#64;</span>ssw0rd</a></p></td>
+<td><p>管理者のパスワードの設定</p></td>
+</tr>
+<tr class="row-even"><td><p>Sitecore license file</p></td>
+<td><p>license.xml へのパス</p></td>
+<td><p>ライセンスファイル</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/sia06.png"><img alt="インストールの基本設定" class="align-center" src="../../_images/sia06.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="sql-server-settings">
+<h3>2.4.3.2. SQL Server settings<a class="headerlink" href="#sql-server-settings" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>続いてインストールをしている SQL Server に関する設定を入力します。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 13%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>力値</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SQL Server instance</p></td>
+<td><p>(local)</p></td>
+<td><p>サーバーのインスタンス名</p></td>
+</tr>
+<tr class="row-odd"><td><p>SQL Server admin user name</p></td>
+<td><p>sa</p></td>
+<td><p>管理者ユーザー名</p></td>
+</tr>
+<tr class="row-even"><td><p>SQL Server admin password</p></td>
+<td></td>
+<td><p>管理者パスワード</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/sia07.png"><img alt="SQL Server の設定" class="align-center" src="../../_images/sia07.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="solr">
+<h3>2.4.3.3. Solr の設定<a class="headerlink" href="#solr" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>すでにインストールしている Solr の設定を入力していきます。ここでは、[Solr 7.5 のインストール](./solr.md) でインストールしているパラメータを利用しています。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 32%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>入力値</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Solr service URL</p></td>
+<td><p><a class="reference external" href="https://localhost:8983/solr">https://localhost:8983/solr</a></p></td>
+<td><p>Solr の URL</p></td>
+</tr>
+<tr class="row-odd"><td><p>Solr file system root</p></td>
+<td><p>C:solrsolr-7.5.0</p></td>
+<td><p>Solr インストール先のディレクトリ</p></td>
+</tr>
+<tr class="row-even"><td><p>Solr Windows service name</p></td>
+<td><p>Solr-7.5.0</p></td>
+<td><p>サービスの名前</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/sia08.png"><img alt="Solr の設定" class="align-center" src="../../_images/sia08.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="id3">
+<h3>2.4.3.4. インストール最終確認<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>設定をしたパラメーターの確認画面が表示されます。</p>
+<a class="reference internal image-reference" href="../../_images/sia09.png"><img alt="パラメーターの確認" class="align-center" src="../../_images/sia09.png" style="width: 400px;" /></a>
+<p>また各種ファイルの検証が行われます。</p>
+<a class="reference internal image-reference" href="../../_images/sia10.png"><img alt="パラメーファイルの検証ターの確認" class="align-center" src="../../_images/sia10.png" style="width: 400px;" /></a>
+<p>全てっチェックが完了したところで、Install のボタンをクリックしてください。</p>
+<a class="reference internal image-reference" href="../../_images/sia11.png"><img alt="インストールの開始" class="align-center" src="../../_images/sia11.png" style="width: 400px;" /></a>
+<p>インストールがこれで無事完了します。</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>2.4.4. インスタンスの確認<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>インストールをした Sitecore のインスタンスを確認します。検索ボックスで <cite>IIS</cite> と入力すると、以下のように管理ツールが表示されます。</p>
+<a class="reference internal image-reference" href="../../_images/iis01.png"><img alt="IIS 管理ツール" class="align-center" src="../../_images/iis01.png" style="width: 400px;" /></a>
+<p>サイトの一覧を確認します。</p>
+<a class="reference internal image-reference" href="../../_images/iis02.png"><img alt="サイトの一覧" class="align-center" src="../../_images/iis02.png" style="width: 400px;" /></a>
+<p>今回の設定の場合、3つの Web サイトが立ち上がっています。</p>
+<div class="line-block">
+<div class="line">サイト名 | サイトの役割 |</div>
+<div class="line">--- | --- |</div>
+<div class="line">92sc.dev.local | コンテンツ管理サーバー |</div>
+<div class="line">92identityserver.dev.local | 認証サーバー |</div>
+<div class="line">92xconnect.dev.local | xConnect サーバー |</div>
+</div>
+<p>まずはコンテンツ管理サーバーにアクセスをします。ブラウザで <cite>http://92sc.dev.local</cite> にアクセスをしてください。初回起動は若干時間がかかりますので、待ちましょう。</p>
+<a class="reference internal image-reference" href="../../_images/iis03.png"><img alt="Sitecore起動画面" class="align-center" src="../../_images/iis03.png" style="width: 400px;" /></a>
+<p>管理者でログインをすることができるか確認をします。ログインをする際には、コンテンツ管理サーバーに対して <cite>/sitecore</cite> の URL を追加するとログインの画面に遷移します。</p>
+<a class="reference internal image-reference" href="../../_images/iis04.png"><img alt="ログイン画面" class="align-center" src="../../_images/iis04.png" style="width: 400px;" /></a>
+<p>管理者のアカウントは <cite>Admin</cite> 、パスワードはインストーラーで設定したパスワードを指定してログインをします。ログインをしてスタート画面が出たら、インストールは完了で全ての機能を利用することができます。</p>
+<a class="reference internal image-reference" href="../../_images/iis05.png"><img alt="スタート画面" class="align-center" src="../../_images/iis05.png" style="width: 400px;" /></a>
+<p>標準では英語の管理画面となるため、次のステップで日本語の管理画面、日本語のサイトの追加を進めます。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="japanese.html" class="btn btn-neutral float-right" title="2.5. 日本語リソースのインポート" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="solr.html" class="btn btn-neutral float-left" title="2.3. Solr のインストール" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sitecore Japan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

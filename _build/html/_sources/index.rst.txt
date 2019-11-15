@@ -3,19 +3,33 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to quick-start's documentation!
+Sitecore クイックスタート
 =======================================
 
+Sitecore クイックスタートでは、インストールの手順、モジュールの追加、各種モジュールの活用方法などを評価することができるように各種情報を提供しています。
+
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+    :caption: 目次
+    :titlesonly:
+    :numbered:
+    :maxdepth: 2
 
-hello
+    readme
+    install/index
+    modules/index
+    guide/index
+    demo/index
+    sxa/index
+    jss/index
+    PowerShellExtentions/index
 
+.. note:: 特に記載がない場合は Sitecore Experience Platform 9.2 Initial Release を対象とした文書となっています。
 
-Indices and tables
+索引とテーブル
 ==================
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+.. todolist::

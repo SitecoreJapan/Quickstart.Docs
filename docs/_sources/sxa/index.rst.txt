@@ -8,4 +8,4 @@ Sitecore Experience Accelerator
 .. toctree::
     :caption: 目次
     :titlesonly:
-
+    :numbered:
