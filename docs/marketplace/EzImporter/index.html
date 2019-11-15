@@ -83,7 +83,6 @@
               <p class="caption"><span class="caption-text">目次</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../93/index.html">Sitecore Experience Platform 9.3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../92/index.html">Sitecore Experience Platform 9.2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
@@ -162,38 +161,55 @@
   <div class="section" id="ez-importer">
 <h1>Ez Importer でデータインポート<a class="headerlink" href="#ez-importer" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>ここでは Sitecore Marketplace で提供されている Ez Impoter に関する情報を提供しています。このモジュールを利用することで、Excel ファイルで定義されているデータが一括で Sitecore のアイテムとしてインポートされる形となります。</p>
-<p>## 検証環境</p>
-<p>今回は以下の環境でテスト、実行しました。モジュールとしてはテスト対象外のバージョンとなりますが、以下の手順に関しては動作します。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Sitecore Experience Platform 9.1 Initial Release での動作検証となります。</p>
+</div>
+<div class="section" id="id1">
+<h2>モジュールのダウンロード<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>以下のサイトからモジュールをダウンロードしてください。</p>
 <ul class="simple">
-<li><p>Sitecore Experience Platform 9.1 Initial Release</p></li>
+<li><p><a class="reference external" href="https://github.com/dresser/SitecoreEzImporter/releases">https://github.com/dresser/SitecoreEzImporter/releases</a></p></li>
 </ul>
-<p>## モジュールのダウンロード
-[<a class="reference external" href="https://github.com/dresser/SitecoreEzImporter/releases](https://github.com/dresser/SitecoreEzImporter/releases">https://github.com/dresser/SitecoreEzImporter/releases](https://github.com/dresser/SitecoreEzImporter/releases</a>) から今回は <cite>Sitecore.EzImporter-1.0.3.zip</cite> をダウンロードします。</p>
-<p>## サンプルのダウンロード
-上記のモジュールで必要となるサンプルデータを [Sitecore Marketplace - Ez Importer](<a class="reference external" href="https://marketplace.sitecore.net/Modules/E/Ez_Importer.aspx?sc_lang=en">https://marketplace.sitecore.net/Modules/E/Ez_Importer.aspx?sc_lang=en</a>) からダウンロードします。ダウンロードするファイルは以下の２つとなります。</p>
+<p>今回は <cite>Sitecore.EzImporter-1.0.3.zip</cite> をダウンロードします。</p>
+</div>
+<div class="section" id="id2">
+<h2>サンプルのダウンロード<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>上記のモジュールで必要となるサンプルデータを <a class="reference external" href="https://marketplace.sitecore.net/Modules/E/Ez_Importer.aspx?sc_lang=en">Sitecore Marketplace - Ez Importer</a> からダウンロードします。ダウンロードするファイルは以下の２つとなります。</p>
 <ul class="simple">
 <li><p><cite>Sitecore.EzImporter.SampleMap-1.0.01.zip</cite></p></li>
 <li><p><cite>Cars-1.0.0.xlsx</cite></p></li>
 </ul>
 <p>なお、上記の Excel ファイルと SampleMap の構造が若干違うため、Excel のファイルに関しては修正が必要となります。C1 セルの Body Type の間のスペースを削除してください。</p>
-<p>&lt;img src=&quot;images/car.PNG&quot; alt=&quot;Excel&quot;&gt;</p>
-<p>## 日本語リソースのダウンロード
-Ez Impoter は英語のリソースのみのため、この Github のリポジトリにて簡単なサンプル日本語リソースを用意しています。ダウンロードして利用してください。</p>
-<p>## インストール</p>
+<a class="reference internal image-reference" href="../../_images/car.png"><img alt="Excel" class="align-center" src="../../_images/car.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="id3">
+<h2>日本語リソースのダウンロード<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Ez Impoter は英語のリソースのみのため、この Github のリポジトリにて <a class="reference external" href="https://github.com/SitecoreJapan/InstallScript/tree/master/demo/EzImporter">サンプル日本語リソース</a> を用意しています。ダウンロードして利用してください。</p>
+</div>
+<div class="section" id="id5">
+<h2>インストール<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>手順は非常にシンプルで、以下の手順を進めることで利用できるようになります。</p>
 <ul class="simple">
 <li><p><cite>Sitecore.EzImporter-1.0.3.zip</cite> のモジュールインストール</p></li>
 <li><p><cite>Sitecore.EzImporter.SampleMap-1.0.01.zip</cite> のモジュールインストール</p></li>
 <li><p>日本語リソースのインポート ( <cite>ez-importer-ja-jp.xml</cite> は Core へ、<cite>ez-importer-master-ja-jp.xml</cite> は Master へ )</p></li>
 </ul>
-<p>## インポート</p>
+</div>
+<div class="section" id="id6">
+<h2>インポート<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>ログイン後の画面に Ez Impoter が 追加されているためクリックします。画面が開いたあとには、ダウンロード、修正済の <cite>Cars-1.0.0.xlsx</cite> のファイルをドラッグ＆ドロップ、コンテンツのインポート先を指定して、Import ボタンを押すとデータが追加されます。</p>
-<p>## 関連サイト一覧
-* ブログ - [Ez Importer Excel Import Utility](<a class="reference external" href="https://www.matthewdresser.com/sitecore/ez-importer-excel-import-utility">https://www.matthewdresser.com/sitecore/ez-importer-excel-import-utility</a>)
-* Sitecore Marketplace - [Ez Importer](<a class="reference external" href="https://marketplace.sitecore.net/Modules/E/Ez_Importer.aspx?sc_lang=en">https://marketplace.sitecore.net/Modules/E/Ez_Importer.aspx?sc_lang=en</a>)
-* GitHub [SitecoreEzImporter](<a class="reference external" href="https://github.com/dresser/SitecoreEzImporter">https://github.com/dresser/SitecoreEzImporter</a>)</p>
+</div>
+<div class="section" id="id7">
+<h2>関連サイト一覧<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>ブログ - <a class="reference external" href="https://www.matthewdresser.com/sitecore/ez-importer-excel-import-utility">Ez Importer Excel Import Utility</a></p></li>
+<li><p>Sitecore Marketplace - <a class="reference external" href="https://marketplace.sitecore.net/Modules/E/Ez_Importer.aspx?sc_lang=en">Ez Importer</a></p></li>
+<li><p>GitHub <a class="reference external" href="https://github.com/dresser/SitecoreEzImporter">SitecoreEzImporter</a></p></li>
+</ul>
 <p>---
 [目次に戻る](../README.md)</p>
+</div>
 </div>
 
 

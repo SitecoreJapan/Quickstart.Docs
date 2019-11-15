@@ -14,7 +14,6 @@ Sitecore クイックスタートでは、インストールの手順、モジ�
     :maxdepth: 1
 
     readme
-    93/index
     92/index
     sxa/index
     jss/index

@@ -8,4 +8,4 @@ Sitecore JavaScript Services
 .. toctree::
     :caption: 目次
     :titlesonly:
-
+    :numbered:

@@ -11,25 +11,17 @@ Sitecore クイックスタートでは、インストールの手順、モジ�
 .. toctree::
     :caption: 目次
     :titlesonly:
-    :numbered:
-    :maxdepth: 2
+    :maxdepth: 1
 
     readme
-    install/index
-    modules/index
-    guide/index
-    demo/index
+    92/index
     sxa/index
     jss/index
-    PowerShellExtentions/index
-
-.. note:: 特に記載がない場合は Sitecore Experience Platform 9.2 Initial Release を対象とした文書となっています。
+    marketplace/index
 
 索引とテーブル
-==================
+***************
 
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-.. todolist::

@@ -15,4 +15,4 @@
     salesforcemc
     sitecoredam
     sitecorecmp
-    azuretoolkit
+    

@@ -5,5 +5,6 @@
     :caption: 目次
     :titlesonly:
 
+    azuretoolkit
     ad
     exm
