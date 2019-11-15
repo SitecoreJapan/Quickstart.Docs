@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Brightcove Connector for Sitecore &mdash; Sitecore クイックスタート  ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="Ez Importer でデータインポート" href="../EzImporter/index.html" />
+    <link rel="prev" title="Sitecore PowerShell Extentions" href="../PowerShellExtentions/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Sitecore クイックスタート
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目次</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../93/index.html">Sitecore Experience Platform 9.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../92/index.html">Sitecore Experience Platform 9.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">各種ツールに関して</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../PowerShellExtentions/index.html">Sitecore PowerShell Extentions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Brightcove Connector for Sitecore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../EzImporter/index.html">Ez Importer でデータインポート</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sitecore クイックスタート</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">各種ツールに関して</a> &raquo;</li>
+        
+      <li>Brightcove Connector for Sitecore</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/marketplace/brightcove/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="brightcove-connector-for-sitecore">
+<h1>Brightcove Connector for Sitecore<a class="headerlink" href="#brightcove-connector-for-sitecore" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>動画配信サービスの Brightcove Video Cloud と連携することができます。公式サイトは以下の通りです。</p>
+<ul class="simple">
+<li><p>[Getting Started with Brightcove Video Connect for the Sitecore Experience Platform](<a class="reference external" href="https://support.brightcove.com/getting-started-brightcove-video-connect-sitecore-experience-platform">https://support.brightcove.com/getting-started-brightcove-video-connect-sitecore-experience-platform</a>)</p></li>
+<li><p>[BrightcoveOS/Sitecore-Connector](<a class="reference external" href="https://github.com/BrightcoveOS/Sitecore-Connector">https://github.com/BrightcoveOS/Sitecore-Connector</a>)</p></li>
+</ul>
+<p>本記事執筆の時点（2019年11月05日）において、Sitecore 9.1.1 向けのモジュールが提供されています （[モジュール一覧](<a class="reference external" href="https://github.com/BrightcoveOS/Sitecore-Connector/releases">https://github.com/BrightcoveOS/Sitecore-Connector/releases</a>)）。Sitecore 9.2.0 ではモジュールのインストールができませんので、9.2.0 の環境での検証はできません。</p>
+<p>## モジュールのインストール</p>
+<p>Sitecore の管理画面から、モジュールのインストールを進めていきます。コントロールパネルを開いて、「管理」－「モジュールのインストール」を選択します。</p>
+<p>&lt;img src=&quot;images/brightcove01.png&quot; alt=&quot;モジュールの選択&quot; /&gt;</p>
+<p>モジュールのインストールを進めると、確認画面が表示されます。対象となる Sitecore のバージョンになっているか、確認をしてください。</p>
+<p>&lt;img src=&quot;images/brightcove02.png&quot; alt=&quot;確認画面&quot; /&gt;</p>
+<p>## 日本語リソースのインポート</p>
+<p>Brightcove Video Connect for the Sitecore Experience Platform の日本語リソースを用意しました。[リソースファイル](brightcove-911-ja-jp.xml&quot;) をダウンロード、インポートしてください。インポートは「コントロールパネル」－「グローバリゼーション」メニューにある「言語ファイルをインポート」からアップロード、実行します。</p>
+<p>&lt;img src=&quot;images/brightcove03.png&quot; alt=&quot;ファイルをアップロード&quot; /&gt;</p>
+<p>インポート先のデータベースは「Core」を選択してください。一部 Master データベースにも反映されますが、リソースファイルにその記載があるため、1回のインポートで完了します。</p>
+<p>&lt;img src=&quot;images/brightcove04.png&quot; alt=&quot;インポート&quot; /&gt;</p>
+<p>## アイテムをパブリッシュする</p>
+<p>ワークボックスに作成されている、Brightcove 連携で利用するアイテムを公開します。まず、ワークボックスを開きます。</p>
+<p>&lt;img src=&quot;images/brightcove05.png&quot; alt=&quot;ワークボックス&quot; /&gt;</p>
+<p>ワークフローのグループから「アナリティクスワークフロー」を選択します。</p>
+<p>&lt;img src=&quot;images/brightcove06.png&quot; alt=&quot;アナリティクスワークフローを選択&quot; /&gt;</p>
+<p>下書きのアイテムが表示されます。このアイテムをすべて公開作業を実行するために、「配置（すべて）」をクリックしてください。</p>
+<p>&lt;img src=&quot;images/brightcove07.png&quot; alt=&quot;すべて配置を選択&quot; /&gt;</p>
+<p>該当アイテムが下書きグループに表示されない段階で、公開が完了となります。</p>
+<p>## データベースの追加</p>
+<p>Brigthcove が利用する Analytics に関するテーブルを追加する必要があります。モジュールをインポートすると、 /temp フォルダに <cite>Sitecore 9.0 Media Framework Reporting Data Update Script.sql</cite> というファイルが展開されています。これを、SQL Server Management Studio で開いて、Reporting データベースを対象として、実行してください。</p>
+<p>&lt;img src=&quot;images/brightcove08.png&quot; alt=&quot;SQL の実行&quot; /&gt;</p>
+<p>## アカウントのリンク</p>
+<p>Sitecore と Brightcove Video Cloud（以下 Video Cloud ）の接続をするために、ここからは Video Cloud の管理画面での作業となります。</p>
+<p>まず管理者でログインをしたあと、アカウント情報を開いてください。この画面で表示される <cite>アカウントID</cite> が設定で必要となります。</p>
+<p>&lt;img src=&quot;images/brightcove10.png&quot; alt=&quot;アカウント情報&quot; /&gt;</p>
+<p>続いて API 認証のメニューを選択してください。</p>
+<p>&lt;img src=&quot;images/brightcove11.png&quot; alt=&quot;OAuth認証&quot; /&gt;</p>
+<p>今回は新規の接続となるため、<cite>新規アプリケーションの登録</cite> をクリックします。設定項目に関しては、以下の情報を参考にしてください</p>
+<div class="line-block">
+<div class="line">設定項目 | 設定内容 | 今回の設定 |</div>
+<div class="line">--- | --- | --- |</div>
+<div class="line">名前 | アプリケーションの名前 | sitecoredemo |</div>
+<div class="line">説明 | アプリケーションの説明 | （任意） |</div>
+<div class="line">認証のためのアカウント選択 | 利用するアカウント |</div>
+<div class="line">公開される Brightcove API | Analytics | チェック |</div>
+<div class="line-block">
+<div class="line">| Audience | チェック無し |</div>
+<div class="line">| Dynamic Ingest | 全てチェック |</div>
+<div class="line">| Gallery Experiences | チェック無し |</div>
+<div class="line">| Ingestion Profiles | 全てチェック |</div>
+<div class="line">| Players | 全てチェック |</div>
+</div>
+</div>
+<p>設定済の画面は以下の通りとなります。</p>
+<p>&lt;img src=&quot;images/brightcove12.png&quot; alt=&quot;アプリケーションの設定&quot; /&gt;</p>
+<p>保存をすると、クライアントID およびクライアントシークレットが表示されます。このクライアントシークレットは今後表示されないため、大切なキーとして保護してください。</p>
+<p>&lt;img src=&quot;images/brightcove13.png&quot; alt=&quot;クライアントシークレットの画面&quot; /&gt;</p>
+<p>作業が完了すると、以下のような表示となります。</p>
+<p>&lt;img src=&quot;images/brightcove14.png&quot; alt=&quot;アプリケーションの画面&quot; /&gt;</p>
+<p>これで必要なパラメータが準備できました。</p>
+<p>## メディアライブラリの設定</p>
+<p>Video Cloud の設定情報を取得したので、これらのデータを Sitecore のメディアライブラリに設定をします。管理者権限でログインをしてメディアライブラリを開くと、Media Framwork – Accounts というアイテムができています。</p>
+<p>&lt;img src=&quot;images/brightcove15.png&quot; alt=&quot;メディアライブラリ&quot; /&gt;</p>
+<p>Accounts のアイテムを選択し、リボンの <cite>バージョン</cite> グループの言語で <cite>英語（地域）:English(地域）</cite> を選択してください。これは、設定に関して英語のリソースを参照しに行くためです。</p>
+<p>&lt;img src=&quot;images/brightcove16.png&quot; alt=&quot;言語を切り替える&quot; /&gt;</p>
+<p>タブを「フォルダー」に切り替えて、Brightcove アカウントのボタンをクリックして、アカウントのアイテムを作成します。</p>
+<p>&lt;img src=&quot;images/brightcove17.png&quot; alt=&quot;アカウント作成&quot; /&gt;</p>
+<p>ここでは Brightcove Demo を作成します。</p>
+<p>&lt;img src=&quot;images/brightcove18.png&quot; alt=&quot;デモ&quot; /&gt;</p>
+<p>作成したアイテムに対して、以下の項目を設定します。</p>
+<div class="line-block">
+<div class="line">フィールド名 | 設定値 |</div>
+<div class="line">--- | --- |</div>
+<div class="line">Publisher ID | アカウント ID |</div>
+<div class="line">Client ID | アプリケーションの Client ID |</div>
+<div class="line">Client Secret | アプリケーションのクライアントシークレット |</div>
+</div>
+<p>設定している参考画面は以下の通りです。</p>
+<p>&lt;img src=&quot;images/brightcove19.png&quot; alt=&quot;デモ&quot; /&gt;</p>
+<p>## 動作確認</p>
+<p>上記の設定が完了した後、以下の手順で連携ができているか確認をします。</p>
+<ol class="arabic simple">
+<li><p>コンテンツエディターを開く</p></li>
+<li><p><cite>表示</cite> タブにある <cite>表示</cite> グループにある <cite>バケット</cite> をチェックします</p></li>
+</ol>
+<p>&lt;img src=&quot;images/brightcove20.png&quot; alt=&quot;バケット&quot; /&gt;</p>
+<ol class="arabic simple" start="3">
+<li><p><cite>メディア フレームワーク</cite> タブを開く</p></li>
+<li><p><cite>すべてをインポート</cite> を実行します</p></li>
+</ol>
+<p>&lt;img src=&quot;images/brightcove21.png&quot; alt=&quot;インポート&quot; /&gt;</p>
+<ol class="arabic simple" start="5">
+<li><p>動画データを Brightcove からインポートをします</p></li>
+</ol>
+<p>&lt;img src=&quot;images/brightcove22.png&quot; alt=&quot;インポート状態&quot; /&gt;</p>
+<p>インポートをしたデータは、メディアライブラリに登録されます。</p>
+<p>&lt;img src=&quot;images/brightcove23.png&quot; alt=&quot;メディアライブラリ&quot; /&gt;</p>
+<p>ファイルのフィールドを参照すると、以下のようなメタデータが保存されています。</p>
+<p>&lt;img src=&quot;images/brightcove24.png&quot; alt=&quot;アイテムの確認&quot; /&gt;</p>
+<p>これにより、Brightcove に保存されている動画に関して、Sitecore のメディアライブラリからアクセスすることができるようになりました。</p>
+<p>---
+[目次に戻る](../)</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../EzImporter/index.html" class="btn btn-neutral float-right" title="Ez Importer でデータインポート" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../PowerShellExtentions/index.html" class="btn btn-neutral float-left" title="Sitecore PowerShell Extentions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sitecore Japan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

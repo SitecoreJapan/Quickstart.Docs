@@ -13,12 +13,12 @@ Sitecore クイックスタートでは、インストールの手順、モジ�
     :titlesonly:
     :maxdepth: 1
 
+    readme
+    93/index
     92/index
     sxa/index
     jss/index
-    PowerShellExtentions/index
-
-    93/index
+    marketplace/index
 
 索引とテーブル
 ***************

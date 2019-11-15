@@ -32,7 +32,6 @@
 
 .. image:: images/index01.png
    :align: center
-   :width: 400px
    :alt: インデックス
 
 

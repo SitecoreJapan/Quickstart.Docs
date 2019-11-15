@@ -280,13 +280,17 @@ security token    セキュリティトークン
    :width: 400px
    :alt: リセット
 
-上記取得したキーを以下に入れて完成させます。:::
+上記取得したキーを以下に入れて完成させます。
 
-   <add name="mysf" connectionString="user id=`[user id]`;password=`[password]`;client id=`[client id]`;secret key=`[secret key]`;security token=`[security token]`" />
+.. code-block:: xml
 
-例：:::
+  <add name="mysf" connectionString="user id=`[user id]`;password=`[password]`;client id=`[client id]`;secret key=`[secret key]`;security token=`[security token]`" />
 
-    <add name="mysf" connectionString="user id=someone@email.com;password=b;client id=GEH9zlTNB8o8BA45pAeDtC8W.DIqrAzuky2uffEEOwtHxIEhLzkmPwjz8KF_vzWY8dNIfurWHpfbZPGdtc3b;secret key=5468568999798354123;security token=g3ygFuNzGgm33YTfsM3WKG3AA" />
+例：
+
+.. code-block:: xml
+
+  <add name="mysf" connectionString="user id=someone@email.com;password=b;client id=GEH9zlTNB8o8BA45pAeDtC8W.DIqrAzuky2uffEEOwtHxIEhLzkmPwjz8KF_vzWY8dNIfurWHpfbZPGdtc3b;secret key=5468568999798354123;security token=g3ygFuNzGgm33YTfsM3WKG3AA" />
 
 
 上記の一行は、 /config/connectionstring.config に追加してください。

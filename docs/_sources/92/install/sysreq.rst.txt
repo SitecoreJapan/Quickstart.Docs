@@ -150,7 +150,7 @@ SQL Server Management Studio のインストール
 
 SQL Server Management Studio は、マイクロソフトのサイトからダウンロードをすることができます。
 
-* [SQL Server Management Studio](https://docs.microsoft.com/ja-jp/sql/ssms/download-sql-server-management-studio-ssms)
+* `SQL Server Management Studio <https://docs.microsoft.com/ja-jp/sql/ssms/download-sql-server-management-studio-ssms>`_
 
 .. image:: images/ssms01.png
    :align: center

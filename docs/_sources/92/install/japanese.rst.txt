@@ -32,14 +32,12 @@
 
 .. image:: images/jajp01.png
    :align: center
-   :width: 400px
    :alt: データベースの切り替え
 
 * 左上にある Sitecore メニューをクリックしてスタート画面に戻ります。
 
 .. image:: images/jajp02.png
    :align: center
-   :width: 400px
    :alt: Sitecore スタート画面に戻る
 
 * `Controle Panel` を開きます
@@ -68,7 +66,6 @@
 
 .. image:: images/jajp05.png
    :align: center
-   :width: 400px
    :alt: データベースの切り替え
 
 * `Controle Panel` を開いて、もう一度 `Localization` にある `Add a new language` から日本語を追加します（手順は上記と同じです）。

@@ -37,7 +37,7 @@ Java のインストール
    :width: 400px
    :alt: 参照
 
-* c:\Program Files のフォルダを指定します
+* c:\\Program Files のフォルダを指定します
 
 .. image:: images/jdk04.png
    :align: center
@@ -156,14 +156,30 @@ Solr をインストールするために、PowerShell の実行権限を確認�
    :width: 400px
    :alt: PowerShell の起動
 
-続いて、`Get-ExecutionPolicy` のコマンドを実行します。 ::
+続いて、`Get-ExecutionPolicy` のコマンドを実行します。
 
-   PS C:\Windows\system32> Get-ExecutionPolicy
-   Restricted
+.. code-block:: powershell
+
+    Get-ExecutionPolicy
+
+結果は以下の通りです
+
+.. code-block::
+
+    PS C:\Windows\system32> Get-ExecutionPolicy
+    Restricted
 
 Windows 10 では標準で `Restricted` で設定されています。このため、通常では PowerShell のスクリプトを実行することができません（詳しくは `About Execution Policies <https://docs.microsoft.com/ja-jp/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-6>`_ を参照）。
 
-ポリシーを変更するためには、`Set-ExecutionPolicy` のコマンドで変更をすることができます。今回はローカルのファイルのみ OK ということにするため、`RemoteSigned` を設定します。 ::
+ポリシーを変更するためには、`Set-ExecutionPolicy` のコマンドで変更をすることができます。今回はローカルのファイルのみ OK ということにするため、`RemoteSigned` を設定します。 
+
+.. code-block:: powershell
+
+  Set-ExecutionPolicy RemoteSigned
+
+結果は以下の通りです。
+
+.. code-block::
 
   PS C:\Windows\system32> Set-ExecutionPolicy RemoteSigned
   

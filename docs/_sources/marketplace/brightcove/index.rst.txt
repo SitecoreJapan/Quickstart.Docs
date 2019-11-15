@@ -1,0 +1,154 @@
+Brightcove Connector for Sitecore
+=====================================
+
+動画配信サービスの Brightcove Video Cloud と連携することができます。公式サイトは以下の通りです。
+
+* [Getting Started with Brightcove Video Connect for the Sitecore Experience Platform](https://support.brightcove.com/getting-started-brightcove-video-connect-sitecore-experience-platform)
+* [BrightcoveOS/Sitecore-Connector](https://github.com/BrightcoveOS/Sitecore-Connector)
+
+本記事執筆の時点（2019年11月05日）において、Sitecore 9.1.1 向けのモジュールが提供されています （[モジュール一覧](https://github.com/BrightcoveOS/Sitecore-Connector/releases)）。Sitecore 9.2.0 ではモジュールのインストールができませんので、9.2.0 の環境での検証はできません。
+
+## モジュールのインストール
+
+Sitecore の管理画面から、モジュールのインストールを進めていきます。コントロールパネルを開いて、「管理」－「モジュールのインストール」を選択します。
+
+<img src="images/brightcove01.png" alt="モジュールの選択" />
+
+モジュールのインストールを進めると、確認画面が表示されます。対象となる Sitecore のバージョンになっているか、確認をしてください。
+
+<img src="images/brightcove02.png" alt="確認画面" />
+
+## 日本語リソースのインポート
+
+Brightcove Video Connect for the Sitecore Experience Platform の日本語リソースを用意しました。[リソースファイル](brightcove-911-ja-jp.xml") をダウンロード、インポートしてください。インポートは「コントロールパネル」－「グローバリゼーション」メニューにある「言語ファイルをインポート」からアップロード、実行します。
+
+<img src="images/brightcove03.png" alt="ファイルをアップロード" />
+
+インポート先のデータベースは「Core」を選択してください。一部 Master データベースにも反映されますが、リソースファイルにその記載があるため、1回のインポートで完了します。
+
+<img src="images/brightcove04.png" alt="インポート" />
+
+## アイテムをパブリッシュする
+
+ワークボックスに作成されている、Brightcove 連携で利用するアイテムを公開します。まず、ワークボックスを開きます。
+
+<img src="images/brightcove05.png" alt="ワークボックス" />
+
+ワークフローのグループから「アナリティクスワークフロー」を選択します。
+
+<img src="images/brightcove06.png" alt="アナリティクスワークフローを選択" />
+
+下書きのアイテムが表示されます。このアイテムをすべて公開作業を実行するために、「配置（すべて）」をクリックしてください。
+
+<img src="images/brightcove07.png" alt="すべて配置を選択" />
+
+該当アイテムが下書きグループに表示されない段階で、公開が完了となります。
+
+## データベースの追加
+
+Brigthcove が利用する Analytics に関するテーブルを追加する必要があります。モジュールをインポートすると、 /temp フォルダに `Sitecore 9.0 Media Framework Reporting Data Update Script.sql` というファイルが展開されています。これを、SQL Server Management Studio で開いて、Reporting データベースを対象として、実行してください。
+
+<img src="images/brightcove08.png" alt="SQL の実行" />
+
+## アカウントのリンク
+
+Sitecore と Brightcove Video Cloud（以下 Video Cloud ）の接続をするために、ここからは Video Cloud の管理画面での作業となります。
+
+まず管理者でログインをしたあと、アカウント情報を開いてください。この画面で表示される `アカウントID` が設定で必要となります。
+
+<img src="images/brightcove10.png" alt="アカウント情報" />
+
+続いて API 認証のメニューを選択してください。
+
+<img src="images/brightcove11.png" alt="OAuth認証" />
+
+今回は新規の接続となるため、`新規アプリケーションの登録` をクリックします。設定項目に関しては、以下の情報を参考にしてください
+
+| 設定項目 | 設定内容 | 今回の設定 |
+| --- | --- | --- |
+| 名前 | アプリケーションの名前 | sitecoredemo |
+| 説明 | アプリケーションの説明 | （任意） |
+| 認証のためのアカウント選択 | 利用するアカウント | 
+| 公開される Brightcove API | Analytics | チェック |
+|  | Audience | チェック無し |
+|  | Dynamic Ingest | 全てチェック |
+|  | Gallery Experiences | チェック無し |
+|  | Ingestion Profiles | 全てチェック |
+|  | Players | 全てチェック |
+
+設定済の画面は以下の通りとなります。
+
+<img src="images/brightcove12.png" alt="アプリケーションの設定" />
+
+保存をすると、クライアントID およびクライアントシークレットが表示されます。このクライアントシークレットは今後表示されないため、大切なキーとして保護してください。
+
+<img src="images/brightcove13.png" alt="クライアントシークレットの画面" />
+
+作業が完了すると、以下のような表示となります。
+
+<img src="images/brightcove14.png" alt="アプリケーションの画面" />
+
+これで必要なパラメータが準備できました。
+
+## メディアライブラリの設定
+
+Video Cloud の設定情報を取得したので、これらのデータを Sitecore のメディアライブラリに設定をします。管理者権限でログインをしてメディアライブラリを開くと、Media Framwork – Accounts というアイテムができています。
+
+<img src="images/brightcove15.png" alt="メディアライブラリ" />
+
+Accounts のアイテムを選択し、リボンの `バージョン` グループの言語で `英語（地域）:English(地域）` を選択してください。これは、設定に関して英語のリソースを参照しに行くためです。
+
+
+<img src="images/brightcove16.png" alt="言語を切り替える" />
+
+タブを「フォルダー」に切り替えて、Brightcove アカウントのボタンをクリックして、アカウントのアイテムを作成します。
+
+<img src="images/brightcove17.png" alt="アカウント作成" />
+
+ここでは Brightcove Demo を作成します。
+
+<img src="images/brightcove18.png" alt="デモ" />
+
+作成したアイテムに対して、以下の項目を設定します。
+
+| フィールド名 | 設定値 |
+| --- | --- | 
+| Publisher ID | アカウント ID |
+| Client ID | アプリケーションの Client ID | 
+| Client Secret | アプリケーションのクライアントシークレット |
+
+設定している参考画面は以下の通りです。
+
+<img src="images/brightcove19.png" alt="デモ" />
+
+
+## 動作確認
+
+上記の設定が完了した後、以下の手順で連携ができているか確認をします。
+
+1. コンテンツエディターを開く
+2. `表示` タブにある `表示` グループにある `バケット` をチェックします
+
+<img src="images/brightcove20.png" alt="バケット" />
+
+3. `メディア フレームワーク` タブを開く
+4. `すべてをインポート` を実行します
+
+<img src="images/brightcove21.png" alt="インポート" />
+
+5. 動画データを Brightcove からインポートをします
+
+<img src="images/brightcove22.png" alt="インポート状態" />
+
+インポートをしたデータは、メディアライブラリに登録されます。
+
+<img src="images/brightcove23.png" alt="メディアライブラリ" />
+
+ファイルのフィールドを参照すると、以下のようなメタデータが保存されています。
+
+<img src="images/brightcove24.png" alt="アイテムの確認" />
+
+これにより、Brightcove に保存されている動画に関して、Sitecore のメディアライブラリからアクセスすることができるようになりました。
+
+---
+[目次に戻る](../) 

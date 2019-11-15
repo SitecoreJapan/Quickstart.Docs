@@ -7,7 +7,7 @@
 * `Google Chrome <https://www.google.com/intl/ja_jp/chrome/>`_
 * `Firefox <https://www.mozilla.org/ja/firefox/new/>`_
 * `Git for Windows <https://gitforwindows.org/>`_
-* `GitHub for Windows <https://desktop.github.com/>`_
+* `GitHub Desktop <https://desktop.github.com/>`_
 
 ブラウザに関しては好みに合わせてご利用ください。
 
