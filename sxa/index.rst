@@ -1,5 +1,6 @@
+#####################################
 Sitecore Experience Accelerator 
-==================================
+#####################################
 
 .. index:: Sitecore Experience Accelerator
 

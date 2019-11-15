@@ -1,7 +1,6 @@
+###################################################
 Sitecore Connect for Salesforce Marketing Cloud
-==================================================
+###################################################
 
-Sitecore Connect for Salesforce Marketing Cloud 3.0 モジュールのインストールについて追記します。
-
-.. todo::  インストールガイドを作成
+Sitecore Connect for Salesforce Marketing Cloud 3.0 モジュールのインストールの手順は現在制作中。
 
