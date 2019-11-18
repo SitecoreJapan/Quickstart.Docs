@@ -14,7 +14,8 @@
     jss
     dynamicscrm
     salesforcecrm
-    salesforcemc
+    salesforcemcce
+    salesforcemcbde
     sitecoredam
     sitecorecmp
     

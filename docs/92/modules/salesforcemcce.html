@@ -1,0 +1,414 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.5. Sitecore Connect for SFMC - Content Exchange &mdash; Sitecore クイックスタート  ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="2.6. Sitecore Connect for SFMC - Behavioral Data Exchange" href="salesforcemcbde.html" />
+    <link rel="prev" title="2.4. Sitecore Connect for Salesforce CRM" href="salesforcecrm.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Sitecore クイックスタート
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目次</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore Experience Platform 9.2</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../install/index.html">1. インストールガイド</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2. モジュールのインストール</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sxa.html">2.1. Sitecore Experience Accelerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jss.html">2.2. Sitecore JavaScript Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamicscrm.html">2.3. Sitecore Connect for Microsoft Dynamics 365 for Sales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="salesforcecrm.html">2.4. Sitecore Connect for Salesforce CRM</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.5. Sitecore Connect for SFMC - Content Exchange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="salesforcemcbde.html">2.6. Sitecore Connect for SFMC - Behavioral Data Exchange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sitecoredam.html">2.7. Sitecore Connect for Sitecore DAM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sitecorecmp.html">2.8. Sitecore Connect for Sitecore CMP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">3. 各種設定に関して</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo/index.html">4. デモサイト</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sitecore クイックスタート</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Sitecore Experience Platform 9.2</a> &raquo;</li>
+        
+          <li><a href="index.html">2. モジュールのインストール</a> &raquo;</li>
+        
+      <li>2.5. Sitecore Connect for SFMC - Content Exchange</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/92/modules/salesforcemcce.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sitecore-connect-for-sfmc-content-exchange">
+<h1>2.5. Sitecore Connect for SFMC - Content Exchange<a class="headerlink" href="#sitecore-connect-for-sfmc-content-exchange" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>この文書では、 Sitecore Connect for Salesforce Marketing Cloud 3.0 のモジュールのうち、Content Exchange に関するセットアップ手順を紹介しています。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>Sitecore Connect for Salesforce Marketing Cloud 3.0 は Sitecore Experience Platform 9.2 向けのモジュールとなります。Sitecore 9.0, 9.0.1, 9.1 を利用されている方は、別のバージョンのモジュールをご利用ください。</p>
+</div>
+<div class="section" id="id1">
+<h2>2.5.1. 必要システム<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>モジュールのインストールには、以下のバージョンが必須となります。</p>
+<ul class="simple">
+<li><p>Sitecore Experience Platform 9.2 もしくは Sitecore Experience Manager 9.2</p></li>
+<li><p>Salesforce Marketing Cloud の設定権限のあるアカウント</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>2.5.2. モジュールのインストール<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>以下の手順でインストールを進めていきます。</p>
+<ol class="arabic simple">
+<li><p>モジュールを <a class="reference external" href="https://dev.sitecore.net/Downloads/Sitecore_Connect_software_for_Salesforce_Marketing_Cloud/1x/Sitecore_Connect_software_for_Salesforce_Marketing_Cloud_30.aspx">Sitecore Connect for Salesforce Marketing Cloud 3.0</a> にある Content Exchange の Installation Package をクリックしてダウンロードをします。</p></li>
+<li><p>インストールをする Sitecore の環境に管理者権限でログインをします</p></li>
+<li><p>「コントロールパネル」－「管理」パネル－「パッケージをインストールする」を開きます</p></li>
+<li><p>ダウンロードしたモジュールのインストールをします</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/sfmcce01.png"><img alt="パッケージをインストールする" class="align-center" src="../../_images/sfmcce01.png" style="width: 400px;" /></a>
+<p>5．インストールの手順を確認します。</p>
+<a class="reference internal image-reference" href="../../_images/sfmcce02.png"><img alt="インストールの注意点" class="align-center" src="../../_images/sfmcce02.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="6">
+<li><p>インストールの手順で紹介されていた、「サイトコア クライアントを再起動します。」をチェックしてブラウザ側の設定をリセットします。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/sfmcce03.png"><img alt="サイトコア クライアントを再起動します。" class="align-center" src="../../_images/sfmcce03.png" style="width: 400px;" /></a>
+<p>これでモジュールのインストールは完了となります。</p>
+<div class="section" id="salesforce-marketing-cloud">
+<h3>2.5.2.1. Salesforce Marketing Cloud の設定<a class="headerlink" href="#salesforce-marketing-cloud" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Salesforce Marketing Cloud の設定手順として、セットアップの権限のあるユーザーでログインをします。ログインをすると、右上のユーザーアイコンにマウスカーソルを合わせると、セットアップのメニューが表示されますので、クリックしてください。</p>
+<img alt="セットアップ" class="align-center" src="../../_images/sfmcce04.png" />
+<p>メニューの「プラットフォームツール」から、「アプリ」－「インストール済パッケージ」をクリックしてください。</p>
+<img alt="インストール済パッケージ" class="align-center" src="../../_images/sfmcce05.png" />
+<p>以下の手順で新しいパッケージを作成します。</p>
+<ol class="arabic simple">
+<li><p>「新規」ボタンをクリックします</p></li>
+<li><p>新しいパッケージ詳細では、以下の項目を入力してください。</p></li>
+</ol>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>設定項目</p></th>
+<th class="head"><p>設定内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>名前</p></td>
+<td><p>アプリケーション名</p></td>
+</tr>
+<tr class="row-odd"><td><p>説明</p></td>
+<td><p>アプリケーションに関する説明（オプション）</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/sfmcce06.png"><img alt="新しいパッケージの詳細" class="align-center" src="../../_images/sfmcce06.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>作成されたパッケージにコンポーネントを追加します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/sfmcce07.png"><img alt="コンポーネントの追加" class="align-center" src="../../_images/sfmcce07.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>コンポーネントの種別としては API 連携を選択します</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/sfmcce08.png"><img alt="API 連携" class="align-center" src="../../_images/sfmcce08.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p>連携の種別を選択のダイアログでは、「サーバー間」を選択します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/sfmcce09.png"><img alt="サーバー間連携" class="align-center" src="../../_images/sfmcce09.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="6">
+<li><p>アクセス権に関しては、以下の設定をします</p></li>
+</ol>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 42%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>カテゴリ</p></th>
+<th class="head"><p>タイプ</p></th>
+<th class="head"><p>権限</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Assets</p></td>
+<td><p>Documents and Imags</p></td>
+<td><p>Read and Write</p></td>
+</tr>
+<tr class="row-odd"><td><p>Assets</p></td>
+<td><p>Saved content</p></td>
+<td><p>Read and Write</p></td>
+</tr>
+<tr class="row-even"><td><p>Hub</p></td>
+<td><p>Tags</p></td>
+<td><p>Write</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/sfmcce10.png"><img alt="Assets" class="align-center" src="../../_images/sfmcce10.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sfmcce11.png"><img alt="Hub - Tags" class="align-center" src="../../_images/sfmcce11.png" style="width: 400px;" /></a>
+<p>上記の設定で Salesforce 側の設定が完了しました。作成したパッケージの情報を利用して、Sitecore と接続するための設定を実施します。</p>
+</div>
+<div class="section" id="sitecore">
+<h3>2.5.2.2. Sitecore の設定<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Sitecore の設定としては、Salesforce Marketing Cloud で作成をしたパッケージを利用して接続文字列を作る必要があります。接続文字列のサンプルは以下の通りです。</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;add</span> <span class="na">name=</span><span class="s">&quot;sfmc&quot;</span> <span class="na">connectionString=</span><span class="s">&quot;client id=&lt;Client Id&gt;;</span>
+<span class="s">  client secret=&lt;Client Secret&gt;;</span>
+<span class="s">  auth endpoint=&lt;Authentication Base URI&gt;;</span>
+<span class="s">  rest endpoint=&lt;REST Base URI&gt;;</span>
+<span class="s">  soap endpoint=&lt;SOAP Base URI&gt;&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>パラメーターは作成したパッケージから、以下の項目をそのまま反映させてください。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 46%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ConnectionString の表記</p></th>
+<th class="head"><p>パッケージの表記</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Client Id</p></td>
+<td><p>クライアント ID</p></td>
+</tr>
+<tr class="row-odd"><td><p>Client Secret</p></td>
+<td><p>クライアントシークレット</p></td>
+</tr>
+<tr class="row-even"><td><p>Authentication Base URI</p></td>
+<td><p>認証ベース URI</p></td>
+</tr>
+<tr class="row-odd"><td><p>REST Base URI</p></td>
+<td><p>REST ベース URI</p></td>
+</tr>
+<tr class="row-even"><td><p>SOAP Base URI</p></td>
+<td><p>SOAP ベース URI</p></td>
+</tr>
+</tbody>
+</table>
+<p>ConnectionString の変更が終わったタイミングで、Sitecore のインスタンスを再起動して反映させます。</p>
+</div>
+<div class="section" id="id3">
+<h3>2.5.2.3. 画像ファイルの公開テスト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ここでは Salesforce Marketing Cloud と連携させるフォルダを Sitecore のメディアライブラリに作成し、連携、同期させます。</p>
+<div class="section" id="id4">
+<h4>2.5.2.3.1. Sitecore の追加設定<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>まず連携をさせるためのフォルダを指定ます。今回は、 <cite>/sitecore/media library/SFMC Demo</cite> のフォルダを作成しました。</p>
+<img alt="フォルダの作成" class="align-center" src="../../_images/sfmcce12.png" />
+<p>続いてシステムにフォルダの同期をするためのアイテムを作成します。 <cite>/sitecore/system/Settings/SFMC Connector/Configuration</cite> のアイテムを選択し、 <cite>SFMC 設定</cite> のボタンをクリックします。</p>
+<a class="reference internal image-reference" href="../../_images/sfmcce13.png"><img alt="SFMC 設定" class="align-center" src="../../_images/sfmcce13.png" style="width: 400px;" /></a>
+<p>アイテムの名前は任意で設定できます。今回はテストのため <cite>SFMC Test</cite> という名前を付けました。</p>
+<a class="reference internal image-reference" href="../../_images/sfmcce14.png"><img alt="SFMC Test" class="align-center" src="../../_images/sfmcce14.png" style="width: 400px;" /></a>
+<p>事前に作成をしたメディアライブラリのフォルダを指定します。</p>
+<a class="reference internal image-reference" href="../../_images/sfmcce15.png"><img alt="フォルダの指定" class="align-center" src="../../_images/sfmcce15.png" style="width: 400px;" /></a>
+<p>これで設定は完了です。</p>
+</div>
+<div class="section" id="id5">
+<h4>2.5.2.3.2. ファイルの同期のテスト<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>デフォルトの設定では 10 時間に一度同期する設定になっています（設定は　<cite>App_Config\Modules\Connector.Sfmc\Sitecore.Connector.Sfmc.config</cite> で変更が可能です）。
+今回はマニュアルで同期させます。</p>
+<p>まず Salesforce Marketing Cloud の画面で、「Content Builder」－「Content builder」を選択してください。</p>
+<a class="reference internal image-reference" href="../../_images/sfmcce16.png"><img alt="Content builder の起動" class="align-center" src="../../_images/sfmcce16.png" style="width: 400px;" /></a>
+<p>設定してすぐは、フォルダーの中に Sitecore から同期された情報はありません。</p>
+<img alt="設定後のフォルダの状況" class="align-center" src="../../_images/sfmcce17.png" />
+<p>同期させるファイルを、作成したフォルダにアップロードします。</p>
+<a class="reference internal image-reference" href="../../_images/sfmcce20.png"><img alt="ファイルをアップロード" class="align-center" src="../../_images/sfmcce20.png" style="width: 400px;" /></a>
+<p>対象となるフォルダを右クリックして「アイテムをパブリッシュ」を実行します。</p>
+<a class="reference internal image-reference" href="../../_images/sfmcce21.png"><img alt="アイテムをパブリッシュ" class="align-center" src="../../_images/sfmcce21.png" style="width: 400px;" /></a>
+<p>「開発」タブにある「メディアをプッシュ」のボタンをクリックしてください。</p>
+<img alt="メディアをプッシュ" class="align-center" src="../../_images/sfmcce18.png" />
+<p>すぐに手動プッシュが開始されます。</p>
+<a class="reference internal image-reference" href="../../_images/sfmcce19.png"><img alt="メディアを手動でプッシュ" class="align-center" src="../../_images/sfmcce19.png" style="width: 400px;" /></a>
+<p>しばらくすると、Content Builder にフォルダが出来上がり、ファイルが連携されていることを確認できます。</p>
+<img alt="フォルダが作成されている" class="align-center" src="../../_images/sfmcce22.png" />
+<a class="reference internal image-reference" href="../../_images/sfmcce23.png"><img alt="画像が同期されている" class="align-center" src="../../_images/sfmcce23.png" style="width: 400px;" /></a>
+<p>このように、Sitecore で公開している画像ファイルを Salesforce Marketing Cloud で利用することが可能となります。</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="salesforcemcbde.html" class="btn btn-neutral float-right" title="2.6. Sitecore Connect for SFMC - Behavioral Data Exchange" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="salesforcecrm.html" class="btn btn-neutral float-left" title="2.4. Sitecore Connect for Salesforce CRM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sitecore Japan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

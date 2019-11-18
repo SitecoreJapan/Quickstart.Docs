@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.5. Sitecore Connect for Salesforce Marketing Cloud &mdash; Sitecore クイックスタート  ドキュメント</title>
+  <title>Sitecore PowerShell Extensions &mdash; Sitecore クイックスタート  ドキュメント</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="2.6. Sitecore Connect for Sitecore DAM" href="sitecoredam.html" />
-    <link rel="prev" title="2.4. Sitecore Connect for Salesforce CRM" href="salesforcecrm.html" /> 
+    <link rel="next" title="新しいバージョンの追加" href="additemversion.html" />
+    <link rel="prev" title="各種ツールに関して" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,25 +84,23 @@
               <p class="caption"><span class="caption-text">目次</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore Experience Platform 9.2</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../install/index.html">1. インストールガイド</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">2. モジュールのインストール</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="sxa.html">2.1. Sitecore Experience Accelerator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="jss.html">2.2. Sitecore JavaScript Services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dynamicscrm.html">2.3. Sitecore Connect for Microsoft Dynamics 365 for Sales</a></li>
-<li class="toctree-l3"><a class="reference internal" href="salesforcecrm.html">2.4. Sitecore Connect for Salesforce CRM</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">2.5. Sitecore Connect for Salesforce Marketing Cloud</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sitecoredam.html">2.6. Sitecore Connect for Sitecore DAM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sitecorecmp.html">2.7. Sitecore Connect for Sitecore CMP</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">3. 各種設定に関して</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../demo/index.html">4. デモサイト</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../92/index.html">Sitecore Experience Platform 9.2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">各種ツールに関して</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Sitecore PowerShell Extensions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="additemversion.html">新しいバージョンの追加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="export.html">コンテンツのエクスポート</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getitem.html">アイテムに関するコマンド</a></li>
+<li class="toctree-l3"><a class="reference internal" href="import.html">コンテンツのインポート</a></li>
+<li class="toctree-l3"><a class="reference internal" href="newrole.html">新しいロールの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="newuser.html">新しいユーザーの作成</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../brightcove/index.html">Brightcove Connector for Sitecore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../EzImporter/index.html">Ez Importer でデータインポート</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -148,17 +146,15 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">Sitecore Experience Platform 9.2</a> &raquo;</li>
+          <li><a href="../index.html">各種ツールに関して</a> &raquo;</li>
         
-          <li><a href="index.html">2. モジュールのインストール</a> &raquo;</li>
-        
-      <li>2.5. Sitecore Connect for Salesforce Marketing Cloud</li>
+      <li>Sitecore PowerShell Extensions</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/92/modules/salesforcemc.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/marketplace/PowerShellExtensions/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -171,9 +167,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="sitecore-connect-for-salesforce-marketing-cloud">
-<h1>2.5. Sitecore Connect for Salesforce Marketing Cloud<a class="headerlink" href="#sitecore-connect-for-salesforce-marketing-cloud" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Sitecore Connect for Salesforce Marketing Cloud 3.0 モジュールのインストールの手順は現在制作中。</p>
+  <div class="section" id="sitecore-powershell-extensions">
+<h1>Sitecore PowerShell Extensions<a class="headerlink" href="#sitecore-powershell-extensions" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ここに Sitecore PowerShell Extensions に関する説明を入れる。</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">目次</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="additemversion.html">新しいバージョンの追加</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export.html">コンテンツのエクスポート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getitem.html">アイテムに関するコマンド</a></li>
+<li class="toctree-l1"><a class="reference internal" href="import.html">コンテンツのインポート</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newrole.html">新しいロールの作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="newuser.html">新しいユーザーの作成</a></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>参考サイト<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://doc.sitecorepowershell.com/">Sitecore PowerShell Extensions</a></p></li>
+</ul>
+</div>
 </div>
 
 
@@ -184,10 +197,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="sitecoredam.html" class="btn btn-neutral float-right" title="2.6. Sitecore Connect for Sitecore DAM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="additemversion.html" class="btn btn-neutral float-right" title="新しいバージョンの追加" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="salesforcecrm.html" class="btn btn-neutral float-left" title="2.4. Sitecore Connect for Salesforce CRM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="各種ツールに関して" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

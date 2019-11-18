@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="2.8. Sitecore Azure Toolkit" href="azuretoolkit.html" />
+    <link rel="next" title="3. 各種設定に関して" href="../configuration/index.html" />
     <link rel="prev" title="2.6. Sitecore Connect for Sitecore DAM" href="sitecoredam.html" /> 
 </head>
 
@@ -93,10 +93,7 @@
 <li class="toctree-l3"><a class="reference internal" href="salesforcecrm.html">2.4. Sitecore Connect for Salesforce CRM</a></li>
 <li class="toctree-l3"><a class="reference internal" href="salesforcemc.html">2.5. Sitecore Connect for Salesforce Marketing Cloud</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sitecoredam.html">2.6. Sitecore Connect for Sitecore DAM</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">2.7. Sitecore Connect for Sitecore CMP</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="azuretoolkit.html">2.8. Sitecore Azure Toolkit</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.7. Sitecore Connect for Sitecore CMP</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">3. 各種設定に関して</a></li>
@@ -176,8 +173,379 @@
             
   <div class="section" id="sitecore-connect-for-sitecore-cmp">
 <h1>2.7. Sitecore Connect for Sitecore CMP<a class="headerlink" href="#sitecore-connect-for-sitecore-cmp" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Sitecore Connect for Sitecore CMP 1.0.0 モジュールのインストール</p>
-<div class="toctree-wrapper compound">
+<p>Sitecore Connect for Sitecore CMP 1.0.0 を利用することで、Content Hub で作成したコンテンツを、Sitecore のアイテムとして追加することができるようになります。</p>
+<p>ここではモジュールのインストールと動作検証まで紹介をします。</p>
+<div class="section" id="id1">
+<h2>2.7.1. 必要システム<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Sitecore Connect for Sitecore CMP 1.0.0 は以下のシステムで利用することができます。</p>
+<ul class="simple">
+<li><p>Sitecore Experience Platform 9.2</p></li>
+<li><p>Sitecore Experience Manager 9.2</p></li>
+<li><p>Sitecore Experience Platform 9.1</p></li>
+<li><p>Sitecore Experience Manager 9.1</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>本文書は Sitecore Experience Platform 9.2 の内容となっています。</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>2.7.2. モジュールのダウンロード<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>以下のページからモジュールのダウンロードをします。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dev.sitecore.net/Downloads/Sitecore_Connect_for_Sitecore_CMP/10/Sitecore_Connect_for_Sitecore_CMP_100.aspx">Sitecore Connect for Sitecore CMP 1.0.0</a></p></li>
+</ul>
+<p>この解説では <cite>Sitecore Connect CMP for Sitecore XP 9.2</cite> をダウンロードしてインストールを進めます。</p>
+</div>
+<div class="section" id="id3">
+<h2>2.7.3. モジュールのインストール<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>モジュールのインストールは、「コントロールパネル」－「パッケージをインストールする」を開いてください。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp01.png"><img alt="モジュールのインストール" class="align-center" src="../../_images/chcmp01.png" style="width: 400px;" /></a>
+<p>モジュールのインストールが完了すれば、あとは設定のみとなります。</p>
+</div>
+<div class="section" id="microsoft-azure-service-bus">
+<h2>2.7.4. Microsoft Azure Service Bus の設定<a class="headerlink" href="#microsoft-azure-service-bus" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Sitecore Content Hub CMP と Sitecore の接続をする際に Microsoft Azure Service Bus の設定が必要となります。ここではサンプルを1つ作成します。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp02.png"><img alt="Service Bus の作成" class="align-center" src="../../_images/chcmp02.png" style="width: 400px;" /></a>
+<p>設定する項目は以下の通りです</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>設定項目</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>名前</p></td>
+<td><p>名前を設定します</p></td>
+</tr>
+<tr class="row-odd"><td><p>価格レベル</p></td>
+<td><p>Standard</p></td>
+</tr>
+<tr class="row-even"><td><p>サブスクリプション</p></td>
+<td><p>お持ちのサブスクリプション</p></td>
+</tr>
+<tr class="row-odd"><td><p>リソースグループ</p></td>
+<td><p>追加するリソースグループ</p></td>
+</tr>
+<tr class="row-even"><td><p>場所</p></td>
+<td><p>利用するデータセンター</p></td>
+</tr>
+</tbody>
+</table>
+<p>今回は以下のように設定をしました。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp03.png"><img alt="名前空間の作成" class="align-center" src="../../_images/chcmp03.png" style="width: 400px;" /></a>
+<p>作成した Service Bus を開いて、左側のメニューからエンティティの中にあるトピックを選択します。</p>
+<img alt="トピック" class="align-center" src="../../_images/chcmp04.png" />
+<p>新しいトピックを作成します</p>
+<a class="reference internal image-reference" href="../../_images/chcmp05.png"><img alt="トピックの追加" class="align-center" src="../../_images/chcmp05.png" style="width: 400px;" /></a>
+<p>今回は以下のように設定をします。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 67%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>設定項目</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>名前</p></td>
+<td><p>m_out</p></td>
+</tr>
+<tr class="row-odd"><td><p>トピックの最大サイズ</p></td>
+<td><p>1GB</p></td>
+</tr>
+<tr class="row-even"><td><p>メッセージの Time to Live</p></td>
+<td><p>14日</p></td>
+</tr>
+<tr class="row-odd"><td><p>重複データ検出を有効にする</p></td>
+<td><p>チェック無し</p></td>
+</tr>
+<tr class="row-even"><td><p>パーティション分割を有効にする</p></td>
+<td><p>チェック無し</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/chcmp06.png"><img alt="トピックの作成" class="align-center" src="../../_images/chcmp06.png" style="width: 400px;" /></a>
+<p>作成をした m_out のトピックを開きます。ここで、サブスクリプションを作成します。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp07.png"><img alt="サブスクリプションの追加" class="align-center" src="../../_images/chcmp07.png" style="width: 400px;" /></a>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 72%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>設定項目</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>名前</p></td>
+<td><p>sitecore</p></td>
+</tr>
+<tr class="row-odd"><td><p>メッセージの Time to Live</p></td>
+<td><p>14日</p></td>
+</tr>
+<tr class="row-even"><td><p>ロック期間</p></td>
+<td><p>30秒</p></td>
+</tr>
+<tr class="row-odd"><td><p>最大配信数</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/chcmp08.png"><img alt="サブスクリプションの作成" class="align-center" src="../../_images/chcmp08.png" style="width: 400px;" /></a>
+<p>これで Service Bus の準備完了となります。</p>
+</div>
+<div class="section" id="content-hub-cmp">
+<h2>2.7.5. Content Hub CMP の設定<a class="headerlink" href="#content-hub-cmp" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id4">
+<h3>2.7.5.1. スーパーユーザーの作成<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>CMP から Azure Servie Bus にメッセージを送るための管理者を作成します。Content Hub の管理画面で、「管理」―「ユーザー」を開いて、「ユーザーの追加」をクリックします。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp09.png"><img alt="ユーザーの追加" class="align-center" src="../../_images/chcmp09.png" style="width: 400px;" /></a>
+<p>ユーザーグループのタブを選択し、「グループメンバーシップ」に <cite>Superusers</cite> を追加してください。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp10.png"><img alt="Superusers の追加" class="align-center" src="../../_images/chcmp10.png" style="width: 400px;" /></a>
+<p>保存をクリックすると、警告が出てきますが、今回は <cite>Superusers</cite> の追加で問題ないので、そのまま続けます。</p>
+<p>アカウントのパスワードを設定するために、作成したユーザーのプロファイルの編集を開きます。開いた後、パスワードリセットをするためのメールアドレスを入れてください。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp11.png"><img alt="プロファイルの編集" class="align-center" src="../../_images/chcmp11.png" style="width: 400px;" /></a>
+<p>メールアドレスを設定したあと、「パスワードのリセット」のボタンが有効になるため、これをクリックしてパスワードをリセットします。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp12.png"><img alt="パスワードのリセット" class="align-center" src="../../_images/chcmp12.png" style="width: 400px;" /></a>
+<p>パスワードリセットのメールが、指定したメールアドレスに届きます。メールは迷惑メールに入る可能性もあるため、迷惑メールフォルダも確認をしてください。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp13.png"><img alt="パスワードリセットのメール" class="align-center" src="../../_images/chcmp13.png" style="width: 400px;" /></a>
+<p>パスワードをいれて、新しいパスワードを設定して下さい。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp14.png"><img alt="パスワードリセットの完了" class="align-center" src="../../_images/chcmp14.png" style="width: 400px;" /></a>
+<p>新しいアカウントでログインが可能か確認をしてください。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp15.png"><img alt="パスワードリセットの完了" class="align-center" src="../../_images/chcmp15.png" style="width: 400px;" /></a>
+<p>ユーザー名と設定したパスワードでログインが出来た段階で、管理者アカウントの完成となります。</p>
+</div>
+<div class="section" id="id5">
+<h3>2.7.5.2. アクションの作成<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Content Hub のアクションを作成します。「管理」－「アクション」を開き、「新規アクション」をクリックします。作成をする際には、形式を Azure Service Bus に変更することで、接続文字列などを入力できるようになります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>設定項目</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>名前</p></td>
+<td><p>sitecore</p></td>
+</tr>
+<tr class="row-odd"><td><p>ラベル</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>形式</p></td>
+<td><p>Azure Service Bus</p></td>
+</tr>
+<tr class="row-odd"><td><p>接続文字列</p></td>
+<td><p>（後述）</p></td>
+</tr>
+<tr class="row-even"><td><p>送信タイプ</p></td>
+<td><p>トピック</p></td>
+</tr>
+<tr class="row-odd"><td><p>送信先</p></td>
+<td><p>m_out</p></td>
+</tr>
+</tbody>
+</table>
+<p>接続文字列は Microsoft Azure から以下のように取得します。</p>
+<ol class="arabic simple">
+<li><p>先ほど作成をした Service Bus の設定を開きます</p></li>
+<li><p>共有アクセスポリシーを選択します</p></li>
+<li><p>表示される <cite>RootManageSharedAccessKey</cite> をクリックします</p></li>
+<li><p>プライマリ接続文字列 をコピーしてください</p></li>
+</ol>
+<p>例
+.. code-block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Endpoint</span><span class="o">=</span><span class="n">sb</span><span class="p">:</span><span class="o">//</span><span class="n">名前</span><span class="o">.</span><span class="n">servicebus</span><span class="o">.</span><span class="n">windows</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="p">;</span><span class="n">SharedAccessKeyName</span><span class="o">=</span><span class="n">RootManageSharedAccessKey</span><span class="p">;</span><span class="n">SharedAccessKey</span><span class="o">=</span><span class="n">キー</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/chcmp16.png"><img alt="プライマリ接続文字列" class="align-center" src="../../_images/chcmp16.png" style="width: 400px;" /></a>
+<p>作成するアクションは以下のようになり、テスト接続に成功するか確認をしてください。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp17.png"><img alt="アクションの完成" class="align-center" src="../../_images/chcmp17.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="id6">
+<h3>2.7.5.3. トリガーの作成<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>続いて Content Hub のコンテンツのステートが変更されたタイミングで、作成をしたアクションが動くようにトリガーを設定します。「管理」－「トリガー」を開いて、「新規トリガー」を作成します。</p>
+<p>基本の項目は以下のように今回は設定をします。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>設定項目</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>名前</p></td>
+<td><p>SitecoreCMP</p></td>
+</tr>
+<tr class="row-odd"><td><p>目的</p></td>
+<td><p>エンティティの変更</p></td>
+</tr>
+<tr class="row-even"><td><p>実行タイプ</p></td>
+<td><p>バックグラウンドで</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/chcmp18.png"><img alt="基本設定" class="align-center" src="../../_images/chcmp18.png" style="width: 400px;" /></a>
+<p>続いて条件を開き「定義の追加」をクリックします。定義の追加では M.Content をまずは選択します。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp19.png"><img alt="M.Content の選択" class="align-center" src="../../_images/chcmp19.png" style="width: 400px;" /></a>
+<p>続いて、条件を以下の画像のように設定をしてください。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp20.png"><img alt="条件の選択" class="align-center" src="../../_images/chcmp20.png" style="width: 400px;" /></a>
+<p>最後にアクションタブを選択し、「アクションの追加」をクリックします。ここで、先ほど作成をしたアクションを指定します。ここでは Sitecoreを作成したので、一番下の項目を選択します。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp21.png"><img alt="Sitecore の選択" class="align-center" src="../../_images/chcmp21.png" style="width: 400px;" /></a>
+<p>選択をしたあと、保存をすると、トリガーに合わせてアクションが動くようになります。</p>
+</div>
+</div>
+<div class="section" id="sitecore">
+<h2>2.7.6. Sitecore の設定<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Content Hub から Service Bus につながりましたので、次は Service Bus と Content Hub に関する設定を Sitecore 側に追加していきましょう。</p>
+<div class="section" id="service-bus">
+<h3>2.7.6.1. Service Bus に関する設定<a class="headerlink" href="#service-bus" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Sitecore の設定としては、 /sitecore/system/Modules/CMP/Config にあるアイテムに設定を入れる必要があります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>設定項目</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Client Id</p></td>
+<td><p>LogicApp</p></td>
+</tr>
+<tr class="row-odd"><td><p>Client Secret</p></td>
+<td><p>（後述）</p></td>
+</tr>
+<tr class="row-even"><td><p>ユーザー名</p></td>
+<td><p>作成した管理者名</p></td>
+</tr>
+<tr class="row-odd"><td><p>Password</p></td>
+<td><p>作成した管理者のパスワード</p></td>
+</tr>
+<tr class="row-even"><td><p>Content Hub URI</p></td>
+<td><p>Content Hub のサーバー URL</p></td>
+</tr>
+<tr class="row-odd"><td><p>Connection String</p></td>
+<td><p>Service Bus の Endpont</p></td>
+</tr>
+<tr class="row-even"><td><p>Incoming topic name</p></td>
+<td><p>m_out</p></td>
+</tr>
+<tr class="row-odd"><td><p>Incoming subscription name</p></td>
+<td><p>sitecore</p></td>
+</tr>
+<tr class="row-even"><td><p>Outgoing topic name</p></td>
+<td><p>m_in</p></td>
+</tr>
+<tr class="row-odd"><td><p>Default Language</p></td>
+<td><p>en</p></td>
+</tr>
+</tbody>
+</table>
+<p>Client Secret に関しては、Content Hub の管理画面から取得することができます。「管理」－「OAuth クライアント」をクリックして、今回利用する <cite>LogicApp</cite> の鉛筆マークをクリック、クライアントシークレットを取得してください。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp23.png"><img alt="クライアントシークレット" class="align-center" src="../../_images/chcmp23.png" style="width: 400px;" /></a>
+<p>設定した内容は以下のようになります（設定項目は環境に合わせて入力してください）。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp22.png"><img alt="Sitecore の設定" class="align-center" src="../../_images/chcmp22.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="id7">
+<h3>2.7.6.2. 連携アイテムの作成<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>今回は Content Hub でブログの記事が投稿された場合に、Sitecore にブログのアイテムが作成される、という設定を追加します。まず、データのテンプレートを作成します。</p>
+<ol class="arabic simple">
+<li><p>テンプレートとして Blog テンプレートを作成、Title ( Single-line Text ）と Body ( Multi-line Text ）を作成します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/chcmp24.png"><img alt="テンプレートの作成" class="align-center" src="../../_images/chcmp24.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="2">
+<li><p>作成したテンプレートの「コンテンツタブ」を開いて、テンプレートのデータとして、Templates/CMP/Content Hub Entity のテンプレートを追加します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/chcmp25.png"><img alt="テンプレートデータの追加" class="align-center" src="../../_images/chcmp25.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>続いてバケットを作成します。 <cite>/sitecore/content/CMP</cite> アイテムを右クリックして、バケットをつ追加します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/chcmp26.png"><img alt="バケットの追加" class="align-center" src="../../_images/chcmp26.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>名前を今回は Blogs と指定します</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/chcmp27.png"><img alt="ブログの作成" class="align-center" src="../../_images/chcmp27.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p><cite>/sitecore/system/Modules/CMP/Config</cite> のアイテムを右クリックして、 <cite>Entity Mapping</cite> のアイテムを作成します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/chcmp28.png"><img alt="エンティティマッピングの追加" class="align-center" src="../../_images/chcmp28.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="6">
+<li><p>Blog を作成</p></li>
+<li><p>作成した Blog アイテムを右クリックして、 <cite>field Mapping</cite> を作成します。今回は、<cite>Body</cite> と <cite>Title</cite> の２つを作成します。完成下ツリーは以下の通り。</p></li>
+</ol>
+<img alt="ツリー構造" class="align-center" src="../../_images/chcmp29.png" />
+<ol class="arabic simple" start="8">
+<li><p>Blog アイテムには、以下の項目を設定します。</p></li>
+</ol>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>設定項目</p></th>
+<th class="head"><p>設定値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Content Type Id</p></td>
+<td><p>M.ContentType.Blog</p></td>
+</tr>
+<tr class="row-odd"><td><p>バケット</p></td>
+<td><p>事前に作成をしたバケット</p></td>
+</tr>
+<tr class="row-even"><td><p>テンプレート</p></td>
+<td><p>事前に作成をしたテンプレート</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/chcmp30.png"><img alt="データの設定" class="align-center" src="../../_images/chcmp30.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="9">
+<li><p>Body と Title に関しては、Content Hub のフィールド名と作成をしたテンプレートのフィールド名のマッピングを設定します。今回は以下のように設定をします。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/chcmp31.png"><img alt="Body の設定" class="align-center" src="../../_images/chcmp31.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/chcmp32.png"><img alt="Title の設定" class="align-center" src="../../_images/chcmp32.png" style="width: 400px;" /></a>
+<p>これで設定は一通り完了しました。なお、設定を反映させるためには Sitecore を一度再起動する必要があります。</p>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>2.7.7. 連携の確認<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>実際に正しく動作しているか、確認をします。まず、作成した段階では何も Blogs のアイテムに含まれていないのを確認します。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp33.png"><img alt="空のブログバケット" class="align-center" src="../../_images/chcmp33.png" style="width: 400px;" /></a>
+<p>Content Hub にアクセスをして、右上にある「＋コンテンツ」のボタンをクリックします。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp34.png"><img alt="コンテンツの追加" class="align-center" src="../../_images/chcmp34.png" style="width: 400px;" /></a>
+<p>今回はブログの設定をしているだけなので、コンテンツのタイプとして「ブログ」を選択します（ダイアログ一番下の項目）。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp35.png"><img alt="コンテンツの追加" class="align-center" src="../../_images/chcmp35.png" style="width: 400px;" /></a>
+<p>右上にある「編集」ボタンをクリックします。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp36.png"><img alt="コンテンツの追加" class="align-center" src="../../_images/chcmp36.png" style="width: 400px;" /></a>
+<p>タイトル、記事の入力エリアが有効になります。今回はテストのため簡単な記事を入れておきます。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp37.png"><img alt="コンテンツを入力" class="align-center" src="../../_images/chcmp37.png" style="width: 400px;" /></a>
+<p>保存をして、ワークフローに関して「公開」まで進めていきます。しばらくすると、Sitecore にブログのアイテムが作成される、という設定を追加します。まず、データのテンプレートを作成します。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp38.png"><img alt="アイテムの完成" class="align-center" src="../../_images/chcmp38.png" style="width: 400px;" /></a>
+<p>バケットの中にあるアイテムを参照するために、コンテンツエディターの「表示」エリアから「バケット」をチェックしますｓ。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp39.png"><img alt="バケットの確認" class="align-center" src="../../_images/chcmp39.png" style="width: 400px;" /></a>
+<p>表示ができるモードに切り替わると、ツリービュー形式でアイテムを確認することができるようになります。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp40.png"><img alt="アイテムが表示さえる" class="align-center" src="../../_images/chcmp40.png" style="width: 400px;" /></a>
+<p>表示されたアイテムを選択すると、Content Hub で入力された情報が反映されていることを確認できます。</p>
+<a class="reference internal image-reference" href="../../_images/chcmp41.png"><img alt="アイテムの確認" class="align-center" src="../../_images/chcmp41.png" style="width: 400px;" /></a>
+<p>このように、Content Hub で作成した情報を Sitecore で利用することができるようになります。</p>
 </div>
 </div>
 
@@ -189,7 +557,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="azuretoolkit.html" class="btn btn-neutral float-right" title="2.8. Sitecore Azure Toolkit" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../configuration/index.html" class="btn btn-neutral float-right" title="3. 各種設定に関して" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="sitecoredam.html" class="btn btn-neutral float-left" title="2.6. Sitecore Connect for Sitecore DAM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
