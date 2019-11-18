@@ -204,9 +204,14 @@
 </ol>
 <a class="reference internal image-reference" href="../../_images/sfmcce03.png"><img alt="サイトコア クライアントを再起動します。" class="align-center" src="../../_images/sfmcce03.png" style="width: 400px;" /></a>
 <p>これでモジュールのインストールは完了となります。</p>
+</div>
 <div class="section" id="salesforce-marketing-cloud">
-<h3>2.5.2.1. Salesforce Marketing Cloud の設定<a class="headerlink" href="#salesforce-marketing-cloud" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h2>2.5.3. Salesforce Marketing Cloud の設定<a class="headerlink" href="#salesforce-marketing-cloud" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Salesforce Marketing Cloud の設定手順として、セットアップの権限のあるユーザーでログインをします。ログインをすると、右上のユーザーアイコンにマウスカーソルを合わせると、セットアップのメニューが表示されますので、クリックしてください。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>API 連携に関しては、すでに <a class="reference internal" href="salesforcemcbde.html"><span class="doc">Sitecore Connect for SFMC - Behavioral Data Exchange</span></a> で作成している場合は共有することができます。この場合、アクセス権に関して既存の設定に追加してください。</p>
+</div>
 <img alt="セットアップ" class="align-center" src="../../_images/sfmcce04.png" />
 <p>メニューの「プラットフォームツール」から、「アプリ」－「インストール済パッケージ」をクリックしてください。</p>
 <img alt="インストール済パッケージ" class="align-center" src="../../_images/sfmcce05.png" />
@@ -282,7 +287,7 @@
 <p>上記の設定で Salesforce 側の設定が完了しました。作成したパッケージの情報を利用して、Sitecore と接続するための設定を実施します。</p>
 </div>
 <div class="section" id="sitecore">
-<h3>2.5.2.2. Sitecore の設定<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h2>2.5.4. Sitecore の設定<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Sitecore の設定としては、Salesforce Marketing Cloud で作成をしたパッケージを利用して接続文字列を作る必要があります。接続文字列のサンプルは以下の通りです。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;add</span> <span class="na">name=</span><span class="s">&quot;sfmc&quot;</span> <span class="na">connectionString=</span><span class="s">&quot;client id=&lt;Client Id&gt;;</span>
 <span class="s">  client secret=&lt;Client Secret&gt;;</span>
@@ -323,10 +328,10 @@
 <p>ConnectionString の変更が終わったタイミングで、Sitecore のインスタンスを再起動して反映させます。</p>
 </div>
 <div class="section" id="id3">
-<h3>2.5.2.3. 画像ファイルの公開テスト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h2>2.5.5. 画像ファイルの公開テスト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>ここでは Salesforce Marketing Cloud と連携させるフォルダを Sitecore のメディアライブラリに作成し、連携、同期させます。</p>
 <div class="section" id="id4">
-<h4>2.5.2.3.1. Sitecore の追加設定<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h3>2.5.5.1. Sitecore の追加設定<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>まず連携をさせるためのフォルダを指定ます。今回は、 <cite>/sitecore/media library/SFMC Demo</cite> のフォルダを作成しました。</p>
 <img alt="フォルダの作成" class="align-center" src="../../_images/sfmcce12.png" />
 <p>続いてシステムにフォルダの同期をするためのアイテムを作成します。 <cite>/sitecore/system/Settings/SFMC Connector/Configuration</cite> のアイテムを選択し、 <cite>SFMC 設定</cite> のボタンをクリックします。</p>
@@ -338,7 +343,7 @@
 <p>これで設定は完了です。</p>
 </div>
 <div class="section" id="id5">
-<h4>2.5.2.3.2. ファイルの同期のテスト<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h3>2.5.5.2. ファイルの同期のテスト<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>デフォルトの設定では 10 時間に一度同期する設定になっています（設定は　<cite>App_Config\Modules\Connector.Sfmc\Sitecore.Connector.Sfmc.config</cite> で変更が可能です）。
 今回はマニュアルで同期させます。</p>
 <p>まず Salesforce Marketing Cloud の画面で、「Content Builder」－「Content builder」を選択してください。</p>
@@ -357,7 +362,6 @@
 <img alt="フォルダが作成されている" class="align-center" src="../../_images/sfmcce22.png" />
 <a class="reference internal image-reference" href="../../_images/sfmcce23.png"><img alt="画像が同期されている" class="align-center" src="../../_images/sfmcce23.png" style="width: 400px;" /></a>
 <p>このように、Sitecore で公開している画像ファイルを Salesforce Marketing Cloud で利用することが可能となります。</p>
-</div>
 </div>
 </div>
 </div>

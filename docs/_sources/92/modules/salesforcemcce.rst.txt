@@ -48,10 +48,15 @@ Sitecore Connect for SFMC - Content Exchange
 
 これでモジュールのインストールは完了となります。
 
+
+*************************************
 Salesforce Marketing Cloud の設定
-=====================================
+*************************************
 
 Salesforce Marketing Cloud の設定手順として、セットアップの権限のあるユーザーでログインをします。ログインをすると、右上のユーザーアイコンにマウスカーソルを合わせると、セットアップのメニューが表示されますので、クリックしてください。
+
+.. note:: API 連携に関しては、すでに :doc:`Sitecore Connect for SFMC - Behavioral Data Exchange <salesforcemcbde>` で作成している場合は共有することができます。この場合、アクセス権に関して既存の設定に追加してください。
+
 
 .. image:: images/sfmcce04.png
    :align: center
@@ -125,8 +130,9 @@ Hub         Tags                   Write
 上記の設定で Salesforce 側の設定が完了しました。作成したパッケージの情報を利用して、Sitecore と接続するための設定を実施します。
 
 
+**********************
 Sitecore の設定
-==================
+**********************
 
 Sitecore の設定としては、Salesforce Marketing Cloud で作成をしたパッケージを利用して接続文字列を作る必要があります。接続文字列のサンプルは以下の通りです。
 
@@ -153,13 +159,14 @@ SOAP Base URI            SOAP ベース URI
 ConnectionString の変更が終わったタイミングで、Sitecore のインスタンスを再起動して反映させます。
 
 
+*****************************
 画像ファイルの公開テスト
-==========================
+*****************************
 
 ここでは Salesforce Marketing Cloud と連携させるフォルダを Sitecore のメディアライブラリに作成し、連携、同期させます。
 
 Sitecore の追加設定
------------------------
+=====================
 
 まず連携をさせるためのフォルダを指定ます。今回は、 `/sitecore/media library/SFMC Demo` のフォルダを作成しました。
 
@@ -195,7 +202,7 @@ Sitecore の追加設定
 
 
 ファイルの同期のテスト
--------------------------
+========================
 
 デフォルトの設定では 10 時間に一度同期する設定になっています（設定は　`App_Config\\Modules\\Connector.Sfmc\\Sitecore.Connector.Sfmc.config` で変更が可能です）。
 今回はマニュアルで同期させます。
