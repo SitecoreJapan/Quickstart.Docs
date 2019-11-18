@@ -1,10 +1,12 @@
+####################
 各種ツールに関して
-==================
+####################
+
 
 .. toctree::
     :caption: 目次
     :titlesonly:
 
-    PowerShellExtentions/index
+    PowerShellExtensions/index
     brightcove/index
     EzImporter/index

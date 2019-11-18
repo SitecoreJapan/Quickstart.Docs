@@ -1,10 +1,12 @@
+#######################################################
 Sitecore Connect for Microsoft Dynamics 365 for Sales
-======================================================
+#######################################################
 
 Sitecore Experience Platform では Dynamics 365 CRM と連携するためのモジュール、Sitecore Connect for Microsoft Dynamics 365 for Sales 3.0.0 を提供しています。ここではセットアップに関しての手順を紹介しています。
 
+**************************
 モジュールのダウンロード
-****************************************
+**************************
 
 モジュールに関しては、Sitecore Download サイトから入手することができます。
 
@@ -17,8 +19,9 @@ Sitecore Experience Platform では Dynamics 365 CRM と連携するためのモ
     * Sitecore Connect for Microsoft Dynamics 365 for Sales
     * Staging Database for Sitecore Connect for Microsoft Dynamics 365 for Sales
 
+**************************
 モジュールのインストール
-****************************************
+**************************
 
 モジュールのインストールは以下の手順で進めていきます。
 
@@ -48,8 +51,9 @@ Sitecore Experience Platform では Dynamics 365 CRM と連携するためのモ
 
 * モジュールのインストールは完了です。
 
+*******************************
 ステージングデータベースの追加
-****************************************
+*******************************
 
 Microsoft Dynamics とマーケティングリストを同期させるためのデータベースのセットアップをします。 ファイルダウンロードの `Staging Database for Sitecore Connect for Microsoft Dynamics 365 for Sales` をクリックして、 `Sitecore.DataExchange.Staging.dacpac` のファイルをダウンロードします。
 
@@ -67,7 +71,6 @@ Microsoft Dynamics とマーケティングリストを同期させるための�
    :width: 400px
    :alt: ファイルを指定する
 
-
 * データベース名は変更せずにそのまま進めていきます。
 
 .. image:: images/dacpac03.png
@@ -77,8 +80,9 @@ Microsoft Dynamics とマーケティングリストを同期させるための�
 
 * 実行をするとデータベースが追加されます。これでデータベースの設定は完了です。
 
+*******************
 Web.config の変更
-****************************************
+*******************
 
 Web.config の  configuration > runtime > assemblyBinding に以下の設定を追加します。 
 
@@ -98,8 +102,9 @@ Web.config の  configuration > runtime > assemblyBinding に以下の設定を�
    :width: 400px
    :alt: web.config
 
+**********************************
 Dynamics 365 for Sales を準備する
-****************************************
+**********************************
 
 今回は試用版として、無料トライアルを利用しています。このサイトからアクセスをして、無料で利用できるインスタンスを用意してください。
 
@@ -107,8 +112,9 @@ Dynamics 365 for Sales を準備する
 
 評価版の立ち上げに関しては、他のブログとかで紹介されていますので、分からない場合は検索をしてみてください。
 
+******************
 接続文字列の作成
-****************************************
+******************
 
 Sitecore と Dynamics 365 を接続するための接続文字列を作成して、`Connectionstrings.config` に設定を追加する必要があります。
 
@@ -147,9 +153,9 @@ Sitecore と Dynamics 365 を接続するための接続文字列を作成して
 
   <add name="mycrm" connectionString="url=https://####/XRMServices/2011/Organization.svc;user id=####;password=####;organization=###;authentication type=2" />
 
-
+******************************
 ステージングデータベースの追加
-****************************************
+******************************
 
 上記の接続文字列と同じく、ステージングデータベースに関する情報も ConnectionStrings.config に追加する必要があります。
 
@@ -159,8 +165,9 @@ Sitecore と Dynamics 365 を接続するための接続文字列を作成して
 
   <add name="Sitecore.DataExchange.Staging" connectionString="Data Source=(local);Initial Catalog=Sitecore.DataExchange.Staging;User ID=username;Password=password" />
 
+********************
 xConnect との接続
-****************************************
+********************
 
 続いてモジュールをインストールしたあと、xConnect との連携に関する手順を追加します。コンテンツエディタを開いて、 `sitecore/system/Settings/Data Exchange/Providers/xConnect/Collection Models/Connect for Dynamics/Connect for Dynamics Collection Model` のアイテムを選択します。
 
@@ -174,8 +181,9 @@ xConnect との接続
 * `\\App_Data\\Models\\`
 * `\\App_Data\\jobs\\continuous\\IndexWorker\\App_Data\\Models\\`
 
+***************
 テナントの作成
-****************************************
+***************
 
 テナントを作成するために `sitecore/system/Data Exchange` のアイテムを選択、右クリックをして `Connect for Dynamics Tenant` をクリックします。
 
@@ -186,8 +194,9 @@ xConnect との接続
 
 テナント名は任意で問題ありません、ここでは `My Dynamics Tenant` とします。
 
+**********************
 エンドポイントの登録
-****************************************
+**********************
 
 テナントに接続に関する情報を登録していきます。作成をしたテナントの `Endpoints/Providers/Dynamics/Dynamics Organization Endpoint` のアイテムを開き、`mycrm` を接続文字列として設定します。
 
@@ -263,8 +272,9 @@ xConnect との接続
 
 上記ですべて接続が確認できれば、設定が完了となります。
 
+**********************
 テナントを有効にする
-****************************************
+**********************
 
 作成したテナントを指定して、タブを「コンテンツ」に切り替えてください。
 

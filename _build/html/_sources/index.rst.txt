@@ -3,8 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+##########################
 Sitecore クイックスタート
-=======================================
+##########################
 
 Sitecore クイックスタートでは、インストールの手順、モジュールの追加、各種モジュールの活用方法などを評価することができるように各種情報を提供しています。
 
@@ -19,6 +20,7 @@ Sitecore クイックスタートでは、インストールの手順、モジ�
     jss/index
     marketplace/index
 
+***************
 索引とテーブル
 ***************
 

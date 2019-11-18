@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2.6. Sitecore Connect for Sitecore DAM &mdash; Sitecore クイックスタート  ドキュメント</title>
+  <title>2.7. Sitecore Connect for Sitecore DAM &mdash; Sitecore クイックスタート  ドキュメント</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="2.7. Sitecore Connect for Sitecore CMP" href="sitecorecmp.html" />
-    <link rel="prev" title="2.5. Sitecore Connect for Salesforce Marketing Cloud" href="salesforcemc.html" /> 
+    <link rel="next" title="2.8. Sitecore Connect for Sitecore CMP" href="sitecorecmp.html" />
+    <link rel="prev" title="2.6. Sitecore Connect for SFMC - Behavioral Data Exchange" href="salesforcemcbde.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,9 +96,10 @@
 <li class="toctree-l4"><a class="reference internal" href="jss.html">2.2. Sitecore JavaScript Services</a></li>
 <li class="toctree-l4"><a class="reference internal" href="dynamicscrm.html">2.3. Sitecore Connect for Microsoft Dynamics 365 for Sales</a></li>
 <li class="toctree-l4"><a class="reference internal" href="salesforcecrm.html">2.4. Sitecore Connect for Salesforce CRM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="salesforcemc.html">2.5. Sitecore Connect for Salesforce Marketing Cloud</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">2.6. Sitecore Connect for Sitecore DAM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sitecorecmp.html">2.7. Sitecore Connect for Sitecore CMP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="salesforcemcce.html">2.5. Sitecore Connect for SFMC - Content Exchange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="salesforcemcbde.html">2.6. Sitecore Connect for SFMC - Behavioral Data Exchange</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">2.7. Sitecore Connect for Sitecore DAM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sitecorecmp.html">2.8. Sitecore Connect for Sitecore CMP</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../configuration/index.html">3. 各種設定に関して</a></li>
@@ -158,7 +159,7 @@
         
           <li><a href="index.html">2. モジュールのインストール</a> &raquo;</li>
         
-      <li>2.6. Sitecore Connect for Sitecore DAM</li>
+      <li>2.7. Sitecore Connect for Sitecore DAM</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -178,9 +179,119 @@
            <div itemprop="articleBody">
             
   <div class="section" id="sitecore-connect-for-sitecore-dam">
-<h1>2.6. Sitecore Connect for Sitecore DAM<a class="headerlink" href="#sitecore-connect-for-sitecore-dam" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Sitecore Connect for Sitecore DAM 2.0.0 モジュールのインストール</p>
-<div class="toctree-wrapper compound">
+<h1>2.7. Sitecore Connect for Sitecore DAM<a class="headerlink" href="#sitecore-connect-for-sitecore-dam" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Sitecore Connect for Sitecore DAM 2.0.0  を利用することで、Sitecore の管理画面から直接 Content Hub で管理している画像を指定するようになります。ここではモジュールのインストールと動作検証まで紹介をします。</p>
+<div class="section" id="id1">
+<h2>2.7.1. 必要システム<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Sitecore Connect for Sitecore DAM 2.0.0 は以下のシステムで利用することができます。</p>
+<ul class="simple">
+<li><p>Sitecore Experience Platform 9.2</p></li>
+<li><p>Sitecore Experience Platform 9.1.0, 9.1.1</p></li>
+</ul>
+<p>なお、Sitecore Experience Manager、 Sitecore Experience Commerce でも上記のバージョンであればご利用いただけます。</p>
+</div>
+<div class="section" id="sitecore-content-hub">
+<h2>2.7.2. Sitecore Content Hub の設定<a class="headerlink" href="#sitecore-content-hub" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>まず最初に、Sitecore Experience Platform と Sitecore Content Hub の接続ができるように、設定を Sitecore Content Hub に追加していきます。</p>
+<ul class="simple">
+<li><p>管理者の権限を持っているアカウントで Sitecore Content Hub にアクセスをして、「管理」―「設定」を開きます。</p></li>
+<li><p>左側のメニューの`PortalConfiguratoin` をクリックします</p></li>
+<li><p><cite>CORSConfiguration</cite> をクリックして設定画面を開きます</p></li>
+<li><p>管理サーバーの URL を入力して保存をクリックします</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/chdam04.png"><img alt="サーバー情報を追加" class="align-center" src="../../_images/chdam04.png" style="width: 400px;" /></a>
+<p>続いてログイン方法に関して、今回はシングルサインオン以外でログインをするために、ログインの設定を変更します。</p>
+<ul class="simple">
+<li><p>管理者の権限を持っているアカウントで Sitecore Content Hub にアクセスをして、「管理」―「設定」を開きます。</p></li>
+<li><p>左側のメニューの`Authentication` をクリックします</p></li>
+<li><p>設定の表示を <cite>Tree</cite> から <cite>Text</cite> に変更します。</p></li>
+</ul>
+<img alt="テキストに切り替え" class="align-center" src="../../_images/chdam05.png" />
+<ul class="simple">
+<li><p>ログインの設定で提供されている項目から、authentication_mode を “Passive” に変更します。また ExternalRedirectKeys を追加してください。追加した結果は以下のようになります。</p></li>
+</ul>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">&quot;Providers&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;$type&quot;</span><span class="p">:</span> <span class="s2">&quot;Stylelabs.M.Portal.Authentication.SamlAuthenticationProviderConfigurator, Stylelabs.M.Portal&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;metadata_location&quot;</span><span class="p">:</span> <span class="s2">&quot;---------------------&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;sp_entity_id&quot;</span><span class="p">:</span> <span class="s2">&quot;---------------------&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;idp_entity_id&quot;</span><span class="p">:</span> <span class="s2">&quot;-------------------------&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;provider_name&quot;</span><span class="p">:</span> <span class="s2">&quot;SSO&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;authentication_mode&quot;</span><span class="p">:</span> <span class="s2">&quot;Passive&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;module_path&quot;</span><span class="p">:</span> <span class="s2">&quot;AuthServices&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;is_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">}</span>
+<span class="p">],</span>
+<span class="nt">&quot;ExternalRedirectKeys&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;Sitecore&quot;</span><span class="p">:</span> <span class="s2">&quot;https://92sc.dev.local/&quot;</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>変更しているのは2か所です、確認をして保存します。</p>
+</div>
+<div class="section" id="sitecore-experience-platform">
+<h2>2.7.3. Sitecore Experience Platform の設定<a class="headerlink" href="#sitecore-experience-platform" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>モジュールのダウンロード</p>
+<p>続いて Sitecore の設定を開始します。まず、以下のページからモジュールのダウンロードをします。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dev.sitecore.net/Downloads/Sitecore_Plugin_for_Stylelabs_DAM/20/Sitecore_Connect_for_Sitecore_DAM_200.aspx">Sitecore Connect for Sitecore DAM 2.0.0</a></p></li>
+</ul>
+<p>この解説では <cite>Sitecore Connect for Sitecore DAM</cite> をダウンロードしてインストールを進めます。</p>
+<div class="section" id="id2">
+<h3>2.7.3.1. モジュールのインストール<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>モジュールのインストールは、「コントロールパネル」－「パッケージをインストールする」を開いてください。</p>
+<a class="reference internal image-reference" href="../../_images/chdam01.png"><img alt="ファイルを指定する" class="align-center" src="../../_images/chdam01.png" style="width: 400px;" /></a>
+<p>次へ、をクリックすると以下のような警告が出ます。</p>
+<a class="reference internal image-reference" href="../../_images/chdam02.png"><img alt="アイテムに関する警告" class="align-center" src="../../_images/chdam02.png" style="width: 400px;" /></a>
+<p>上書きを選択した後、全てに適用をクリックしてください。しばらくすると、インストールが完了します。</p>
+<a class="reference internal image-reference" href="../../_images/chdam03.png"><img alt="インストールが完了" class="align-center" src="../../_images/chdam03.png" style="width: 400px;" /></a>
+<p>続いて以下の手続きを実行します。</p>
+</div>
+<div class="section" id="id3">
+<h3>2.7.3.2. 日本語リソースの追加<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>日本語リソースは標準で入っていないため、以下から <cite>20-damtoolbar-ja-jp.xml</cite> をダウンロードしてください。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/SitecoreJapan/InstallScript/tree/master/ContentHub/DAM">https://github.com/SitecoreJapan/InstallScript/tree/master/ContentHub/DAM</a></p></li>
+</ul>
+<p>このリソースは、 Core データベースに追加することで、日本語の表記を修正する形となります。</p>
+</div>
+<div class="section" id="id4">
+<h3>2.7.3.3. モジュールの設定<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>コンテンツエディターを開いて、<cite>/sitecore/system/Modules/DAM/Config/DAM connector</cite> のアイテムを選択します。</p>
+<a class="reference internal image-reference" href="../../_images/chdam06.png"><img alt="アイテムの選択" class="align-center" src="../../_images/chdam06.png" style="width: 400px;" /></a>
+<p>日本語バージョンを追加して（共有リソースのため、英語で設定しても同じです）、DAM のインスタンス、検索ページ、Content Hub の Authentication で設定をした ExternalRedirectKeys のキーを設定します。</p>
+<a class="reference internal image-reference" href="../../_images/chdam07.png"><img alt="アイテムの選択" class="align-center" src="../../_images/chdam07.png" style="width: 400px;" /></a>
+<p>これで設定は完了となります。</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>2.7.4. 動作確認<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>リッチテキストエディタを利用して、Sitecore Content Hub にアクセスできるか確認をします。</p>
+<ol class="arabic simple">
+<li><p>インストールすると標準で用意されている <cite>/sitecore/content/Home</cite> のアイテムをコンテンツエディタで選択します。</p></li>
+<li><p><cite>エディターで表示する</cite> をクリックします</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/chdam08.png"><img alt="エディタを表示" class="align-center" src="../../_images/chdam08.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>リッチテキストエディタにボタンが増えていることを確認します（左から５つめ）</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/chdam09.png"><img alt="リボンを確認" class="align-center" src="../../_images/chdam09.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>ボタンをクリックします。ログイン画面が表示された場合は、Sitecore Content Hub のアカウントでログインをしてください。</p></li>
+<li><p>DAM に登録されているアセットが表示されます。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/chdam10.png"><img alt="アセットを確認" class="align-center" src="../../_images/chdam10.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="6">
+<li><p>公開リンクのついているアイテムを選択します</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/chdam11.png"><img alt="アセットの選択" class="align-center" src="../../_images/chdam11.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="7">
+<li><p>利用するアセットを選択すると、挿入された画面を確認することができます。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/chdam12.png"><img alt="画像の挿入" class="align-center" src="../../_images/chdam12.png" style="width: 400px;" /></a>
+<p>OK を押して保存をして、画像のリンクが有効になっていれば、動作検証が完了となります。</p>
 </div>
 </div>
 
@@ -192,10 +303,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="sitecorecmp.html" class="btn btn-neutral float-right" title="2.7. Sitecore Connect for Sitecore CMP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="sitecorecmp.html" class="btn btn-neutral float-right" title="2.8. Sitecore Connect for Sitecore CMP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="salesforcemc.html" class="btn btn-neutral float-left" title="2.5. Sitecore Connect for Salesforce Marketing Cloud" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="salesforcemcbde.html" class="btn btn-neutral float-left" title="2.6. Sitecore Connect for SFMC - Behavioral Data Exchange" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

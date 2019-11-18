@@ -1,5 +1,7 @@
+#####################################
 Sitecore JavaScript Services
-==================================
+#####################################
+
 
 .. index:: Sitecore JavaScript Services
 

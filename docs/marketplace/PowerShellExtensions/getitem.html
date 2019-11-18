@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>アイテムに関するコマンド &mdash; Sitecore クイックスタート  ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="コンテンツのインポート" href="import.html" />
+    <link rel="prev" title="コンテンツのエクスポート" href="export.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Sitecore クイックスタート
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目次</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../93/index.html">Sitecore Experience Platform 9.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">各種ツールに関して</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Sitecore PowerShell Extensions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="additemversion.html">新しいバージョンの追加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="export.html">コンテンツのエクスポート</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">アイテムに関するコマンド</a></li>
+<li class="toctree-l3"><a class="reference internal" href="import.html">コンテンツのインポート</a></li>
+<li class="toctree-l3"><a class="reference internal" href="newrole.html">新しいロールの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="newuser.html">新しいユーザーの作成</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../brightcove/index.html">Brightcove Connector for Sitecore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../EzImporter/index.html">Ez Importer でデータインポート</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sitecore クイックスタート</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">各種ツールに関して</a> &raquo;</li>
+        
+          <li><a href="index.html">Sitecore PowerShell Extensions</a> &raquo;</li>
+        
+      <li>アイテムに関するコマンド</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/marketplace/PowerShellExtensions/getitem.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>アイテムに関するコマンド<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>アイテムを操作するためのコマンドとして、以下のコマンドが用意されています。</p>
+<div class="section" id="get-item">
+<h2>Get-Item<a class="headerlink" href="#get-item" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>アイテムの情報を取得することができます。</p>
+<div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span><span class="nb">Get-Item</span> <span class="n">-Path</span> <span class="s2">&quot;master:\content\home&quot;</span>
+</pre></div>
+</div>
+<p>結果</p>
+<a class="reference internal image-reference" href="../../_images/getitem1.png"><img alt="Get-Item" class="align-center" src="../../_images/getitem1.png" style="width: 400px;" /></a>
+<p>言語を指定する場合は、<cite>-language &quot;en-us&quot;</cite> を追加します。</p>
+<div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span><span class="nb">Get-Item</span> <span class="n">-Path</span> <span class="s2">&quot;master:\content\home&quot;</span> <span class="n">-language</span> <span class="s2">&quot;en-us&quot;</span>
+</pre></div>
+</div>
+<p>結果</p>
+<a class="reference internal image-reference" href="../../_images/getitem2.png"><img alt="Get-Item" class="align-center" src="../../_images/getitem2.png" style="width: 400px;" /></a>
+<p>すべての言語を指定する場合は以下の通り。</p>
+<div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span><span class="nb">Get-Item</span> <span class="n">-Path</span> <span class="s2">&quot;master:\content\home&quot;</span> <span class="n">-language</span> <span class="s2">&quot;*&quot;</span>
+</pre></div>
+</div>
+<p>結果</p>
+<a class="reference internal image-reference" href="../../_images/getitem3.png"><img alt="Get-Item" class="align-center" src="../../_images/getitem3.png" style="width: 400px;" /></a>
+<p>アイテムの情報を表示します</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span><span class="o">-</span><span class="n">Item</span> <span class="o">-</span><span class="n">Path</span> <span class="n">master</span><span class="p">:</span><span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">home</span> <span class="o">-</span><span class="n">Language</span> <span class="n">ja</span><span class="o">-</span><span class="n">jp</span> <span class="o">|</span> <span class="n">Format</span><span class="o">-</span><span class="n">Table</span> <span class="o">-</span><span class="n">Property</span> <span class="n">DisplayName</span><span class="p">,</span> <span class="n">Language</span><span class="p">,</span> <span class="n">Id</span><span class="p">,</span> <span class="n">Version</span><span class="p">,</span> <span class="n">Title</span><span class="p">,</span> <span class="n">Text</span>
+</pre></div>
+</div>
+<p>結果</p>
+<a class="reference internal image-reference" href="../../_images/getitem4.png"><img alt="Get-Item" class="align-center" src="../../_images/getitem4.png" style="width: 400px;" /></a>
+<p>Sitecore Query を利用して取得することもできます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span><span class="o">-</span><span class="n">Item</span> <span class="o">-</span><span class="n">Path</span> <span class="n">master</span><span class="p">:</span> <span class="o">-</span><span class="n">Query</span> <span class="s2">&quot;/sitecore/content//*[@@templatename=&#39;Sample Item&#39;]&quot;</span>
+</pre></div>
+</div>
+<p>結果</p>
+<a class="reference internal image-reference" href="../../_images/getitem5.png"><img alt="Get-Item" class="align-center" src="../../_images/getitem5.png" style="width: 400px;" /></a>
+<p>Sitecore Query で取得したデータを一覧で表示</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span><span class="o">-</span><span class="n">Item</span> <span class="o">-</span><span class="n">Path</span> <span class="n">master</span><span class="p">:</span> <span class="o">-</span><span class="n">Query</span> <span class="s2">&quot;/sitecore/content//*[@@templatename=&#39;Sample Item&#39;]&quot;</span> <span class="o">|</span> <span class="n">Format</span><span class="o">-</span><span class="n">Table</span> <span class="o">-</span><span class="n">Property</span> <span class="n">DisplayName</span><span class="p">,</span> <span class="n">Language</span><span class="p">,</span> <span class="n">Id</span><span class="p">,</span> <span class="n">Version</span><span class="p">,</span> <span class="n">ItemPath</span><span class="p">,</span> <span class="n">TemplateName</span>
+</pre></div>
+</div>
+<p>結果</p>
+<a class="reference internal image-reference" href="../../_images/getitem6.png"><img alt="Get-Item" class="align-center" src="../../_images/getitem6.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="get-childitem">
+<h2>Get-ChildItem<a class="headerlink" href="#get-childitem" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>アイテムの子アイテムに関して取得することができます</p>
+<div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span><span class="nb">Get-ChildItem</span> <span class="n">-Path</span> <span class="s2">&quot;master:\content\home&quot;</span> <span class="n">-Recurse</span>
+</pre></div>
+</div>
+<p>結果</p>
+<a class="reference internal image-reference" href="../../_images/getitem7.png"><img alt="Get-ChildItem" class="align-center" src="../../_images/getitem7.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="new-item">
+<h2>New-Item<a class="headerlink" href="#new-item" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>新しいアイテムを作成するコマンドです。</p>
+<div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span><span class="nb">New-Item</span> <span class="n">-Path</span> <span class="s2">&quot;master:\content\home&quot;</span> <span class="n">-Name</span> <span class="s2">&quot;Demo&quot;</span> <span class="n">-ItemType</span> <span class="s2">&quot;Sample/Sample Item&quot;</span>
+<span class="c"># or</span>
+<span class="nb">New-Item</span> <span class="n">-Path</span> <span class="s2">&quot;master:\content\home&quot;</span> <span class="n">-Name</span> <span class="s2">&quot;Demo&quot;</span> <span class="n">-ItemType</span> <span class="s2">&quot;{76036F5E-CBCE-46D1-AF0A-4143F9B557AA}&quot;</span>
+</pre></div>
+</div>
+<p>結果</p>
+<a class="reference internal image-reference" href="../../_images/getitem8.png"><img alt="New-Item" class="align-center" src="../../_images/getitem8.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="remove-item">
+<h2>Remove-Item<a class="headerlink" href="#remove-item" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>アイテムを削除するためのコマンドです。</p>
+<div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span><span class="nb">Get-Item</span> <span class="n">-Path</span> <span class="s2">&quot;master:\content\home\Demo&quot;</span> <span class="p">|</span> <span class="nb">Remove-Item</span>
+</pre></div>
+</div>
+<p>結果</p>
+<a class="reference internal image-reference" href="../../_images/getitem9.png"><img alt="Remove-Item" class="align-center" src="../../_images/getitem9.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="move-item">
+<h2>Move-Item<a class="headerlink" href="#move-item" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>アイテムを移動させるためのコマンドです。</p>
+<div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span><span class="nb">Move-Item</span> <span class="n">-Path</span> <span class="s2">&quot;master:\content\home\Demo&quot;</span> <span class="n">-Destination</span> <span class="s2">&quot;master:\content\home\Demo1&quot;</span>
+</pre></div>
+</div>
+<p>結果</p>
+<a class="reference internal image-reference" href="../../_images/getitema.png"><img alt="Move-Item" class="align-center" src="../../_images/getitema.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="copy-item">
+<h2>Copy-Item<a class="headerlink" href="#copy-item" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="highlight-PowerShell notranslate"><div class="highlight"><pre><span></span><span class="nb">Copy-Item</span> <span class="n">-Path</span> <span class="s2">&quot;master:\content\home\Demo1&quot;</span> <span class="n">-Destination</span> <span class="s2">&quot;master:\content\home\Demo2&quot;</span>
+</pre></div>
+</div>
+<p>結果</p>
+<a class="reference internal image-reference" href="../../_images/getitemb.png"><img alt="Copy-Item" class="align-center" src="../../_images/getitemb.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="id2">
+<h2>参考記事<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://doc.sitecorepowershell.com/working-with-items">Working with Items</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="import.html" class="btn btn-neutral float-right" title="コンテンツのインポート" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="export.html" class="btn btn-neutral float-left" title="コンテンツのエクスポート" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sitecore Japan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

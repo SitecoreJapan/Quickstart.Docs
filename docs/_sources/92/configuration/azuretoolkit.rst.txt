@@ -1,8 +1,10 @@
+########################
 Sitecore Azure Toolkit
-========================
+########################
 
 Sitecore は Microsoft Azure の PaaS に対応しており、展開方法としては Marketplace および Azure Toolkit を利用した展開ができるようになっています。ここでは Azure Toolkit を利用して展開する手順に関してまとめています。詳細に関しては、このページの一番下にある参考サイトをご覧ください。
 
+*********************************
 展開をするにあたって準備するもの
 *********************************
 
@@ -17,7 +19,7 @@ Sample Powershell Script に関しては、README.md の中に含まれている
 
 .. note:: 本文書は Sitecore Experience Platform 9.1 Initial Release をベースに紹介をしています。
 
-
+*********************************
 テンプレートのダウンロード
 *********************************
 
@@ -27,7 +29,7 @@ Github で公開されている `Sitecore-Azure-Quickstart-Templates <https://gi
 
   C:\projects\Sitecore-Azure-Quickstart-Templates
 
-
+*******************************************
 Microsoft Azure Powershell のインストール
 *******************************************
 
@@ -42,8 +44,9 @@ Web Platform Installer を利用して Microsoft Azure Powershell をインス�
 
 Web Deploy 3.6 for Hosting Service も併せてインストールしてください。
 
+********************************
 Sitecore Azure Toolkit の展開
-***********************************
+********************************
 
 ダウンロードをした Sitecore Azure Toolkit を以下のフォルダに展開します。
 
@@ -93,6 +96,7 @@ Sitecore Azure Toolkit の展開
 
 これでツールの準備ができました。
 
+***********************
 ファイルの準備
 ***********************
 
@@ -109,6 +113,7 @@ Sitecore Azure Toolkit の展開
 
 続いて Azure の Blob にすでにダウンロード済のファイルを展開して、アップロードをします。
 
+************************************
 実行ファイル、パラメーターの設定
 ************************************
 
@@ -169,8 +174,9 @@ xcSingleMsDeployPackageUrl  Sitecore xConnect のパッケージ URL
 
 アップしたファイルの URL を上記のように設定する形です。
 
+****************
 展開を実行する
-***********************************************
+****************
 
 上記のように準備した後、あとはスクリプトを実行するのみです。まずは Powershell のコンソールから Azure にログインを実行します。
 
@@ -186,8 +192,9 @@ xcSingleMsDeployPackageUrl  Sitecore xConnect のパッケージ URL
 
 上記の設定がすべてクリアできていれば、40分ほどで展開が完了します。
 
+***********
 参考サイト
-***********************************************
+***********
 
 * `Sitecore Azure Toolkit モジュールダウンロード <https://dev.sitecore.net/Downloads/Sitecore_Azure_Toolkit.aspx>`_
 * Github `Sitecore-Azure-Quickstart-Templates <https://github.com/Sitecore/Sitecore-Azure-Quickstart-Templates>`_

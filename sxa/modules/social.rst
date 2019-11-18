@@ -14,9 +14,9 @@ Twitter
 
 * [Twitter サンプル](https://sxa.cmsdemo.jp/components/other/social/twitter)
 
-**********************
+***************************
 ソーシャルメディアシェア
-**********************
+***************************
 
 * [ソーシャルメディアシェア サンプル](https://sxa.cmsdemo.jp/components/other/social/social-media-share)
 

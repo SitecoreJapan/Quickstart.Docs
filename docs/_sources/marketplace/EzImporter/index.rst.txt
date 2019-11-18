@@ -1,9 +1,13 @@
+#####################################
 Ez Importer でデータインポート
-===============================
+#####################################
+
 
 ここでは Sitecore Marketplace で提供されている Ez Impoter に関する情報を提供しています。このモジュールを利用することで、Excel ファイルで定義されているデータが一括で Sitecore のアイテムとしてインポートされる形となります。
 
 .. note:: Sitecore Experience Platform 9.1 Initial Release での動作検証となります。
+
+.. tip:: PowerShell Extensions が便利です :doc:`コンテンツのインポート </marketplace/PowerShellExtensions/import>` を参照してください。
 
 モジュールのダウンロード
 ************************
