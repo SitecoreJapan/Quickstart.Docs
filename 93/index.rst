@@ -18,8 +18,8 @@ Sitecore Experience Platform 9.3
     install/index
     modules/index
     configuration/index
-    guide/index
     demo/index
+
 
 .. note:: 特に記載がない場合は Sitecore Experience Platform 9.3 Initial Release を対象とした文書となっています。
 
