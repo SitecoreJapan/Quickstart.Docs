@@ -447,3 +447,46 @@ xConnect コンタクトとマーケティングリスト
 Salesforce Marketing Cloud データエクステンション 連携に関して
 ******************************************************************
 
+Sitecore が持っているデータと Salesforce Marketing Cloud の連携している項目に関しては、作成したテナントの `Providers/SFMC/Object Definitions` に定義が保存されています。どの項目が連携しているか、以下の項目を参照してください。
+
+
+Email Studio テンプレート
+==============================
+
+`Email Studio テンプレート` の項目に関しては、テナントの `Providers/SFMC/Object Definitions/Data Extension Templates/Email Studio Template` にアイテムがあります。
+
+.. image:: images/sfmcbde35.png
+   :align: center
+   :alt: Sitecore のテナントの設定
+
+オーディエンス定義
+======================
+
+`オーディエンス定義`  の項目に関しては、テナントの `Providers/SFMC/Object Definitions/Data Extensions/Audience Definition` にアイテムがあります。
+
+.. image:: images/sfmcbde36.png
+   :align: center
+   :alt: Sitecore のテナントの設定
+
+オーディエンス メンバーシップ
+================================
+
+`オーディエンス メンバーシップ`  の項目に関しては、テナントの `Providers/SFMC/Object Definitions/Data Extensions/Audience Definition` にアイテムがあります。
+
+.. image:: images/sfmcbde37.png
+   :align: center
+   :alt: Sitecore のテナントの設定
+
+
+xDB コンタクト
+===============
+
+`xDB コンタクト` の項目に関しては、テナントの `Providers/SFMC/Object Definitions/Data Extensions/Audience Definition` にアイテムがあります。
+
+.. image:: images/sfmcbde38.png
+   :align: center
+   :alt: Sitecore のテナントの設定
+
+
+上記の項目に関しての拡張方法は、別途ガイダンスが提供されています。
+
