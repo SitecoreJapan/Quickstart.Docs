@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.5.3. ヘッダーの作成 &mdash; Sitecore クイックスタート  ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="1.5.4. サイトの構造を確認する" href="partialdesignsxasiteinfo.html" />
+    <link rel="prev" title="1.5.2. フッターの作成" href="partialdesignfooter.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Sitecore クイックスタート
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目次</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../93/index.html">Sitecore Experience Platform 9.3</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore Experience Accelerator</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">1. サイトを作る</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="createweb.html">1.1. テナントの作成、サイトの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="createtemplate.html">1.2. アイテムの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pagedesign.html">1.3. ページデザインの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pageitem.html">1.4. ページアイテムの作成</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="partialdesign.html">1.5. パーシャルデザインの作成</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="partialdesignbody.html">1.5.1. ボディの作成</a></li>
+<li class="toctree-l4"><a class="reference internal" href="partialdesignfooter.html">1.5.2. フッターの作成</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">1.5.3. ヘッダーの作成</a></li>
+<li class="toctree-l4"><a class="reference internal" href="partialdesignsxasiteinfo.html">1.5.4. サイトの構造を確認する</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">2. SXA モジュールについて</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../json/index.html">3. SXA における JSON の活用</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sitecore クイックスタート</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Sitecore Experience Accelerator</a> &raquo;</li>
+        
+          <li><a href="index.html">1. サイトを作る</a> &raquo;</li>
+        
+          <li><a href="partialdesign.html">1.5. パーシャルデザインの作成</a> &raquo;</li>
+        
+      <li>1.5.3. ヘッダーの作成</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/sxa/firststep/partialdesignheader.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>1.5.3. ヘッダーの作成<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>## パーシャルデザインのアイテム作成</p>
+<p>まずはヘッダーエリアを作成するために、ヘッダーのパーシャルデザインを作成することになります。メニューの「エクスペリエンスアクセラレーター」を開いて、「パーシャルデザイン」のアイコンをクリックすると、作成するためのメニューが表示されます。</p>
+<p>&lt;img src=&quot;images/header01.png&quot; alt=&quot;メニュー&quot; /&gt;</p>
+<p>「パーシャルデザインを追加」をクリックすると、ダイアログが開きます。今回作成するパーシャルデザインはヘッダーになるため、<cite>Partial Design</cite> を選択してアイテム名を <cite>Header</cite> とします。入力したら OK をクリックします。</p>
+<p>&lt;img src=&quot;images/header02.png&quot; alt=&quot;ヘッダーアイテムの作成&quot; /&gt;</p>
+<p>作成しているアイテムが何かを確認しやすくするために、メニューの項目から「表示」－「ナビゲーションバー」をチェックします。</p>
+<p>&lt;img src=&quot;images/header03.png&quot; alt=&quot;ナビゲーションバーの表示&quot; /&gt;</p>
+<p>## モジュールの配置</p>
+<p>ヘッダーエリアにモジュールを配置していきます。ヘッダーエリアは、クリックをするとヘッダーと表示される場所となります。</p>
+<p>&lt;img src=&quot;images/header04.png&quot; alt=&quot;ヘッダー&quot; /&gt;</p>
+<p>なおモジュールは右側のエリアに一覧が隠れており、＜ のアイコンをクリックすると表示されます。</p>
+<p>&lt;img src=&quot;images/header05.png&quot; alt=&quot;ツールボックス&quot; /&gt;</p>
+<p>「ページ構造」のグループにある「スプリッタ（列）」をドラッグ＆ドロップでヘッダーエリアに配置してください。</p>
+<p>&lt;img src=&quot;images/header06.png&quot; alt=&quot;ドラッグ＆ドロップ&quot; /&gt;</p>
+<p>スプリッターが配置されると、以下のような画面になります。</p>
+<p>&lt;img src=&quot;images/header07.png&quot; alt=&quot;スプリッター配置&quot; /&gt;</p>
+<p>スプリッターのエリアは2つ出来上がっており、カラムを選択することが可能です（下図は左側のカラムを選択）。</p>
+<p>&lt;img src=&quot;images/header08.png&quot; alt=&quot;カラム&quot; /&gt;</p>
+<p>スプリッターの基本設定としては、12分割する形となっており、配置したときには２つは 6 のサイズが割り当てられています。今回は左側にロゴを配置する、という形で左側を 4 、右側を 8 というサイズに変更します。まず、左側のカラムを選択した際に、以下のボタンをクリックしてください。</p>
+<p>&lt;img src=&quot;images/header09.png&quot; alt=&quot;アイコン&quot; /&gt;</p>
+<p>以下のようなダイアログが表示されます。</p>
+<p>&lt;img src=&quot;images/header10.png&quot; alt=&quot;ダイアログ&quot; /&gt;</p>
+<p>今回は左側のカラムを 4 に設定するために、一番上の数字を 6 から 4 に変更をして、OK を押します。すると、サイズが変わることがわかります。</p>
+<p>&lt;img src=&quot;images/header11.png&quot; alt=&quot;設定後&quot; /&gt;</p>
+<p>同じ手順を右側のカラムに対しても変更します。右側のカラムは 6 を 8 に変更します。</p>
+<p>&lt;img src=&quot;images/header12.png&quot; alt=&quot;設定後その２&quot; /&gt;</p>
+<p>カラムの設定変更を完了させたので、続いてモジュールを配置していきます。左側には「メディア」グループにある「画像」をドラッグ＆ドロップします。</p>
+<p>&lt;img src=&quot;images/header13.png&quot; alt=&quot;画像を配置&quot; /&gt;</p>
+<p>右側のエリアには「検索」グループにある「検索ボックス」をドラッグ＆ドロップします。</p>
+<p>&lt;img src=&quot;images/header14.png&quot; alt=&quot;検索ボックスを配置&quot; /&gt;</p>
+<p>ダイアログが開きますが、今回は「デフォルト」を選択して OK　を押してください。</p>
+<p>&lt;img src=&quot;images/header15.png&quot; alt=&quot;デフォルトを設定&quot; /&gt;</p>
+<p>結果は以下のような画面となります。</p>
+<p>&lt;img src=&quot;images/header16.png&quot; alt=&quot;配置した結果&quot; /&gt;</p>
+<p>左上の保存のアイコンをクリックしてください。ここまで作成した内容を保存することができます。</p>
+<p>## ナビゲーションの追加</p>
+<p>ここでグローバルメニューをヘッダーエリアに追加します。ナビゲーションアイテムを選択し、ドラッグ＆ドロップでスプリッターの下に配置します。</p>
+<p>&lt;img src=&quot;images/header17.png&quot; alt=&quot;ナビゲーションを配置&quot; /&gt;</p>
+<p>配置すると、すでに作成をしておいたアイテムをベースとしたナビゲーションが作成されています。</p>
+<p>&lt;img src=&quot;images/header18.png&quot; alt=&quot;ナビゲーションの情報を参照&quot; /&gt;</p>
+<p>ナビゲーションの設定を変更するために、カラムのサイズを変更したときのアイコンを改めてクリックします。</p>
+<p>&lt;img src=&quot;images/header09.png&quot; alt=&quot;アイコン&quot; /&gt;</p>
+<p>ここでは「スタイリング」の中にある設定で、「メインナビゲーション - 垂直ドロップダウン」を選択します。</p>
+<p>&lt;img src=&quot;images/header19.png&quot; alt=&quot;設定を変更&quot; /&gt;</p>
+<p>変更をすると、ドロップダウンメニューに切り替わります。</p>
+<p>&lt;img src=&quot;images/header20.png&quot; alt=&quot;メニュー項目の変更&quot; /&gt;</p>
+<p>これでヘッダーエリアの作業を一度終了させます。</p>
+<p>---
+[目次に戻る](./) | 次 -&gt; [フッターの作成](footer.md)</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="partialdesignsxasiteinfo.html" class="btn btn-neutral float-right" title="1.5.4. サイトの構造を確認する" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="partialdesignfooter.html" class="btn btn-neutral float-left" title="1.5.2. フッターの作成" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sitecore Japan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
