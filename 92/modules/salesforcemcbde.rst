@@ -231,6 +231,7 @@ Sitecore の設定を追加していきます。
    :width: 400px
    :alt: トラブルシューティングツールを実行
 
+
 xConnect のエンドポイントの設定
 ================================
 
@@ -266,4 +267,183 @@ xConnect のエンドポイントの設定
    :align: center
    :width: 400px
    :alt: トラブルシューティングツールを実行
+
+
+パイプラインバッチの実行
+================================
+
+作成したテナントの `Pipeline Batches` のアイテムの下に、Salesforce Marketing Cloud 連携させるためのバッチが準備されています。
+
+.. image:: images/sfmcbde19.png
+   :align: center
+   :width: 400px
+   :alt: パイプラインバッチ
+
+各バッチのアイテムを選択すると、リボンに「データ交換」のリボンが表示されて、「パイプラインバッチを実行」を選択することができます。
+
+.. image:: images/sfmcbde20.png
+   :align: center
+   :width: 400px
+   :alt: パイプラインバッチを実行
+
+
+********************************************************
+Sitecore のデータと Salesforce Data Extensions のリンク
+********************************************************
+
+実際に利用するにあたって、Sitecore のデータと Salesforce Marketing Cloud と連携させる必要があります。ここではその手順を紹介します。
+
+.. note:: パイプラインバッチの「設定 - SFMC アカウントインフラストラクチャー」、「xConnect コンタクトをプッシュ」、「マーケティングリストをプッシュ」を実行してください。
+
+
+コンタクトデータのリンク作成
+=============================
+
+1. Salesforce Marketing Cloud にログインをします。
+2. Audience Build の項目にある Contact Builder を実行します
+
+.. image:: images/sfmcbde21.png
+   :align: center
+   :width: 400px
+   :alt: コンタクトビルダーを選択
+
+3. データデザイナーが起動します
+
+.. image:: images/sfmcbde22.png
+   :align: center
+   :width: 400px
+   :alt: データデザイナー
+
+4. 「属性グループの作成」をクリックします
+
+.. image:: images/sfmcbde23.png
+   :align: center
+   :alt: 属性グループの作成
+
+5. 属性グループに名前を設定します。アイコンはわかりやすいものを選択してください。
+
+.. image:: images/sfmcbde24.png
+   :align: center
+   :width: 400px
+   :alt: 名前の設定
+
+6. 作成した属性グループにおいて「データエクステンションのリンク」をクリックします。
+
+.. image:: images/sfmcbde25.png
+   :align: center
+   :width: 400px
+   :alt: 名前の設定
+
+7. 新しいウィンドウで /Data Extensions/Sitecore を選択、xDB Contact をクリックします
+
+.. image:: images/sfmcbde26.png
+   :align: center
+   :width: 400px
+   :alt: xDB Conact を選択
+
+8. 顧客データの「Contact Key」とxDB Contact の「contactKey」をリンクさせます。右上にある設定は「One」を選択してください。
+
+.. image:: images/sfmcbde27.png
+   :align: center
+   :width: 400px
+   :alt: Contact Key の設定
+
+9. 「保存」をしてコンタクトデータのリンク作成を完了させます
+
+
+コンタクトデータをメンバーシップデータに拡張する
+================================================
+
+上記の手順から続けて、Sitecore の属性グループを編集していきます。
+
+1. 作成した属性グループを開きます
+2. xDB Contact の右上にある拡張ボタンをクリックします。
+
+.. image:: images/sfmcbde28.png
+   :align: center
+   :width: 400px
+   :alt: 拡張アイコンをクリック
+
+3. データエクステンションのリンク、の画面で 「データエクステンション」－「Sitecore」－「Journeys」の下にある `Audience Membership` を選択します
+
+.. image:: images/sfmcbde29.png
+   :align: center
+   :width: 400px
+   :alt: Audience Membership
+
+4. xDB Contact の設定は「One」を選択したまま contactKey を選択、Audience Membership に関しては Many を選択した上で Contact Key を選択できるようになっている段階で、モジュールのインストールは成功しています。
+
+.. image:: images/sfmcbde30.png
+   :align: center
+   :width: 400px
+   :alt: Audience Membership の設定
+
+5. 作成をした `Audience Membership` の拡張リンクをクリックして、右側のダイアログでは「Sitecore」ー「Journeys」の下にある `Audience Definition` を選択します。
+
+.. image:: images/sfmcbde31.png
+   :align: center
+   :width: 400px
+   :alt: 設定
+
+6. Audiende Membership の項目は `Many` の `Segment Id` を、合わせて Audience Definition も `Many` の `Segument Id` を選択してください。
+
+.. image:: images/sfmcbde32.png
+   :align: center
+   :width: 400px
+   :alt: Segment Id をリンクする
+
+これで作成は完了です。
+
+
+****************************
+パイプラインバッチについて
+****************************
+
+ここからはパイプラインバッチの設定について紹介していきます。なお、Sitecore 側の設定に関しては作成したテナントの `Providers/SFMC/Object Definitions/Data Folders` のアイテムに設定が入っているため、外部キーなどを変更する必要があれば、このアイテムを変更してください。
+
+.. image:: images/sfmcbde33.png
+   :align: center
+   :width: 400px
+   :alt: Sitecore のテナントの設定
+
+xConnect コンタクトをプッシュ
+=============================
+
+`/Data Extension/Sitecore` に設定されています。
+
+.. image:: images/sfmcbde34.png
+   :align: center
+   :alt: データエクステンションの xDB Contact
+
+標準では xDB のコンタクトと以下の項目が連携します。
+
+* Personal info
+* Preferred email address
+* Preferred phone number
+* Preferred address
+* Engagement measures
+
+マーケティングリストをプッシュ
+====================================
+
+以下の項目がプッシュで展開されます。
+
+====================== ================== ===================================================================================
+SFMC アプリケーション   プッシュデータ      SFMC におけるデータ拡張 
+====================== ================== ===================================================================================
+Journey Builder         List definitions   Audience Definitions, in /Data Extensions/Sitecore/Journeys
+Journey Builder         List memberships   Audience Memberships, in /Data Extensions/Sitecore/Journeys
+Email Studio            List definitions   A separate data extension for each list, in /Data Extensions/Sitecore/Email
+Email Studio            List memberships   Contacts are stored in a flat format, in /Data Extensions/Sitecore/xDB Contacts
+====================== ================== ===================================================================================
+
+
+xConnect コンタクトとマーケティングリスト
+===========================================
+
+このパイプラインバッチは、 `xConnect コンタクトのプッシュ` と `マーケティングリストをプッシュ` を実行するバッチです。
+
+******************************************************************
+Salesforce Marketing Cloud データエクステンション 連携に関して
+******************************************************************
 
