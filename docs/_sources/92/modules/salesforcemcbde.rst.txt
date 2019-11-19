@@ -457,7 +457,7 @@ Email Studio テンプレート
 
 .. image:: images/sfmcbde35.png
    :align: center
-   :alt: Sitecore のテナントの設定
+   :alt: Email Studio テンプレート
 
 オーディエンス定義
 ======================
@@ -466,7 +466,7 @@ Email Studio テンプレート
 
 .. image:: images/sfmcbde36.png
    :align: center
-   :alt: Sitecore のテナントの設定
+   :alt: オーディエンス定義
 
 オーディエンス メンバーシップ
 ================================
@@ -475,7 +475,7 @@ Email Studio テンプレート
 
 .. image:: images/sfmcbde37.png
    :align: center
-   :alt: Sitecore のテナントの設定
+   :alt: オーディエンス メンバーシップ
 
 
 xDB コンタクト
@@ -485,7 +485,7 @@ xDB コンタクト
 
 .. image:: images/sfmcbde38.png
    :align: center
-   :alt: Sitecore のテナントの設定
+   :alt: xDB コンタクト
 
 
 上記の項目に関しての拡張方法は、別途ガイダンスが提供されています。
