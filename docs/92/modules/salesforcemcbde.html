@@ -397,6 +397,142 @@
 </ol>
 <a class="reference internal image-reference" href="../../_images/sfmcbde17.png"><img alt="トラブルシューティングツールを実行" class="align-center" src="../../_images/sfmcbde17.png" style="width: 400px;" /></a>
 </div>
+<div class="section" id="id6">
+<h3>2.6.4.4. パイプラインバッチの実行<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>作成したテナントの <cite>Pipeline Batches</cite> のアイテムの下に、Salesforce Marketing Cloud 連携させるためのバッチが準備されています。</p>
+<a class="reference internal image-reference" href="../../_images/sfmcbde19.png"><img alt="パイプラインバッチ" class="align-center" src="../../_images/sfmcbde19.png" style="width: 400px;" /></a>
+<p>各バッチのアイテムを選択すると、リボンに「データ交換」のリボンが表示されて、「パイプラインバッチを実行」を選択することができます。</p>
+<a class="reference internal image-reference" href="../../_images/sfmcbde20.png"><img alt="パイプラインバッチを実行" class="align-center" src="../../_images/sfmcbde20.png" style="width: 400px;" /></a>
+</div>
+</div>
+<div class="section" id="sitecore-salesforce-data-extensions">
+<h2>2.6.5. Sitecore のデータと Salesforce Data Extensions のリンク<a class="headerlink" href="#sitecore-salesforce-data-extensions" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>実際に利用するにあたって、Sitecore のデータと Salesforce Marketing Cloud と連携させる必要があります。ここではその手順を紹介します。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>パイプラインバッチの「設定 - SFMC アカウントインフラストラクチャー」、「xConnect コンタクトをプッシュ」、「マーケティングリストをプッシュ」を実行してください。</p>
+</div>
+<div class="section" id="id7">
+<h3>2.6.5.1. コンタクトデータのリンク作成<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Salesforce Marketing Cloud にログインをします。</p></li>
+<li><p>Audience Build の項目にある Contact Builder を実行します</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/sfmcbde21.png"><img alt="コンタクトビルダーを選択" class="align-center" src="../../_images/sfmcbde21.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>データデザイナーが起動します</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/sfmcbde22.png"><img alt="データデザイナー" class="align-center" src="../../_images/sfmcbde22.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>「属性グループの作成」をクリックします</p></li>
+</ol>
+<img alt="属性グループの作成" class="align-center" src="../../_images/sfmcbde23.png" />
+<ol class="arabic simple" start="5">
+<li><p>属性グループに名前を設定します。アイコンはわかりやすいものを選択してください。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/sfmcbde24.png"><img alt="名前の設定" class="align-center" src="../../_images/sfmcbde24.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="6">
+<li><p>作成した属性グループにおいて「データエクステンションのリンク」をクリックします。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/sfmcbde25.png"><img alt="名前の設定" class="align-center" src="../../_images/sfmcbde25.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="7">
+<li><p>新しいウィンドウで /Data Extensions/Sitecore を選択、xDB Contact をクリックします</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/sfmcbde26.png"><img alt="xDB Conact を選択" class="align-center" src="../../_images/sfmcbde26.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="8">
+<li><p>顧客データの「Contact Key」とxDB Contact の「contactKey」をリンクさせます。右上にある設定は「One」を選択してください。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/sfmcbde27.png"><img alt="Contact Key の設定" class="align-center" src="../../_images/sfmcbde27.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="9">
+<li><p>「保存」をしてコンタクトデータのリンク作成を完了させます</p></li>
+</ol>
+</div>
+<div class="section" id="id8">
+<h3>2.6.5.2. コンタクトデータをメンバーシップデータに拡張する<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>上記の手順から続けて、Sitecore の属性グループを編集していきます。</p>
+<ol class="arabic simple">
+<li><p>作成した属性グループを開きます</p></li>
+<li><p>xDB Contact の右上にある拡張ボタンをクリックします。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/sfmcbde28.png"><img alt="拡張アイコンをクリック" class="align-center" src="../../_images/sfmcbde28.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>データエクステンションのリンク、の画面で 「データエクステンション」－「Sitecore」－「Journeys」の下にある <cite>Audience Membership</cite> を選択します</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/sfmcbde29.png"><img alt="Audience Membership" class="align-center" src="../../_images/sfmcbde29.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>xDB Contact の設定は「One」を選択したまま contactKey を選択、Audience Membership に関しては Many を選択した上で Contact Key を選択できるようになっている段階で、モジュールのインストールは成功しています。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/sfmcbde30.png"><img alt="Audience Membership の設定" class="align-center" src="../../_images/sfmcbde30.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p>作成をした <cite>Audience Membership</cite> の拡張リンクをクリックして、右側のダイアログでは「Sitecore」ー「Journeys」の下にある <cite>Audience Definition</cite> を選択します。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/sfmcbde31.png"><img alt="設定" class="align-center" src="../../_images/sfmcbde31.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="6">
+<li><p>Audiende Membership の項目は <cite>Many</cite> の <cite>Segment Id</cite> を、合わせて Audience Definition も <cite>Many</cite> の <cite>Segument Id</cite> を選択してください。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/sfmcbde32.png"><img alt="Segment Id をリンクする" class="align-center" src="../../_images/sfmcbde32.png" style="width: 400px;" /></a>
+<p>これで作成は完了です。</p>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>2.6.6. パイプラインバッチについて<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ここからはパイプラインバッチの設定について紹介していきます。なお、Sitecore 側の設定に関しては作成したテナントの <cite>Providers/SFMC/Object Definitions/Data Folders</cite> のアイテムに設定が入っているため、外部キーなどを変更する必要があれば、このアイテムを変更してください。</p>
+<a class="reference internal image-reference" href="../../_images/sfmcbde33.png"><img alt="Sitecore のテナントの設定" class="align-center" src="../../_images/sfmcbde33.png" style="width: 400px;" /></a>
+<div class="section" id="id10">
+<h3>2.6.6.1. xConnect コンタクトをプッシュ<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><cite>/Data Extension/Sitecore</cite> に設定されています。</p>
+<img alt="データエクステンションの xDB Contact" class="align-center" src="../../_images/sfmcbde34.png" />
+<p>標準では xDB のコンタクトと以下の項目が連携します。</p>
+<ul class="simple">
+<li><p>Personal info</p></li>
+<li><p>Preferred email address</p></li>
+<li><p>Preferred phone number</p></li>
+<li><p>Preferred address</p></li>
+<li><p>Engagement measures</p></li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3>2.6.6.2. マーケティングリストをプッシュ<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>以下の項目がプッシュで展開されます。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 15%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>SFMC アプリケーション</p></th>
+<th class="head"><p>プッシュデータ</p></th>
+<th class="head"><p>SFMC におけるデータ拡張</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Journey Builder</p></td>
+<td><p>List definitions</p></td>
+<td><p>Audience Definitions, in /Data Extensions/Sitecore/Journeys</p></td>
+</tr>
+<tr class="row-odd"><td><p>Journey Builder</p></td>
+<td><p>List memberships</p></td>
+<td><p>Audience Memberships, in /Data Extensions/Sitecore/Journeys</p></td>
+</tr>
+<tr class="row-even"><td><p>Email Studio</p></td>
+<td><p>List definitions</p></td>
+<td><p>A separate data extension for each list, in /Data Extensions/Sitecore/Email</p></td>
+</tr>
+<tr class="row-odd"><td><p>Email Studio</p></td>
+<td><p>List memberships</p></td>
+<td><p>Contacts are stored in a flat format, in /Data Extensions/Sitecore/xDB Contacts</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id12">
+<h3>2.6.6.3. xConnect コンタクトとマーケティングリスト<a class="headerlink" href="#id12" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>このパイプラインバッチは、 <cite>xConnect コンタクトのプッシュ</cite> と <cite>マーケティングリストをプッシュ</cite> を実行するバッチです。</p>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>2.6.7. Salesforce Marketing Cloud データエクステンション 連携に関して<a class="headerlink" href="#id13" title="このヘッドラインへのパーマリンク">¶</a></h2>
 </div>
 </div>
 
