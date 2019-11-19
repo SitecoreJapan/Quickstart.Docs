@@ -287,8 +287,9 @@ xConnect のエンドポイントの設定
    :alt: パイプラインバッチを実行
 
 
+********************************************************
 Sitecore のデータと Salesforce Data Extensions のリンク
-===========================================================
+********************************************************
 
 実際に利用するにあたって、Sitecore のデータと Salesforce Marketing Cloud と連携させる必要があります。ここではその手順を紹介します。
 
@@ -296,7 +297,7 @@ Sitecore のデータと Salesforce Data Extensions のリンク
 
 
 コンタクトデータのリンク作成
-----------------------------
+=============================
 
 1. Salesforce Marketing Cloud にログインをします。
 2. Audience Build の項目にある Contact Builder を実行します
@@ -317,7 +318,6 @@ Sitecore のデータと Salesforce Data Extensions のリンク
 
 .. image:: images/sfmcbde23.png
    :align: center
-   :width: 400px
    :alt: 属性グループの作成
 
 5. 属性グループに名前を設定します。アイコンはわかりやすいものを選択してください。
@@ -352,7 +352,7 @@ Sitecore のデータと Salesforce Data Extensions のリンク
 
 
 コンタクトデータをメンバーシップデータに拡張する
-------------------------------------------------
+================================================
 
 上記の手順から続けて、Sitecore の属性グループを編集していきます。
 
@@ -363,3 +363,122 @@ Sitecore のデータと Salesforce Data Extensions のリンク
    :align: center
    :width: 400px
    :alt: 拡張アイコンをクリック
+
+3. データエクステンションのリンク、の画面で 「データエクステンション」－「Sitecore」－「Journeys」の下にある `Audience Membership` を選択します
+
+.. image:: images/sfmcbde29.png
+   :align: center
+   :width: 400px
+   :alt: Audience Membership
+
+4. xDB Contact の設定は「One」を選択したまま contactKey を選択、Audience Membership に関しては Many を選択した上で Contact Key を選択できるようになっている段階で、モジュールのインストールは成功しています。
+
+.. image:: images/sfmcbde30.png
+   :align: center
+   :width: 400px
+   :alt: Audience Membership の設定
+
+5. 作成をした `Audience Membership` の拡張リンクをクリックして、右側のダイアログでは「Sitecore」ー「Journeys」の下にある `Audience Definition` を選択します。
+
+.. image:: images/sfmcbde31.png
+   :align: center
+   :width: 400px
+   :alt: 設定
+
+6. Audiende Membership の項目は `Many` の `Segment Id` を、合わせて Audience Definition も `Many` の `Segument Id` を選択してください。
+
+.. image:: images/sfmcbde32.png
+   :align: center
+   :width: 400px
+   :alt: Segment Id をリンクする
+
+これで作成は完了です。
+
+
+****************************
+パイプラインバッチについて
+****************************
+
+ここからはパイプラインバッチの設定について紹介していきます。なお、Sitecore 側の設定に関しては作成したテナントの `Providers/SFMC/Object Definitions/Data Folders` のアイテムに設定が入っているため、外部キーなどを変更する必要があれば、このアイテムを変更してください。
+
+.. image:: images/sfmcbde33.png
+   :align: center
+   :width: 400px
+   :alt: Sitecore のテナントの設定
+
+xConnect コンタクトをプッシュ
+=============================
+
+`/Data Extension/Sitecore` に設定されています。
+
+.. image:: images/sfmcbde34.png
+   :align: center
+   :alt: データエクステンションの xDB Contact
+
+標準では xDB のコンタクトと以下の項目が連携します。
+
+* Personal info
+* Preferred email address
+* Preferred phone number
+* Preferred address
+* Engagement measures
+
+マーケティングリストをプッシュ
+====================================
+
+以下の項目がプッシュで展開されます。
+
+====================== ================== ===================================================================================
+SFMC アプリケーション   プッシュデータ      SFMC におけるデータ拡張 
+====================== ================== ===================================================================================
+Journey Builder         List definitions   Audience Definitions, in /Data Extensions/Sitecore/Journeys
+Journey Builder         List memberships   Audience Memberships, in /Data Extensions/Sitecore/Journeys
+Email Studio            List definitions   A separate data extension for each list, in /Data Extensions/Sitecore/Email
+Email Studio            List memberships   Contacts are stored in a flat format, in /Data Extensions/Sitecore/xDB Contacts
+====================== ================== ===================================================================================
+
+
+xConnect コンタクトとマーケティングリスト
+===========================================
+
+このパイプラインバッチは、 `xConnect コンタクトのプッシュ` と `マーケティングリストをプッシュ` を実行するバッチです。
+
+******************************************************************
+Salesforce Marketing Cloud データエクステンション 連携に関して
+******************************************************************
+
+Sitecore が持っているデータに対して、
+
+.. image:: images/sfmcbde34.png
+   :align: center
+   :width: 400px
+   :alt: Sitecore のテナントの設定
+
+Email Studio Template
+
+.. image:: images/sfmcbde35.png
+   :align: center
+   :width: 400px
+   :alt: Sitecore のテナントの設定
+
+Audience Definition
+
+.. image:: images/sfmcbde36.png
+   :align: center
+   :width: 400px
+   :alt: Sitecore のテナントの設定
+
+Audience Membership
+
+.. image:: images/sfmcbde37.png
+   :align: center
+   :width: 400px
+   :alt: Sitecore のテナントの設定
+
+
+xDB Contact 
+
+.. image:: images/sfmcbde38.png
+   :align: center
+   :width: 400px
+   :alt: Sitecore のテナントの設定
