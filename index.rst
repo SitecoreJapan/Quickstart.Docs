@@ -15,7 +15,6 @@ Sitecore クイックスタートでは、インストールの手順、モジ�
 
     readme
     93/index
-    guide/index
     sxa/index
     jss/index
     marketplace/index
