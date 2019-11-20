@@ -4,6 +4,7 @@
 
 アイテムを操作するためのコマンドとして、以下のコマンドが用意されています。
 
+***********
 Get-Item
 ***********
 
@@ -88,6 +89,16 @@ Sitecore Query で取得したデータを一覧で表示
    :width: 400px
    :alt: Get-Item
 
+
+PowerShell Get-Item 応用編
+=============================
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FWasLJhxbXk" frameborder="0" allowfullscreen></iframe>
+
+
+*****************
 Get-ChildItem
 *****************
 
@@ -104,6 +115,15 @@ Get-ChildItem
    :width: 400px
    :alt: Get-ChildItem
 
+
+PowerShell Get-ChildItem
+=========================
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ALznsgJw-1s" frameborder="0" allowfullscreen></iframe>
+
+*****************
 New-Item
 *****************
 
@@ -122,6 +142,7 @@ New-Item
    :width: 400px
    :alt: New-Item
 
+*****************
 Remove-Item
 *****************
 
@@ -138,6 +159,7 @@ Remove-Item
    :width: 400px
    :alt: Remove-Item
 
+*****************
 Move-Item
 *****************
 
@@ -154,6 +176,7 @@ Move-Item
    :width: 400px
    :alt: Move-Item
 
+*****************
 Copy-Item
 *****************
 
@@ -168,6 +191,16 @@ Copy-Item
    :width: 400px
    :alt: Copy-Item
 
+
+***********************************************************
+PowerShell New-Item, Remove-Item, Move-Item, Copy-Item
+***********************************************************
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/89Vkhl3H5vU" frameborder="0" allowfullscreen></iframe>
+
+*****************
 参考記事
 *****************
 * `Working with Items <https://doc.sitecorepowershell.com/working-with-items>`_

@@ -16,6 +16,17 @@
 
   New-User -Identity saitokoa -Enabled -Password b -Email saitokoa@sitecore.demo -FullName "Saito Koa"
 
+
+****************************
+PowerShell New-User
+****************************
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DAIjqXBMHU4" frameborder="0" allowfullscreen></iframe>
+
+
+**************
 参考ページ
 **************
 
