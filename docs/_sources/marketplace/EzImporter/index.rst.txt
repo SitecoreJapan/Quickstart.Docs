@@ -9,6 +9,7 @@ Ez Importer でデータインポート
 
 .. tip:: PowerShell Extensions が便利です :doc:`コンテンツのインポート </marketplace/PowerShellExtensions/import>` を参照してください。
 
+************************
 モジュールのダウンロード
 ************************
 
@@ -18,6 +19,7 @@ Ez Importer でデータインポート
 
 今回は `Sitecore.EzImporter-1.0.3.zip` をダウンロードします。
 
+************************
 サンプルのダウンロード
 ************************
 
@@ -33,13 +35,14 @@ Ez Importer でデータインポート
    :width: 400px
    :alt: Excel
 
+***********************************
 日本語リソースのダウンロード
 ***********************************
 
 Ez Impoter は英語のリソースのみのため、この Github のリポジトリにて `サンプル日本語リソース <https://github.com/SitecoreJapan/InstallScript/tree/master/demo/EzImporter>`_ を用意しています。ダウンロードして利用してください。
 
 インストール
-************************
+=============
 
 手順は非常にシンプルで、以下の手順を進めることで利用できるようになります。
 
@@ -47,17 +50,26 @@ Ez Impoter は英語のリソースのみのため、この Github のリポジ�
 * `Sitecore.EzImporter.SampleMap-1.0.01.zip` のモジュールインストール
 * 日本語リソースのインポート ( `ez-importer-ja-jp.xml` は Core へ、`ez-importer-master-ja-jp.xml` は Master へ )
 
+************************
 インポート
 ************************
 
 ログイン後の画面に Ez Impoter が 追加されているためクリックします。画面が開いたあとには、ダウンロード、修正済の `Cars-1.0.0.xlsx` のファイルをドラッグ＆ドロップ、コンテンツのインポート先を指定して、Import ボタンを押すとデータが追加されます。
 
+
+*************************
+Ez Importer 参考動画
+*************************
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QC_0332MMCQ" frameborder="0" allowfullscreen></iframe>
+
+
+************************
 関連サイト一覧
 ************************
 
 * ブログ - `Ez Importer Excel Import Utility <https://www.matthewdresser.com/sitecore/ez-importer-excel-import-utility>`_
 * Sitecore Marketplace - `Ez Importer <https://marketplace.sitecore.net/Modules/E/Ez_Importer.aspx?sc_lang=en>`_
 * GitHub `SitecoreEzImporter <https://github.com/dresser/SitecoreEzImporter>`_
-
----
-[目次に戻る](../README.md)

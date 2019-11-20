@@ -15,6 +15,7 @@ Sitecore PowerShell Extensions
     newrole
     newuser
 
+***********
 参考サイト
 ***********
 * `Sitecore PowerShell Extensions <https://doc.sitecorepowershell.com/>`_
