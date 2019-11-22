@@ -86,7 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore Experience Platform 9.3</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../readme.html">1. はじめに</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install/index.html">2. Sitecore Experience Platform のインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/index.html">2. インストールガイド</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">3. モジュールのインストール</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="sxa.html">3.1. Sitecore Experience Accelerator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="jss.html">3.2. Sitecore JavaScript Services</a></li>
@@ -176,7 +176,123 @@
             
   <div class="section" id="sitecore-connect-for-sitecore-dam">
 <h1>3.7. Sitecore Connect for Sitecore DAM<a class="headerlink" href="#sitecore-connect-for-sitecore-dam" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>本文書は Sitecore 9.3 リリース後に提供予定。</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">課題</p>
+<p>本文書は Sitecore 9.3 リリース後に更新予定です。</p>
+</div>
+<p>Sitecore Connect for Sitecore DAM 2.0.0  を利用することで、Sitecore の管理画面から直接 Content Hub で管理している画像を指定するようになります。ここではモジュールのインストールと動作検証まで紹介をします。</p>
+<div class="section" id="id2">
+<h2>3.7.1. 必要システム<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Sitecore Connect for Sitecore DAM 2.0.0 は以下のシステムで利用することができます。</p>
+<ul class="simple">
+<li><p>Sitecore Experience Platform 9.2</p></li>
+<li><p>Sitecore Experience Platform 9.1.0, 9.1.1</p></li>
+</ul>
+<p>なお、Sitecore Experience Manager、 Sitecore Experience Commerce でも上記のバージョンであればご利用いただけます。</p>
+</div>
+<div class="section" id="sitecore-content-hub">
+<h2>3.7.2. Sitecore Content Hub の設定<a class="headerlink" href="#sitecore-content-hub" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>まず最初に、Sitecore Experience Platform と Sitecore Content Hub の接続ができるように、設定を Sitecore Content Hub に追加していきます。</p>
+<ul class="simple">
+<li><p>管理者の権限を持っているアカウントで Sitecore Content Hub にアクセスをして、「管理」―「設定」を開きます。</p></li>
+<li><p>左側のメニューの`PortalConfiguratoin` をクリックします</p></li>
+<li><p><cite>CORSConfiguration</cite> をクリックして設定画面を開きます</p></li>
+<li><p>管理サーバーの URL を入力して保存をクリックします</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/chdam041.png"><img alt="サーバー情報を追加" class="align-center" src="../../_images/chdam041.png" style="width: 400px;" /></a>
+<p>続いてログイン方法に関して、今回はシングルサインオン以外でログインをするために、ログインの設定を変更します。</p>
+<ul class="simple">
+<li><p>管理者の権限を持っているアカウントで Sitecore Content Hub にアクセスをして、「管理」―「設定」を開きます。</p></li>
+<li><p>左側のメニューの`Authentication` をクリックします</p></li>
+<li><p>設定の表示を <cite>Tree</cite> から <cite>Text</cite> に変更します。</p></li>
+</ul>
+<img alt="テキストに切り替え" class="align-center" src="../../_images/chdam051.png" />
+<ul class="simple">
+<li><p>ログインの設定で提供されている項目から、authentication_mode を “Passive” に変更します。また ExternalRedirectKeys を追加してください。追加した結果は以下のようになります。</p></li>
+</ul>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">&quot;Providers&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;$type&quot;</span><span class="p">:</span> <span class="s2">&quot;Stylelabs.M.Portal.Authentication.SamlAuthenticationProviderConfigurator, Stylelabs.M.Portal&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;metadata_location&quot;</span><span class="p">:</span> <span class="s2">&quot;---------------------&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;sp_entity_id&quot;</span><span class="p">:</span> <span class="s2">&quot;---------------------&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;idp_entity_id&quot;</span><span class="p">:</span> <span class="s2">&quot;-------------------------&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;provider_name&quot;</span><span class="p">:</span> <span class="s2">&quot;SSO&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;authentication_mode&quot;</span><span class="p">:</span> <span class="s2">&quot;Passive&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;module_path&quot;</span><span class="p">:</span> <span class="s2">&quot;AuthServices&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;is_enabled&quot;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">}</span>
+<span class="p">],</span>
+<span class="nt">&quot;ExternalRedirectKeys&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;Sitecore&quot;</span><span class="p">:</span> <span class="s2">&quot;https://92sc.dev.local/&quot;</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>変更しているのは2か所です、確認をして保存します。</p>
+</div>
+<div class="section" id="sitecore-experience-platform">
+<h2>3.7.3. Sitecore Experience Platform の設定<a class="headerlink" href="#sitecore-experience-platform" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>モジュールのダウンロード</p>
+<p>続いて Sitecore の設定を開始します。まず、以下のページからモジュールのダウンロードをします。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dev.sitecore.net/Downloads/Sitecore_Plugin_for_Stylelabs_DAM/20/Sitecore_Connect_for_Sitecore_DAM_200.aspx">Sitecore Connect for Sitecore DAM 2.0.0</a></p></li>
+</ul>
+<p>この解説では <cite>Sitecore Connect for Sitecore DAM</cite> をダウンロードしてインストールを進めます。</p>
+<div class="section" id="id3">
+<h3>3.7.3.1. モジュールのインストール<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>モジュールのインストールは、「コントロールパネル」－「パッケージをインストールする」を開いてください。</p>
+<a class="reference internal image-reference" href="../../_images/chdam011.png"><img alt="ファイルを指定する" class="align-center" src="../../_images/chdam011.png" style="width: 400px;" /></a>
+<p>次へ、をクリックすると以下のような警告が出ます。</p>
+<a class="reference internal image-reference" href="../../_images/chdam021.png"><img alt="アイテムに関する警告" class="align-center" src="../../_images/chdam021.png" style="width: 400px;" /></a>
+<p>上書きを選択した後、全てに適用をクリックしてください。しばらくすると、インストールが完了します。</p>
+<a class="reference internal image-reference" href="../../_images/chdam031.png"><img alt="インストールが完了" class="align-center" src="../../_images/chdam031.png" style="width: 400px;" /></a>
+<p>続いて以下の手続きを実行します。</p>
+</div>
+<div class="section" id="id4">
+<h3>3.7.3.2. 日本語リソースの追加<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>日本語リソースは標準で入っていないため、以下から <cite>20-damtoolbar-ja-jp.xml</cite> をダウンロードしてください。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/SitecoreJapan/InstallScript/tree/master/ContentHub/DAM">https://github.com/SitecoreJapan/InstallScript/tree/master/ContentHub/DAM</a></p></li>
+</ul>
+<p>このリソースは、 Core データベースに追加することで、日本語の表記を修正する形となります。</p>
+</div>
+<div class="section" id="id5">
+<h3>3.7.3.3. モジュールの設定<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>コンテンツエディターを開いて、<cite>/sitecore/system/Modules/DAM/Config/DAM connector</cite> のアイテムを選択します。</p>
+<a class="reference internal image-reference" href="../../_images/chdam061.png"><img alt="アイテムの選択" class="align-center" src="../../_images/chdam061.png" style="width: 400px;" /></a>
+<p>日本語バージョンを追加して（共有リソースのため、英語で設定しても同じです）、DAM のインスタンス、検索ページ、Content Hub の Authentication で設定をした ExternalRedirectKeys のキーを設定します。</p>
+<a class="reference internal image-reference" href="../../_images/chdam071.png"><img alt="アイテムの選択" class="align-center" src="../../_images/chdam071.png" style="width: 400px;" /></a>
+<p>これで設定は完了となります。</p>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>3.7.4. 動作確認<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>リッチテキストエディタを利用して、Sitecore Content Hub にアクセスできるか確認をします。</p>
+<ol class="arabic simple">
+<li><p>インストールすると標準で用意されている <cite>/sitecore/content/Home</cite> のアイテムをコンテンツエディタで選択します。</p></li>
+<li><p><cite>エディターで表示する</cite> をクリックします</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/chdam081.png"><img alt="エディタを表示" class="align-center" src="../../_images/chdam081.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>リッチテキストエディタにボタンが増えていることを確認します（左から５つめ）</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/chdam091.png"><img alt="リボンを確認" class="align-center" src="../../_images/chdam091.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>ボタンをクリックします。ログイン画面が表示された場合は、Sitecore Content Hub のアカウントでログインをしてください。</p></li>
+<li><p>DAM に登録されているアセットが表示されます。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/chdam101.png"><img alt="アセットを確認" class="align-center" src="../../_images/chdam101.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="6">
+<li><p>公開リンクのついているアイテムを選択します</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/chdam111.png"><img alt="アセットの選択" class="align-center" src="../../_images/chdam111.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="7">
+<li><p>利用するアセットを選択すると、挿入された画面を確認することができます。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/chdam121.png"><img alt="画像の挿入" class="align-center" src="../../_images/chdam121.png" style="width: 400px;" /></a>
+<p>OK を押して保存をして、画像のリンクが有効になっていれば、動作検証が完了となります。</p>
+</div>
 </div>
 
 

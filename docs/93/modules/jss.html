@@ -86,7 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore Experience Platform 9.3</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../readme.html">1. はじめに</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install/index.html">2. Sitecore Experience Platform のインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/index.html">2. インストールガイド</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">3. モジュールのインストール</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="sxa.html">3.1. Sitecore Experience Accelerator</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">3.2. Sitecore JavaScript Services</a></li>
@@ -176,7 +176,70 @@
             
   <div class="section" id="sitecore-javascript-services">
 <h1>3.2. Sitecore JavaScript Services<a class="headerlink" href="#sitecore-javascript-services" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>本文書は Sitecore 9.3 リリース後に提供予定。</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">課題</p>
+<p>本文書は Sitecore 9.3 リリース後に更新予定です。</p>
+</div>
+<p>ここでは、Sitecore Experience Platform 9.2 Initial Release に、Sitecore JavaScript Services 12.0.0 インストールをするための手順を紹介しています。</p>
+<div class="section" id="node-js">
+<h2>3.2.1. Node.js のダウンロードとインストール<a class="headerlink" href="#node-js" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Sitecore JavaScript Services (以下、JSS) を利用するためには、Node.js のモジュールをインストールする必要があります。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://nodejs.org/ja/">Node.js</a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>推奨は最新の LTS バージョンです</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/jss011.png"><img alt="インストーラー" class="align-center" src="../../_images/jss011.png" style="width: 400px;" /></a>
+<p>インストールに関しては標準の設定で進めます。</p>
+</div>
+<div class="section" id="id3">
+<h2>3.2.2. モジュールのダウンロード<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>モジュールに関しては、Sitecore Download サイトから入手することができます。</p>
+<ul>
+<li><p><a class="reference external" href="https://dev.sitecore.net/Downloads/Sitecore_JavaScript_Services/120/Sitecore_JavaScript_Services_1200.aspx">Sitecore JavaScript Services 12.0.0</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Sitecore JavaScript Services Server for Sitecore 9.2 XM</p></li>
+<li><p>Sitecore JavaScript Services Server for Sitecore 9.2 XP</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>今回は XP 向けのモジュールを利用します。</p>
+</div>
+<div class="section" id="id4">
+<h2>3.2.3. モジュールのインストール<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>モジュールのインストールは以下の手順で進めていきます。</p>
+<ul class="simple">
+<li><p>管理者の権限でログインをします</p></li>
+<li><p>スタート画面からコントロールパネルを選択</p></li>
+<li><p>「管理」グループにある <cite>パッケージをインストールする</cite> を選択します</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/jss021.png"><img alt="パッケージをインストールする" class="align-center" src="../../_images/jss021.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>ダウンロードしたファイルをアップロードして選択します。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/jss031.png"><img alt="アップロード" class="align-center" src="../../_images/jss031.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>ライセンスの許諾に同意します</p></li>
+<li><p>インストールを実行</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/jss041.png"><img alt="インストール" class="align-center" src="../../_images/jss041.png" style="width: 400px;" /></a>
+<p>モジュールのインストールが完了した段階で、設定は完了となります。</p>
+</div>
+<div class="section" id="id5">
+<h2>3.2.4. 次のステップ<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>インストールが完了したあと、簡単な使い方に関しては サイト内のリンク <a class="reference internal" href="../../jss/index.html"><span class="doc">Sitecore JavaScript Services クイックガイド</span></a> を参考にしてください。</p>
+</div>
+<div class="section" id="id6">
+<h2>3.2.5. 関連サイト<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jss.sitecore.com/">Sitecore JSS Documentation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sitecore/jss">Github サンプルサイト</a></p></li>
+</ul>
+</div>
 </div>
 
 
