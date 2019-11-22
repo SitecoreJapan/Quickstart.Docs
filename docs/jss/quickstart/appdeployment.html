@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="各種ツールに関して" href="../../marketplace/index.html" />
+    <link rel="next" title="2. Step by Step ガイド" href="../stepbystep/index.html" />
     <link rel="prev" title="1.4. サーバー環境の準備" href="jssserverinstall.html" /> 
 </head>
 
@@ -95,6 +95,8 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">1.5. 作成したアプリの展開</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../stepbystep/index.html">2. Step by Step ガイド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../graphql/index.html">3. Sitecore GraphQL</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
@@ -169,6 +171,101 @@
             
   <div class="section" id="id1">
 <h1>1.5. 作成したアプリの展開<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ここでは実際に作成をした React で作った JavaScript のアプリを Sitecore に展開する手続きを進めます。</p>
+<div class="section" id="jss">
+<h2>1.5.1. JSS アプリの準備<a class="headerlink" href="#jss" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>サンプルのアプリを作成した際には、 <cite>sitecoreconfig&lt;appname&gt;.config</cite> という形で設定ファイルが作成されています。今回動作させるホスト名を <cite>hostName</cite> に設定します。</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;site</span> <span class="na">patch:before=</span><span class="s">&quot;site[@name=&#39;website&#39;]&quot;</span>
+      <span class="na">inherits=</span><span class="s">&quot;website&quot;</span>
+      <span class="na">name=</span><span class="s">&quot;sample-app&quot;</span>
+      <span class="na">hostName=</span><span class="s">&quot;sample-app.dev.local&quot;</span>
+      <span class="na">rootPath=</span><span class="s">&quot;/sitecore/content/sample-app&quot;</span>
+      <span class="na">startItem=</span><span class="s">&quot;/home&quot;</span>
+      <span class="na">database=</span><span class="s">&quot;master&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>今回はデモ環境のため、このまま <cite>sample-app.dev.local</cite> の名前を、 <cite>C:¥¥Windows¥¥System32¥¥drivers¥¥etc¥¥hosts</cite> に追加します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>    <span class="n">sample</span><span class="o">-</span><span class="n">app</span><span class="o">.</span><span class="n">dev</span><span class="o">.</span><span class="n">local</span>
+</pre></div>
+</div>
+<p>Sitecore がインストースされているインスタンスに対して、このホスト名を追加します。</p>
+<a class="reference internal image-reference" href="../../_images/hostname01.png"><img alt="ホスト名を追加する" class="align-center" src="../../_images/hostname01.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="sitecore">
+<h2>1.5.2. Sitecore の準備<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>作成したアプリを展開するにあたり、API Key を Sitecore 側で準備をする必要があります。API Key の作成は以下の手順でできます。</p>
+<ol class="arabic simple">
+<li><p>Sitecore に管理者権限でログインをします。</p></li>
+<li><p>コンテンツエディターを開きます</p></li>
+<li><p><cite>/sitecore/system/Settings/Services/API Keys</cite> のアイテムを選択します</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/apikey01.png"><img alt="API キーのアイテムを選択" class="align-center" src="../../_images/apikey01.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>API キーを作成します、ここではアプリ名で作成しました</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/apikey02.png"><img alt="キーのアイテムを作成" class="align-center" src="../../_images/apikey02.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p>API キーに以下の項目を設定します</p></li>
+</ol>
+<p>設定名　            設定内容　今回の設定</p>
+<p>CORS Origines         <a class="reference external" href="http://localhost:3000">http://localhost:3000</a>
+認められたコントローラー  *
+偽装ユーザー            extranetanonymous
+スロットルストラテジー    空欄</p>
+<a class="reference internal image-reference" href="../../_images/apikey03.png"><img alt="キーのアイテムを作成" class="align-center" src="../../_images/apikey03.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="6">
+<li><p>アイテムをパブリッシュします</p></li>
+<li><p>アイテム ID を控えます</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/apikey04.png"><img alt="アイテム ID" class="align-center" src="../../_images/apikey04.png" style="width: 400px;" /></a>
+<p>このサンプルでは、{45D95A97-1FD4-4403-BF9C-42BFD75843FE} がアイテム ID になります。</p>
+<ol class="arabic simple" start="8">
+<li><p>作成したキーが利用できるか、以下の URL でアクセスをします</p></li>
+</ol>
+<ul class="simple">
+<li><p><a class="reference external" href="http://sample-app.dev.local/sitecore/api/layout/render/jss?item=">http://sample-app.dev.local/sitecore/api/layout/render/jss?item=</a>/&amp;sc_apikey={YOUR_API_KEY_ID}</p></li>
+</ul>
+<ol class="arabic simple" start="9">
+<li><p>アクセスをすると、以下のように JSON 形式でデータが表示されます。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/apikey05.png"><img alt="設定の最終確認" class="align-center" src="../../_images/apikey05.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="jss-sitecore">
+<h2>1.5.3. JSS アプリと Sitecore の接続<a class="headerlink" href="#jss-sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>設定が完了したので、接続をする手順と接続を実施します。まず、コマンドとして <cite>jss setup</cite> を実行してください。</p>
+<ol class="arabic simple">
+<li><p>最初にインスタンスの状態を聞いてきます。ここでは y を選択します。</p></li>
+<li><p>続いて Sitecore がインストールされているディレクトリ名を記載します。</p></li>
+</ol>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>PS C:\Users\Sitecore\sample-app&gt; jss setup
+Is your Sitecore instance on this machine or accessible via network share? [y/n]: y
+Path to the Sitecore folder (e.g. c:\inetpub\wwwroot\my.siteco.re): C:\inetpub\wwwroot\sample-app.dev.local
+Sitecore hostname (e.g. http://myapp.local.siteco.re; see /sitecore/config; ensure added to hosts): http://sample-app.dev.local
+Sitecore import service URL [http://sample-app.dev.local/sitecore/api/jss/import]:
+Sitecore API Key (ID of API key item): {45D95A97-1FD4-4403-BF9C-42BFD75843FE}
+Please enter your deployment secret (32+ random chars; or press enter to generate one): 256655EC8F3A45B5AD90B63BC25B8067
+Deploy secret Sitecore config written to C:\Users\Sitecore\sample-app\sitecore\config\sample-app.deploysecret.config
+Ensure this configuration is deployed to Sitecore.
+JSS connection settings saved to C:\Users\Sitecore\sample-app\scjssconfig.json
+
+NEXT STEPS
+* Ensure the hostName in /sitecore/config/*.config is configured as sample-app.dev.local, and in hosts file if needed.
+* Deploy your configuration (i.e. &#39;jss deploy config&#39;)
+* Deploy your app (i.e. &#39;jss deploy app -c -d&#39;)
+* Test your app in integrated mode by visiting http://sample-app.dev.local
+PS C:\Users\Sitecore\sample-app&gt;
+</pre></div>
+</div>
+<p>jss deploy config</p>
+<p>jss deploy app --includeContent --includeDictionary</p>
+<p><a class="reference external" href="http://sample-app.dev.local/">http://sample-app.dev.local/</a></p>
+</div>
+<div class="section" id="id2">
+<h2>1.5.4. 関連サイト<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jss.sitecore.com/docs/getting-started/app-deployment">App Deployment</a></p></li>
+</ul>
+</div>
 </div>
 
 
@@ -179,7 +276,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../marketplace/index.html" class="btn btn-neutral float-right" title="各種ツールに関して" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../stepbystep/index.html" class="btn btn-neutral float-right" title="2. Step by Step ガイド" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="jssserverinstall.html" class="btn btn-neutral float-left" title="1.4. サーバー環境の準備" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

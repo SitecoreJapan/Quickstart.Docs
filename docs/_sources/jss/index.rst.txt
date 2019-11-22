@@ -14,6 +14,8 @@ Sitecore JavaScript Services
     :numbered:
 
     quickstart/index
+    stepbystep/index
+    graphql/index
 
 ********************************
 Sitecore JSS 関連サイト

@@ -45,6 +45,8 @@ JSS アプリを作るためのコマンドをインストールします。今�
   + @sitecore-jss/sitecore-jss-cli@12.0.0
   updated 2 packages in 18.077s
 
+コマンドラインのインストールが完了です。
+
 ***************************
 サンプルプロジェクトの作成
 ***************************
@@ -113,3 +115,8 @@ Enjoy! まで表示されれば、`sample-app` のフォルダの中にサンプ
 
 ページが表示されていれば、完了となります。
 
+**************
+関連サイト
+**************
+
+* `Quick Start <https://jss.sitecore.com/docs/getting-started/quick-start>`_
