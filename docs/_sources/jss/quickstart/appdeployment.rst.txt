@@ -100,7 +100,7 @@ JSS アプリと Sitecore の接続
 1. 最初にインスタンスの状態を聞いてきます。ここでは y を選択します。
 2. 続いて Sitecore がインストールされているディレクトリ名を記載します。
 
-.. code-block:: powershell
+.. code-block:: 
 
     PS C:\Users\Sitecore\sample-app> jss setup
     Is your Sitecore instance on this machine or accessible via network share? [y/n]: y

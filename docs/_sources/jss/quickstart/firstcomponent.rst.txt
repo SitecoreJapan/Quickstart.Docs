@@ -71,7 +71,7 @@ MyFirstComponent\index.js
 
 上記のコンポーネントファイルと合わせて作成されているファイルが `src\components\MyFirstComponent\index.js` となります。実際にファイルの内容を確認すると以下のようになっています。
 
-.. code-block:: javascript
+.. code-block:: 
 
     import React from 'react';
     import { Text } from '@sitecore-jss/sitecore-jss-react';
