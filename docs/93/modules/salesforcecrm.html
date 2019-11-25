@@ -86,7 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore Experience Platform 9.3</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../readme.html">1. はじめに</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install/index.html">2. Sitecore Experience Platform のインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/index.html">2. インストールガイド</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">3. モジュールのインストール</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="sxa.html">3.1. Sitecore Experience Accelerator</a></li>
 <li class="toctree-l3"><a class="reference internal" href="jss.html">3.2. Sitecore JavaScript Services</a></li>
@@ -176,7 +176,453 @@
             
   <div class="section" id="sitecore-connect-for-salesforce-crm">
 <h1>3.4. Sitecore Connect for Salesforce CRM<a class="headerlink" href="#sitecore-connect-for-salesforce-crm" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>本文書は Sitecore 9.3 リリース後に提供予定。</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">課題</p>
+<p>本文書は Sitecore 9.3 リリース後に更新予定です。</p>
+</div>
+<p>Sitecore Connect for Salesforce CRM 3.0.0 モジュールのインストール</p>
+<p>Salesforce CRM との連携に関しては、Salesforce CRM のサービスとつなげることができる環境を用意できることが前提となります。</p>
+<div class="section" id="id2">
+<h2>3.4.1. モジュールのダウンロード<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>モジュールに関しては、Sitecore Download サイトから入手することができます。</p>
+<ul>
+<li><p><a class="reference external" href="https://dev.sitecore.net/Downloads/Data_Exchange_Framework/3x/Data_Exchange_Framework_300.aspx">Sitecore Data Exchange Framework 3.0.0</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Data Exchange Framework</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a class="reference external" href="https://dev.sitecore.net/Downloads/Salesforce_Connect/3x/Sitecore_Connect_for_Salesforce_CRM_300.aspx">Sitecore Connect for Salesforce CRM 3.0.0</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Sitecore Connect for Salesforce CRM</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>3.4.2. モジュールのインストール<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>モジュールのインストールは以下の手順で進めていきます。</p>
+<ul class="simple">
+<li><p>管理者の権限でログインをします</p></li>
+<li><p>スタート画面からコントロールパネルを選択</p></li>
+<li><p>「管理」グループにある <cite>パッケージをインストールする</cite> を選択します</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/jss021.png"><img alt="パッケージをインストールする" class="align-center" src="../../_images/jss021.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>まず最初に、<cite>Sitecore Data Exchange Framework 3.0.0</cite> のファイルをアップロードします（すでにインストール済の場合は省略できます）。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm011.png"><img alt="Data Exchange Framework" class="align-center" src="../../_images/sfcrm011.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>インストールを実行します</p></li>
+<li><p>続いて <cite>Sitecore Connect for Salesforce CRM 3.0.0</cite> のファイルをアップロードします。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm021.png"><img alt="Salesforce CRM モジュール" class="align-center" src="../../_images/sfcrm021.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>インストールを完了させます。</p></li>
+</ul>
+</div>
+<div class="section" id="salesforce-crm">
+<h2>3.4.3. Salesforce CRM を準備する<a class="headerlink" href="#salesforce-crm" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Salesforce CRM と Sitecore を接続するためには、API を有効にして Web サービス経由で接続する必要があります。開発者の方は無料で利用できる Developer Edition が提供されているため、申込みをして連携の開発をすることが可能です。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://developer.salesforce.com/ja/">Salesforce 開発者</a></p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>3.4.4. 接続アプリケーションの作成<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>以下の手順で、Sitecore と接続をするための設定を取得します。</p>
+<a class="reference internal image-reference" href="../../_images/sfcrm031.png"><img alt="Salesforce ログイン画面" class="align-center" src="../../_images/sfcrm031.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>右上のメニューから「設定」を開きます。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm041.png"><img alt="設定" class="align-center" src="../../_images/sfcrm041.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>左側のメニューから「プラットフォームツール」－「アプリケーション」－「アプリケーション マネージャ」を選択します</p></li>
+</ul>
+<img alt="アプリケーション マネージャ" class="align-center" src="../../_images/sfcrm051.png" />
+<ul class="simple">
+<li><p>右上に表示される「新規接続アプリケーション」をクリックします</p></li>
+</ul>
+<p>以下のように項目を入力してください。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目名</p></th>
+<th class="head"><p>設定内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>接続アプリケーション名</p></td>
+<td><p>任意の文字列</p></td>
+</tr>
+<tr class="row-odd"><td><p>API参照名</p></td>
+<td><p>自動的に作成するキーの利用を推奨</p></td>
+</tr>
+<tr class="row-even"><td><p>取引先責任者メール</p></td>
+<td><p>メールアドレス</p></td>
+</tr>
+<tr class="row-odd"><td><p>OAuth設定の有効化</p></td>
+<td><p>チェック</p></td>
+</tr>
+<tr class="row-even"><td><p>コールバック URL</p></td>
+<td><p>この値は使いませんが設定が必要</p></td>
+</tr>
+<tr class="row-odd"><td><p>選択したOAuth範囲</p></td>
+<td><p>データへのアクセス管理（api）を選択</p></td>
+</tr>
+<tr class="row-even"><td><p>Web サーバフローの秘密が必要</p></td>
+<td><p>チェック</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/sfcrm061.png"><img alt="接続情報" class="align-center" src="../../_images/sfcrm061.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="crm">
+<h2>3.4.5. CRM 項目のカスタマイズ（オプション）<a class="headerlink" href="#crm" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>この項目はインストールガイドでもオプションとなっていますので、スキップすることは可能です。</p>
+<ul class="simple">
+<li><p>右上のメニューから「設定」を開きます。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm041.png"><img alt="日本語リソース" class="align-center" src="../../_images/sfcrm041.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>左側のメニューから「プラットフォームツール」－「オブジェクトおよび項目」－「オブジェクトマネージャ」を開く。</p></li>
+</ul>
+<img alt="日本語リソース" class="align-center" src="../../_images/sfcrm121.png" />
+<p>ここから <cite>取引先責任者</cite> と <cite>活動</cite> にカスタムフィールドを追加します。</p>
+<div class="section" id="id5">
+<h3>3.4.5.1. 取引先責任者<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>追加する内容は、以下の内容を含んだキーを追加します。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 53%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>設定項目</p></th>
+<th class="head"><p>設定する情報</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>データ型</p></td>
+<td><p>テキスト</p></td>
+</tr>
+<tr class="row-odd"><td><p>項目の表示ラベル</p></td>
+<td><p>Sitecore Id</p></td>
+</tr>
+<tr class="row-even"><td><p>文字数</p></td>
+<td><p>36</p></td>
+</tr>
+<tr class="row-odd"><td><p>項目名</p></td>
+<td><p>SitecoreId</p></td>
+</tr>
+<tr class="row-even"><td><p>外部 ID</p></td>
+<td><p>チェック</p></td>
+</tr>
+</tbody>
+</table>
+<p>手順は以下の通り。</p>
+<ul class="simple">
+<li><p>オブジェクト一覧から「取引先責任者」を選択します。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm141.png"><img alt="日本語リソース" class="align-center" src="../../_images/sfcrm141.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>「項目とリレーション」を選択します。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sxa031.png"><img alt="日本語リソース" class="align-center" src="../../_images/sxa031.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>右上のメニューから「新規」をクリックして実行。</p></li>
+<li><p>データ型では「テキスト」を選択します、選択したら次へ。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm151.png"><img alt="データ型の選択" class="align-center" src="../../_images/sfcrm151.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>項目の表示ラベル、文字数、項目名を上記の表の通りに入力をする。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm161.png"><img alt="データ型の選択" class="align-center" src="../../_images/sfcrm161.png" style="width: 400px;" /></a>
+<p>あとは保存をして終わります。続いて <cite>活動</cite> の設定をします。</p>
+</div>
+<div class="section" id="id6">
+<h3>3.4.5.2. 活動<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>追加する内容は、以下の内容を含んだキーを追加します。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 53%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>設定項目</p></th>
+<th class="head"><p>設定する情報</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>データ型</p></td>
+<td><p>テキスト</p></td>
+</tr>
+<tr class="row-odd"><td><p>項目の表示ラベル</p></td>
+<td><p>SitecoreId</p></td>
+</tr>
+<tr class="row-even"><td><p>文字数</p></td>
+<td><p>36</p></td>
+</tr>
+<tr class="row-odd"><td><p>項目名</p></td>
+<td><p>SitecoreId</p></td>
+</tr>
+<tr class="row-even"><td><p>外部 ID</p></td>
+<td><p>チェック</p></td>
+</tr>
+</tbody>
+</table>
+<p>手順は以下の通り。</p>
+<ul class="simple">
+<li><p>オブジェクト一覧から「活動」を選択します。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm171.png"><img alt="活動" class="align-center" src="../../_images/sfcrm171.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sxa031.png"><img alt="日本語リソース" class="align-center" src="../../_images/sxa031.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>「項目とリレーション」を選択します。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm181.png"><img alt="日本語リソース" class="align-center" src="../../_images/sfcrm181.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>あとは <cite>取引先責任者</cite> と同様に追加していきます。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm191.png"><img alt="活動 - 項目とリレーション" class="align-center" src="../../_images/sfcrm191.png" style="width: 400px;" /></a>
+</div>
+</div>
+<div class="section" id="connectionstring">
+<h2>3.4.6. ConnectionString の作成<a class="headerlink" href="#connectionstring" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Sitecore が Salesforce に接続するための ConnectionString を作成します。必要な項目は以下の通りです。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>項目</p></th>
+<th class="head"><p>設定内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>user id</p></td>
+<td><p>CRM にログインをするユーザー名</p></td>
+</tr>
+<tr class="row-odd"><td><p>password</p></td>
+<td><p>CRM にログインをするユーザーのパスワード</p></td>
+</tr>
+<tr class="row-even"><td><p>client id</p></td>
+<td><p>コンシューマ鍵</p></td>
+</tr>
+<tr class="row-odd"><td><p>secret key</p></td>
+<td><p>コンシューマの秘密</p></td>
+</tr>
+<tr class="row-even"><td><p>security token</p></td>
+<td><p>セキュリティトークン</p></td>
+</tr>
+</tbody>
+</table>
+<p><cite>user id</cite> と <cite>password</cite> に関しては、アクセスするためのアカウントを用意することになります。<cite>コンシューマー鍵</cite> と <cite>コンシューマの秘密</cite> は以下の手順で取得することができます。</p>
+<ul class="simple">
+<li><p>左側のメニューから「プラットフォームツール」－「アプリケーション」－「アプリケーション マネージャ」を選択します</p></li>
+<li><p>先ほど作成をしたアプリケーションの右側に表示されている「▼」をクリック、参照を開きます</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm071.png"><img alt="参照" class="align-center" src="../../_images/sfcrm071.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>画面に表示される <cite>コンシューマー鍵</cite> と <cite>コンシューマの秘密</cite> を利用することになります。<cite>コンシューマの秘密</cite> はクリックすると表示されます。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm081.png"><img alt="コンシューマー" class="align-center" src="../../_images/sfcrm081.png" style="width: 400px;" /></a>
+<p>セキュリティトークンを以下の手順で取得します。なお、すでに取得している場合は以前のセキュリティトークンを利用する形でこの手続きは省略できます。</p>
+<ul class="simple">
+<li><p>右上のアイコンから「設定」を開きます。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm091.png"><img alt="設定" class="align-center" src="../../_images/sfcrm091.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>左側のメニューから「私のセキュリティトークンのリセット」を選択</p></li>
+</ul>
+<img alt="セキュリティトークン" class="align-center" src="../../_images/sfcrm101.png" />
+<ul class="simple">
+<li><p>「セキュリティトークンのリセット」のボタンをクリックしてください。セキュリティトークンはメールで届きます。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm111.png"><img alt="リセット" class="align-center" src="../../_images/sfcrm111.png" style="width: 400px;" /></a>
+<p>上記取得したキーを以下に入れて完成させます。</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;add</span> <span class="na">name=</span><span class="s">&quot;mysf&quot;</span> <span class="na">connectionString=</span><span class="s">&quot;user id=`[user id]`;password=`[password]`;client id=`[client id]`;secret key=`[secret key]`;security token=`[security token]`&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>例：</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;add</span> <span class="na">name=</span><span class="s">&quot;mysf&quot;</span> <span class="na">connectionString=</span><span class="s">&quot;user id=someone@email.com;password=b;client id=GEH9zlTNB8o8BA45pAeDtC8W.DIqrAzuky2uffEEOwtHxIEhLzkmPwjz8KF_vzWY8dNIfurWHpfbZPGdtc3b;secret key=5468568999798354123;security token=g3ygFuNzGgm33YTfsM3WKG3AA&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>上記の一行は、 /config/connectionstring.config に追加してください。</p>
+</div>
+<div class="section" id="sitecore">
+<h2>3.4.7. Sitecore の設定<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="xconnect-collection-model">
+<h3>3.4.7.1. xConnect Collection Model の展開<a class="headerlink" href="#xconnect-collection-model" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<ul class="simple">
+<li><p>Sitecore の管理画面を開きます</p></li>
+<li><p>コンテンツエディターを開きます</p></li>
+<li><p>アイテム <cite>sitecore/system/Settings/Data Exchange/Providers/xConnect/Collection Models/Connect for Salesforce/Connect for Salesforce Collection Model</cite> を選択します。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm201.png"><img alt="Connect for Salesforce Collection Model" class="align-center" src="../../_images/sfcrm201.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>リボンに表示されている「モデルを JSON に変換する」をクリックします。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm211.png"><img alt="モデルを JSON に変換する" class="align-center" src="../../_images/sfcrm211.png" style="width: 400px;" /></a>
+<ul>
+<li><p>JSON ファイルのダウンロードが完了します。</p></li>
+<li><p>xConnect のサーバー（例： C:\inetpub\wwwroot\92xconnect.dev.local）に、ダウンロードした JSON ファイルをコピーします。コピー先は以下の2か所です。</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>\App_Data\Models\</p></li>
+<li><p>\App_Data\jobs\continuous\IndexWorker\App_Data\Models\</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="id7">
+<h3>3.4.7.2. テナントの作成<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>コンテンツエディターを利用して、アイテム <cite>sitecore/system/Data Exchange</cite> を選択します。</p>
+<img alt="データ交換" class="align-center" src="../../_images/sfcrm221.png" />
+<p>Connect for Salesforce Tenant をクリックします。</p>
+<a class="reference internal image-reference" href="../../_images/sfcrm231.png"><img alt="テナント作成" class="align-center" src="../../_images/sfcrm231.png" style="width: 400px;" /></a>
+<p>テナント名を設定します</p>
+<a class="reference internal image-reference" href="../../_images/sfcrm241.png"><img alt="名前の設定" class="align-center" src="../../_images/sfcrm241.png" style="width: 400px;" /></a>
+<p>テナントが作成されます。</p>
+<a class="reference internal image-reference" href="../../_images/sfcrm251.png"><img alt="テナント作成完了" class="align-center" src="../../_images/sfcrm251.png" style="width: 400px;" /></a>
+<p>作成したテナントの、 <cite>Endpoints/Providers/Salesforce/Salesforce Client Endpoint</cite> のアイテムを選択します。</p>
+<a class="reference internal image-reference" href="../../_images/sfcrm261.png"><img alt="Endpoint の選択" class="align-center" src="../../_images/sfcrm261.png" style="width: 400px;" /></a>
+<p>ConnectionString で設定をした接続文字列（上記の例では mysf ）を、接続文字列名に入力します。</p>
+<a class="reference internal image-reference" href="../../_images/sfcrm271.png"><img alt="Endpoint の選択" class="align-center" src="../../_images/sfcrm271.png" style="width: 400px;" /></a>
+<p>リボンに表示されている、「トラブルシューティングツールの実行」をクリックします。</p>
+<img alt="トラブルシューティングツールの実行" class="align-center" src="../../_images/sfcrm281.png" />
+<p>接続に成功した場合は、以下のようなダイアログが表示されます。</p>
+<a class="reference internal image-reference" href="../../_images/sfcrm291.png"><img alt="接続は正常に確立されました" class="align-center" src="../../_images/sfcrm291.png" style="width: 400px;" /></a>
+<p>接続が失敗するケースとしては、ConnectionString の作成に失敗しているケースか、CRM にアクセスできるように Web サービスを利用できていない形があります。</p>
+<p>続いて、xConnect との接続の設定を進めます。同じテナントで作成されているアイテム <cite>Endpoints/Providers/xConnect/xConnect Client Endpoint</cite> のアイテムを選択します。</p>
+<a class="reference internal image-reference" href="../../_images/sfcrm301.png"><img alt="xConnect クライアントエンドポイント" class="align-center" src="../../_images/sfcrm301.png" style="width: 400px;" /></a>
+<p>このアイテムには、以下の情報を入力します。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 22%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>フィールド名</p></th>
+<th class="head"><p>必須かどうか</p></th>
+<th class="head"><p>設定情報</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>コレクション サービス接続文字列名</p></td>
+<td><p>常に必須</p></td>
+<td><p>標準では xconnect.collection</p></td>
+</tr>
+<tr class="row-odd"><td><p>コレクション サービス証明書の接続文字列名</p></td>
+<td><p>SSL が有効な場合必須</p></td>
+<td><p>標準では xconnect.collection.certificate</p></td>
+</tr>
+<tr class="row-even"><td><p>コレクション サービスの資格情報接続文字列名</p></td>
+<td><p>認証が必要な場合は必須</p></td>
+<td><p>今回は空欄</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/sfcrm311.png"><img alt="設定情報" class="align-center" src="../../_images/sfcrm311.png" style="width: 400px;" /></a>
+<p>設定をした情報で正しく接続できるか、トラブルシューティングツールを実行して確認します。</p>
+<img alt="トラブルシューティングツール" class="align-center" src="../../_images/sfcrm321.png" />
+<p>設定が正しい場合は、以下のようにメッセージが表示されます。</p>
+<a class="reference internal image-reference" href="../../_images/sfcrm331.png"><img alt="確立" class="align-center" src="../../_images/sfcrm331.png" style="width: 400px;" /></a>
+<p>同じ階層にある、 <cite>Endpoints/Providers/xConnect/xDB Reference Data Client Endpoint</cite> を開きます。設定項目は以下の通り。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 46%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>フィールド名</p></th>
+<th class="head"><p>設定情報</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>クライアント接続文字列名</p></td>
+<td><p>xdb.referencedata.client</p></td>
+</tr>
+<tr class="row-odd"><td><p>クライアント証明書の接続文字列名</p></td>
+<td><p>xdb.referencedata.client.certificate</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/sfcrm341.png"><img alt="xDB 参照データ" class="align-center" src="../../_images/sfcrm341.png" style="width: 400px;" /></a>
+<p>接続が全て成功した段階で設定が終了となります。</p>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>3.4.8. カスタムフィールドの設定（オプション）<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Salesforce CRM の <cite>取引先責任者</cite> と <cite>活動</cite> の項目をカスタマイズで追加している場合は、以下の手順でカスタムフィールドを設定してください。</p>
+<ul class="simple">
+<li><p>テナントに作成されている、 <cite>Data Access/Value Accessor Sets/Providers/Salesforce/Salesforce Contact Fields/Sitecore Id on Salesforce Contact</cite> のアイテムを選択します</p></li>
+</ul>
+<img alt="Sitecore ID" class="align-center" src="../../_images/sfcrm351.png" />
+<ul class="simple">
+<li><p>アイテムのフィールド「管理」セクションにあるチェックボックスをチェックして保存してください。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm361.png"><img alt="チェック" class="align-center" src="../../_images/sfcrm361.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>アクティビティに関しても設定をする場合は、 <cite>Data Access/Value Accessor Sets/Providers/Salesforce/Salesforce Event Fields/Sitecore Id on Salesforce Activity</cite> のアイテムで同様の手続きをします。</p></li>
+</ul>
+</div>
+<div class="section" id="id9">
+<h2>3.4.9. Salesforce との同期<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Salesforce CRM と同期をさせる場合、初回に関しては Salesforce Contact ID が設定されていないため、このままでは同期することはできません。そこで、設定を変更して同期できるようにします。</p>
+<ul class="simple">
+<li><p>アイテム <cite>/sitecore/system/Data Exchange/&lt;tenant&gt;/Value Mapping Sets/xConnect Contact to Salesforce Contact Mappings/Contact Model to Salesforce Contact/Salesforce Contact Id</cite> を選択します</p></li>
+</ul>
+<img alt="アイテムの選択" class="align-center" src="../../_images/sfcrm371.png" />
+<ul class="simple">
+<li><p>アイテムのフィールド <cite>ソース バリュー を読み込めなくてもエラーにしない</cite> をチェックします。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm381.png"><img alt="ソースバリューをチェック" class="align-center" src="../../_images/sfcrm381.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="pii">
+<h2>3.4.10. PII フィールドのインデックスを有効にする<a class="headerlink" href="#pii" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>個人情報に紐づく情報に関しては、 xConnect はデフォルトでインデックスをする形になっていません。Salesforce CRM と連動する場合、FirstName と Email の項目を検索できるようにするために、インデックスの対象にすることになります。CRM と同期しない場合はこの設定は不要です。</p>
+<ul class="simple">
+<li><p>フォルダ <cite>wwwroot\&lt;sitecoreInstanceName&gt;_xconnect\App_Data\Config\Sitecore\SearchIndexer\</cite> にある <cite>sc.Xdb.Collection.IndexerSettings.xml</cite> のファイルを開きます</p></li>
+<li><p>ファイルの <cite>Sitecore\XConnect\SearchIndexer\Services\IndexerSettings\Options\IndexPIISensitiveData</cite> のノードの値を True にします。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm391.png"><img alt="日本語リソース" class="align-center" src="../../_images/sfcrm391.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>フォルダ <cite>wwwroot\&lt;sitecoreInstanceName&gt;_xconnect\App_Data\jobs\continuous\IndexWorker\App_data\config\sitecore\SearchIndexer\</cite> にある <cite>sc.Xdb.Collection.IndexerSettings.xml</cite> のファイルを開きます</p></li>
+<li><p>ファイルの <cite>Sitecore\XConnect\SearchIndexer\Services\IndexerSettings\Options\IndexPIISensitiveData</cite> のノードの値を True にします。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/sfcrm401.png"><img alt="IndexPIISensitiveDataの変更2" class="align-center" src="../../_images/sfcrm401.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="id10">
+<h2>3.4.11. テナントを有効にする<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>設定がすべて完了したあと、テナントを有効にすることができます。有効にする手順としては、コンテンツエディターで作成をしたテナントのアイテムを選択します。</p>
+<a class="reference internal image-reference" href="../../_images/sfcrm411.png"><img alt="テナントを有効にします" class="align-center" src="../../_images/sfcrm411.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="id11">
+<h2>3.4.12. 同期のテスト<a class="headerlink" href="#id11" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>テナントが有効にしたあと、<cite>エクスペリエンスプロファイル</cite> のツールを開いても初回の同期が実行されるまでは、プロファイルが表示されません。</p>
+<a class="reference internal image-reference" href="../../_images/sfcrm421.png"><img alt="プロファイル同期前" class="align-center" src="../../_images/sfcrm421.png" style="width: 400px;" /></a>
+<p>そこで、パイプラインバッチを実行して、初回同期を実行します。このパイプラインバッチは、作成したテナントの配下にあります。コンテンツエディターで、<cite>パイプラインバッチ/Salesforce Contact  to xConnect Sync</cite> のアイテムを選択します。</p>
+<a class="reference internal image-reference" href="../../_images/sfcrm431.png"><img alt="パイプラインバッチ" class="align-center" src="../../_images/sfcrm431.png" style="width: 400px;" /></a>
+<p>実行をする場合、<cite>データ交換</cite> のリボンを開いて、<cite>パイプラインバッチを実行</cite> をクリックします。</p>
+<img alt="パイプラインバッチを実行" class="align-center" src="../../_images/sfcrm441.png" />
+<p>実行をすると、ダイアログが表示されます。</p>
+<a class="reference internal image-reference" href="../../_images/sfcrm451.png"><img alt="メッセージ" class="align-center" src="../../_images/sfcrm451.png" style="width: 400px;" /></a>
+<p>エクスペリエンスプロファイルを開くと以下のようになっています。</p>
+<a class="reference internal image-reference" href="../../_images/sfcrm461.png"><img alt="プロファイル同期後" class="align-center" src="../../_images/sfcrm461.png" style="width: 400px;" /></a>
+<p>プロファイルを開くと、コンタクト詳細情報が同期されていることも確認できます。</p>
+<a class="reference internal image-reference" href="../../_images/sfcrm471.png"><img alt="プロファイル詳細" class="align-center" src="../../_images/sfcrm471.png" style="width: 400px;" /></a>
+<p>これで Salesforce CRM 連携の設定が完了しました。</p>
+</div>
 </div>
 
 
@@ -225,7 +671,18 @@
   
   
     
-   
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153234118-1');
+</script>
+
 
 </body>
 </html>

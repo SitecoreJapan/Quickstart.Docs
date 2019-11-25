@@ -65,7 +65,11 @@ Sitecore JavaScript Services (以下、JSS) を利用するためには、Node.j
    :alt: インストール
    
 
-モジュールのインストールが完了した段階で、設定は完了となります。
+モジュールのインストールが完了したあと、以下の URL を利用して動いているか確認をしてください。
+
+* http://<your-sitecore-instance>/sitecore/api/layout/render/jss?item=/&sc_apikey=TEST
+
+`HTTP Error 400.0 - API key is not valid` のエラ〜メッセージが返ってくれば、モジュールのインストールに成功しています。
 
 **************
 次のステップ

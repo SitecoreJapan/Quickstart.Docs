@@ -227,7 +227,11 @@
 <li><p>インストールを実行</p></li>
 </ul>
 <a class="reference internal image-reference" href="../../_images/jss04.png"><img alt="インストール" class="align-center" src="../../_images/jss04.png" style="width: 400px;" /></a>
-<p>モジュールのインストールが完了した段階で、設定は完了となります。</p>
+<p>モジュールのインストールが完了したあと、以下の URL を利用して動いているか確認をしてください。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http:/">http:/</a>/&lt;your-sitecore-instance&gt;/sitecore/api/layout/render/jss?item=/&amp;sc_apikey=TEST</p></li>
+</ul>
+<p><cite>HTTP Error 400.0 - API key is not valid</cite> のエラ〜メッセージが返ってくれば、モジュールのインストールに成功しています。</p>
 </div>
 <div class="section" id="id4">
 <h2>2.2.4. 次のステップ<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
@@ -288,7 +292,18 @@
   
   
     
-   
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153234118-1');
+</script>
+
 
 </body>
 </html>
