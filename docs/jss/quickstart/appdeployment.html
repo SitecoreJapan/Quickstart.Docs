@@ -37,7 +37,18 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
     <link rel="next" title="2. Step by Step ガイド" href="../stepbystep/index.html" />
-    <link rel="prev" title="1.4. サーバー環境の準備" href="jssserverinstall.html" /> 
+    <link rel="prev" title="1.4. サーバー環境の準備" href="jssserverinstall.html" />
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153234118-1');
+</script>
+
 </head>
 
 <body class="wy-body-for-nav">
@@ -256,12 +267,187 @@ NEXT STEPS
 PS C:\Users\Sitecore\sample-app&gt;
 </pre></div>
 </div>
-<p>jss deploy config</p>
-<p>jss deploy app --includeContent --includeDictionary</p>
-<p><a class="reference external" href="http://sample-app.dev.local/">http://sample-app.dev.local/</a></p>
+<p>上記の設定を元に、Sitecore に設定ファイルを追加します。このコマンドは <cite>jss deploy config</cite> を実行するだけとなります。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Sitecore</span>\<span class="n">sample</span><span class="o">-</span><span class="n">app</span><span class="o">&gt;</span> <span class="n">jss</span> <span class="n">deploy</span> <span class="n">config</span>
+<span class="n">Copying</span> <span class="o">./</span><span class="n">sitecore</span><span class="o">/</span><span class="n">config</span> <span class="n">to</span> <span class="n">C</span><span class="p">:</span>\<span class="n">inetpub</span>\<span class="n">wwwroot</span>\<span class="n">habitathome</span><span class="o">.</span><span class="n">cmsdemo</span><span class="o">.</span><span class="n">jp</span>\<span class="n">App_Config</span>\<span class="n">Include</span>\<span class="n">zzz</span><span class="o">...</span>
+
+<span class="n">JSS</span> <span class="n">app</span> <span class="n">build</span> <span class="n">artifacts</span> <span class="n">have</span> <span class="n">been</span> <span class="n">deployed</span> <span class="n">to</span> <span class="n">Sitecore</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>設定のコピーが完了したあと、実際のアプリの情報を展開します。この際、コンテンツや辞書情報も含めてインポートをする形とするため、今回は <cite>jss deploy app --includeContent --includeDictionary</cite> とコマンドを実行します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PS C:\Users\Sitecore\sample-app&gt; jss deploy app --includeContent --includeDictionary
+JSS is creating a manifest for sample-app to ./sitecore/manifest...
+Cleaning path ./sitecore/manifest...
+Cleaned:
+C:\Users\Sitecore\sample-app\sitecore\manifest\data
+C:\Users\Sitecore\sample-app\sitecore\manifest\data\media
+C:\Users\Sitecore\sample-app\sitecore\manifest\data\media\files
+C:\Users\Sitecore\sample-app\sitecore\manifest\data\media\files\jss.pdf
+C:\Users\Sitecore\sample-app\sitecore\manifest\data\media\img
+C:\Users\Sitecore\sample-app\sitecore\manifest\data\media\img\jss_logo.png
+C:\Users\Sitecore\sample-app\sitecore\manifest\data\media\img\sc_logo.png
+C:\Users\Sitecore\sample-app\sitecore\manifest\sitecore-import.json
+Enabling Babel 7 transpilation for the manifest...
+path or pattern &#39;./sitecore/pipelines/**/*.patch.js&#39; did not match any files.
+path or pattern &#39;./sitecore/pipelines/**/*.patch.ts&#39; did not match any files.
+copied media from: ./data/media/img/sc_logo.png to: sitecore\manifest\data\media\img\sc_logo.png
+copied media from: ./data/media/img/jss_logo.png to: sitecore\manifest\data\media\img\jss_logo.png
+copied media from: ./data/media/files/jss.pdf to: sitecore\manifest\data\media\files\jss.pdf
+Manifest has been generated and written to ./sitecore/manifest/sitecore-import.json
+JSS is manifest packaging sample-app to ./sitecore/package...
+Adding data/media/files/jss.pdf
+Adding data/media/img/jss_logo.png
+Adding data/media/img/sc_logo.png
+Adding sitecore-import.json
+Wrote sitecore\package\sample-app.1574663545523.manifest.zip
+Sending package sitecore\package\sample-app.1574663545523.manifest.zip to http://sample-app.dev.local/sitecore/api/jss/import...
+Sitecore has accepted import task JSSImport-sample-app-6:32:25 AM
+Job started: JSSImport-sample-app-6:32:25 AM
+Importing sample-app as sitecore\JssImport
+Import database is master
+Import data contains:
+        Templates - 29
+        Renderings - 27
+        Placeholders - 7
+        Route Items - 6
+        Other Items - 12
+        Dictionary Items - 4
+
+Import language is en
+Reloaded all GraphQL schemas.
+
+Import is complete.
+&gt; npm run build --
+
+&gt; sample-app@12.0.0 build C:\Users\Sitecore\sample-app
+&gt; npm-run-all --serial bootstrap:connected build:client build:server
+
+
+&gt; sample-app@12.0.0 bootstrap:connected C:\Users\Sitecore\sample-app
+&gt; node scripts/bootstrap.js
+
+Writing runtime config to C:\Users\Sitecore\sample-app\src\temp\config.js
+Registering JSS component ContentBlock
+Registering JSS component GraphQL-ConnectedDemo
+Registering JSS component GraphQL-IntegratedDemo
+Registering JSS component GraphQL-Layout
+Registering JSS component MyFirstComponent
+Registering JSS component Styleguide-ComponentParams
+Registering JSS component Styleguide-CustomRouteType
+Registering JSS component Styleguide-FieldUsage-Checkbox
+Registering JSS component Styleguide-FieldUsage-ContentList
+Registering JSS component Styleguide-FieldUsage-Custom
+Registering JSS component Styleguide-FieldUsage-Date
+Registering JSS component Styleguide-FieldUsage-File
+Registering JSS component Styleguide-FieldUsage-Image
+Registering JSS component Styleguide-FieldUsage-ItemLink
+Registering JSS component Styleguide-FieldUsage-Link
+Registering JSS component Styleguide-FieldUsage-Number
+Registering JSS component Styleguide-FieldUsage-RichText
+Registering JSS component Styleguide-FieldUsage-Text
+Registering JSS component Styleguide-Layout
+Registering JSS component Styleguide-Layout-Reuse
+Registering JSS component Styleguide-Layout-Tabs
+Registering JSS component Styleguide-Layout-Tabs-Tab
+Registering JSS component Styleguide-Multilingual
+Registering JSS component Styleguide-RouteFields
+Registering JSS component Styleguide-Section
+Registering JSS component Styleguide-SitecoreContext
+Registering JSS component Styleguide-Tracking
+Writing component factory to C:\Users\Sitecore\sample-app\src\temp\componentFactory.js
+
+&gt; sample-app@12.0.0 build:client C:\Users\Sitecore\sample-app
+&gt; cross-env-shell PUBLIC_URL=$npm_package_config_sitecoreDistPath &quot;react-scripts build&quot;
+
+Creating an optimized production build...
+Browserslist: caniuse-lite is outdated. Please run next command `npm update caniuse-lite browserslist`
+Compiled successfully.
+
+File sizes after gzip:
+
+123.75 KB  build\static\js\1.898f276c.chunk.js
+21.85 KB   build\static\css\1.360b8f80.chunk.css
+14.57 KB   build\static\js\main.2678a662.chunk.js
+771 B      build\static\js\runtime~main.0e5bfa88.js
+148 B      build\static\css\main.61b40953.chunk.css
+
+The project was built assuming it is hosted at /dist/sample-app/.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+
+Find out more about deployment here:
+
+http://bit.ly/CRA-deploy
+
+
+&gt; sample-app@12.0.0 build:server C:\Users\Sitecore\sample-app
+&gt; cross-env-shell NODE_ENV=production &quot;webpack --config server/server.webpack.config.js&quot;
+
+Browserslist: caniuse-lite is outdated. Please run next command `npm update caniuse-lite browserslist`
+Hash: 13f3d0ed933710e7b310
+Version: webpack 4.19.1
+Time: 4030ms
+Built at: 11/25/2019 6:32:57 AM
+                    Asset      Size  Chunks             Chunk Names
+../build/server.bundle.js  1.12 MiB       0  [emitted]  main
+Entrypoint main = ../build/server.bundle.js
+[6] ./src/temp/config.js 501 bytes {0} [built]
+[19] external &quot;stream&quot; 42 bytes {0} [built]
+[23] external &quot;url&quot; 42 bytes {0} [built]
+[25] external &quot;http&quot; 42 bytes {0} [built]
+[29] external &quot;https&quot; 42 bytes {0} [built]
+[32] external &quot;util&quot; 42 bytes {0} [built]
+[45] external &quot;zlib&quot; 42 bytes {0} [built]
+[64] ./src/temp/GraphQLFragmentTypes.json 4.68 KiB {0} [built]
+[73] ./src/assets/sc_logo.png 5.36 KiB {0} [built]
+[75] ./build/index.html 2.23 KiB {0} [built]
+[109] ./node_modules/encoding/lib sync 160 bytes {0} [optional] [built]
+[124] (webpack)/buildin/module.js 497 bytes {0} [built]
+[125] (webpack)/buildin/harmony-module.js 573 bytes {0} [built]
+[186] ./src/assets/app.css 360 bytes {0} [built]
+[188] ./server/server.js + 158 modules 581 KiB {0} [built]
+    | ./server/server.js 6.7 KiB [built]
+    | ./src/lib/GraphQLClientFactory.js 2.02 KiB [built]
+    | ./src/i18n.js 2.58 KiB [built]
+    | ./src/RouteHandler.js 9.64 KiB [built]
+    | ./src/AppRoot.js 1.94 KiB [built]
+    | ./src/dataFetcher.js 703 bytes [built]
+    | ./src/temp/componentFactory.js 4.12 KiB [built]
+    | ./src/lib/SitecoreContextFactory.js 602 bytes [built]
+    | ./src/Layout.js 2.75 KiB [built]
+    | ./src/NotFound.js 1010 bytes [built]
+    | ./src/lib/GraphQLData.js 5.83 KiB [built]
+    |     + 148 hidden modules
+    + 199 hidden modules
+
+WARNING in ./node_modules/encoding/lib/iconv-loader.js 9:12-34
+Critical dependency: the request of a dependency is an expression
+@ ./node_modules/encoding/lib/encoding.js
+@ ./node_modules/node-fetch/lib/body.js
+@ ./node_modules/node-fetch/index.js
+@ ./node_modules/isomorphic-fetch/fetch-npm-node.js
+@ ./src/lib/GraphQLClientFactory.js
+@ ./server/server.js
+Copying C:\Users\Sitecore\sample-app\build to C:\inetpub\wwwroot\habitathome.cmsdemo.jp\dist\sample-app...
+
+JSS app build artifacts have been deployed to Sitecore.
+PS C:\Users\Sitecore\sample-app&gt;
+</pre></div>
+</div>
+<p>展開されたメッセージが表示されれば、インポートは完了となります。</p>
 </div>
 <div class="section" id="id2">
-<h2>1.5.4. 関連サイト<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>1.5.4. Sitecore における動作確認<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>実際にインポートされたサイトに関して、ブラウザ経由でアクセスします。今回は <cite>http://sample-app.dev.local/</cite> にアクセスをすると以下のようにページが表示されます。</p>
+<a class="reference internal image-reference" href="../../_images/jsssample04.png"><img alt="ページが表示される" class="align-center" src="../../_images/jsssample04.png" style="width: 400px;" /></a>
+<p>管理画面にログインをして、コンテンツエディタを開いてください。下記のように新しいコンテンツツリーが作成されていることがわかります。</p>
+<a class="reference internal image-reference" href="../../_images/jsssample05.png"><img alt="コンテンツツリーで確認" class="align-center" src="../../_images/jsssample05.png" style="width: 400px;" /></a>
+<p>これで JSS の最も小さなプロジェクトを作成して、コンテンツがどのように Sitecore と連携できるのか、というのを確認することができました。</p>
+<p>もう少し Sitecore JSS に関して学ぶ場合は、 <a class="reference internal" href="../stepbystep/index.html"><span class="doc">Step by Step ガイド</span></a> を参考にしてください。</p>
+</div>
+<div class="section" id="id3">
+<h2>1.5.5. 関連サイト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://jss.sitecore.com/docs/getting-started/app-deployment">App Deployment</a></p></li>
 </ul>
@@ -314,18 +500,7 @@ PS C:\Users\Sitecore\sample-app&gt;
   
   
     
-  
- 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-153234118-1');
-</script>
-
+   
 
 </body>
 </html>
