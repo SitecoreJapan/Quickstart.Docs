@@ -2,9 +2,7 @@
 Sitecore Experience Accelerator
 #####################################
 
-.. todo:: 本文書は Sitecore 9.3 リリース後に更新予定です。
-
-Sitecore Experience Accelerator 1.9.0 モジュールのインストールについて紹介をしています。
+Sitecore Experience Accelerator 9.3 モジュールのインストールについて紹介をしています。
 
 *************************
 モジュールのダウンロード
@@ -12,10 +10,10 @@ Sitecore Experience Accelerator 1.9.0 モジュールのインストールにつ
 
 モジュールに関しては、Sitecore Download サイトから入手することができます。
 
-* `Sitecore Experience Accelerator 1.9.0 <https://dev.sitecore.net/Downloads/Sitecore_Experience_Accelerator/19/Sitecore_Experience_Accelerator_190.aspx>`_ 
+* `Sitecore Experience Accelerator 9.3.0 <https://dev.sitecore.net/Downloads/Sitecore_Experience_Accelerator/9x/Sitecore_Experience_Accelerator_930.aspx>`_ 
 
-    * Sitecore Experience Accelerator for 9.2
-    * Sitecore PowerShell Extension 5.0 for Sitecore 9.2
+    * Sitecore Experience Accelerator for 9.3
+    * Sitecore PowerShell Extension for Sitecore 9.3
 
 上記のモジュールをダウンロードした後、次のステップに進みます。
 
@@ -34,7 +32,7 @@ Sitecore Experience Accelerator 1.9.0 モジュールのインストールにつ
    :width: 400px
    :alt: パッケージをインストールする
 
-* まず最初に、`Sitecore PowerShell Extension 5.0 for Sitecore 9.2` のファイルをアップロードします。
+* まず最初に、`Sitecore PowerShell Extension for Sitecore 9.3` のファイルをアップロードします。
 
 .. image:: images/sxa01.png
    :align: center
@@ -42,7 +40,7 @@ Sitecore Experience Accelerator 1.9.0 モジュールのインストールにつ
    :alt: PowerShell モジュール
 
 * インストールを実行します
-* 続いて `Sitecore Experience Accelerator for 9.2` のファイルをアップロードします。
+* 続いて `Sitecore Experience Accelerator for 9.3` のファイルをアップロードします。
 
 .. image:: images/sxa02.png
    :align: center

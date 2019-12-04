@@ -12,3 +12,7 @@ Sitecore Experience Platform のインストール手順に関して紹介をし
     :maxdepth: 1
     :titlesonly:
     
+    sysreq
+    tools
+    install
+    japanese

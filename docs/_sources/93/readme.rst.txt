@@ -2,10 +2,12 @@
 はじめに
 ###############
 
-Sitecore Experience Platform 9.3 に関する情報を提供しています。
+Sitecore Experience Platform 9.3 に関して、
 
 ******************
 9.3 新機能一覧
 ******************
 
-.. todo:: 本文書は Sitecore 9.3 リリース後に更新予定です。
+* データベース対応として SQL Server 2019 が追加されました
+* Sitecore Install Assistant を利用して Solr のインストールも自動で完了します
+*
