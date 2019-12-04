@@ -2,19 +2,17 @@
 Sitecore HabitatHome Platform
 #################################
 
-.. todo:: 本文書は Sitecore 9.3 リリース後に更新予定です。
-
 ここで紹介をしている Sitecore HabitatHome Plathome は以下の GitHub のリポジトリで公開されているものを紹介しています。
 
 * `https://github.com/Sitecore/Sitecore.HabitatHome.Platform <https://github.com/Sitecore/Sitecore.HabitatHome.Platform>`_
 
-インストールをする際には、 `release/9.2.0` のブランチを選択してください。
+インストールをする際には、 `release/9.3.0` のブランチを選択してください。
 
-***********************
-インストール環境の確認
-***********************
+**************************
+Sitecore のインストール
+**************************
 
-Sitecore Experience Platform 9.2 Initial Release の準備をしてください。デモ環境は、Sitecore のインストール環境としては、以下の設定が標準で設定されています。
+Sitecore Experience Platform 9.3 Initial Release をインストールします。デモ環境は、Sitecore のインストール環境としては、以下の設定が標準で設定されています。
 
 ========================= ====================================================
 設定項目　                 設定値
@@ -30,32 +28,50 @@ xConnect ルート            C:\\inetpub\\wwwroot\\habitathome_xconnect.dev.loc
 xConnect ホスト            habitathome_xconnect.dev.local
 ========================= ====================================================
 
-.. code-block::
+今回のデモ環境の構築は、以下の環境で構築しています。
 
-  $prefix = "dev.local"
-  $XConnectCollectionService = "habitathome_xconnect.dev.local"
-  $sitecoreSiteName = "habitathome.dev.local"
+* Windows Server 2019 Standard
+* SQL Server 2019 Standard
+* SQL Server Management Studio
 
-  $xconnectHostName = "habitathome_xconnect.dev.local"
+Sitecore Install Assistant の利用
+======================================
 
-Sitecore のクリーンインストールが完了すると、 http://habitathome.dev.local/ でアクセスができるようになります。アクセス後、 /sitecore と入力するとログイン画面が表示されます。
+モジュールや Solr のインストールを手軽に実施するために、Sitecore Install Assistant を利用してインストールをします。手順は以下のように進めてください。
+
+* Graphical setup package for XP Single ファイルをダウンロード、 `C:\\projects\\sif` に展開してください。
+* Setup.exe を実行して、モジュールのインストールを完了させます
+
+.. image:: images/habitat01.png
+   :align: center
+   :width: 400px
+   :alt: モジュールをインストールする
+
+* Solr のインストールを実行します、prefix は habitat とします。
+
+.. image:: images/habitat02.png
+   :align: center
+   :width: 400px
+   :alt: Solr のインストール
+
+上記の手順が終わったところでインストールウィザードを終了させます。
+
 
 インストールスクリプトの活用
 ================================
 
-Sitecore Install Assistant を利用せずにインストールをすることができるスクリプトを用意しています。
+Solr までインストールが完了した後は、Sitecore Install Framework のスクリプトを利用してインストールを進めます。
 
 * `https://github.com/SitecoreJapan/InstallScript/tree/master/demo/HabitatPlatform <https://github.com/SitecoreJapan/InstallScript/tree/master/demo/HabitatPlatform>`_
 
 手順は以下の通りです。
 
-1. Packages for XP Single ファイルをダウンロード、 `C:\\projects\\sif` に展開してください。
-2. `XP0 Configuration files 9.2.0 rev. 002893.zip` のファイルを同じフォルダに展開します。
-3. `Habitat-920-XP.ps1` のファイルをダウンロードして、 `C:\\projects\\sif` にコピーします。
-4. ダウンロードした `Habitat-920-XP.ps1` ファイルのデータベースに関する情報を更新してください。
-5. 同じフォルダにライセンスファイルをコピーします
+1. `Habitat-930-XP0.ps1` のファイルをダウンロードして、 `C:\\projects\\sif` にコピーします。
+2. ダウンロードした `Habitat-930-XP0.ps1` ファイルのデータベースに関する情報を更新してください。
+3. 同じフォルダにライセンスファイルをコピーします
 
 上記の手順のあと、 PowerShell のスクリプトを実行することで、Sitecore のインストールが完了します。
+
 
 *************************
 モジュールのインストール
@@ -63,24 +79,16 @@ Sitecore Install Assistant を利用せずにインストールをすること�
 
 デモサイトで必要なモジュールをインストールしていきます。モジュールは以下の順番でインストールを進めてください。
 
-* Sitecore PowerShell Extensions-5.0 for 9.2.zip 
-* Sitecore Experience Accelerator 1.9.0 rev. 190528 for 9.2.zip
+* Sitecore.PowerShell.Extensions-6.0.zip 
+* Sitecore Experience Accelerator 9.3.0.2589.zip
+
 
 **********************
 日本語リソースの追加
 **********************
 
-Sitecore Experience Platform 9.2 Initial Release の日本語リソースの追加および SXA の日本語リソースを追加してください。追加の手順は、[Youtube の動画](https://www.youtube.com/watch?v=iJGBN0wj10s) が参考になります。
+Sitecore Experience Platform 9.3 Initial Release の日本語リソースの追加および SXA の日本語リソースを追加してください。追加の手順は、[Youtube の動画](https://www.youtube.com/watch?v=iJGBN0wj10s) が参考になります。
 
-****************
-証明書の追加
-****************
-
-https://github.com/SitecoreJapan/InstallScript/tree/master/demo/HabitatPlatform にある `habitatdevhome.cert.ps1` のファイルを c:\\projects\\sif のフォルダにコピーをして実行してください。自己証明書が生成されたあと、 IIS にて https://habitathome.dev.local/ でアクセスできることを確認します。
-
-https での接続でもログインができるようにするために、 Identity Server の設定を変更する必要があります。
-
-`C:\\inetpub\\wwwroot\\habitathome.identityserver\\Config\\production` にある `Sitecore.IdentityServer.Host.xml` のファイルを開いて、対象となる URL を http から https に変更してください。
 
 **********************
 リポジトリのクローン
@@ -92,6 +100,7 @@ https://github.com/Sitecore/Sitecore.HabitatHome.Platform のリポジトリの�
 * publishsettings.targets
 
 Sitecore Experience Platform のインストール環境に合わせて、パラメーターを変更してください。
+
 
 ****************************
 必要なツールのインストール
@@ -157,11 +166,13 @@ Sitecore Experience Platform のインストール環境に合わせて、パラ
 
 スクリプトの実行が完了したタイミングで、インストールが完了します。
 
+
 **********************
 インストール後の作業
 **********************
 
 インストールが完了したあと、以下の手順を実行してください。
+
 
 Unicorn の設定をオフにする
 ==========================================
@@ -172,6 +183,7 @@ Unicorn の設定をオフにする
 
     <add key="unicorn:define" value="Off" />
 
+
 マーケティングリソースの追加
 =============================
 
@@ -181,6 +193,7 @@ Unicorn の設定をオフにする
 
 `920-marketing-ja-jp.xml` のファイルをマスターデータベースにインポートすることで、環境が整います。
 
+
 インストールしたデータを反映させる
 =====================================
 
@@ -188,6 +201,7 @@ Unicorn の設定をオフにする
 
 * 全コンテンツの Republish
 * インデックスの再構築
+
 
 ***********
 関連サイト

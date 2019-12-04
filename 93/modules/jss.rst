@@ -2,9 +2,7 @@
 Sitecore JavaScript Services
 ################################
 
-.. todo:: 本文書は Sitecore 9.3 リリース後に更新予定です。
-
-ここでは、Sitecore Experience Platform 9.2 Initial Release に、Sitecore JavaScript Services 12.0.0 インストールをするための手順を紹介しています。
+ここでは、Sitecore Experience Platform 9.3 Initial Release に、Sitecore JavaScript Services 13.0.0 インストールをするための手順を紹介しています。
 
 *************************************
 Node.js のダウンロードとインストール
@@ -29,10 +27,10 @@ Sitecore JavaScript Services (以下、JSS) を利用するためには、Node.j
 
 モジュールに関しては、Sitecore Download サイトから入手することができます。
 
-* `Sitecore JavaScript Services 12.0.0 <https://dev.sitecore.net/Downloads/Sitecore_JavaScript_Services/120/Sitecore_JavaScript_Services_1200.aspx>`_
+* `Sitecore JavaScript Services 13.0.0 <https://dev.sitecore.net/Downloads/Sitecore_JavaScript_Services/130/Sitecore_JavaScript_Services_1300.aspx>`_
 
-    * Sitecore JavaScript Services Server for Sitecore 9.2 XM
-    * Sitecore JavaScript Services Server for Sitecore 9.2 XP
+    * Sitecore JavaScript Services Server for Sitecore 9.3 XM
+    * Sitecore JavaScript Services Server for Sitecore 9.3 XP
 
 今回は XP 向けのモジュールを利用します。
 
