@@ -16,3 +16,4 @@ Sitecore Experience Platform のインストール手順に関して紹介をし
     tools
     install
     japanese
+    rebuild
