@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4.3. Email Experience Manager &mdash; Sitecore クイックスタート  ドキュメント</title>
+  <title>Email Experience Manager &mdash; Sitecore クイックスタート  ドキュメント</title>
   
 
   
@@ -36,8 +36,6 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="5. デモサイト" href="../demo/index.html" />
-    <link rel="prev" title="4.2. Azure Active Directory の設定" href="ad.html" />
  
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
@@ -93,21 +91,9 @@
             
             
               <p class="caption"><span class="caption-text">目次</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore Experience Platform 9.3</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../readme.html">1. はじめに</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install/index.html">2. インストールガイド</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">3. モジュールのインストール</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">4. 各種設定に関して</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="azuretoolkit.html">4.1. Sitecore Azure Toolkit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ad.html">4.2. Azure Active Directory の設定</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">4.3. Email Experience Manager</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../demo/index.html">5. デモサイト</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Sitecore Experience Platform 9.3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
@@ -157,11 +143,7 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">Sitecore Experience Platform 9.3</a> &raquo;</li>
-        
-          <li><a href="index.html">4. 各種設定に関して</a> &raquo;</li>
-        
-      <li>4.3. Email Experience Manager</li>
+      <li>Email Experience Manager</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -181,13 +163,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="email-experience-manager">
-<h1>4.3. Email Experience Manager<a class="headerlink" href="#email-experience-manager" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>Email Experience Manager<a class="headerlink" href="#email-experience-manager" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="admonition-todo admonition" id="id1">
 <p class="admonition-title">課題</p>
 <p>本文書は Sitecore 9.3 リリース後に更新予定です。</p>
 </div>
 <div class="section" id="custom-smtp">
-<h2>4.3.1. Custom SMTP の設定<a class="headerlink" href="#custom-smtp" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Custom SMTP の設定<a class="headerlink" href="#custom-smtp" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Sitecore の Email Experience Manager に関しては、月間のメール利用料を基にした契約をすることで、メールの配信ができるサービスとなります。デモで利用する場合は、 Custom SMTP を利用することで、デモを実施することができます。手順に関しては以下のページが参考になります。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://doc.sitecore.com/developers/exm/92/email-experience-manager/en/use-a-custom-smtp-for-email-delivery.html">Use a Custom SMTP for email delivery</a></p></li>
@@ -198,7 +180,7 @@
 </div>
 <p>Sitecore でメールを利用するためには、通常は Email Experience Manager のサービスを契約することで対応できますが、デモや検証にあたっては CustomSMTP を使う形となります。ここでは、CustomSMTP の場合のメールサービスの設定を紹介しています。</p>
 <div class="section" id="sitecore-config">
-<h3>4.3.1.1. Sitecore.config の設定<a class="headerlink" href="#sitecore-config" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Sitecore.config の設定<a class="headerlink" href="#sitecore-config" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p><cite>App_Config</cite> のフォルダにある <cite>Sitecore.config</cite> の設定を変更します。今回は Outlook.com のメールアドレス、サーバーの設定で紹介をしていますが、実際に利用するサーバーが別にある場合は、そのサーバーの値に合わせて設定をしてください。</p>
 <table class="docutils align-default">
 <colgroup>
@@ -258,10 +240,10 @@
 </div>
 </div>
 <div class="section" id="customsmtp">
-<h2>4.3.2. CustomSMTP の設定<a class="headerlink" href="#customsmtp" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>CustomSMTP の設定<a class="headerlink" href="#customsmtp" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p><cite>App_ConfigSitecoreEmailExperience</cite> のフォルダにある <cite>Sitecore.EDS.Providers.CustomSMTP.config</cite> および <cite>Sitecore.EDS.Providers.CustomSMTP.Sync.config</cite> のファイルの編集をします。</p>
 <div class="section" id="sitecore-eds-providers-customsmtp-config">
-<h3>4.3.2.1. Sitecore.EDS.Providers.CustomSMTP.config<a class="headerlink" href="#sitecore-eds-providers-customsmtp-config" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Sitecore.EDS.Providers.CustomSMTP.config<a class="headerlink" href="#sitecore-eds-providers-customsmtp-config" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>まずは SMTP サーバーとの接続に関しての設定をします。項目としては以下のとおりです。</p>
 <table class="docutils align-default">
 <colgroup>
@@ -311,7 +293,7 @@
 </div>
 </div>
 <div class="section" id="sitecore-eds-providers-customsmtp-sync-config">
-<h3>4.3.2.2. Sitecore.EDS.Providers.CustomSMTP.Sync.config<a class="headerlink" href="#sitecore-eds-providers-customsmtp-sync-config" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Sitecore.EDS.Providers.CustomSMTP.Sync.config<a class="headerlink" href="#sitecore-eds-providers-customsmtp-sync-config" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>続いて POP サーバーとの接続に関しての設定をします。項目としては以下のとおりです。</p>
 <table class="docutils align-default">
 <colgroup>
@@ -365,13 +347,13 @@
 </div>
 </div>
 <div class="section" id="id2">
-<h2>4.3.3. 接続テスト<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>接続テスト<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>サーバーとの接続テストを実施するために、管理画面にアクセスをして、コンテンツエディターを開いてください。左側のコンテンツツリーに表示されている、 Sitecore - コンテンツ - 電子メールアドレス のアイテムを選択します。</p>
-<img alt="アイテムの選択" class="align-center" src="../../_images/exm011.png" />
+<img alt="アイテムの選択" class="align-center" src="93\configuration\images/exm01.png" />
 <p>アイテムを選択すると、メニューに <cite>電子メール</cite> のタブが追加され、<cite>テスト接続</cite> のアイコンが表示されます。これをクリックしてください。</p>
-<img alt="テスト接続" class="align-center" src="../../_images/exm021.png" />
+<img alt="テスト接続" class="align-center" src="93\configuration\images/exm02.png" />
 <p>テスト結果として、Eメールサーバーは利用可能です、と表示されることで、メールサーバーとの接続を確認することができました。</p>
-<a class="reference internal image-reference" href="../../_images/exm031.png"><img alt="テスト結果" class="align-center" src="../../_images/exm031.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="93\configuration\images/exm03.png"><img alt="テスト結果" class="align-center" src="93\configuration\images/exm03.png" style="width: 400px;" /></a>
 <p>接続ができない場合は、いくつかの要因があります。</p>
 <ul class="simple">
 <li><p>多要素認証を組み合わせてメールを利用している</p></li>
@@ -388,15 +370,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../demo/index.html" class="btn btn-neutral float-right" title="5. デモサイト" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="ad.html" class="btn btn-neutral float-left" title="4.2. Azure Active Directory の設定" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

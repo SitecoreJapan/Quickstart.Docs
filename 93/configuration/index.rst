@@ -9,5 +9,3 @@
     :titlesonly:
 
     azuretoolkit
-    ad
-    exm
