@@ -1,0 +1,506 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.5. 作成したアプリの展開 &mdash; Sitecore クイックスタート  ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="2. Step by Step ガイド" href="../stepbystep/index.html" />
+    <link rel="prev" title="1.4. サーバー環境の準備" href="jssserverinstall.html" />
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153234118-1');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Sitecore クイックスタート
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目次</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../93/index.html">Sitecore Experience Platform 9.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore JavaScript Services</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">1. クイックスタート</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="windows.html">1.1. 環境の整備 ( Windows 編)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="macos.html">1.2. 環境の整備 ( macOS 編)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="firstcomponent.html">1.3. 最初のコンポーネントの追加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jssserverinstall.html">1.4. サーバー環境の準備</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.5. 作成したアプリの展開</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../stepbystep/index.html">2. Step by Step ガイド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../graphql/index.html">3. Sitecore GraphQL</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sitecore クイックスタート</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Sitecore JavaScript Services</a> &raquo;</li>
+        
+          <li><a href="index.html">1. クイックスタート</a> &raquo;</li>
+        
+      <li>1.5. 作成したアプリの展開</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/jss/quickstart/appdeployment.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>1.5. 作成したアプリの展開<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ここでは実際に作成をした React で作った JavaScript のアプリを Sitecore に展開する手続きを進めます。</p>
+<div class="section" id="jss">
+<h2>1.5.1. JSS アプリの準備<a class="headerlink" href="#jss" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>サンプルのアプリを作成した際には、 <cite>sitecoreconfig&lt;appname&gt;.config</cite> という形で設定ファイルが作成されています。今回動作させるホスト名を <cite>hostName</cite> に設定します。</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;site</span> <span class="na">patch:before=</span><span class="s">&quot;site[@name=&#39;website&#39;]&quot;</span>
+      <span class="na">inherits=</span><span class="s">&quot;website&quot;</span>
+      <span class="na">name=</span><span class="s">&quot;sample-app&quot;</span>
+      <span class="na">hostName=</span><span class="s">&quot;sample-app.dev.local&quot;</span>
+      <span class="na">rootPath=</span><span class="s">&quot;/sitecore/content/sample-app&quot;</span>
+      <span class="na">startItem=</span><span class="s">&quot;/home&quot;</span>
+      <span class="na">database=</span><span class="s">&quot;master&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p>今回はデモ環境のため、このまま <cite>sample-app.dev.local</cite> の名前を、 <cite>C:¥¥Windows¥¥System32¥¥drivers¥¥etc¥¥hosts</cite> に追加します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>    <span class="n">sample</span><span class="o">-</span><span class="n">app</span><span class="o">.</span><span class="n">dev</span><span class="o">.</span><span class="n">local</span>
+</pre></div>
+</div>
+<p>Sitecore がインストースされているインスタンスに対して、このホスト名を追加します。</p>
+<a class="reference internal image-reference" href="../../_images/hostname01.png"><img alt="ホスト名を追加する" class="align-center" src="../../_images/hostname01.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="sitecore">
+<h2>1.5.2. Sitecore の準備<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>作成したアプリを展開するにあたり、API Key を Sitecore 側で準備をする必要があります。API Key の作成は以下の手順でできます。</p>
+<ol class="arabic simple">
+<li><p>Sitecore に管理者権限でログインをします。</p></li>
+<li><p>コンテンツエディターを開きます</p></li>
+<li><p><cite>/sitecore/system/Settings/Services/API Keys</cite> のアイテムを選択します</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/apikey01.png"><img alt="API キーのアイテムを選択" class="align-center" src="../../_images/apikey01.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="4">
+<li><p>API キーを作成します、ここではアプリ名で作成しました</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/apikey02.png"><img alt="キーのアイテムを作成" class="align-center" src="../../_images/apikey02.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p>API キーに以下の項目を設定します</p></li>
+</ol>
+<p>設定名　            設定内容　今回の設定</p>
+<p>CORS Origines         <a class="reference external" href="http://localhost:3000">http://localhost:3000</a>
+認められたコントローラー  *
+偽装ユーザー            extranetanonymous
+スロットルストラテジー    空欄</p>
+<a class="reference internal image-reference" href="../../_images/apikey03.png"><img alt="キーのアイテムを作成" class="align-center" src="../../_images/apikey03.png" style="width: 400px;" /></a>
+<ol class="arabic simple" start="6">
+<li><p>アイテムをパブリッシュします</p></li>
+<li><p>アイテム ID を控えます</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/apikey04.png"><img alt="アイテム ID" class="align-center" src="../../_images/apikey04.png" style="width: 400px;" /></a>
+<p>このサンプルでは、{45D95A97-1FD4-4403-BF9C-42BFD75843FE} がアイテム ID になります。</p>
+<ol class="arabic simple" start="8">
+<li><p>作成したキーが利用できるか、以下の URL でアクセスをします</p></li>
+</ol>
+<ul class="simple">
+<li><p><a class="reference external" href="http://sample-app.dev.local/sitecore/api/layout/render/jss?item=">http://sample-app.dev.local/sitecore/api/layout/render/jss?item=</a>/&amp;sc_apikey={YOUR_API_KEY_ID}</p></li>
+</ul>
+<ol class="arabic simple" start="9">
+<li><p>アクセスをすると、以下のように JSON 形式でデータが表示されます。</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../_images/apikey05.png"><img alt="設定の最終確認" class="align-center" src="../../_images/apikey05.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="jss-sitecore">
+<h2>1.5.3. JSS アプリと Sitecore の接続<a class="headerlink" href="#jss-sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>設定が完了したので、接続をする手順と接続を実施します。まず、コマンドとして <cite>jss setup</cite> を実行してください。</p>
+<ol class="arabic simple">
+<li><p>最初にインスタンスの状態を聞いてきます。ここでは y を選択します。</p></li>
+<li><p>続いて Sitecore がインストールされているディレクトリ名を記載します。</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PS C:\Users\Sitecore\sample-app&gt; jss setup
+Is your Sitecore instance on this machine or accessible via network share? [y/n]: y
+Path to the Sitecore folder (e.g. c:\inetpub\wwwroot\my.siteco.re): C:\inetpub\wwwroot\sample-app.dev.local
+Sitecore hostname (e.g. http://myapp.local.siteco.re; see /sitecore/config; ensure added to hosts): http://sample-app.dev.local
+Sitecore import service URL [http://sample-app.dev.local/sitecore/api/jss/import]:
+Sitecore API Key (ID of API key item): {45D95A97-1FD4-4403-BF9C-42BFD75843FE}
+Please enter your deployment secret (32+ random chars; or press enter to generate one): 256655EC8F3A45B5AD90B63BC25B8067
+Deploy secret Sitecore config written to C:\Users\Sitecore\sample-app\sitecore\config\sample-app.deploysecret.config
+Ensure this configuration is deployed to Sitecore.
+JSS connection settings saved to C:\Users\Sitecore\sample-app\scjssconfig.json
+
+NEXT STEPS
+* Ensure the hostName in /sitecore/config/*.config is configured as sample-app.dev.local, and in hosts file if needed.
+* Deploy your configuration (i.e. &#39;jss deploy config&#39;)
+* Deploy your app (i.e. &#39;jss deploy app -c -d&#39;)
+* Test your app in integrated mode by visiting http://sample-app.dev.local
+PS C:\Users\Sitecore\sample-app&gt;
+</pre></div>
+</div>
+<p>上記の設定を元に、Sitecore に設定ファイルを追加します。このコマンドは <cite>jss deploy config</cite> を実行するだけとなります。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Sitecore</span>\<span class="n">sample</span><span class="o">-</span><span class="n">app</span><span class="o">&gt;</span> <span class="n">jss</span> <span class="n">deploy</span> <span class="n">config</span>
+<span class="n">Copying</span> <span class="o">./</span><span class="n">sitecore</span><span class="o">/</span><span class="n">config</span> <span class="n">to</span> <span class="n">C</span><span class="p">:</span>\<span class="n">inetpub</span>\<span class="n">wwwroot</span>\<span class="n">habitathome</span><span class="o">.</span><span class="n">cmsdemo</span><span class="o">.</span><span class="n">jp</span>\<span class="n">App_Config</span>\<span class="n">Include</span>\<span class="n">zzz</span><span class="o">...</span>
+
+<span class="n">JSS</span> <span class="n">app</span> <span class="n">build</span> <span class="n">artifacts</span> <span class="n">have</span> <span class="n">been</span> <span class="n">deployed</span> <span class="n">to</span> <span class="n">Sitecore</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>設定のコピーが完了したあと、実際のアプリの情報を展開します。この際、コンテンツや辞書情報も含めてインポートをする形とするため、今回は <cite>jss deploy app --includeContent --includeDictionary</cite> とコマンドを実行します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PS C:\Users\Sitecore\sample-app&gt; jss deploy app --includeContent --includeDictionary
+JSS is creating a manifest for sample-app to ./sitecore/manifest...
+Cleaning path ./sitecore/manifest...
+Cleaned:
+C:\Users\Sitecore\sample-app\sitecore\manifest\data
+C:\Users\Sitecore\sample-app\sitecore\manifest\data\media
+C:\Users\Sitecore\sample-app\sitecore\manifest\data\media\files
+C:\Users\Sitecore\sample-app\sitecore\manifest\data\media\files\jss.pdf
+C:\Users\Sitecore\sample-app\sitecore\manifest\data\media\img
+C:\Users\Sitecore\sample-app\sitecore\manifest\data\media\img\jss_logo.png
+C:\Users\Sitecore\sample-app\sitecore\manifest\data\media\img\sc_logo.png
+C:\Users\Sitecore\sample-app\sitecore\manifest\sitecore-import.json
+Enabling Babel 7 transpilation for the manifest...
+path or pattern &#39;./sitecore/pipelines/**/*.patch.js&#39; did not match any files.
+path or pattern &#39;./sitecore/pipelines/**/*.patch.ts&#39; did not match any files.
+copied media from: ./data/media/img/sc_logo.png to: sitecore\manifest\data\media\img\sc_logo.png
+copied media from: ./data/media/img/jss_logo.png to: sitecore\manifest\data\media\img\jss_logo.png
+copied media from: ./data/media/files/jss.pdf to: sitecore\manifest\data\media\files\jss.pdf
+Manifest has been generated and written to ./sitecore/manifest/sitecore-import.json
+JSS is manifest packaging sample-app to ./sitecore/package...
+Adding data/media/files/jss.pdf
+Adding data/media/img/jss_logo.png
+Adding data/media/img/sc_logo.png
+Adding sitecore-import.json
+Wrote sitecore\package\sample-app.1574663545523.manifest.zip
+Sending package sitecore\package\sample-app.1574663545523.manifest.zip to http://sample-app.dev.local/sitecore/api/jss/import...
+Sitecore has accepted import task JSSImport-sample-app-6:32:25 AM
+Job started: JSSImport-sample-app-6:32:25 AM
+Importing sample-app as sitecore\JssImport
+Import database is master
+Import data contains:
+        Templates - 29
+        Renderings - 27
+        Placeholders - 7
+        Route Items - 6
+        Other Items - 12
+        Dictionary Items - 4
+
+Import language is en
+Reloaded all GraphQL schemas.
+
+Import is complete.
+&gt; npm run build --
+
+&gt; sample-app@12.0.0 build C:\Users\Sitecore\sample-app
+&gt; npm-run-all --serial bootstrap:connected build:client build:server
+
+
+&gt; sample-app@12.0.0 bootstrap:connected C:\Users\Sitecore\sample-app
+&gt; node scripts/bootstrap.js
+
+Writing runtime config to C:\Users\Sitecore\sample-app\src\temp\config.js
+Registering JSS component ContentBlock
+Registering JSS component GraphQL-ConnectedDemo
+Registering JSS component GraphQL-IntegratedDemo
+Registering JSS component GraphQL-Layout
+Registering JSS component MyFirstComponent
+Registering JSS component Styleguide-ComponentParams
+Registering JSS component Styleguide-CustomRouteType
+Registering JSS component Styleguide-FieldUsage-Checkbox
+Registering JSS component Styleguide-FieldUsage-ContentList
+Registering JSS component Styleguide-FieldUsage-Custom
+Registering JSS component Styleguide-FieldUsage-Date
+Registering JSS component Styleguide-FieldUsage-File
+Registering JSS component Styleguide-FieldUsage-Image
+Registering JSS component Styleguide-FieldUsage-ItemLink
+Registering JSS component Styleguide-FieldUsage-Link
+Registering JSS component Styleguide-FieldUsage-Number
+Registering JSS component Styleguide-FieldUsage-RichText
+Registering JSS component Styleguide-FieldUsage-Text
+Registering JSS component Styleguide-Layout
+Registering JSS component Styleguide-Layout-Reuse
+Registering JSS component Styleguide-Layout-Tabs
+Registering JSS component Styleguide-Layout-Tabs-Tab
+Registering JSS component Styleguide-Multilingual
+Registering JSS component Styleguide-RouteFields
+Registering JSS component Styleguide-Section
+Registering JSS component Styleguide-SitecoreContext
+Registering JSS component Styleguide-Tracking
+Writing component factory to C:\Users\Sitecore\sample-app\src\temp\componentFactory.js
+
+&gt; sample-app@12.0.0 build:client C:\Users\Sitecore\sample-app
+&gt; cross-env-shell PUBLIC_URL=$npm_package_config_sitecoreDistPath &quot;react-scripts build&quot;
+
+Creating an optimized production build...
+Browserslist: caniuse-lite is outdated. Please run next command `npm update caniuse-lite browserslist`
+Compiled successfully.
+
+File sizes after gzip:
+
+123.75 KB  build\static\js\1.898f276c.chunk.js
+21.85 KB   build\static\css\1.360b8f80.chunk.css
+14.57 KB   build\static\js\main.2678a662.chunk.js
+771 B      build\static\js\runtime~main.0e5bfa88.js
+148 B      build\static\css\main.61b40953.chunk.css
+
+The project was built assuming it is hosted at /dist/sample-app/.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+
+Find out more about deployment here:
+
+http://bit.ly/CRA-deploy
+
+
+&gt; sample-app@12.0.0 build:server C:\Users\Sitecore\sample-app
+&gt; cross-env-shell NODE_ENV=production &quot;webpack --config server/server.webpack.config.js&quot;
+
+Browserslist: caniuse-lite is outdated. Please run next command `npm update caniuse-lite browserslist`
+Hash: 13f3d0ed933710e7b310
+Version: webpack 4.19.1
+Time: 4030ms
+Built at: 11/25/2019 6:32:57 AM
+                    Asset      Size  Chunks             Chunk Names
+../build/server.bundle.js  1.12 MiB       0  [emitted]  main
+Entrypoint main = ../build/server.bundle.js
+[6] ./src/temp/config.js 501 bytes {0} [built]
+[19] external &quot;stream&quot; 42 bytes {0} [built]
+[23] external &quot;url&quot; 42 bytes {0} [built]
+[25] external &quot;http&quot; 42 bytes {0} [built]
+[29] external &quot;https&quot; 42 bytes {0} [built]
+[32] external &quot;util&quot; 42 bytes {0} [built]
+[45] external &quot;zlib&quot; 42 bytes {0} [built]
+[64] ./src/temp/GraphQLFragmentTypes.json 4.68 KiB {0} [built]
+[73] ./src/assets/sc_logo.png 5.36 KiB {0} [built]
+[75] ./build/index.html 2.23 KiB {0} [built]
+[109] ./node_modules/encoding/lib sync 160 bytes {0} [optional] [built]
+[124] (webpack)/buildin/module.js 497 bytes {0} [built]
+[125] (webpack)/buildin/harmony-module.js 573 bytes {0} [built]
+[186] ./src/assets/app.css 360 bytes {0} [built]
+[188] ./server/server.js + 158 modules 581 KiB {0} [built]
+    | ./server/server.js 6.7 KiB [built]
+    | ./src/lib/GraphQLClientFactory.js 2.02 KiB [built]
+    | ./src/i18n.js 2.58 KiB [built]
+    | ./src/RouteHandler.js 9.64 KiB [built]
+    | ./src/AppRoot.js 1.94 KiB [built]
+    | ./src/dataFetcher.js 703 bytes [built]
+    | ./src/temp/componentFactory.js 4.12 KiB [built]
+    | ./src/lib/SitecoreContextFactory.js 602 bytes [built]
+    | ./src/Layout.js 2.75 KiB [built]
+    | ./src/NotFound.js 1010 bytes [built]
+    | ./src/lib/GraphQLData.js 5.83 KiB [built]
+    |     + 148 hidden modules
+    + 199 hidden modules
+
+WARNING in ./node_modules/encoding/lib/iconv-loader.js 9:12-34
+Critical dependency: the request of a dependency is an expression
+@ ./node_modules/encoding/lib/encoding.js
+@ ./node_modules/node-fetch/lib/body.js
+@ ./node_modules/node-fetch/index.js
+@ ./node_modules/isomorphic-fetch/fetch-npm-node.js
+@ ./src/lib/GraphQLClientFactory.js
+@ ./server/server.js
+Copying C:\Users\Sitecore\sample-app\build to C:\inetpub\wwwroot\habitathome.cmsdemo.jp\dist\sample-app...
+
+JSS app build artifacts have been deployed to Sitecore.
+PS C:\Users\Sitecore\sample-app&gt;
+</pre></div>
+</div>
+<p>展開されたメッセージが表示されれば、インポートは完了となります。</p>
+</div>
+<div class="section" id="id2">
+<h2>1.5.4. Sitecore における動作確認<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>実際にインポートされたサイトに関して、ブラウザ経由でアクセスします。今回は <cite>http://sample-app.dev.local/</cite> にアクセスをすると以下のようにページが表示されます。</p>
+<a class="reference internal image-reference" href="../../_images/jsssample04.png"><img alt="ページが表示される" class="align-center" src="../../_images/jsssample04.png" style="width: 400px;" /></a>
+<p>管理画面にログインをして、コンテンツエディタを開いてください。下記のように新しいコンテンツツリーが作成されていることがわかります。</p>
+<a class="reference internal image-reference" href="../../_images/jsssample05.png"><img alt="コンテンツツリーで確認" class="align-center" src="../../_images/jsssample05.png" style="width: 400px;" /></a>
+<p>これで JSS の最も小さなプロジェクトを作成して、コンテンツがどのように Sitecore と連携できるのか、というのを確認することができました。</p>
+<p>もう少し Sitecore JSS に関して学ぶ場合は、 <a class="reference internal" href="../stepbystep/index.html"><span class="doc">Step by Step ガイド</span></a> を参考にしてください。</p>
+</div>
+<div class="section" id="id3">
+<h2>1.5.5. 関連サイト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jss.sitecore.com/docs/getting-started/app-deployment">App Deployment</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../stepbystep/index.html" class="btn btn-neutral float-right" title="2. Step by Step ガイド" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="jssserverinstall.html" class="btn btn-neutral float-left" title="1.4. サーバー環境の準備" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sitecore Japan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

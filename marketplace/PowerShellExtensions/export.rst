@@ -9,6 +9,7 @@ Sitecore で持っているアイテムを CSV 形式で出力します。以下
 
   Get-ChildItem '/sitecore/content/home' -Language 'ja-jp' | Select-Object Name,ItemPath,DisplayName,Title,Text | Export-CSV 'C:\Temp\test.csv' -Encoding UTF8 -NoTypeInformation
 
+********************
 リストビューで表示
 ********************
 
@@ -27,6 +28,14 @@ Sitecore で持っているアイテムをリストビューで表示して、�
 
 このリストビューで表示されたデータから、フィルタをしてデータを絞り込んだあと CSV 以外にも Excel、JSON 等のデータにも出力することができます。
 
+PowerShell アイテムのエクスポート
+==================================
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5rSZimdYmYY" frameborder="0" allowfullscreen></iframe>
+
+**********
 参考記事
 **********
 * `Sitecore PowerShell Extensionsを使ってアイテムをCSVファイルにエクスポート <https://www.pine4.net/Memo2/Article/Archive/Export-Item-to-CSV-with-Sitecore-PowerShell-Extensions>`_

@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.3. 最初のコンポーネントの追加 &mdash; Sitecore クイックスタート  ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="1.4. サーバー環境の準備" href="jssserverinstall.html" />
+    <link rel="prev" title="1.2. 環境の整備 ( macOS 編)" href="macos.html" />
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153234118-1');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Sitecore クイックスタート
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目次</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../93/index.html">Sitecore Experience Platform 9.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore JavaScript Services</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">1. クイックスタート</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="windows.html">1.1. 環境の整備 ( Windows 編)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="macos.html">1.2. 環境の整備 ( macOS 編)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.3. 最初のコンポーネントの追加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jssserverinstall.html">1.4. サーバー環境の準備</a></li>
+<li class="toctree-l3"><a class="reference internal" href="appdeployment.html">1.5. 作成したアプリの展開</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../stepbystep/index.html">2. Step by Step ガイド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../graphql/index.html">3. Sitecore GraphQL</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sitecore クイックスタート</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Sitecore JavaScript Services</a> &raquo;</li>
+        
+          <li><a href="index.html">1. クイックスタート</a> &raquo;</li>
+        
+      <li>1.3. 最初のコンポーネントの追加</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/jss/quickstart/firstcomponent.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>1.3. 最初のコンポーネントの追加<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="scaffolding">
+<h2>1.3.1. Scaffolding<a class="headerlink" href="#scaffolding" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>コンポーネントを追加する際、Scaffolding というコマンドを利用してコンポーネント追加に必要なデータをプロジェクトに追加することができます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jss</span> <span class="n">scaffold</span> <span class="o">&lt;</span><span class="n">componentName</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>プロジェクトのルートとなるエリアで、以下のコマンドを実行します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Sitecore</span>\<span class="n">sample</span><span class="o">-</span><span class="n">app</span><span class="o">&gt;</span> <span class="n">jss</span> <span class="n">scaffold</span> <span class="n">MyFirstComponent</span>
+<span class="o">&gt;</span> <span class="n">npm</span> <span class="n">run</span> <span class="n">scaffold</span> <span class="o">--</span> <span class="n">MyFirstComponent</span>
+
+<span class="o">&gt;</span> <span class="n">sample</span><span class="o">-</span><span class="n">app</span><span class="nd">@12</span><span class="o">.</span><span class="mf">0.0</span> <span class="n">scaffold</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Sitecore</span>\<span class="n">sample</span><span class="o">-</span><span class="n">app</span>
+<span class="o">&gt;</span> <span class="n">node</span> <span class="n">scripts</span><span class="o">/</span><span class="n">scaffold</span><span class="o">-</span><span class="n">component</span><span class="o">.</span><span class="n">js</span> <span class="s2">&quot;MyFirstComponent&quot;</span>
+
+
+<span class="n">Component</span> <span class="n">MyFirstComponent</span> <span class="n">has</span> <span class="n">been</span> <span class="n">scaffolded</span><span class="o">.</span>
+<span class="n">Next</span> <span class="n">steps</span><span class="p">:</span>
+<span class="o">*</span> <span class="n">Define</span> <span class="n">the</span> <span class="n">component</span><span class="s1">&#39;s data in sitecore\definitions\components\MyFirstComponent.sitecore.js</span>
+<span class="o">*</span> <span class="n">Implement</span> <span class="n">the</span> <span class="n">React</span> <span class="n">component</span> <span class="ow">in</span> <span class="n">src</span>\<span class="n">components</span>\<span class="n">MyFirstComponent</span>\<span class="n">index</span><span class="o">.</span><span class="n">js</span>
+<span class="o">*</span> <span class="n">Add</span> <span class="n">the</span> <span class="n">component</span> <span class="n">to</span> <span class="n">a</span> <span class="n">route</span> <span class="n">layout</span> <span class="p">(</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">routes</span><span class="p">)</span> <span class="ow">and</span> <span class="n">test</span> <span class="n">it</span> <span class="k">with</span> <span class="n">jss</span> <span class="n">start</span>
+<span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">Sitecore</span>\<span class="n">sample</span><span class="o">-</span><span class="n">app</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>実行結果に表示されているように、コマンドを実行することで ２つのファイルが追加されています。</p>
+<div class="section" id="myfirstcomponent-sitecore-js">
+<h3>1.3.1.1. MyFirstComponent.sitecore.js<a class="headerlink" href="#myfirstcomponent-sitecore-js" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>コンポーネントとなるファイルを確認します。対象となるファイルは <cite>sitecoredefinitionscomponentsMyFirstComponent.sitecore.js</cite> となります。コードでポイントとなるのは、フィールドの定義となります。</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// eslint-disable-next-line no-unused-vars</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">CommonFieldTypes</span><span class="p">,</span> <span class="nx">SitecoreIcon</span><span class="p">,</span> <span class="nx">Manifest</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@sitecore-jss/sitecore-jss-manifest&#39;</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm">* Adds the MyFirstComponent component to the disconnected manifest.</span>
+<span class="cm">* This function is invoked by convention (*.sitecore.js) when &#39;jss manifest&#39; is run.</span>
+<span class="cm">* @param {Manifest} manifest Manifest instance to add components to</span>
+<span class="cm">*/</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span><span class="p">(</span><span class="nx">manifest</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">manifest</span><span class="p">.</span><span class="nx">addComponent</span><span class="p">({</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;MyFirstComponent&#39;</span><span class="p">,</span>
+    <span class="nx">icon</span><span class="o">:</span> <span class="nx">SitecoreIcon</span><span class="p">.</span><span class="nx">DocumentTag</span><span class="p">,</span>
+    <span class="nx">fields</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;heading&#39;</span><span class="p">,</span> <span class="nx">type</span><span class="o">:</span> <span class="nx">CommonFieldTypes</span><span class="p">.</span><span class="nx">SingleLineText</span> <span class="p">},</span>
+    <span class="p">],</span>
+    <span class="cm">/*</span>
+<span class="cm">    If the component implementation uses &lt;Placeholder&gt; or withPlaceholder to expose a placeholder,</span>
+<span class="cm">    register it here, or components added to that placeholder will not be returned by Sitecore:</span>
+<span class="cm">    placeholders: [&#39;exposed-placeholder-name&#39;]</span>
+<span class="cm">    */</span>
+<span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Sitecore の開発でテンプレートでデータ定義を設定することができますが、Sitecore JSS では Component で定義をします。</p>
+</div>
+<div class="section" id="myfirstcomponentindex-js">
+<h3>1.3.1.2. MyFirstComponentindex.js<a class="headerlink" href="#myfirstcomponentindex-js" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>上記のコンポーネントファイルと合わせて作成されているファイルが <cite>srccomponentsMyFirstComponentindex.js</cite> となります。実際にファイルの内容を確認すると以下のようになっています。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">React</span> <span class="kn">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="kn">import</span> <span class="p">{</span> <span class="n">Text</span> <span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;@sitecore-jss/sitecore-jss-react&#39;</span><span class="p">;</span>
+
+<span class="n">const</span> <span class="n">MyFirstComponent</span> <span class="o">=</span> <span class="p">(</span><span class="n">props</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span>
+<span class="o">&lt;</span><span class="n">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">MyFirstComponent</span> <span class="n">Component</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Text</span> <span class="n">field</span><span class="o">=</span><span class="p">{</span><span class="n">props</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">heading</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+<span class="p">);</span>
+
+<span class="n">export</span> <span class="n">default</span> <span class="n">MyFirstComponent</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>実際に HTML として出力するコード、合わせて管理しているデータとして何を表示するのかが定義されています。これは Sitecore でのサブレイアウトと同様に、デザインを定義するコードとなります。</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>1.3.2. コンポーネントの追加<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>作成したコンポーネントを追加します。サンプルはあまりコンテンツとして揃っていないため、サンプルのトップページに作成したコンポーネントを追加します。</p>
+<p>対象となるファイルは <cite>/data/routes/en.yml</cite> です。</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">placeholders</span><span class="p">:</span>
+<span class="nt">jss-main</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">componentName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ContentBlock</span>
+    <span class="l l-Scalar l-Scalar-Plain">fields</span><span class="p p-Indicator">:</span>
+    <span class="nt">heading</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Welcome to Sitecore JSS</span>
+</pre></div>
+</div>
+<p>今回作成したコンポーネントを追加します。</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">placeholders</span><span class="p">:</span>
+<span class="nt">jss-main</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">componentName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">MyFirstComponent</span>
+    <span class="l l-Scalar l-Scalar-Plain">fields</span><span class="p p-Indicator">:</span>
+    <span class="nt">heading</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Hello World!</span>
+<span class="p p-Indicator">-</span> <span class="nt">componentName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ContentBlock</span>
+    <span class="l l-Scalar l-Scalar-Plain">fields</span><span class="p p-Indicator">:</span>
+    <span class="nt">heading</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Welcome to Sitecore JSS</span>
+</pre></div>
+</div>
+<p>設定を反映させたあと、 <cite>jss start</cite> を実行して、アプリを起動してください。作成したコンポーネントが表示されていることがわかります。</p>
+<a class="reference internal image-reference" href="../../_images/addcomponent01.png"><img alt="コンポーネントが追加されている" class="align-center" src="../../_images/addcomponent01.png" style="width: 400px;" /></a>
+<p>上記のファイルを見ると以下のことがわかります。</p>
+<ul class="simple">
+<li><p>データ形式の定義</p></li>
+<li><p>データを表示する定義</p></li>
+<li><p>コンテンツおよびコンポーネントの情報</p></li>
+</ul>
+<p>これを Sitecore JSS のレイアウトエンジンが Web ページとして表示している形となります。</p>
+</div>
+<div class="section" id="id3">
+<h2>1.3.3. 関連サイト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jss.sitecore.com/docs/getting-started/first-component">Building your first JSS component</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="jssserverinstall.html" class="btn btn-neutral float-right" title="1.4. サーバー環境の準備" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="macos.html" class="btn btn-neutral float-left" title="1.2. 環境の整備 ( macOS 編)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Sitecore Japan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

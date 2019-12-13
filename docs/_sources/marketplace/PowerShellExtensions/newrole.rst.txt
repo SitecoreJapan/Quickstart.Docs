@@ -12,6 +12,15 @@
   New-Role -Identity ProductGroup1
 
 
+PowerShell New-Role
+======================
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VlGl2Ru1dk4" frameborder="0" allowfullscreen></iframe>
+
+
+************
 参考ページ
 ************
 

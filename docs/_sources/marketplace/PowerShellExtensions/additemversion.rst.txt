@@ -19,6 +19,15 @@
   Add-ItemVersion -Path "master:\content\home" -Language ja-JP -IfExist Append
 
 
+***************************
+PowerShell Add-NewVersion
+***************************
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/iifqa1X-nHw" frameborder="0" allowfullscreen></iframe>
+
+************
 参考ページ
 ************
 * `New-ItemVesion <https://doc.sitecorepowershell.com/appendix/common/add-itemversion>`_

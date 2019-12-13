@@ -47,6 +47,16 @@ CSV ファイルで定義されたデータに関して、コマンドを利用�
   }
 
 
+*********************************
+PowerShell コンテンツのインポート
+*********************************
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/np8I8UBR8CY" frameborder="0" allowfullscreen></iframe>
+
+
+**********
 参考記事
 **********
 * `Working with items <https://doc.sitecorepowershell.com/working-with-items>`_
