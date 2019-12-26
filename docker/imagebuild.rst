@@ -1,5 +1,5 @@
 #############################
-Docker Images の活用
+Docker イメージのビルド
 #############################
 
 ここでは Sitecore Experience Platform 9.3.0 を Docker に展開するための手順を紹介しています。
