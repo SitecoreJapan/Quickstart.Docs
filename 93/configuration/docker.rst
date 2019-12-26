@@ -165,4 +165,4 @@ sitecore-xp-sxa-solr:9.3.0-nanoserver-1809                                True  
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Q9HJB-HYb4k&" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Q9HJB-HYb4k" frameborder="0" allowfullscreen></iframe>
