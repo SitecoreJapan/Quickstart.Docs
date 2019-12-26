@@ -156,3 +156,13 @@ sitecore-xp-solr:9.3.0-nanoserver-1809                                    True  
 sitecore-xp-sxa-solr:9.3.0-nanoserver-1809                                True      False     1000 {mcr.microsoft.co...
 ========================================================================= ========= ======= ====== =======================
 
+
+***********************
+参考動画
+***********************
+
+上記の手順を早送りで紹介している動画を公開しています。
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Q9HJB-HYb4k&" frameborder="0" allowfullscreen></iframe>
