@@ -1,6 +1,6 @@
-####################
-Sitecore Docker
-####################
+######################
+Sitecore on Docker
+######################
 
 ここでは Sitecore を Docker 上に展開するための手順を紹介しています。
 
@@ -11,6 +11,8 @@ Sitecore Docker
     :maxdepth: 2
 
     imagebuild
+    start
+    deployazure
 
 
 ********************************
