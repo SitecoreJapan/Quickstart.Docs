@@ -20,7 +20,6 @@ Desktop を開きます
 
 .. image:: images/addmanagelang03.png
    :align: center
-   :width: 400px
    :alt: Core に切り替える
 
 左下のスタートメニューから `Control Panel` を選択します。
@@ -63,4 +62,27 @@ Sitecore のサイトからダウンロードした言語ファイルをアッ�
    :width: 400px
    :alt: インポート
 
+インポートの作業が終わったあと、 `My Settings` にある `Region and language options` をクリックします。
 
+.. image:: images/addmanagelang09.png
+   :align: center
+   :width: 400px
+   :alt: 言語の設定を開く
+
+表示する言語を日本語に設定します
+
+.. image:: images/addmanagelang10.png
+   :align: center
+   :width: 400px
+   :alt: 日本語に設定
+
+左上にある Sitecore メニューのアイコンをクリックしてホームに戻ります。
+
+.. image:: images/addmanagelang11.png
+   :align: center
+   :width: 400px
+   :alt: 管理画面の言語が変わる
+
+管理画面の言語が変わりました。
+
+この手順の後、SXA の日本語リソースも適用してください。

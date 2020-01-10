@@ -11,6 +11,7 @@
 
     vscode
     containers
+    firststep
     pageupdate
     addmanagelanguage
     addlanguage
