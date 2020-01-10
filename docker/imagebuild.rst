@@ -109,12 +109,38 @@ Docker の環境が整った次のステップとして、Github に公開され
   -a----       2019/12/23     12:47       17235647 Sitecore Experience Accelerator 9.3.0.2589.scwdp.zip
   -a----       2019/12/23     12:49        3907601 Sitecore Experience Accelerator XM 9.3.0.2589 CD.scwdp.zip
   -a----       2019/12/23     12:49       17235627 Sitecore Experience Accelerator XM 9.3.0.2589.scwdp.zip
-  -a----       2019/11/29     10:03        2508447 Sitecore Publishing Module 9.3.0.0 rev. r00546.2197.scwdp.zip
   -a----       2019/12/23     12:50       17626005 Sitecore Publishing Service 4.2.0-win-x64.zip
   -a----       2019/12/23     12:49        1921044 Sitecore.PowerShell.Extensions-6.0.scwdp.zip
 
 
-作成したクローンの中に `build.ps1` というファイルがあります。このコマンドに、ユーザー名、パスワードを渡して実行をします。
+Publishing Service に関するファイルが準備されていないため、 `Download-PS-Prerequisites .ps1` のファイルを利用してモジュールを作成します。詳細な手順は `Experimental Publishing Service (not automatically build because of missing prerequisites from Sitecore) <https://github.com/Sitecore/docker-images/blob/master/README.md#experimental-publishing-service-not-automatically-build-because-of-missing-prerequisites-from-sitecore>`_ に記載されていますが、今回は以下のように進めます（この文書作成時にはファイル名にスペースがあったため、ファイル名を一度変更しています）。
+
+.. code-block:: 
+
+  .\Download-PS-Prerequisites.ps1 -SitecoreUsername "YOUR dev.sitecore.net USERNAME" -SitecorePassword "YOUR dev.sitecore.net PASSWORD"
+
+.. image:: images/ps01.png
+   :align: center
+   :width: 400px
+   :alt: Publishing Service のモジュール作成
+
+サイトからモジュールをダウンロード、またモジュールを作成するために Sitecore Azure Toolkit をダウンロードして、展開、zip ファイル化まで実行します。
+
+.. code-block:: 
+
+  Downloading 'https://dev.sitecore.net/~/media/417C43AC4F334C4085D18925367FE79A.ashx' to 'C:\projects\docker-images\packages\Sitecore Publishing Module 9.3.0.0 rev. r00546.2197.zip'...
+  Downloading 'https://dev.sitecore.net/~/media/B627BFA7070B40AD854A0FF08719381D.ashx' to 'C:\projects\docker-images\packages\Sitecore Azure Toolkit 2.4.0-r02514.1001.zip'...
+  Prepare Azure toolkit
+  Sitecore Azure Toolkit directory C:\projects\docker-images\tools\sat
+  Create SAT directory C:\projects\docker-images\tools\sat
+  Import Sitecore Azure Toolkit
+  Convert to WDP C:\projects\docker-images\packages\Sitecore Publishing Module 9.3.0.0 rev. r00546.2197.zip
+  C:\projects\docker-images\packages\Sitecore Publishing Module 9.3.0.0 rev. r00546.2197.scwdp.zip
+  DONE
+  PS C:\projects\docker-images>
+
+
+続いて `build.ps1` を利用して、Sitecore の Docker イメージを作成します。このコマンドに、ユーザー名、パスワードを渡して実行をします。
 
 .. code-block:: 
 

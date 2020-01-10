@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
-    <link rel="next" title="各種ツールに関して" href="../marketplace/index.html" />
-    <link rel="prev" title="Sitecore Docker" href="index.html" />
+    <link rel="next" title="2. Sitecore の起動" href="start.html" />
+    <link rel="prev" title="Sitecore on Docker" href="index.html" />
  
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
@@ -98,8 +98,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../93/index.html">Sitecore Experience Platform 9.3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sxa/index.html">Sitecore Experience Accelerator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jss/index.html">Sitecore JavaScript Services</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Sitecore Docker</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Sitecore on Docker</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">1. Docker イメージのビルド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="start.html">2. Sitecore の起動</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commitcontainers.html">3. コンテナーの確認とイメージ作成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployazure.html">4. Microsoft Azure への展開</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../marketplace/index.html">各種ツールに関して</a></li>
@@ -149,7 +152,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">Sitecore Docker</a> &raquo;</li>
+          <li><a href="index.html">Sitecore on Docker</a> &raquo;</li>
         
       <li>1. Docker イメージのビルド</li>
     
@@ -226,12 +229,29 @@
 <span class="o">-</span><span class="n">a</span><span class="o">----</span>       <span class="mi">2019</span><span class="o">/</span><span class="mi">12</span><span class="o">/</span><span class="mi">23</span>     <span class="mi">12</span><span class="p">:</span><span class="mi">47</span>       <span class="mi">17235647</span> <span class="n">Sitecore</span> <span class="n">Experience</span> <span class="n">Accelerator</span> <span class="mf">9.3</span><span class="o">.</span><span class="mf">0.2589</span><span class="o">.</span><span class="n">scwdp</span><span class="o">.</span><span class="n">zip</span>
 <span class="o">-</span><span class="n">a</span><span class="o">----</span>       <span class="mi">2019</span><span class="o">/</span><span class="mi">12</span><span class="o">/</span><span class="mi">23</span>     <span class="mi">12</span><span class="p">:</span><span class="mi">49</span>        <span class="mi">3907601</span> <span class="n">Sitecore</span> <span class="n">Experience</span> <span class="n">Accelerator</span> <span class="n">XM</span> <span class="mf">9.3</span><span class="o">.</span><span class="mf">0.2589</span> <span class="n">CD</span><span class="o">.</span><span class="n">scwdp</span><span class="o">.</span><span class="n">zip</span>
 <span class="o">-</span><span class="n">a</span><span class="o">----</span>       <span class="mi">2019</span><span class="o">/</span><span class="mi">12</span><span class="o">/</span><span class="mi">23</span>     <span class="mi">12</span><span class="p">:</span><span class="mi">49</span>       <span class="mi">17235627</span> <span class="n">Sitecore</span> <span class="n">Experience</span> <span class="n">Accelerator</span> <span class="n">XM</span> <span class="mf">9.3</span><span class="o">.</span><span class="mf">0.2589</span><span class="o">.</span><span class="n">scwdp</span><span class="o">.</span><span class="n">zip</span>
-<span class="o">-</span><span class="n">a</span><span class="o">----</span>       <span class="mi">2019</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">29</span>     <span class="mi">10</span><span class="p">:</span><span class="mi">03</span>        <span class="mi">2508447</span> <span class="n">Sitecore</span> <span class="n">Publishing</span> <span class="n">Module</span> <span class="mf">9.3</span><span class="o">.</span><span class="mf">0.0</span> <span class="n">rev</span><span class="o">.</span> <span class="n">r00546</span><span class="o">.</span><span class="mf">2197.</span><span class="n">scwdp</span><span class="o">.</span><span class="n">zip</span>
 <span class="o">-</span><span class="n">a</span><span class="o">----</span>       <span class="mi">2019</span><span class="o">/</span><span class="mi">12</span><span class="o">/</span><span class="mi">23</span>     <span class="mi">12</span><span class="p">:</span><span class="mi">50</span>       <span class="mi">17626005</span> <span class="n">Sitecore</span> <span class="n">Publishing</span> <span class="n">Service</span> <span class="mf">4.2</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">win</span><span class="o">-</span><span class="n">x64</span><span class="o">.</span><span class="n">zip</span>
 <span class="o">-</span><span class="n">a</span><span class="o">----</span>       <span class="mi">2019</span><span class="o">/</span><span class="mi">12</span><span class="o">/</span><span class="mi">23</span>     <span class="mi">12</span><span class="p">:</span><span class="mi">49</span>        <span class="mi">1921044</span> <span class="n">Sitecore</span><span class="o">.</span><span class="n">PowerShell</span><span class="o">.</span><span class="n">Extensions</span><span class="o">-</span><span class="mf">6.0</span><span class="o">.</span><span class="n">scwdp</span><span class="o">.</span><span class="n">zip</span>
 </pre></div>
 </div>
-<p>作成したクローンの中に <cite>build.ps1</cite> というファイルがあります。このコマンドに、ユーザー名、パスワードを渡して実行をします。</p>
+<p>Publishing Service に関するファイルが準備されていないため、 <cite>Download-PS-Prerequisites .ps1</cite> のファイルを利用してモジュールを作成します。詳細な手順は <a class="reference external" href="https://github.com/Sitecore/docker-images/blob/master/README.md#experimental-publishing-service-not-automatically-build-because-of-missing-prerequisites-from-sitecore">Experimental Publishing Service (not automatically build because of missing prerequisites from Sitecore)</a> に記載されていますが、今回は以下のように進めます（この文書作成時にはファイル名にスペースがあったため、ファイル名を一度変更しています）。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>\<span class="n">Download</span><span class="o">-</span><span class="n">PS</span><span class="o">-</span><span class="n">Prerequisites</span><span class="o">.</span><span class="n">ps1</span> <span class="o">-</span><span class="n">SitecoreUsername</span> <span class="s2">&quot;YOUR dev.sitecore.net USERNAME&quot;</span> <span class="o">-</span><span class="n">SitecorePassword</span> <span class="s2">&quot;YOUR dev.sitecore.net PASSWORD&quot;</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/ps01.png"><img alt="Publishing Service のモジュール作成" class="align-center" src="../_images/ps01.png" style="width: 400px;" /></a>
+<p>サイトからモジュールをダウンロード、またモジュールを作成するために Sitecore Azure Toolkit をダウンロードして、展開、zip ファイル化まで実行します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Downloading</span> <span class="s1">&#39;https://dev.sitecore.net/~/media/417C43AC4F334C4085D18925367FE79A.ashx&#39;</span> <span class="n">to</span> <span class="s1">&#39;C:\projects\docker-images\packages\Sitecore Publishing Module 9.3.0.0 rev. r00546.2197.zip&#39;</span><span class="o">...</span>
+<span class="n">Downloading</span> <span class="s1">&#39;https://dev.sitecore.net/~/media/B627BFA7070B40AD854A0FF08719381D.ashx&#39;</span> <span class="n">to</span> <span class="s1">&#39;C:\projects\docker-images\packages\Sitecore Azure Toolkit 2.4.0-r02514.1001.zip&#39;</span><span class="o">...</span>
+<span class="n">Prepare</span> <span class="n">Azure</span> <span class="n">toolkit</span>
+<span class="n">Sitecore</span> <span class="n">Azure</span> <span class="n">Toolkit</span> <span class="n">directory</span> <span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">docker</span><span class="o">-</span><span class="n">images</span>\<span class="n">tools</span>\<span class="n">sat</span>
+<span class="n">Create</span> <span class="n">SAT</span> <span class="n">directory</span> <span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">docker</span><span class="o">-</span><span class="n">images</span>\<span class="n">tools</span>\<span class="n">sat</span>
+<span class="n">Import</span> <span class="n">Sitecore</span> <span class="n">Azure</span> <span class="n">Toolkit</span>
+<span class="n">Convert</span> <span class="n">to</span> <span class="n">WDP</span> <span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">docker</span><span class="o">-</span><span class="n">images</span>\<span class="n">packages</span>\<span class="n">Sitecore</span> <span class="n">Publishing</span> <span class="n">Module</span> <span class="mf">9.3</span><span class="o">.</span><span class="mf">0.0</span> <span class="n">rev</span><span class="o">.</span> <span class="n">r00546</span><span class="o">.</span><span class="mf">2197.</span><span class="n">zip</span>
+<span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">docker</span><span class="o">-</span><span class="n">images</span>\<span class="n">packages</span>\<span class="n">Sitecore</span> <span class="n">Publishing</span> <span class="n">Module</span> <span class="mf">9.3</span><span class="o">.</span><span class="mf">0.0</span> <span class="n">rev</span><span class="o">.</span> <span class="n">r00546</span><span class="o">.</span><span class="mf">2197.</span><span class="n">scwdp</span><span class="o">.</span><span class="n">zip</span>
+<span class="n">DONE</span>
+<span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">docker</span><span class="o">-</span><span class="n">images</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>続いて <cite>build.ps1</cite> を利用して、Sitecore の Docker イメージを作成します。このコマンドに、ユーザー名、パスワードを渡して実行をします。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>\<span class="n">Build</span><span class="o">.</span><span class="n">ps1</span> <span class="o">-</span><span class="n">SitecoreUsername</span> <span class="s2">&quot;YOUR dev.sitecore.net USERNAME&quot;</span> <span class="o">-</span><span class="n">SitecorePassword</span> <span class="s2">&quot;YOUR dev.sitecore.net PASSWORD&quot;</span>
 </pre></div>
 </div>
@@ -438,10 +458,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../marketplace/index.html" class="btn btn-neutral float-right" title="各種ツールに関して" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="start.html" class="btn btn-neutral float-right" title="2. Sitecore の起動" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="Sitecore Docker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Sitecore on Docker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
