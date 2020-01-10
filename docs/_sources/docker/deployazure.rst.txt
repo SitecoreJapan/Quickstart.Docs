@@ -5,51 +5,6 @@ Microsoft Azure への展開
 Microsoft Azure には Docker のコンテナを管理するためのサービスとして、`Container Registry <https://azure.microsoft.com/ja-jp/services/container-registry/>`_ を提供しています。
 
 *******************************
-Visual Studio Code の設定
-*******************************
-
-Visual Studio Code は多くの拡張機能に対応しており、Docker に関する作業を簡単にできる拡張機能も提供しています。ここでは 2 つの拡張機能を追加します。
-
-
-Docker
-=====================
-
-Docker の機能拡張は、Visual Studio Code から Docker に関する機能を利用する上で便利な機能が提供されています。インストールでは `Docker` で検索をすると、以下のように Docker の機能拡張を見つけることができます。
-
-.. image:: images/vscode01.png
-   :align: center
-   :width: 400px
-   :alt: Docker エクステンション
-
-実際にインストールをすると、左側のメニューに Docker のアイコンが追加されます。
-
-.. image:: images/vscode02.png
-   :align: center
-   :alt: Docker アイコン
-
-アイコンを選択すると左側に Docker の機能を操作することができるサイドバーが表示されます。
-
-.. image:: images/vscode03.png
-   :align: center
-   :alt: Docker サイドバー
-
-
-Azure Account
-=====================
-
-直接 Docker の拡張機能から Azure にログインをすることができますが、その機能を有効にするために、Azure Account をインストールします。
-
-.. image:: images/vscode04.png
-   :align: center
-   :alt: Azure Account
-
-インストールをすると、Docker の拡張機能の `Registries` の項目から Azure にログインをすることができます。
-
-.. image:: images/vscode05.png
-   :align: center
-   :alt: Azure Account
-
-*******************************
 Container Registry の作成
 *******************************
 
@@ -91,6 +46,72 @@ Enter を入力すると次のパラメーターが表示されます。どの�
 
 .. image:: images/vscode11.png
    :align: center
-   :width: 400px
    :alt: 作成されたレジストリを確認
+
+
+******************************************
+Container Registry にイメージをコピーする
+******************************************
+
+ローカルで作成をした Docker イメージを Azure の Container Registry に展開します。まず上記で作成をした Azure Contaner Registry を標準に設定します。Visual Studio Code でレジストリを右クリックして、Set as Default とします。
+
+.. image:: images/acr01.png
+   :align: center
+   :alt: コンテナレジストリを標準に設定する
+
+以下のイメージをコピーする形で進めていきます。
+
+.. code-block:: 
+
+    sitecore-xp-sxa-cd
+    sitecore-xp-sxa-solr
+    sitecore-xp-sxa-sqldev
+    sitecore-xp-sxa-standalone
+    sitecore-xp-xconnect
+    sitecore-xp-xconnect-automationengine
+    sitecore-xp-xconnect-indexworker
+    sitecore-xp-xconnect-processingengine
+
+.. image:: images/acr02.png
+   :align: center
+   :width: 400px
+   :alt: コンテナレジストリを標準に設定する
+
+まず、Push する先のレジストリに対してログインを実行します。
+
+.. code-block:: 
+
+    az acr login --name sitecoredockerjp
+
+.. image:: images/acr03.png
+   :align: center
+   :width: 400px
+   :alt: レジストリにログイン
+
+ログインに成功した後は、左側の一覧から順に Push を実行していきます。今回はまず最初に sitecore-xp-xconnect を push します。
+
+.. image:: images/acr04.png
+   :align: center
+   :alt: sitecore-xp-xconnect を Push 
+
+実際にイメージの名前を入力が促されるため、イメージの名前そのままを指定して Enter を押します。
+
+.. image:: images/acr05.png
+   :align: center
+   :width: 400px
+   :alt: 名前を指定します 
+
+続いて、Push のプロセスが走ります。
+
+.. image:: images/acr06.png
+   :align: center
+   :width: 400px
+   :alt: Push を実行しています
+
+Push が完了したかどうか、Azure ポータルで確認をしてください。
+
+.. image:: images/acr07.png
+   :align: center
+   :width: 400px
+   :alt: Azure ポータルで確認
 

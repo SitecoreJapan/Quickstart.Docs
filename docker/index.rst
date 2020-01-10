@@ -8,10 +8,11 @@ Sitecore on Docker
     :caption: 目次
     :titlesonly:
     :numbered:
-    :maxdepth: 2
+    :maxdepth: 1
 
     imagebuild
     start
+    check/index
     deployazure
 
 
