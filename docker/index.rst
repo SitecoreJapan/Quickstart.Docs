@@ -14,7 +14,7 @@ Sitecore on Docker
     start
     check/index
     deployazure
-
+    tips
 
 ********************************
 Docker 関連サイト

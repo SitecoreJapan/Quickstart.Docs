@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Sitecore on Docker &mdash; Sitecore クイックスタート  ドキュメント</title>
+  <title>5. Docker Tips &mdash; Sitecore クイックスタート  ドキュメント</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
-    <link rel="next" title="1. Docker イメージのビルド" href="imagebuild.html" />
-    <link rel="prev" title="3. Sitecore GraphQL" href="../jss/graphql/index.html" />
+    <link rel="next" title="各種ツールに関して" href="../marketplace/index.html" />
+    <link rel="prev" title="4. Microsoft Azure への展開" href="deployazure.html" />
  
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
@@ -98,12 +98,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../93/index.html">Sitecore Experience Platform 9.3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sxa/index.html">Sitecore Experience Accelerator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jss/index.html">Sitecore JavaScript Services</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Sitecore on Docker</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Sitecore on Docker</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="imagebuild.html">1. Docker イメージのビルド</a></li>
 <li class="toctree-l2"><a class="reference internal" href="start.html">2. Sitecore の起動</a></li>
 <li class="toctree-l2"><a class="reference internal" href="check/index.html">3. 確認とイメージ作成</a></li>
 <li class="toctree-l2"><a class="reference internal" href="deployazure.html">4. Microsoft Azure への展開</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tips.html">5. Docker Tips</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5. Docker Tips</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../marketplace/index.html">各種ツールに関して</a></li>
@@ -153,13 +153,15 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Sitecore on Docker</li>
+          <li><a href="index.html">Sitecore on Docker</a> &raquo;</li>
+        
+      <li>5. Docker Tips</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/docker/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/docker/tips.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -172,24 +174,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="sitecore-on-docker">
-<h1>Sitecore on Docker<a class="headerlink" href="#sitecore-on-docker" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>ここでは Sitecore を Docker 上に展開するための手順を紹介しています。</p>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">目次</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="imagebuild.html">1. Docker イメージのビルド</a></li>
-<li class="toctree-l1"><a class="reference internal" href="start.html">2. Sitecore の起動</a></li>
-<li class="toctree-l1"><a class="reference internal" href="check/index.html">3. 確認とイメージ作成</a></li>
-<li class="toctree-l1"><a class="reference internal" href="deployazure.html">4. Microsoft Azure への展開</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tips.html">5. Docker Tips</a></li>
-</ul>
+  <div class="section" id="docker-tips">
+<h1>5. Docker Tips<a class="headerlink" href="#docker-tips" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>5.1. ネットワークの変更<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>仮想マシンで Docker を利用している場合、再起動するなどで network の再設定が必要となる場合があります。この場合、以下のコマンドでネットワークの再設定をしてください。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">network</span> <span class="n">connect</span> <span class="o">&lt;</span><span class="n">network</span> <span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">container</span> <span class="n">name</span><span class="o">&gt;</span>
+</pre></div>
 </div>
-<div class="section" id="docker">
-<h2>Docker 関連サイト<a class="headerlink" href="#docker" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/sitecore/docker-images">Github - Sitecore/docker-images</a></p></li>
-</ul>
+<p>93x_default のネットワークに 93x_sql_1 のコンテナを接続する場合は、以下のコマンドを実行します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">network</span> <span class="n">connect</span> <span class="mi">93</span><span class="n">x_default</span> <span class="mi">93</span><span class="n">x_sql_1</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -201,10 +197,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="imagebuild.html" class="btn btn-neutral float-right" title="1. Docker イメージのビルド" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../marketplace/index.html" class="btn btn-neutral float-right" title="各種ツールに関して" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../jss/graphql/index.html" class="btn btn-neutral float-left" title="3. Sitecore GraphQL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="deployazure.html" class="btn btn-neutral float-left" title="4. Microsoft Azure への展開" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
