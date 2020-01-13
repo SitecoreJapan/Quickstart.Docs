@@ -15,6 +15,7 @@
     pageupdate
     addmanagelanguage
     addlanguage
+    checkimage
 
 
 
