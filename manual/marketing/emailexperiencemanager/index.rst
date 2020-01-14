@@ -31,18 +31,3 @@ Email Experience Manager
     createAccount
     createEmail
     delivery
-
-
-* [Custom SMTP の設定](CustomSMTP.md)
-* [メールサービスの設定](MailServer.md)
-* [接続テスト](ConnectionTest.md)
-
-設定が完了した段階で、以下の点を確認してください。
-
-* [Email Experience Manager の基本設定](settings.md)
-* [アカウントの作成](createAccount.md)
-
-全ての設定が完了したあと、メールの作成を進めていきます。
-
-* [サンプルメールの作成](createEmail.md)
-* [配信](delivery.md)
