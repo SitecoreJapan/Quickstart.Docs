@@ -6,5 +6,5 @@
 マップ
 *********
 
-* [マップ サンプル](https://sxa.cmsdemo.jp/components/maps/map)
+* `マップ サンプル <https://sxa.cmsdemo.jp/components/maps/map>`_
 

@@ -7,7 +7,7 @@
     :titlesonly:
     
     createweb
-    createtemplate
-    pagedesign
     pageitem
     partialdesign
+    pagedesign
+    createtemplate

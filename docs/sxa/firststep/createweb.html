@@ -96,6 +96,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../93/index.html">Sitecore Experience Platform 9.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">オンライン マニュアル</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore Experience Accelerator</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">1. サイトを作る</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">1.1. テナントの作成、サイトの作成</a></li>
@@ -106,7 +107,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../modules/index.html">2. SXA モジュールについて</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../json/index.html">3. SXA における JSON の活用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../creativeexchange/index.html">3. Creative Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../json/index.html">4. SXA における JSON の活用</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
@@ -185,39 +187,66 @@
 <h1>1.1. テナントの作成、サイトの作成<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>Sitecore は複数の Web サイトを管理することができる仕組みとなっています。この際、サイト間で情報共有をしたい場合は、同じテナントの下に Web サイトを作成することで簡単に共有することができます。</p>
 <p>ここではテナントの作成方法について、紹介をします。</p>
-<p>## テナントの作成</p>
+<div class="section" id="id2">
+<h2>1.1.1. テナントの作成<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>ログインをしたあと、コンテンツエディターを立ち上げてください。コンテンツエディターを立ち上げたあとアイテムとして Sitecore - コンテンツ が表示されているので、ここで右クリックをするとメニューが出てきます。メニューの項目から「挿入」を選択すると下のように挿入することができるアイテムとして「テナント」が表示されます。</p>
-<p>&lt;img src=&quot;./images/tenant01.png&quot; alt=&quot;テナント作成&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/tenant01.png"><img alt="テナント作成" class="align-center" src="../../_images/tenant01.png" style="width: 400px;" /></a>
 <p>実行をすると、テナントを作成するにあたって必要となる設定項目が表示されます。ここではテナント名を <cite>QuickStart</cite> と設定します。モジュールに関しては今回はすべて選択します。</p>
-<p>&lt;img src=&quot;./images/tenant02.png&quot; alt=&quot;ダイアログ&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/tenant02.png"><img alt="ダイアログ" class="align-center" src="../../_images/tenant02.png" style="width: 400px;" /></a>
 <p>完了すると、テナントのアイテムが作成されます。このテナントで利用するtンプレート、テーマ、メディアライブラリの場所などがアイテムで定義されています。</p>
-<p>&lt;img src=&quot;./images/tenant03.png&quot; alt=&quot;テナントの完成&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/tenant03.png"><img alt="テナントの完成" class="align-center" src="../../_images/tenant03.png" style="width: 400px;" /></a>
 <p>これでテナントは完成しました。</p>
-<p>## サイトの作成</p>
-<p>テナントの下にはサイトを構築することができます。今回は、作成をしたテナントを右クリックをしてサイトを追加するメニューを表示します。</p>
-<p>&lt;img src=&quot;./images/site01.png&quot; alt=&quot;サイトの作成&quot; /&gt;</p>
-<p>暫くすると以下のようなダイアログが表示されます。</p>
-<p>&lt;img src=&quot;./images/site02.png&quot; alt=&quot;ダイアログ&quot; /&gt;</p>
-<p>今回は以下のように設定していきます。</p>
-<div class="line-block">
-<div class="line">設定項目 | 値 |</div>
-<div class="line">--- | --- |</div>
-<div class="line">サイト名 | demo |</div>
-<div class="line">ホスト名 | * |</div>
-<div class="line">仮想フォルダー | / |</div>
-<div class="line">言語 | ja-jp |</div>
 </div>
+<div class="section" id="id3">
+<h2>1.1.2. サイトの作成<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>テナントの下にはサイトを構築することができます。今回は、作成をしたテナントを右クリックをしてサイトを追加するメニューを表示します。</p>
+<a class="reference internal image-reference" href="../../_images/site01.png"><img alt="サイトの作成" class="align-center" src="../../_images/site01.png" style="width: 400px;" /></a>
+<p>暫くすると以下のようなダイアログが表示されます。</p>
+<a class="reference internal image-reference" href="../../_images/site02.png"><img alt="ダイアログ" class="align-center" src="../../_images/site02.png" style="width: 400px;" /></a>
+<p>今回は以下のように設定していきます。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 70%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>設定項目</p></th>
+<th class="head"><p>値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>サイト名</p></td>
+<td><p>demo</p></td>
+</tr>
+<tr class="row-odd"><td><p>ホスト名</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>仮想フォルダー</p></td>
+<td><p>/</p></td>
+</tr>
+<tr class="row-odd"><td><p>言語</p></td>
+<td><p>ja-jp</p></td>
+</tr>
+</tbody>
+</table>
 <p>設定をすると、以下のようになります。</p>
-<p>&lt;img src=&quot;./images/site03.png&quot; alt=&quot;一般設定&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/site03.png"><img alt="一般設定" class="align-center" src="../../_images/site03.png" style="width: 400px;" /></a>
 <p>続いてタブを切り替えて設定を追加していきます。モジュールはすべてのモジュールを選択しておきます。</p>
-<p>&lt;img src=&quot;./images/site04.png&quot; alt=&quot;モジュール設定&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/site04.png"><img alt="モジュール設定" class="align-center" src="../../_images/site04.png" style="width: 400px;" /></a>
 <p>次にテーマのタブに切り替えます。ここでは、「新しいテーマを作成」のチェックボックスをチェック、またテーマとして「Basic2」と「Wireframe」を選択します。</p>
-<p>&lt;img src=&quot;./images/site05.png&quot; alt=&quot;テーマの設定&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/site05.png"><img alt="テーマの設定" class="align-center" src="../../_images/site05.png" style="width: 400px;" /></a>
 <p>最後にグリッドの設定ですが、標準で設定できる Bootstrap 4 を選択します。</p>
-<p>&lt;img src=&quot;./images/site06.png&quot; alt=&quot;グリッド&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/site06.png"><img alt="グリッド" class="align-center" src="../../_images/site06.png" style="width: 400px;" /></a>
 <p>上記の設定を確認しあと、OK ボタンを押すとサイトに必要な情報の入ったサイトが出来上がります。</p>
-<p>&lt;img src=&quot;./images/site07.png&quot; alt=&quot;サイトの完成&quot; /&gt;</p>
+<img alt="サイトの完成" class="align-center" src="../../_images/site07.png" />
 <p>これで、空っぽの Web サイトが出来上がりました。</p>
+</div>
+<div class="section" id="id4">
+<h2>1.1.3. 参考動画<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bKz7riJGqa0" frameborder="0" allowfullscreen></iframe></div>
 </div>
 
 

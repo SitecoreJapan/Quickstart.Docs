@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.4. ページアイテムの作成 &mdash; Sitecore クイックスタート  ドキュメント</title>
+  <title>1.2. ページアイテムの作成 &mdash; Sitecore クイックスタート  ドキュメント</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="1.5. パーシャルデザインの作成" href="partialdesign.html" />
-    <link rel="prev" title="1.3. ページデザインの作成" href="pagedesign.html" />
+    <link rel="next" title="1.3. パーシャルデザインの作成" href="partialdesign.html" />
+    <link rel="prev" title="1.1. テナントの作成、サイトの作成" href="createweb.html" />
  
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
@@ -96,17 +96,19 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../93/index.html">Sitecore Experience Platform 9.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">オンライン マニュアル</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore Experience Accelerator</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">1. サイトを作る</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="createweb.html">1.1. テナントの作成、サイトの作成</a></li>
-<li class="toctree-l3"><a class="reference internal" href="createtemplate.html">1.2. アイテムの作成</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pagedesign.html">1.3. ページデザインの作成</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">1.4. ページアイテムの作成</a></li>
-<li class="toctree-l3"><a class="reference internal" href="partialdesign.html">1.5. パーシャルデザインの作成</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.2. ページアイテムの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="partialdesign.html">1.3. パーシャルデザインの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pagedesign.html">1.4. ページデザインの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="createtemplate.html">1.5. テンプレートの作成</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../modules/index.html">2. SXA モジュールについて</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../json/index.html">3. SXA における JSON の活用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../creativeexchange/index.html">3. Creative Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../json/index.html">4. SXA における JSON の活用</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
@@ -162,7 +164,7 @@
         
           <li><a href="index.html">1. サイトを作る</a> &raquo;</li>
         
-      <li>1.4. ページアイテムの作成</li>
+      <li>1.2. ページアイテムの作成</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -182,7 +184,107 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>1.4. ページアイテムの作成<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>1.2. ページアイテムの作成<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>ページを作成していくにあたって、今回はダミーのアイテムを準備していきます。アイテムの作成は、作成したいアイテムの親になるアイテムを右クリックすることで、メニューが表示されます。今回は「ページ」を選択します。</p>
+<a class="reference internal image-reference" href="../../_images/items01.png"><img alt="アイテムの作成" class="align-center" src="../../_images/items01.png" style="width: 400px;" /></a>
+<p>アイテムの作成のダイアログが開きます。ここには Item の Path 設定をしていきます。</p>
+<a class="reference internal image-reference" href="../../_images/items02.png"><img alt="ダイアログ" class="align-center" src="../../_images/items02.png" style="width: 400px;" /></a>
+<p>1つ目のアイテムとして <cite>Products</cite> を作成します。</p>
+<a class="reference internal image-reference" href="../../_images/items03.png"><img alt="フィールドの確認" class="align-center" src="../../_images/items03.png" style="width: 400px;" /></a>
+<p>「タイトル」および「ナビゲーションのリンクキャプション」に <cite>製品情報</cite> の値を設定します。</p>
+<a class="reference internal image-reference" href="../../_images/items04.png"><img alt="製品情報" class="align-center" src="../../_images/items04.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/items05.png"><img alt="製品情報" class="align-center" src="../../_images/items05.png" style="width: 400px;" /></a>
+<p>左側のツリーで Products が選択されている状態で、「ホーム」メニューから「名前の変更」グループにある「表示名」をクリックします。</p>
+<a class="reference internal image-reference" href="../../_images/items06.png"><img alt="メニューから表示名" class="align-center" src="../../_images/items06.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/items07.png"><img alt="表示名の設定" class="align-center" src="../../_images/items07.png" style="width: 400px;" /></a>
+<p>コンテンツツリーに表示されるアイテムの名前も製品情報になりました。</p>
+<a class="reference internal image-reference" href="../../_images/items08.png"><img alt="表示名の設定" class="align-center" src="../../_images/items08.png" style="width: 400px;" /></a>
+<p>上記の手順を繰り返して、以下のアイテムを作成してください。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 55%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>アイテム</p></th>
+<th class="head"><p>タイトル</p></th>
+<th class="head"><p>ナビゲーションのリンクキャプション</p></th>
+<th class="head"><p>表示名</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Products</p></td>
+<td><p>製品情報</p></td>
+<td><p>製品情報</p></td>
+<td><p>製品情報</p></td>
+</tr>
+<tr class="row-odd"><td><p>Service</p></td>
+<td><p>サービス</p></td>
+<td><p>サービス</p></td>
+<td><p>サービス</p></td>
+</tr>
+<tr class="row-even"><td><p>Showcase</p></td>
+<td><p>導入事例</p></td>
+<td><p>導入事例</p></td>
+<td><p>導入事例</p></td>
+</tr>
+<tr class="row-odd"><td><p>About</p></td>
+<td><p>会社概要</p></td>
+<td><p>会社概要</p></td>
+<td><p>会社概要</p></td>
+</tr>
+</tbody>
+</table>
+<p>仕上がりとしては以下の図のようになります。</p>
+<a class="reference internal image-reference" href="../../_images/items09.png"><img alt="アイテムを作成" class="align-center" src="../../_images/items09.png" style="width: 400px;" /></a>
+<p>アイテムの順番を上記の表と同じ順番にするために、「ホーム」メニューにある「並べ替え」を利用して、アイテムの表示順を変えてください。以下が並べ替えた後となります。</p>
+<a class="reference internal image-reference" href="../../_images/items10.png"><img alt="並べ替え" class="align-center" src="../../_images/items10.png" style="width: 400px;" /></a>
+<p>続いて、Products の配下に以下のアイテムを作成し、順番も同様に並べ戻します。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 28%" />
+<col style="width: 32%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>アイテム</p></th>
+<th class="head"><p>タイトル</p></th>
+<th class="head"><p>ナビゲーションのリンクキャプション</p></th>
+<th class="head"><p>表示名</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CMS</p></td>
+<td><p>コンテンツ管理</p></td>
+<td><p>コンテンツ管理</p></td>
+<td><p>コンテンツ管理</p></td>
+</tr>
+<tr class="row-odd"><td><p>Marketing</p></td>
+<td><p>デジタルマーケティング</p></td>
+<td><p>デジタルマーケティング</p></td>
+<td><p>デジタルマーケティング</p></td>
+</tr>
+<tr class="row-even"><td><p>Automation</p></td>
+<td><p>マーケティングオートメーション</p></td>
+<td><p>マーケティングオートメーション</p></td>
+<td><p>マーケティングオートメーション</p></td>
+</tr>
+<tr class="row-odd"><td><p>Connector</p></td>
+<td><p>連携ソリューション</p></td>
+<td><p>連携ソリューション</p></td>
+<td><p>連携ソリューション</p></td>
+</tr>
+</tbody>
+</table>
+<p>出来上がりは以下のようになります。</p>
+<a class="reference internal image-reference" href="../../_images/items11.png"><img alt="並べ替え" class="align-center" src="../../_images/items11.png" style="width: 400px;" /></a>
+<p>今回は、ここまでできた状態からサンプルサイトの構築をしていきます。</p>
+<div class="section" id="id2">
+<h2>1.2.1. 参考動画<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ARLe0KEjZOY" frameborder="0" allowfullscreen></iframe></div>
 </div>
 
 
@@ -193,10 +295,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="partialdesign.html" class="btn btn-neutral float-right" title="1.5. パーシャルデザインの作成" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="partialdesign.html" class="btn btn-neutral float-right" title="1.3. パーシャルデザインの作成" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pagedesign.html" class="btn btn-neutral float-left" title="1.3. ページデザインの作成" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="createweb.html" class="btn btn-neutral float-left" title="1.1. テナントの作成、サイトの作成" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

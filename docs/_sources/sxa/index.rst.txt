@@ -10,11 +10,12 @@ Sitecore Experience Acceleartor は Sitecore の環境に Web サイトを立ち
     :caption: 目次
     :titlesonly:
     :numbered:
-    :maxdepth: 2
+    :maxdepth: 1
     
     firststep/index
     modules/index
     json/index
+    creativeexchange/index
 
 ***************
 基本機能の活用
@@ -37,7 +38,7 @@ Sitecore Experience Acceleartor は Sitecore の環境に Web サイトを立ち
 * ソーシャル
 * ナビゲーション
 
-詳しくは、[モジュール一覧](./modules/) を参照してください。
+詳しくは、:doc:`モジュール一覧 <modules/index>` を参照してください。
 
 ******************
 Json 対応について
@@ -45,7 +46,7 @@ Json 対応について
 
 SXA の JSON コンポーネントを利用することで、簡単に Web サイトの情報を JSON 形式で出力することができます。
 
-* [Json 対応について](./Json/)
+* :doc:`Json 対応について <json/index>` 
 
 ******
 活用

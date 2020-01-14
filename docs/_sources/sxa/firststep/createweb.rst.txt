@@ -6,60 +6,115 @@ Sitecore は複数の Web サイトを管理することができる仕組みと
 
 ここではテナントの作成方法について、紹介をします。
 
-## テナントの作成
+****************
+テナントの作成
+****************
 
 ログインをしたあと、コンテンツエディターを立ち上げてください。コンテンツエディターを立ち上げたあとアイテムとして Sitecore - コンテンツ が表示されているので、ここで右クリックをするとメニューが出てきます。メニューの項目から「挿入」を選択すると下のように挿入することができるアイテムとして「テナント」が表示されます。
 
-<img src="./images/tenant01.png" alt="テナント作成" />
+.. image:: images/tenant01.png
+   :align: center
+   :width: 400px
+   :alt: テナント作成
+
 
 実行をすると、テナントを作成するにあたって必要となる設定項目が表示されます。ここではテナント名を `QuickStart` と設定します。モジュールに関しては今回はすべて選択します。
 
-<img src="./images/tenant02.png" alt="ダイアログ" />
+.. image:: images/tenant02.png
+   :align: center
+   :width: 400px
+   :alt: ダイアログ
+
 
 完了すると、テナントのアイテムが作成されます。このテナントで利用するtンプレート、テーマ、メディアライブラリの場所などがアイテムで定義されています。
 
-<img src="./images/tenant03.png" alt="テナントの完成" />
+.. image:: images/tenant03.png
+   :align: center
+   :width: 400px
+   :alt: テナントの完成
+
 
 これでテナントは完成しました。
 
-## サイトの作成
+****************
+サイトの作成
+****************
 
 テナントの下にはサイトを構築することができます。今回は、作成をしたテナントを右クリックをしてサイトを追加するメニューを表示します。
 
-<img src="./images/site01.png" alt="サイトの作成" />
+.. image:: images/site01.png
+   :align: center
+   :width: 400px
+   :alt: サイトの作成
+
+
 
 暫くすると以下のようなダイアログが表示されます。
 
-<img src="./images/site02.png" alt="ダイアログ" />
+.. image:: images/site02.png
+   :align: center
+   :width: 400px
+   :alt: ダイアログ
+
 
 今回は以下のように設定していきます。
 
-| 設定項目 | 値 |
-| --- | --- |
-| サイト名 | demo |
-| ホスト名 | * |
-| 仮想フォルダー | / |
-| 言語 | ja-jp |
+================ =======
+設定項目         値 
+================ =======
+サイト名         demo 
+ホスト名         * 
+仮想フォルダー    / 
+言語             ja-jp 
+================ =======
 
 設定をすると、以下のようになります。
 
-<img src="./images/site03.png" alt="一般設定" />
+.. image:: images/site03.png
+   :align: center
+   :width: 400px
+   :alt: 一般設定
+
 
 続いてタブを切り替えて設定を追加していきます。モジュールはすべてのモジュールを選択しておきます。
 
-<img src="./images/site04.png" alt="モジュール設定" />
+.. image:: images/site04.png
+   :align: center
+   :width: 400px
+   :alt: モジュール設定
+
 
 次にテーマのタブに切り替えます。ここでは、「新しいテーマを作成」のチェックボックスをチェック、またテーマとして「Basic2」と「Wireframe」を選択します。
 
-<img src="./images/site05.png" alt="テーマの設定" />
+.. image:: images/site05.png
+   :align: center
+   :width: 400px
+   :alt: テーマの設定
+
 
 最後にグリッドの設定ですが、標準で設定できる Bootstrap 4 を選択します。
 
-<img src="./images/site06.png" alt="グリッド" />
+.. image:: images/site06.png
+   :align: center
+   :width: 400px
+   :alt: グリッド
+
 
 上記の設定を確認しあと、OK ボタンを押すとサイトに必要な情報の入ったサイトが出来上がります。
 
-<img src="./images/site07.png" alt="サイトの完成" />
+.. image:: images/site07.png
+   :align: center
+   :alt: サイトの完成
+
 
 これで、空っぽの Web サイトが出来上がりました。
+
+
+*************
+参考動画
+*************
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bKz7riJGqa0" frameborder="0" allowfullscreen></iframe>
 

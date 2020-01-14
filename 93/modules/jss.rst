@@ -71,6 +71,16 @@ Sitecore JavaScript Services (以下、JSS) を利用するためには、Node.j
 
 `HTTP Error 400.0 - API key is not valid` のエラ〜メッセージが返ってくれば、モジュールのインストールに成功しています。
 
+
+*************
+参考動画
+*************
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bw_5MIGvKwY" frameborder="0" allowfullscreen></iframe>
+
+
 **************
 次のステップ
 **************

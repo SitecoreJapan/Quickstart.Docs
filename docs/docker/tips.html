@@ -96,6 +96,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../readme.html">はじめに</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../93/index.html">Sitecore Experience Platform 9.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">オンライン マニュアル</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../sxa/index.html">Sitecore Experience Accelerator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../jss/index.html">Sitecore JavaScript Services</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Sitecore on Docker</a><ul class="current">
@@ -179,13 +180,44 @@
 <div class="section" id="id1">
 <h2>5.1. ネットワークの変更<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>仮想マシンで Docker を利用している場合、再起動するなどで network の再設定が必要となる場合があります。この場合、以下のコマンドでネットワークの再設定をしてください。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">network</span> <span class="n">connect</span> <span class="o">&lt;</span><span class="n">network</span> <span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">container</span> <span class="n">name</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">network</span> <span class="n">create</span> <span class="o">-</span><span class="n">d</span> <span class="n">nat</span> <span class="o">&lt;</span><span class="n">network</span> <span class="n">name</span><span class="o">&gt;</span>
+<span class="n">docker</span> <span class="n">network</span> <span class="n">connect</span> <span class="o">&lt;</span><span class="n">network</span> <span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">container</span> <span class="n">name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>93x_default のネットワークに 93x_sql_1 のコンテナを接続する場合は、以下のコマンドを実行します。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">network</span> <span class="n">connect</span> <span class="mi">93</span><span class="n">x_default</span> <span class="mi">93</span><span class="n">x_sql_1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">network</span> <span class="n">create</span> <span class="o">-</span><span class="n">d</span> <span class="n">nat</span> <span class="mi">93</span><span class="n">x_default</span>
+<span class="n">docker</span> <span class="n">network</span> <span class="n">connect</span> <span class="mi">93</span><span class="n">x_default</span> <span class="mi">93</span><span class="n">x_sql_1</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="id2">
+<h2>5.2. ダウンロードに失敗する<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>イメージを build しているときに必要なモジュールのダウンロードに失敗をすることがあります。</p>
+<a class="reference internal image-reference" href="../_images/tips01.png"><img alt="エラー画面" class="align-center" src="../_images/tips01.png" style="width: 400px;" /></a>
+<p>この場合は、Docker の設定に、以下の dns の項目を追加することで解決します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;registry-mirrors&quot;</span><span class="p">:</span> <span class="p">[],</span>
+<span class="s2">&quot;insecure-registries&quot;</span><span class="p">:</span> <span class="p">[],</span>
+<span class="s2">&quot;debug&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+<span class="s2">&quot;experimental&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+<span class="s2">&quot;dns&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;8.8.8.8&quot;</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/tips02.png"><img alt="設定" class="align-center" src="../_images/tips02.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>参考サイト <a class="reference external" href="https://www.sitecoregabe.com/2019/10/sitecore-docker-setup-curl-6-could-not.html">Sitecore Docker Setup; &quot;curl: (6) Could not resolve host&quot;</a></p></li>
+</ul>
+</div>
+<div class="section" id="build">
+<h2>5.3. Build に失敗をする<a class="headerlink" href="#build" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>エラーメッセージで以下のメッセージが出る場合があります。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hcsshim</span><span class="p">::</span><span class="n">PrepareLayer</span> <span class="o">-</span> <span class="n">failed</span> <span class="n">failed</span> <span class="ow">in</span> <span class="n">Win32</span><span class="p">:</span> <span class="n">Incorrect</span> <span class="n">function</span><span class="o">.</span> <span class="p">(</span><span class="mh">0x1</span><span class="p">)</span> <span class="n">Windows</span> <span class="n">Containers</span>
+</pre></div>
+</div>
+<p>このエラーが出る場合は、Box や Dropbox などのアプリケーションがインストールされているケースで発生します。削除して再起動することで、このエラーを回避することができます。</p>
 </div>
 </div>
 
