@@ -6,7 +6,7 @@ CSV ファイルのインポート
 データの準備
 ****************
 
-準備が整いましたので、CSV ファイルのインポートを行います。CSV ファイルのサンプルは [listmanager-sample.csv](listmanager-sample.csv) としてダウンロード可能です。
+準備が整いましたので、CSV ファイルのインポートを行います。CSV ファイルのサンプルは `listmanager-sample.csv <https://github.com/SitecoreJapan/Quickstart.Docs/tree/master/sample/listmanager>`_ としてダウンロード可能です。
 
 今回は CSV ファイルは4つの項目をインポートします。
 
