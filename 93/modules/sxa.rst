@@ -67,6 +67,16 @@ Sitecore Experience Accelerator はコンポーネントに関する日本語リ
 
 上記で Sitecore Experience Accelerator のインストールは完了となります。
 
+
+*************
+参考動画
+*************
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/x7V2eGK2sM8" frameborder="0" allowfullscreen></iframe>
+
+
 ***************
 次のステップ
 ***************

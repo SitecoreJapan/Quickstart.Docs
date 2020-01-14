@@ -10,14 +10,6 @@ Sitecore 9.3 で提供する Sitecore Instllation Assistant は Solr も含め�
 * SQL Server 2019
 
 
-*************************
-インストール参考動画
-*************************
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Bcjf2MjWvkk" frameborder="0" allowfullscreen></iframe>
-
 ****************************************
 Sitecore のインストールプログラムの入手
 ****************************************
@@ -200,3 +192,11 @@ Sitecore Experience Accelerator を同時にインストールをするか、確
 
 ログイン画面が表示されれば、インストールが無事完了します。
 
+
+*************
+参考動画
+*************
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Bcjf2MjWvkk" frameborder="0" allowfullscreen></iframe>
