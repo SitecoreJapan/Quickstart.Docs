@@ -83,7 +83,6 @@
 
 .. image:: images/header09.png
    :align: center
-   :width: 400px
    :alt: アイコン
    
 
@@ -177,7 +176,6 @@
 
 .. image:: images/header09.png
    :align: center
-   :width: 400px
    :alt: アイコン
    
 

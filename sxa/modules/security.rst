@@ -6,5 +6,5 @@
  ログイン、ログアウト
 **********************
 
-* [ログイン、ログアウト サンプル](https://sxa.cmsdemo.jp/components/security/login-and-logout)
+* `ログイン、ログアウト サンプル <https://sxa.cmsdemo.jp/components/security/login-and-logout>`_
 

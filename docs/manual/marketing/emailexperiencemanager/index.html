@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
-    <link rel="next" title="マーケティング オートメーション" href="../marketingautomation/index.html" />
+    <link rel="next" title="Email Experience Manager の基本設定" href="settings.html" />
     <link rel="prev" title="リスト マネージャー" href="../listmanager/index.html" />
  
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -107,7 +107,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../experienceoptimization/index.html">エクスペリエンス オプティマイザー</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../pathanalyzer/index.html">Path アナライザー</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../listmanager/index.html">リスト マネージャー</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Email Experience Manager</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Email Experience Manager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="settings.html">Email Experience Manager の基本設定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="createAccount.html">アカウントの作成</a></li>
+<li class="toctree-l4"><a class="reference internal" href="createEmail.html">サンプルメールの作成</a></li>
+<li class="toctree-l4"><a class="reference internal" href="delivery.html">配信</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../marketingautomation/index.html">マーケティング オートメーション</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../federatedexperiencemanager/index.html">フェデレーション エクスペリエンス マネージャー</a></li>
 </ul>
@@ -191,19 +197,34 @@
   <div class="section" id="email-experience-manager">
 <h1>Email Experience Manager<a class="headerlink" href="#email-experience-manager" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>ここでは Email Experience Manager のデモに関しての設定、簡単なデモについて紹介をしています。</p>
-<p>## 前提条件</p>
+<div class="section" id="id1">
+<h2>前提条件<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>今回の設定に関しては、以下の環境で実施しています。</p>
 <ul class="simple">
-<li><p>Sitecore Experience Platform 9.2 Initial Release</p></li>
+<li><p>Sitecore Experience Platform 9.3 Initial Release</p></li>
 <li><p>Outlook.com のメールアドレス（メール配信アカウントとして）</p></li>
 <li><p>Gmail、Outlook のアカウント（メール受信テスト用として）</p></li>
-<li><p>すでに[配信用のリスト](../ListManager/)が作成されている</p></li>
+<li><p>CustomSMTP の設定が完了している（メールの配信が可能）</p></li>
+<li><p>リストマネージャーで <a class="reference internal" href="../listmanager/index.html"><span class="doc">配信用のリスト</span></a> が作成されている</p></li>
 </ul>
-<p>## 設定方法</p>
-<p>以下の手順で設定を進めていきます。
-* [Custom SMTP の設定](CustomSMTP.md)
-* [メールサービスの設定](MailServer.md)
-* [接続テスト](ConnectionTest.md)</p>
+</div>
+<div class="section" id="id2">
+<h2>設定方法<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>以下の手順で設定を進めていきます。</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">目次</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">Email Experience Manager の基本設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createAccount.html">アカウントの作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createEmail.html">サンプルメールの作成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="delivery.html">配信</a></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>[Custom SMTP の設定](CustomSMTP.md)</p></li>
+<li><p>[メールサービスの設定](MailServer.md)</p></li>
+<li><p>[接続テスト](ConnectionTest.md)</p></li>
+</ul>
 <p>設定が完了した段階で、以下の点を確認してください。</p>
 <ul class="simple">
 <li><p>[Email Experience Manager の基本設定](settings.md)</p></li>
@@ -215,6 +236,7 @@
 <li><p>[配信](delivery.md)</p></li>
 </ul>
 </div>
+</div>
 
 
            </div>
@@ -224,7 +246,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../marketingautomation/index.html" class="btn btn-neutral float-right" title="マーケティング オートメーション" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="settings.html" class="btn btn-neutral float-right" title="Email Experience Manager の基本設定" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../listmanager/index.html" class="btn btn-neutral float-left" title="リスト マネージャー" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

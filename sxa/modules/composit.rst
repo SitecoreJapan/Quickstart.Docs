@@ -6,13 +6,14 @@
 ***************
 アコーディオン
 ***************
-* [アコーディオン サンプル](https://sxa.cmsdemo.jp/components/composites/accordion)
+
+* `アコーディオン サンプル <https://sxa.cmsdemo.jp/components/composites/accordion>`_
 
 ***************
 カルーセル
 ***************
 
-* [カルーセル サンプル](https://sxa.cmsdemo.jp/components/composites/carousel)
+* `カルーセル サンプル <https://sxa.cmsdemo.jp/components/composites/carousel>`_
 
 ***************
 スニペット
@@ -24,11 +25,11 @@
 タブ
 ***************
 
-* [タブ サンプル](https://sxa.cmsdemo.jp/components/composites/tabs)
+* `タブ サンプル <https://sxa.cmsdemo.jp/components/composites/tabs>`_
 
 ***************
 反転
 ***************
 
-* [反転 サンプル](https://sxa.cmsdemo.jp/components/composites/flip)
+* `反転 サンプル <https://sxa.cmsdemo.jp/components/composites/flip>`_
 
