@@ -181,7 +181,7 @@ Unicorn の設定をオフにする
 
 .. code-block:: xml
 
-    <add key="unicorn:define" value="Off" />
+    <add key="unicorn:define" value="Disabled" />
 
 
 マーケティングリソースの追加
@@ -201,6 +201,14 @@ Unicorn の設定をオフにする
 
 * 全コンテンツの Republish
 * インデックスの再構築
+
+***********
+関連動画
+***********
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/G53Uc4kDJVA" frameborder="0" allowfullscreen></iframe>
 
 
 ***********
