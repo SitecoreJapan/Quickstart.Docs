@@ -6,7 +6,7 @@ Sitecore HabitatHome Platform
 
 * `https://github.com/Sitecore/Sitecore.HabitatHome.Platform <https://github.com/Sitecore/Sitecore.HabitatHome.Platform>`_
 
-インストールをする際には、 `release/9.3.0` のブランチを選択してください。
+インストールをする際には、`default` のブランチを選択してください。
 
 **************************
 Sitecore のインストール
