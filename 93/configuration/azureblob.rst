@@ -195,11 +195,7 @@ PowerShell で処理できるように、AzureRM をインストールします�
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/bw_5MIGvKwY" frameborder="0" allowfullscreen></iframe>
-
-****************
-動作環境の確認
-****************
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dqm7Tkc2a5g" frameborder="0" allowfullscreen></iframe>
 
 
 *************
