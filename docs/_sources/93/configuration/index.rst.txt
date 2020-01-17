@@ -6,4 +6,6 @@
     :caption: 目次
     :titlesonly:
 
+    azureblob
     azuretoolkit
+    
