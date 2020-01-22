@@ -15,6 +15,7 @@
     salesforcecrm
     salesforcemcce
     salesforcemcbde
+    dxftenant
 
 *************************
 その他のモジュール
