@@ -156,12 +156,6 @@ CRM 項目のカスタマイズ（オプション）
    :alt: 日本語リソース
 
 * 「項目とリレーション」を選択します。
-
-.. image:: images/sxa03.png
-   :align: center
-   :width: 400px
-   :alt: 日本語リソース
-
 * 右上のメニューから「新規」をクリックして実行。
 * データ型では「テキスト」を選択します、選択したら次へ。
 
@@ -319,7 +313,7 @@ xConnect Collection Model の展開
    :alt: モデルを JSON に変換する
 
 * JSON ファイルのダウンロードが完了します。
-* xConnect のサーバー（例： C:\\inetpub\\wwwroot\\92xconnect.dev.local）に、ダウンロードした JSON ファイルをコピーします。コピー先は以下の2か所です。
+* xConnect のサーバー（例： C:\\inetpub\\wwwroot\\93xconnect.dev.local）に、ダウンロードした JSON ファイルをコピーします。コピー先は以下の2か所です。
 
     * \\App_Data\\Models\\
     * \\App_Data\\jobs\\continuous\\IndexWorker\\App_Data\\Models\\
