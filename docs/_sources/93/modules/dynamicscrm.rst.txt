@@ -36,7 +36,7 @@ Sitecore Experience Platform では Dynamics 365 CRM と連携するためのモ
 
 * まず最初に、`Data Exchange Framework 4.0.0` のファイルをアップロードします（すでにインストール済の場合は省略できます）。
 
-.. image:: images/dcrm01.png
+.. image:: images/sfcrm01.png
    :align: center
    :width: 400px
    :alt: Data Exchange Framework
