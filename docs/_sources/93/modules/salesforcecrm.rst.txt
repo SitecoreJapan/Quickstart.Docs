@@ -199,11 +199,6 @@ CRM 項目のカスタマイズ（オプション）
    :width: 400px
    :alt: 活動
 
-.. image:: images/sxa03.png
-   :align: center
-   :width: 400px
-   :alt: 日本語リソース
-
 * 「項目とリレーション」を選択します。
 
 .. image:: images/sfcrm18.png
