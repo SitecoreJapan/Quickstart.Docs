@@ -550,3 +550,11 @@ PII フィールドのインデックスを有効にする
    :alt: プロファイル詳細
 
 これで Salesforce CRM 連携の設定が完了しました。
+
+*************
+参考動画
+*************
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/pyr4RBGbs_4" frameborder="0" allowfullscreen></iframe>
