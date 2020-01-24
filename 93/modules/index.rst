@@ -16,6 +16,7 @@
     salesforcemcce
     salesforcemcbde
     dxftenant
+    sitecorecmp
 
 *************************
 その他のモジュール
@@ -24,4 +25,4 @@
 以下のモジュールは、Sitecore Experience Platform 9.2 の手順を参考にしてください。
 
 * :doc:`Sitecore Connect for Sitecore DAM </92/modules/sitecoredam>`
-* :doc:`Sitecore Connect for Sitecore CMP </92/modules/sitecorecmp>`
+
