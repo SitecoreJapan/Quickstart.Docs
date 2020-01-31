@@ -11,6 +11,7 @@ Sitecore Experience Platform 9.3
 
     readme
     install/index
+    commerce/index
     modules/index
     configuration/index
     demo/index
