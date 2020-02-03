@@ -235,7 +235,12 @@
 <span class="o">-</span><span class="n">a</span><span class="o">----</span>       <span class="mi">2019</span><span class="o">/</span><span class="mi">12</span><span class="o">/</span><span class="mi">23</span>     <span class="mi">12</span><span class="p">:</span><span class="mi">49</span>        <span class="mi">1921044</span> <span class="n">Sitecore</span><span class="o">.</span><span class="n">PowerShell</span><span class="o">.</span><span class="n">Extensions</span><span class="o">-</span><span class="mf">6.0</span><span class="o">.</span><span class="n">scwdp</span><span class="o">.</span><span class="n">zip</span>
 </pre></div>
 </div>
-<p>Publishing Service に関するファイルが準備されていないため、 <cite>Download-PS-Prerequisites .ps1</cite> のファイルを利用してモジュールを作成します。詳細な手順は <a class="reference external" href="https://github.com/Sitecore/docker-images/blob/master/README.md#experimental-publishing-service-not-automatically-build-because-of-missing-prerequisites-from-sitecore">Experimental Publishing Service (not automatically build because of missing prerequisites from Sitecore)</a> に記載されていますが、今回は以下のように進めます（この文書作成時にはファイル名にスペースがあったため、ファイル名を一度変更しています）。</p>
+<p>Publishing Service に関するファイルが準備されていないため、 <cite>Download-PS-Prerequisites.ps1</cite> のファイルを利用してモジュールを作成します。</p>
+<p>このスクリプトを実行するにあたって、Web Deploy 3.6 for Hosting Servers を事前にインストールしておく必要があります。インストールをしていない場合のエラー画面は以下のようになります。</p>
+<a class="reference internal image-reference" href="../_images/sps-Prerequisites01.png"><img alt="インストールをしていない場合のエラー画面" class="align-center" src="../_images/sps-Prerequisites01.png" style="width: 400px;" /></a>
+<p>モジュールのインストールには、 <a class="reference external" href="https://www.microsoft.com/web/downloads/platform.aspx">Web Platform Installer</a> をインストールして、 <cite>Web Deploy 3.6 for Hosting Servers</cite> をインストールします。インストールは以下のサイトからダウンロードをして実行してください。</p>
+<a class="reference internal image-reference" href="../_images/sps-Prerequisites01.png"><img alt="インストールをしていない場合のエラー画面" class="align-center" src="../_images/sps-Prerequisites01.png" style="width: 400px;" /></a>
+<p>インストールが完了したあと、以下のようにスクリプトを実行します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>\<span class="n">Download</span><span class="o">-</span><span class="n">PS</span><span class="o">-</span><span class="n">Prerequisites</span><span class="o">.</span><span class="n">ps1</span> <span class="o">-</span><span class="n">SitecoreUsername</span> <span class="s2">&quot;YOUR dev.sitecore.net USERNAME&quot;</span> <span class="o">-</span><span class="n">SitecorePassword</span> <span class="s2">&quot;YOUR dev.sitecore.net PASSWORD&quot;</span>
 </pre></div>
 </div>
