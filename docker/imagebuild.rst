@@ -124,10 +124,10 @@ Publishing Service に関するファイルが準備されていないため、 
 
 モジュールのインストールには、 `Web Platform Installer <https://www.microsoft.com/web/downloads/platform.aspx>`_ をインストールして、 `Web Deploy 3.6 for Hosting Servers` をインストールします。インストールは以下のサイトからダウンロードをして実行してください。
 
-.. image:: images/sps-Prerequisites01.png
+.. image:: images/sps-Prerequisites02.png
    :align: center
    :width: 400px
-   :alt: インストールをしていない場合のエラー画面
+   :alt: Web Platform Installer
 
 インストールが完了したあと、以下のようにスクリプトを実行します。
 
