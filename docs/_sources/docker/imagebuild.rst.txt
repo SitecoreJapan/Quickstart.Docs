@@ -113,7 +113,23 @@ Docker の環境が整った次のステップとして、Github に公開され
   -a----       2019/12/23     12:49        1921044 Sitecore.PowerShell.Extensions-6.0.scwdp.zip
 
 
-Publishing Service に関するファイルが準備されていないため、 `Download-PS-Prerequisites .ps1` のファイルを利用してモジュールを作成します。詳細な手順は `Experimental Publishing Service (not automatically build because of missing prerequisites from Sitecore) <https://github.com/Sitecore/docker-images/blob/master/README.md#experimental-publishing-service-not-automatically-build-because-of-missing-prerequisites-from-sitecore>`_ に記載されていますが、今回は以下のように進めます（この文書作成時にはファイル名にスペースがあったため、ファイル名を一度変更しています）。
+Publishing Service に関するファイルが準備されていないため、 `Download-PS-Prerequisites.ps1` のファイルを利用してモジュールを作成します。
+
+このスクリプトを実行するにあたって、Web Deploy 3.6 for Hosting Servers を事前にインストールしておく必要があります。インストールをしていない場合のエラー画面は以下のようになります。
+
+.. image:: images/sps-Prerequisites01.png
+   :align: center
+   :width: 400px
+   :alt: インストールをしていない場合のエラー画面
+
+モジュールのインストールには、 `Web Platform Installer <https://www.microsoft.com/web/downloads/platform.aspx>`_ をインストールして、 `Web Deploy 3.6 for Hosting Servers` をインストールします。インストールは以下のサイトからダウンロードをして実行してください。
+
+.. image:: images/sps-Prerequisites01.png
+   :align: center
+   :width: 400px
+   :alt: インストールをしていない場合のエラー画面
+
+インストールが完了したあと、以下のようにスクリプトを実行します。
 
 .. code-block:: 
 
