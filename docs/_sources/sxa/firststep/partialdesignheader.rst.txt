@@ -2,99 +2,207 @@
 ヘッダーの作成
 ##################
 
-## パーシャルデザインのアイテム作成
+********************************
+パーシャルデザインのアイテム作成
+********************************
 
 まずはヘッダーエリアを作成するために、ヘッダーのパーシャルデザインを作成することになります。メニューの「エクスペリエンスアクセラレーター」を開いて、「パーシャルデザイン」のアイコンをクリックすると、作成するためのメニューが表示されます。
 
-<img src="images/header01.png" alt="メニュー" />
-
+.. image:: images/header01.png
+   :align: center
+   :width: 400px
+   :alt: メニュー
+   
 「パーシャルデザインを追加」をクリックすると、ダイアログが開きます。今回作成するパーシャルデザインはヘッダーになるため、`Partial Design` を選択してアイテム名を `Header` とします。入力したら OK をクリックします。
 
-<img src="images/header02.png" alt="ヘッダーアイテムの作成" />
+.. image:: images/header02.png
+   :align: center
+   :width: 400px
+   :alt: ヘッダーアイテムの作成
+   
+
 
 作成しているアイテムが何かを確認しやすくするために、メニューの項目から「表示」－「ナビゲーションバー」をチェックします。
 
-<img src="images/header03.png" alt="ナビゲーションバーの表示" />
+.. image:: images/header03.png
+   :align: center
+   :width: 400px
+   :alt: ナビゲーションバーの表示
+   
 
-## モジュールの配置
+********************************
+モジュールの配置
+********************************
 
 ヘッダーエリアにモジュールを配置していきます。ヘッダーエリアは、クリックをするとヘッダーと表示される場所となります。
 
-<img src="images/header04.png" alt="ヘッダー" />
+.. image:: images/header04.png
+   :align: center
+   :width: 400px
+   :alt: ヘッダー
+   
+
 
 なおモジュールは右側のエリアに一覧が隠れており、＜ のアイコンをクリックすると表示されます。
 
-<img src="images/header05.png" alt="ツールボックス" />
+.. image:: images/header05.png
+   :align: center
+   :width: 400px
+   :alt: ツールボックス
+   
+
 
 「ページ構造」のグループにある「スプリッタ（列）」をドラッグ＆ドロップでヘッダーエリアに配置してください。
 
-<img src="images/header06.png" alt="ドラッグ＆ドロップ" />
+.. image:: images/header06.png
+   :align: center
+   :width: 400px
+   :alt: ドラッグ＆ドロップ
+   
+
 
 スプリッターが配置されると、以下のような画面になります。
 
-<img src="images/header07.png" alt="スプリッター配置" />
+.. image:: images/header07.png
+   :align: center
+   :width: 400px
+   :alt: スプリッター配置
+   
+
 
 スプリッターのエリアは2つ出来上がっており、カラムを選択することが可能です（下図は左側のカラムを選択）。
 
-<img src="images/header08.png" alt="カラム" />
+.. image:: images/header08.png
+   :align: center
+   :width: 400px
+   :alt: カラム
+   
+
 
 スプリッターの基本設定としては、12分割する形となっており、配置したときには２つは 6 のサイズが割り当てられています。今回は左側にロゴを配置する、という形で左側を 4 、右側を 8 というサイズに変更します。まず、左側のカラムを選択した際に、以下のボタンをクリックしてください。
 
-<img src="images/header09.png" alt="アイコン" />
+.. image:: images/header09.png
+   :align: center
+   :alt: アイコン
+   
+
 
 以下のようなダイアログが表示されます。
 
-<img src="images/header10.png" alt="ダイアログ" />
+.. image:: images/header10.png
+   :align: center
+   :width: 400px
+   :alt: ダイアログ
+   
+
 
 今回は左側のカラムを 4 に設定するために、一番上の数字を 6 から 4 に変更をして、OK を押します。すると、サイズが変わることがわかります。
 
-<img src="images/header11.png" alt="設定後" />
-
+.. image:: images/header11.png
+   :align: center
+   :width: 400px
+   :alt: 設定後
+   
 同じ手順を右側のカラムに対しても変更します。右側のカラムは 6 を 8 に変更します。
 
-<img src="images/header12.png" alt="設定後その２" />
+.. image:: images/header12.png
+   :align: center
+   :width: 400px
+   :alt: 設定後その２
+   
+
 
 カラムの設定変更を完了させたので、続いてモジュールを配置していきます。左側には「メディア」グループにある「画像」をドラッグ＆ドロップします。
 
-<img src="images/header13.png" alt="画像を配置" />
+.. image:: images/header13.png
+   :align: center
+   :width: 400px
+   :alt: 画像を配置
+   
+
 
 右側のエリアには「検索」グループにある「検索ボックス」をドラッグ＆ドロップします。
 
-<img src="images/header14.png" alt="検索ボックスを配置" />
+.. image:: images/header14.png
+   :align: center
+   :width: 400px
+   :alt: 検索ボックスを配置
+   
+
 
 ダイアログが開きますが、今回は「デフォルト」を選択して OK　を押してください。
 
-<img src="images/header15.png" alt="デフォルトを設定" />
+.. image:: images/header15.png
+   :align: center
+   :width: 400px
+   :alt: デフォルトを設定
+   
+
 
 結果は以下のような画面となります。
 
-<img src="images/header16.png" alt="配置した結果" />
+.. image:: images/header16.png
+   :align: center
+   :width: 400px
+   :alt: 配置した結果
+   
+
 
 左上の保存のアイコンをクリックしてください。ここまで作成した内容を保存することができます。
 
-## ナビゲーションの追加
+********************************
+ナビゲーションの追加
+********************************
 
 ここでグローバルメニューをヘッダーエリアに追加します。ナビゲーションアイテムを選択し、ドラッグ＆ドロップでスプリッターの下に配置します。
 
-<img src="images/header17.png" alt="ナビゲーションを配置" />
+.. image:: images/header17.png
+   :align: center
+   :width: 400px
+   :alt: ナビゲーションを配置
+   
+
 
 配置すると、すでに作成をしておいたアイテムをベースとしたナビゲーションが作成されています。
 
-<img src="images/header18.png" alt="ナビゲーションの情報を参照" />
+.. image:: images/header18.png
+   :align: center
+   :width: 400px
+   :alt: ナビゲーションの情報を参照
+   
+
 
 ナビゲーションの設定を変更するために、カラムのサイズを変更したときのアイコンを改めてクリックします。
 
-<img src="images/header09.png" alt="アイコン" />
+.. image:: images/header09.png
+   :align: center
+   :alt: アイコン
+   
+
 
 ここでは「スタイリング」の中にある設定で、「メインナビゲーション - 垂直ドロップダウン」を選択します。
 
-<img src="images/header19.png" alt="設定を変更" />
+.. image:: images/header19.png
+   :align: center
+   :width: 400px
+   :alt: 設定を変更
+   
 
 変更をすると、ドロップダウンメニューに切り替わります。
 
-<img src="images/header20.png" alt="メニュー項目の変更" />
+.. image:: images/header20.png
+   :align: center
+   :width: 400px
+   :alt: メニュー項目の変更
+   
 
 これでヘッダーエリアの作業を一度終了させます。
 
----
-[目次に戻る](./) | 次 -> [フッターの作成](footer.md)
+*************
+参考動画
+*************
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SI2FckOWT6A" frameborder="0" allowfullscreen></iframe>
+

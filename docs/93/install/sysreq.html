@@ -105,13 +105,16 @@
 <li class="toctree-l3"><a class="reference internal" href="rebuild.html">2.5. インデックスの再構築</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">3. モジュールのインストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">4. 各種設定に関して</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../demo/index.html">5. デモサイト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commerce/index.html">3. Commerce インストールガイド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">4. モジュールのインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">5. 各種設定に関して</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo/index.html">6. デモサイト</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">オンライン マニュアル</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Sitecore on Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a></li>
 </ul>
@@ -197,44 +200,44 @@
 <div class="section" id="windows-server-2019">
 <h2>2.1.2. Windows Server 2019 のインストール<a class="headerlink" href="#windows-server-2019" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Hyper-V マネージャを起動して、右側に表示されている操作から、「新規」－「仮想マシン」を選択します。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq011.png"><img alt="仮想マシン" class="align-center" src="../../_images/sysreq011.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq012.png"><img alt="仮想マシン" class="align-center" src="../../_images/sysreq012.png" style="width: 400px;" /></a>
 <p>仮想マシンの名前を決めます。ここでは QuickStart という名前にします（特にこの名前には制限はありません）。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq021.png"><img alt="マシン名" class="align-center" src="../../_images/sysreq021.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq022.png"><img alt="マシン名" class="align-center" src="../../_images/sysreq022.png" style="width: 400px;" /></a>
 <p>今回作成する仮想マシンの世代は「第１世代」を選択します。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq031.png"><img alt="世代の指定" class="align-center" src="../../_images/sysreq031.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq032.png"><img alt="世代の指定" class="align-center" src="../../_images/sysreq032.png" style="width: 400px;" /></a>
 <p>仮想マシンのメモリを設定します。PC の容量に合わせて設定をしてください（推奨としては 8GB 以上）</p>
-<a class="reference internal image-reference" href="../../_images/sysreq041.png"><img alt="メモリの指定" class="align-center" src="../../_images/sysreq041.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq042.png"><img alt="メモリの指定" class="align-center" src="../../_images/sysreq042.png" style="width: 400px;" /></a>
 <p>ネットワークの構成では、接続先を Default Switch にします。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq051.png"><img alt="ネットワークの構成" class="align-center" src="../../_images/sysreq051.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq052.png"><img alt="ネットワークの構成" class="align-center" src="../../_images/sysreq052.png" style="width: 400px;" /></a>
 <p>仮想ハードディスクを作成しますが、作成するディレクトリを <cite>QuickStart</cite> に変更した画面です（標準のままでも問題ありません）。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq061.png"><img alt="仮想ハードディスクの接続" class="align-center" src="../../_images/sysreq061.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq062.png"><img alt="仮想ハードディスクの接続" class="align-center" src="../../_images/sysreq062.png" style="width: 400px;" /></a>
 <p>インストールオプションで、Windows Server 2019 Standard の ISO ファイルを指定します。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq071.png"><img alt="Windows Server 2019 Standard の ISO ファイルを指定" class="align-center" src="../../_images/sysreq071.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq072.png"><img alt="Windows Server 2019 Standard の ISO ファイルを指定" class="align-center" src="../../_images/sysreq072.png" style="width: 400px;" /></a>
 <p>完了ボタンを押します。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq081.png"><img alt="最終確認" class="align-center" src="../../_images/sysreq081.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq082.png"><img alt="最終確認" class="align-center" src="../../_images/sysreq082.png" style="width: 400px;" /></a>
 <p>作成した仮想マシンを右クリックで選択、接続します。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq091.png"><img alt="接続" class="align-center" src="../../_images/sysreq091.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq092.png"><img alt="接続" class="align-center" src="../../_images/sysreq092.png" style="width: 400px;" /></a>
 <p>マシンを起動します（起動をクリック）</p>
-<a class="reference internal image-reference" href="../../_images/sysreq101.png"><img alt="起動" class="align-center" src="../../_images/sysreq101.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq102.png"><img alt="起動" class="align-center" src="../../_images/sysreq102.png" style="width: 400px;" /></a>
 <p>Windows Server 2019 のインストールを進めていきます。途中、エディションが表示される場合は、 <cite>Windows Server 2019 Standard (デスクトップエクスペリエンス)</cite> を選択してください。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq111.png"><img alt="Edition の選択" class="align-center" src="../../_images/sysreq111.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq112.png"><img alt="Edition の選択" class="align-center" src="../../_images/sysreq112.png" style="width: 400px;" /></a>
 <p>あとは Windows Server 2019 のインストールを進めていきます。Windows update を適用して完了します。</p>
 </div>
 <div class="section" id="sql-server-2019">
 <h2>2.1.3. SQL Server 2019 のインストール<a class="headerlink" href="#sql-server-2019" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>SQL Server を今回は ISO ファイルからインストールを進めます。仮想マシンのコンソールのメニューから「メディア」－「DVD ドライブ」-「ディスクの挿入」を選択して、SQL Server の ISO ファイルを選択します。</p>
-<a class="reference internal image-reference" href="../../_images/sql011.png"><img alt="ISO の挿入" class="align-center" src="../../_images/sql011.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sql012.png"><img alt="ISO の挿入" class="align-center" src="../../_images/sql012.png" style="width: 400px;" /></a>
 <p>SQL Server 2019 インストールセンターの左メニューから「インストール」をクリックして、「SQL Server の新規スタンドアロンインストールを実行するか、既存のインストールに起動を追加」からインストールを開始します。</p>
-<a class="reference internal image-reference" href="../../_images/sql021.png"><img alt="インストーラーの起動" class="align-center" src="../../_images/sql021.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sql022.png"><img alt="インストーラーの起動" class="align-center" src="../../_images/sql022.png" style="width: 400px;" /></a>
 <p>ウィザードが起動するので、デフォルトのまま機能の選択の画面まで進めていきます。表示された際には、以下の項目をチェックしてください。</p>
 <ul class="simple">
 <li><p>データベースエンジン</p></li>
 <li><p>Machine Learning サービス（データベース内）</p></li>
 <li><p>R</p></li>
 </ul>
-<a class="reference internal image-reference" href="../../_images/sql031.png"><img alt="機能の選択" class="align-center" src="../../_images/sql031.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sql032.png"><img alt="機能の選択" class="align-center" src="../../_images/sql032.png" style="width: 400px;" /></a>
 <p>インスタンスの構成は、今回は「既定のインスタンス」を選択して進めていきます。</p>
-<a class="reference internal image-reference" href="../../_images/sql041.png"><img alt="インスタンスの構成" class="align-center" src="../../_images/sql041.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sql042.png"><img alt="インスタンスの構成" class="align-center" src="../../_images/sql042.png" style="width: 400px;" /></a>
 <p>サーバーの構成は標準の設定で進めていき、データベースエンジンの構成の画面に進みます。ここでは、「サーバーの構成」のタブにて、以下の項目を選択します。</p>
 <ul class="simple">
 <li><p>混合モード（SQL Server 認証と Windows 認証）</p></li>
@@ -242,13 +245,13 @@
 <li><p>パスワードの確認入力（上記で入力したパスワード）</p></li>
 <li><p>SQL Server 管理者の指定に関しては、「現在のユーザーの追加」をクリックして追加します。</p></li>
 </ul>
-<a class="reference internal image-reference" href="../../_images/sql051.png"><img alt="データベースエンジンの構成" class="align-center" src="../../_images/sql051.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sql052.png"><img alt="データベースエンジンの構成" class="align-center" src="../../_images/sql052.png" style="width: 400px;" /></a>
 <p>あとは標準の設定で進めていき、SQL Server のインストールを完了します。</p>
 </div>
 <div class="section" id="id3">
 <h2>2.1.4. オプション<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>今後ファイルの拡張子が見えているほうが作業をしやすいので、「エクスプローラ」を起動して「表示」から「ファイル名拡張子」をチェックします。</p>
-<a class="reference internal image-reference" href="../../_images/explore011.png"><img alt="拡張子" class="align-center" src="../../_images/explore011.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/explore012.png"><img alt="拡張子" class="align-center" src="../../_images/explore012.png" style="width: 400px;" /></a>
 </div>
 </div>
 
@@ -272,7 +275,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Sitecore Japan
+        &copy; Copyright 2020, Sitecore Japan
 
     </p>
   </div>

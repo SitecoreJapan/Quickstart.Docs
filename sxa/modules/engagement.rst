@@ -6,10 +6,10 @@
 Disqus
 *********
 
-* [ サンプル](https://sxa.cmsdemo.jp/components/engagement/disqus)
+* `Disqus サンプル <https://sxa.cmsdemo.jp/components/engagement/disqus>`_
 
 ******************
 Facebook コメント
 ******************
 
-* [ サンプル](https://sxa.cmsdemo.jp/components/engagement/facebook-comments)
+* `Facebook コメント サンプル <https://sxa.cmsdemo.jp/components/engagement/facebook-comments>`_

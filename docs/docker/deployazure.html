@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. Microsoft Azure への展開 &mdash; Sitecore クイックスタート  ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="5. Docker Tips" href="tips.html" />
+    <link rel="prev" title="3.7. イメージの確認" href="check/checkimage.html" />
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153234118-1');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sitecore クイックスタート
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目次</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../93/index.html">Sitecore Experience Platform 9.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">オンライン マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sxa/index.html">Sitecore Experience Accelerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jss/index.html">Sitecore JavaScript Services</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Sitecore on Docker</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="imagebuild.html">1. Docker イメージのビルド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="start.html">2. Sitecore の起動</a></li>
+<li class="toctree-l2"><a class="reference internal" href="check/index.html">3. 確認とイメージ作成</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4. Microsoft Azure への展開</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips.html">5. Docker Tips</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../marketplace/index.html">各種ツールに関して</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versions.html">過去のバージョンに関して</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sitecore クイックスタート</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Sitecore on Docker</a> &raquo;</li>
+        
+      <li>4. Microsoft Azure への展開</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/docker/deployazure.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="microsoft-azure">
+<h1>4. Microsoft Azure への展開<a class="headerlink" href="#microsoft-azure" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Microsoft Azure には Docker のコンテナを管理するためのサービスとして、<a class="reference external" href="https://azure.microsoft.com/ja-jp/services/container-registry/">Container Registry</a> を提供しています。</p>
+<div class="section" id="id1">
+<h2>4.1. Container Registry の作成<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Azure ポータル画面、およびコマンドラインでも作成することができますが、ここでは Visual Studio Code のサイドバーで作業を進めます。まず作成をしたいサブスクリプションを選択して、右クリックしてください。メニューにある <cite>Create Registry...</cite> を選択します。</p>
+<img alt="Azure Account" class="align-center" src="../_images/vscode06.png" />
+<p>画面の上部にダイアログが表示されて、Registry name の入力を促してきます。</p>
+<a class="reference internal image-reference" href="../_images/vscode07.png"><img alt="Registry name" class="align-center" src="../_images/vscode07.png" style="width: 400px;" /></a>
+<p>Enter を入力すると次のパラメーターが表示されます。どの価格を利用するのか、という選択肢となります。ここでは、 Standard を選択してください。</p>
+<a class="reference internal image-reference" href="../_images/vscode08.png"><img alt="プランの選択" class="align-center" src="../_images/vscode08.png" style="width: 400px;" /></a>
+<p>続いてリソースグループを選択します。新規に作成することも可能です。</p>
+<a class="reference internal image-reference" href="../_images/vscode09.png"><img alt="リソースグループの選択" class="align-center" src="../_images/vscode09.png" style="width: 400px;" /></a>
+<p>最後にデータセンターを選択してください。</p>
+<a class="reference internal image-reference" href="../_images/vscode10.png"><img alt="データセンターの選択" class="align-center" src="../_images/vscode10.png" style="width: 400px;" /></a>
+<p>実際に作成されたレジストリを見ることができます。</p>
+<img alt="作成されたレジストリを確認" class="align-center" src="../_images/vscode11.png" />
+</div>
+<div class="section" id="id2">
+<h2>4.2. Container Registry にイメージをコピーする<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ローカルで作成をした Docker イメージを Azure の Container Registry に展開します。まず上記で作成をした Azure Contaner Registry を標準に設定します。Visual Studio Code でレジストリを右クリックして、Set as Default とします。</p>
+<img alt="コンテナレジストリを標準に設定する" class="align-center" src="../_images/acr01.png" />
+<p>以下のイメージをコピーする形で進めていきます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp</span><span class="o">-</span><span class="n">sxa</span><span class="o">-</span><span class="n">cd</span>
+<span class="n">sitecore</span><span class="o">-</span><span class="n">xp</span><span class="o">-</span><span class="n">sxa</span><span class="o">-</span><span class="n">solr</span>
+<span class="n">sitecore</span><span class="o">-</span><span class="n">xp</span><span class="o">-</span><span class="n">sxa</span><span class="o">-</span><span class="n">sqldev</span>
+<span class="n">sitecore</span><span class="o">-</span><span class="n">xp</span><span class="o">-</span><span class="n">sxa</span><span class="o">-</span><span class="n">standalone</span>
+<span class="n">sitecore</span><span class="o">-</span><span class="n">xp</span><span class="o">-</span><span class="n">xconnect</span>
+<span class="n">sitecore</span><span class="o">-</span><span class="n">xp</span><span class="o">-</span><span class="n">xconnect</span><span class="o">-</span><span class="n">automationengine</span>
+<span class="n">sitecore</span><span class="o">-</span><span class="n">xp</span><span class="o">-</span><span class="n">xconnect</span><span class="o">-</span><span class="n">indexworker</span>
+<span class="n">sitecore</span><span class="o">-</span><span class="n">xp</span><span class="o">-</span><span class="n">xconnect</span><span class="o">-</span><span class="n">processingengine</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/acr02.png"><img alt="コンテナレジストリを標準に設定する" class="align-center" src="../_images/acr02.png" style="width: 400px;" /></a>
+<p>まず、Push する先のレジストリに対してログインを実行します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">az</span> <span class="n">acr</span> <span class="n">login</span> <span class="o">--</span><span class="n">name</span> <span class="n">sitecoredockerjp</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/acr03.png"><img alt="レジストリにログイン" class="align-center" src="../_images/acr03.png" style="width: 400px;" /></a>
+<p>ログインに成功した後は、左側の一覧から順に Push を実行していきます。今回はまず最初に sitecore-xp-xconnect を push します。</p>
+<img alt="sitecore-xp-xconnect を Push" class="align-center" src="../_images/acr04.png" />
+<p>実際にイメージの名前を入力が促されるため、イメージの名前そのままを指定して Enter を押します。</p>
+<a class="reference internal image-reference" href="../_images/acr05.png"><img alt="名前を指定します" class="align-center" src="../_images/acr05.png" style="width: 400px;" /></a>
+<p>続いて、Push のプロセスが走ります。</p>
+<a class="reference internal image-reference" href="../_images/acr06.png"><img alt="Push を実行しています" class="align-center" src="../_images/acr06.png" style="width: 400px;" /></a>
+<p>Push が完了したかどうか、Azure ポータルで確認をしてください。</p>
+<a class="reference internal image-reference" href="../_images/acr07.png"><img alt="Azure ポータルで確認" class="align-center" src="../_images/acr07.png" style="width: 400px;" /></a>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tips.html" class="btn btn-neutral float-right" title="5. Docker Tips" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="check/checkimage.html" class="btn btn-neutral float-left" title="3.7. イメージの確認" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Sitecore Japan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

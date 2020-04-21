@@ -1,0 +1,49 @@
+##########################
+Visual Studio Code の設定
+##########################
+
+Docker はコマンドを利用することで様々な処理を実行することができますが、ここではより手軽に使うために、Visual Studio Code を利用した形を紹介します。Visual Studio Code は多くの拡張機能に対応しており、Docker に関する作業を簡単にできる拡張機能も提供しています。ここでは 2 つの拡張機能を追加します。
+
+
+**********
+Docker
+**********
+
+Docker の機能拡張は、Visual Studio Code から Docker に関する機能を利用する上で便利な機能が提供されています。インストールでは `Docker` で検索をすると、以下のように Docker の機能拡張を見つけることができます。
+
+.. image:: images/vscode01.png
+   :align: center
+   :width: 400px
+   :alt: Docker エクステンション
+
+実際にインストールをすると、左側のメニューに Docker のアイコンが追加されます。
+
+.. image:: images/vscode02.png
+   :align: center
+   :alt: Docker アイコン
+
+アイコンを選択すると左側に Docker の機能を操作することができるサイドバーが表示されます。
+
+.. image:: images/vscode03.png
+   :align: center
+   :width: 400px
+   :alt: Docker サイドバー
+
+
+***************
+Azure Account
+***************
+
+直接 Docker の拡張機能から Azure にログインをすることができますが、その機能を有効にするために、Azure Account をインストールします。
+
+.. image:: images/vscode04.png
+   :align: center
+   :width: 400px
+   :alt: Azure Account
+
+インストールをすると、Docker の拡張機能の `Registries` の項目から Azure にログインをすることができます。
+
+.. image:: images/vscode05.png
+   :align: center
+   :width: 400px
+   :alt: Azure Account

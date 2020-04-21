@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>4.1. Sitecore Azure Toolkit 2.4 &mdash; Sitecore クイックスタート  ドキュメント</title>
+  <title>5.2. Sitecore Azure Toolkit 2.4 &mdash; Sitecore クイックスタート  ドキュメント</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="5. デモサイト" href="../demo/index.html" />
-    <link rel="prev" title="4. 各種設定に関して" href="index.html" />
+    <link rel="next" title="6. デモサイト" href="../demo/index.html" />
+    <link rel="prev" title="5.1. Sitecore blob storage の設定" href="azureblob.html" />
  
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
@@ -98,16 +98,20 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore Experience Platform 9.3</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../readme.html">1. はじめに</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../install/index.html">2. インストールガイド</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">3. モジュールのインストール</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">4. 各種設定に関して</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">4.1. Sitecore Azure Toolkit 2.4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commerce/index.html">3. Commerce インストールガイド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">4. モジュールのインストール</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">5. 各種設定に関して</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="azureblob.html">5.1. Sitecore blob storage の設定</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5.2. Sitecore Azure Toolkit 2.4</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../demo/index.html">5. デモサイト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo/index.html">6. デモサイト</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">オンライン マニュアル</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Sitecore on Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a></li>
 </ul>
@@ -157,9 +161,9 @@
         
           <li><a href="../index.html">Sitecore Experience Platform 9.3</a> &raquo;</li>
         
-          <li><a href="index.html">4. 各種設定に関して</a> &raquo;</li>
+          <li><a href="index.html">5. 各種設定に関して</a> &raquo;</li>
         
-      <li>4.1. Sitecore Azure Toolkit 2.4</li>
+      <li>5.2. Sitecore Azure Toolkit 2.4</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -179,10 +183,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="sitecore-azure-toolkit-2-4">
-<h1>4.1. Sitecore Azure Toolkit 2.4<a class="headerlink" href="#sitecore-azure-toolkit-2-4" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>5.2. Sitecore Azure Toolkit 2.4<a class="headerlink" href="#sitecore-azure-toolkit-2-4" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>Sitecore は Microsoft Azure の PaaS に対応しており、展開方法としては Marketplace および Azure Toolkit を利用した展開ができるようになっています。ここでは Azure Toolkit を利用して展開する手順に関してまとめています。詳細に関しては、このページの一番下にある参考サイトをご覧ください。</p>
 <div class="section" id="id1">
-<h2>4.1.1. 展開をするにあたって準備するもの<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>5.2.1. 展開をするにあたって準備するもの<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>以下のモジュールをダウンロードしてください。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/93/Sitecore_Experience_Platform_93_Initial_Release.aspx">Download options for Azure AppService - Packages for XP Single</a></p></li>
@@ -193,7 +197,7 @@
 <p>Sample Powershell Script に関しては、README.md の中に含まれているためファイルはありません。新たに ps1 のファイルを作成してください。</p>
 </div>
 <div class="section" id="id2">
-<h2>4.1.2. テンプレートのダウンロード<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>5.2.2. テンプレートのダウンロード<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>必要なファイルだけダウンロードすることで、実際のインストールは可能ですが、今回はすべて手元にクローンを作成してから作業を進めていきます。</p>
 <p>まず、Github で公開されている <a class="reference external" href="https://github.com/Sitecore/Sitecore-Azure-Quickstart-Templates">Sitecore-Azure-Quickstart-Templates</a> のクローンを作成します。クローンの作成先は今回は以下のフォルダとします。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">Sitecore</span><span class="o">-</span><span class="n">Azure</span><span class="o">-</span><span class="n">Quickstart</span><span class="o">-</span><span class="n">Templates</span>
@@ -202,7 +206,7 @@
 <a class="reference internal image-reference" href="../../_images/atk01.png"><img alt="リポジトリのクローンを作成" class="align-center" src="../../_images/atk01.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="microsoft-azure-powershell">
-<h2>4.1.3. Microsoft Azure Powershell のインストール<a class="headerlink" href="#microsoft-azure-powershell" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>5.2.3. Microsoft Azure Powershell のインストール<a class="headerlink" href="#microsoft-azure-powershell" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Microsoft Azure Powershell をインストールします。PowerShell のコンソールを開いて、以下のコマンドを実行してください。</p>
 <div class="highlight-Powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">AzureRM</span> <span class="n">-AllowClobber</span>
 </pre></div>
@@ -211,7 +215,7 @@
 <p>またこれとは別に Web Deploy 3.6 for Hosting Service も併せてインストールしてください。</p>
 </div>
 <div class="section" id="sitecore-azure-toolkit">
-<h2>4.1.4. Sitecore Azure Toolkit の展開<a class="headerlink" href="#sitecore-azure-toolkit" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>5.2.4. Sitecore Azure Toolkit の展開<a class="headerlink" href="#sitecore-azure-toolkit" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>ダウンロードをした Sitecore Azure Toolkit を以下のフォルダに展開します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">sitecoreonazure</span>
 </pre></div>
@@ -237,7 +241,7 @@
 <span class="o">------</span>       <span class="mi">2019</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">25</span>     <span class="mi">12</span><span class="p">:</span><span class="mi">32</span>           <span class="mi">1532</span> <span class="n">version</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
-<p>続いて、<cite>Import-Module .toolsSitecore.Cloud.Cmdlets.psm1 -Verbose</cite> のコマンドを実行します。</p>
+<p>続いて、<cite>Import-Module .\tools\Sitecore.Cloud.Cmdlets.psm1 -Verbose</cite> のコマンドを実行します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PS C:\projects\sitecoreonazure&gt; Import-Module .\tools\Sitecore.Cloud.Cmdlets.psm1 -Verbose
 詳細: パス &#39;C:\projects\sitecoreonazure\tools\Sitecore.Cloud.Cmdlets.psm1&#39; からモジュールを読み込んでいます。
 詳細: コマンドレット &#39;New-SCCargoPayload&#39; をインポートしています。
@@ -252,7 +256,7 @@ PS C:\projects\sitecoreonazure&gt;
 <p>これでツールの準備ができました。</p>
 </div>
 <div class="section" id="id4">
-<h2>4.1.5. ファイルの準備<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>5.2.5. ファイルの準備<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>以下のファイルを <cite>C:\projects\sitecoreonazure</cite> のフォルダに準備してください。</p>
 <ul class="simple">
 <li><p>ライセンスファイル</p></li>
@@ -260,11 +264,11 @@ PS C:\projects\sitecoreonazure&gt;
 </ul>
 <p>証明書がない場合は、 <a class="reference external" href="https://doc.sitecore.com/developers/93/sitecore-experience-manager/en/the-client-certificate-for-sitecore-deployments.html">自己証明書の作成手順</a> を参考にしてください。</p>
 <p>続いて Azure の Blob にすでにダウンロード済のファイルを展開して、アップロードをします。必要なモジュールをアップロードして、インストールの際に利用できるようにしておきます。</p>
-<a class="reference internal image-reference" href="../../_images/Azureblob.png"><img alt="ファイルをアップロード" class="align-center" src="../../_images/Azureblob.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/azureblob1.png"><img alt="ファイルをアップロード" class="align-center" src="../../_images/azureblob1.png" style="width: 400px;" /></a>
 <p>パラメーターのファイルに関して、今回は XP Single のイメージを利用するため、 C:\projects\Sitecore-Azure-Quickstart-Templates\Sitecore 9.3.0\XPSingle にある azuredeploy.parameters.json をコピーしてください。</p>
 </div>
 <div class="section" id="id6">
-<h2>4.1.6. 実行ファイル、パラメーターの設定<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>5.2.6. 実行ファイル、パラメーターの設定<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>展開のスクリプトファイル <a class="reference external" href="https://github.com/SitecoreJapan/InstallScript/tree/master/930">azuretoolkit240.ps1</a> に関して、以下のパラメーターを変更してください。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Specify the parameters for the deployment
 $ArmTemplateUrl = &quot;https://raw.githubusercontent.com/Sitecore/Sitecore-Azure-Quickstart-Templates/master/Sitecore%209.3.0/XPSingle/azuredeploy.parameters.json&quot;
@@ -355,19 +359,19 @@ $AzureSubscriptionId = &quot;&quot;
 </table>
 </div>
 <div class="section" id="id7">
-<h2>4.1.7. 展開を実行する<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>5.2.7. 展開を実行する<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>上記のように準備した後、あとはスクリプトを実行するのみです。まずは Powershell のコンソールから Azure にログインを実行します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">sitecoreonazure</span><span class="o">&gt;</span> <span class="n">Add</span><span class="o">-</span><span class="n">AzureRmAccount</span>
 </pre></div>
 </div>
 <p>続いて作成したスクリプトを実行すれば完了となります。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">sitecoreonazure</span><span class="o">&gt;</span> <span class="o">.</span>\<span class="n">deploy91</span><span class="o">.</span><span class="n">ps1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">sitecoreonazure</span><span class="o">&gt;</span> <span class="o">.</span>\<span class="n">deploy93</span><span class="o">.</span><span class="n">ps1</span>
 </pre></div>
 </div>
 <p>上記の設定がすべてクリアできていれば、40分ほどで展開が完了します。</p>
 </div>
 <div class="section" id="id8">
-<h2>4.1.8. 参考サイト<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>5.2.8. 参考サイト<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://dev.sitecore.net/Downloads/Sitecore_Azure_Toolkit.aspx">Sitecore Azure Toolkit モジュールダウンロード</a></p></li>
 <li><p>Github <a class="reference external" href="https://github.com/Sitecore/Sitecore-Azure-Quickstart-Templates">Sitecore-Azure-Quickstart-Templates</a></p></li>
@@ -384,10 +388,10 @@ $AzureSubscriptionId = &quot;&quot;
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../demo/index.html" class="btn btn-neutral float-right" title="5. デモサイト" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../demo/index.html" class="btn btn-neutral float-right" title="6. デモサイト" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="4. 各種設定に関して" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="azureblob.html" class="btn btn-neutral float-left" title="5.1. Sitecore blob storage の設定" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -396,7 +400,7 @@ $AzureSubscriptionId = &quot;&quot;
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Sitecore Japan
+        &copy; Copyright 2020, Sitecore Japan
 
     </p>
   </div>

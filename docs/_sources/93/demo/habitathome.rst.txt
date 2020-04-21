@@ -6,7 +6,7 @@ Sitecore HabitatHome Platform
 
 * `https://github.com/Sitecore/Sitecore.HabitatHome.Platform <https://github.com/Sitecore/Sitecore.HabitatHome.Platform>`_
 
-インストールをする際には、 `release/9.3.0` のブランチを選択してください。
+インストールをする際には、`default` のブランチを選択してください。
 
 **************************
 Sitecore のインストール
@@ -181,7 +181,7 @@ Unicorn の設定をオフにする
 
 .. code-block:: xml
 
-    <add key="unicorn:define" value="Off" />
+    <add key="unicorn:define" value="Disabled" />
 
 
 マーケティングリソースの追加
@@ -201,6 +201,14 @@ Unicorn の設定をオフにする
 
 * 全コンテンツの Republish
 * インデックスの再構築
+
+***********
+関連動画
+***********
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/G53Uc4kDJVA" frameborder="0" allowfullscreen></iframe>
 
 
 ***********

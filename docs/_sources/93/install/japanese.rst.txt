@@ -4,6 +4,7 @@
 
 ここでは Sitecore に日本語リソースをインポートする方法を紹介しています。
 
+
 ******************************
 日本語リソースファイルの準備
 ******************************
@@ -175,3 +176,12 @@ Default Content Language  Japanese (Japan):日本語(日本)  編集するコン
    :alt: 日本語の管理画面
 
 日本語画面に切り替わりました。最後に多くのリソースを追加したので、インデックスを更新します。
+
+*************
+参考動画
+*************
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RV3oiI6eC_A" frameborder="0" allowfullscreen></iframe>
+

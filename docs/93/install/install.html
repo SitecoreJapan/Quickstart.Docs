@@ -105,13 +105,16 @@
 <li class="toctree-l3"><a class="reference internal" href="rebuild.html">2.5. インデックスの再構築</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">3. モジュールのインストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">4. 各種設定に関して</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../demo/index.html">5. デモサイト</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commerce/index.html">3. Commerce インストールガイド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">4. モジュールのインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">5. 各種設定に関して</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demo/index.html">6. デモサイト</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">オンライン マニュアル</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Sitecore on Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a></li>
 </ul>
@@ -184,81 +187,50 @@
             
   <div class="section" id="sitecore-experience-platform">
 <h1>2.3. Sitecore Experience Platform のインストール<a class="headerlink" href="#sitecore-experience-platform" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Sitecore 9.3 で提供する Sitecore Instllation Assistant は Solr も含めて自動的にセットアップをするインストール支援ツールになりました。これにより、 Windows Server と SQL Server がインストールされている環境に対して、簡単にインストールをすることができるようになりました。</p>
+<p>Sitecore Experience Commerce をインストールする最初のステップは、Sitecore Experience Platform 9.3 を事前にインストールしする必要があります。ここでは、Sitecore Instllation Assistant を利用して、まずは関連モジュールをインストールします。</p>
 <p>今回は以下の環境にインストールをします。</p>
 <ul class="simple">
 <li><p>Windows Server 2019 Standard</p></li>
 <li><p>SQL Server 2019</p></li>
 </ul>
-<div class="section" id="id1">
-<h2>2.3.1. インストール参考動画<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Bcjf2MjWvkk" frameborder="0" allowfullscreen></iframe></div>
 <div class="section" id="sitecore">
-<h2>2.3.2. Sitecore のインストールプログラムの入手<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>2.3.1. Sitecore のインストールプログラムの入手<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>今回は Sitecore Install Assistant を利用してインストールを進めていきます。このため、以下の Web サイトからインストールファイルをダウンロードしてください。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/93/Sitecore_Experience_Platform_93_Initial_Release.aspx">Sitecore Experience Platform 9.3 Initial Release</a></p></li>
 </ul>
 <p><cite>Download options for On Premises deployment</cite> のグループにある <cite>Graphical setup package for XP Single</cite> をダウンロードしてください。インストールファイルのダウンロードが完了した、ファイルを展開して次のステップに進みます。</p>
 </div>
-<div class="section" id="id2">
-<h2>2.3.3. モジュールのインストール<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id1">
+<h2>2.3.2. モジュールのインストール<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>この手順に関しては、１つの環境で初回のみ実行するだけで完了です。すでに別の Sitecore をインストールしている場合は、スキップしてください。</p>
 <p>Sitecore Install Assistant を立ち上げます。これはダウンロードをしたファイルを展開してください。ここでは、 <cite>c:\projects\sif</cite> に展開します。</p>
-<a class="reference internal image-reference" href="../../_images/sia011.png"><img alt="フォルダ" class="align-center" src="../../_images/sia011.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia012.png"><img alt="フォルダ" class="align-center" src="../../_images/sia012.png" style="width: 400px;" /></a>
 <p><cite>setup.exe</cite> をダブルクリックすると、インストーラーが立ち上がり以下のような画面となります。</p>
-<a class="reference internal image-reference" href="../../_images/sia021.png"><img alt="起動画面" class="align-center" src="../../_images/sia021.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia022.png"><img alt="起動画面" class="align-center" src="../../_images/sia022.png" style="width: 400px;" /></a>
 <p>Start のボタンをクリックすると、モジュールのインストール画面になります。</p>
-<a class="reference internal image-reference" href="../../_images/sia031.png"><img alt="モジュールインストール" class="align-center" src="../../_images/sia031.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia032.png"><img alt="モジュールインストール" class="align-center" src="../../_images/sia032.png" style="width: 400px;" /></a>
 <p>Install のボタンをクリックして、必要なモジュールをインストールしてください。</p>
-<a class="reference internal image-reference" href="../../_images/sia041.png"><img alt="インストール中" class="align-center" src="../../_images/sia041.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia042.png"><img alt="インストール中" class="align-center" src="../../_images/sia042.png" style="width: 400px;" /></a>
 <p>インストールが完了すると、<cite>Next</cite> のボタンが有効になります。</p>
-<a class="reference internal image-reference" href="../../_images/sia051.png"><img alt="Next が有効に" class="align-center" src="../../_images/sia051.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia052.png"><img alt="Next が有効に" class="align-center" src="../../_images/sia052.png" style="width: 400px;" /></a>
+<p>一旦、ウィザードを閉じます</p>
 </div>
 <div class="section" id="solr">
-<h2>2.3.4. Solr のインストール<a class="headerlink" href="#solr" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Sitecore Install Assistant は 9.3 より Solr のインストールにも対応しています。Java ランタイムなども一緒にインストールされます。なお、Solr を別途インストール済の場合は、スキップできます。</p>
+<h2>2.3.3. Solr のインストール<a class="headerlink" href="#solr" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Sitecore Install Assistant は 9.3 より Solr のインストールにも対応しています。実際には Sitecore Install Framework のツールが sitecore-solr.json ファイルを利用して、Solr のインストールを行います。ここでは、このファイルを利用してインストールを実行します。</p>
 <p>まず、以下の項目が表示されます。</p>
-<a class="reference internal image-reference" href="../../_images/solr011.png"><img alt="設定項目" class="align-center" src="../../_images/solr011.png" style="width: 400px;" /></a>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 39%" />
-<col style="width: 15%" />
-<col style="width: 46%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
-<th class="head"><p>入力値</p></th>
-<th class="head"><p>説明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Solr port</p></td>
-<td><p>8983</p></td>
-<td><p>Solr が利用するポート番号</p></td>
-</tr>
-<tr class="row-odd"><td><p>Windows service and path prefix</p></td>
-<td><p>93</p></td>
-<td><p>インストールをする Solr の Prefix</p></td>
-</tr>
-<tr class="row-even"><td><p>Install path</p></td>
-<td><p>c:solr</p></td>
-<td><p>インストール先</p></td>
-</tr>
-</tbody>
-</table>
+<a class="reference internal image-reference" href="../../_images/solr012.png"><img alt="Solr のインストール" class="align-center" src="../../_images/solr012.png" style="width: 400px;" /></a>
 </div>
-<div class="section" id="id3">
-<h2>2.3.5. インストールの開始<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>モジュールのインストールが完了すると、次は Sitecore のインストールとなります。</p>
-<div class="section" id="sitecore-settings">
-<h3>2.3.5.1. Sitecore Settings<a class="headerlink" href="#sitecore-settings" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<div class="section" id="id2">
+<h2>2.3.4. インストールの開始<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>モジュールのインストールが完了すると、次は Sitecore のインストールとなります。ここではインストールツールに標準で提供されているスクリプトの値を変更します。</p>
 <p>インストールをする際の設定を記載します。以下の項目を入力してください。以下の値は例となります。</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 40%" />
-<col style="width: 27%" />
-<col style="width: 33%" />
+<col style="width: 28%" />
+<col style="width: 32%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>パラメータ</p></th>
@@ -267,103 +239,28 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Installation/Solution prefix</p></td>
-<td><p>93</p></td>
-<td><p>DB 名、サイト名で利用</p></td>
-</tr>
-<tr class="row-odd"><td><p>Sitecore admin password</p></td>
-<td><p><a class="reference external" href="mailto:P&#37;&#52;&#48;ssw0rd">P<span>&#64;</span>ssw0rd</a></p></td>
-<td><p>管理者のパスワードの設定</p></td>
-</tr>
-<tr class="row-even"><td><p>Sitecore license file</p></td>
-<td><p>license.xml へのパス</p></td>
-<td><p>ライセンスファイル</p></td>
-</tr>
-</tbody>
-</table>
-<a class="reference internal image-reference" href="../../_images/sia061.png"><img alt="インストールの基本設定" class="align-center" src="../../_images/sia061.png" style="width: 400px;" /></a>
-</div>
-<div class="section" id="sql-server-settings">
-<h3>2.3.5.2. SQL Server settings<a class="headerlink" href="#sql-server-settings" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>続いてインストールをしている SQL Server に関する設定を入力します。</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 47%" />
-<col style="width: 13%" />
-<col style="width: 40%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
-<th class="head"><p>力値</p></th>
-<th class="head"><p>説明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>SQL Server instance</p></td>
-<td><p>(local)</p></td>
-<td><p>サーバーのインスタンス名</p></td>
-</tr>
-<tr class="row-odd"><td><p>SQL Server admin user name</p></td>
-<td><p>sa</p></td>
-<td><p>管理者ユーザー名</p></td>
-</tr>
-<tr class="row-even"><td><p>SQL Server admin password</p></td>
-<td></td>
+<tr class="row-even"><td><p>$SitecoreAdminPassword</p></td>
+<td><p>b</p></td>
 <td><p>管理者パスワード</p></td>
 </tr>
-</tbody>
-</table>
-<a class="reference internal image-reference" href="../../_images/sia071.png"><img alt="SQL Server の設定" class="align-center" src="../../_images/sia071.png" style="width: 400px;" /></a>
-</div>
-<div class="section" id="id4">
-<h3>2.3.5.3. Solr の設定<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>すでにインストールしている Solr の設定を入力していきます。ここでは、[Solr 7.5 のインストール](./solr.md) でインストールしているパラメータを利用しています。</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 32%" />
-<col style="width: 38%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
-<th class="head"><p>入力値</p></th>
-<th class="head"><p>説明</p></th>
+<tr class="row-odd"><td><p>$SCInstallRoot</p></td>
+<td><p>C:projectssif</p></td>
+<td><p>インストールのルート</p></td>
 </tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Solr service URL</p></td>
-<td><p><a class="reference external" href="https://localhost:8983/solr">https://localhost:8983/solr</a></p></td>
-<td><p>Solr の URL</p></td>
+<tr class="row-even"><td><p>$SitecoreSiteName</p></td>
+<td><p>sxa.storefront.com</p></td>
+<td><p>サイト名</p></td>
 </tr>
-<tr class="row-odd"><td><p>Solr file system root</p></td>
-<td><p>C:Solr93Solr-8.1.1</p></td>
-<td><p>Solr インストール先のディレクトリ</p></td>
-</tr>
-<tr class="row-even"><td><p>Solr Windows service name</p></td>
-<td><p>93Solr-8.1.1</p></td>
-<td><p>サービスの名前</p></td>
+<tr class="row-odd"><td><p>$SqlAdminPassword</p></td>
+<td><p>任意</p></td>
+<td><p>SQL Server パスワード</p></td>
 </tr>
 </tbody>
 </table>
-<a class="reference internal image-reference" href="../../_images/sia081.png"><img alt="Solr の設定" class="align-center" src="../../_images/sia081.png" style="width: 400px;" /></a>
-</div>
-<div class="section" id="sxa">
-<h3>2.3.5.4. SXA の設定<a class="headerlink" href="#sxa" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Sitecore Experience Accelerator を同時にインストールをするか、確認が表示されます。ここではインストールするためにチェックを入れておきます。</p>
-<a class="reference internal image-reference" href="../../_images/sia091.png"><img alt="SXA 設定" class="align-center" src="../../_images/sia091.png" style="width: 400px;" /></a>
-</div>
-<div class="section" id="id5">
-<h3>2.3.5.5. インストール最終確認<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>設定をしたパラメーターの確認画面が表示されます。</p>
-<a class="reference internal image-reference" href="../../_images/sia091.png"><img alt="パラメーターの確認" class="align-center" src="../../_images/sia091.png" style="width: 400px;" /></a>
-<p>また各種ファイルの検証が行われます。</p>
-<a class="reference internal image-reference" href="../../_images/sia101.png"><img alt="パラメーファイルの検証ターの確認" class="align-center" src="../../_images/sia101.png" style="width: 400px;" /></a>
-<p>全てっチェックが完了したところで、Install のボタンをクリックしてください。</p>
-<a class="reference internal image-reference" href="../../_images/sia111.png"><img alt="インストールの開始" class="align-center" src="../../_images/sia111.png" style="width: 400px;" /></a>
-<p>これでインストールが無事完了します。完了をすると下のような画面が表示されますので、 Launch Sitecore のボタンをクリックしてください。</p>
-<a class="reference internal image-reference" href="../../_images/sia12.png"><img alt="インストールの開始" class="align-center" src="../../_images/sia12.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia062.png"><img alt="インストールの基本設定" class="align-center" src="../../_images/sia062.png" style="width: 400px;" /></a>
+<p>インストールを実行します。</p>
+<a class="reference internal image-reference" href="../../_images/sia072.png"><img alt="インストール" class="align-center" src="../../_images/sia072.png" style="width: 400px;" /></a>
 <p>ログイン画面が表示されれば、インストールが無事完了します。</p>
-</div>
 </div>
 </div>
 
@@ -387,7 +284,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Sitecore Japan
+        &copy; Copyright 2020, Sitecore Japan
 
     </p>
   </div>

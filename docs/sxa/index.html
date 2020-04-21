@@ -37,7 +37,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
     <link rel="next" title="1. サイトを作る" href="firststep/index.html" />
-    <link rel="prev" title="5.2. Sitecore Habitat Corporate" href="../93/demo/habitatcorp.html" />
+    <link rel="prev" title="セキュリティ エディター" href="../manual/system/securityeditor/index.html" />
  
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
@@ -96,13 +96,16 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../readme.html">はじめに</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../93/index.html">Sitecore Experience Platform 9.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">オンライン マニュアル</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Sitecore Experience Accelerator</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="firststep/index.html">1. サイトを作る</a></li>
 <li class="toctree-l2"><a class="reference internal" href="modules/index.html">2. SXA モジュールについて</a></li>
 <li class="toctree-l2"><a class="reference internal" href="json/index.html">3. SXA における JSON の活用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="creativeexchange/index.html">4. Creative Exchange</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../jss/index.html">Sitecore JavaScript Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docker/index.html">Sitecore on Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../marketplace/index.html">各種ツールに関して</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../versions.html">過去のバージョンに関して</a></li>
 </ul>
@@ -175,34 +178,10 @@
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">目次</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="firststep/index.html">1. サイトを作る</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="firststep/createweb.html">1.1. テナントの作成、サイトの作成</a></li>
-<li class="toctree-l2"><a class="reference internal" href="firststep/createtemplate.html">1.2. アイテムの作成</a></li>
-<li class="toctree-l2"><a class="reference internal" href="firststep/pagedesign.html">1.3. ページデザインの作成</a></li>
-<li class="toctree-l2"><a class="reference internal" href="firststep/pageitem.html">1.4. ページアイテムの作成</a></li>
-<li class="toctree-l2"><a class="reference internal" href="firststep/partialdesign.html">1.5. パーシャルデザインの作成</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="modules/index.html">2. SXA モジュールについて</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="modules/event.html">2.1. イベント</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modules/engagement.html">2.2. エンゲージメント</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modules/context.html">2.3. コンテキスト</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modules/security.html">2.4. セキュリティ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modules/social.html">2.5. ソーシャル</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modules/navigation.html">2.6. ナビゲーション</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modules/form.html">2.7. フォーム</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modules/content.html">2.8. コンテンツ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modules/structure.html">2.9. ページ構造</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modules/map.html">2.10. マップ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modules/media.html">2.11. メディア</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modules/search.html">2.12. 検索</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modules/composit.html">2.13. 複合</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modules/taxonomy.html">2.14. 分類</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="json/index.html">3. SXA における JSON の活用</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="firststep/index.html">1. サイトを作る</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules/index.html">2. SXA モジュールについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="json/index.html">3. SXA における JSON の活用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="creativeexchange/index.html">4. Creative Exchange</a></li>
 </ul>
 </div>
 <div class="section" id="id1">
@@ -224,13 +203,13 @@
 <li><p>ソーシャル</p></li>
 <li><p>ナビゲーション</p></li>
 </ul>
-<p>詳しくは、[モジュール一覧](./modules/) を参照してください。</p>
+<p>詳しくは、<a class="reference internal" href="modules/index.html"><span class="doc">モジュール一覧</span></a> を参照してください。</p>
 </div>
 <div class="section" id="json">
 <h2>Json 対応について<a class="headerlink" href="#json" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>SXA の JSON コンポーネントを利用することで、簡単に Web サイトの情報を JSON 形式で出力することができます。</p>
 <ul class="simple">
-<li><p>[Json 対応について](./Json/)</p></li>
+<li><p><a class="reference internal" href="json/index.html"><span class="doc">Json 対応について</span></a></p></li>
 </ul>
 </div>
 <div class="section" id="id3">
@@ -253,7 +232,7 @@
         <a href="firststep/index.html" class="btn btn-neutral float-right" title="1. サイトを作る" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../93/demo/habitatcorp.html" class="btn btn-neutral float-left" title="5.2. Sitecore Habitat Corporate" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../manual/system/securityeditor/index.html" class="btn btn-neutral float-left" title="セキュリティ エディター" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -262,7 +241,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Sitecore Japan
+        &copy; Copyright 2020, Sitecore Japan
 
     </p>
   </div>

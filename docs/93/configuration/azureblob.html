@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.1. Sitecore blob storage の設定 &mdash; Sitecore クイックスタート  ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="5.2. Sitecore Azure Toolkit 2.4" href="azuretoolkit.html" />
+    <link rel="prev" title="5. 各種設定に関して" href="index.html" />
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153234118-1');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Sitecore クイックスタート
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目次</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore Experience Platform 9.3</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../readme.html">1. はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/index.html">2. インストールガイド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commerce/index.html">3. Commerce インストールガイド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">4. モジュールのインストール</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">5. 各種設定に関して</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5.1. Sitecore blob storage の設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azuretoolkit.html">5.2. Sitecore Azure Toolkit 2.4</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../demo/index.html">6. デモサイト</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">オンライン マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Sitecore on Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sitecore クイックスタート</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Sitecore Experience Platform 9.3</a> &raquo;</li>
+        
+          <li><a href="index.html">5. 各種設定に関して</a> &raquo;</li>
+        
+      <li>5.1. Sitecore blob storage の設定</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/93/configuration/azureblob.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sitecore-blob-storage">
+<h1>5.1. Sitecore blob storage の設定<a class="headerlink" href="#sitecore-blob-storage" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Sitecore 9.3 からは Azure のストレージサービスとなる Azure Blob Storage の利用ができるようになりました。この設定を編集サーバー、配信サーバーに対して設定することで、ストレージを共有することができるようになります。ここでは実際に使うための手順を紹介します。</p>
+<div class="section" id="id1">
+<h2>5.1.1. 事前の準備<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id2">
+<h3>5.1.1.1. データベースのクリーンアップ<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>モジュールのセットアップの前に、一度 SQL データベースのクリーンアップを実行します。下記の画面は <cite>コントロールパネル</cite> - <cite>管理ツール</cite> を開きます。</p>
+<a class="reference internal image-reference" href="../../_images/Azureblob01.png"><img alt="管理ツールを開く" class="align-center" src="../../_images/Azureblob01.png" style="width: 400px;" /></a>
+<p>続いて <cite>Database and Operations</cite> を選択すると <cite>Database Cleanup</cite> を開きます。</p>
+<a class="reference internal image-reference" href="../../_images/Azureblob02.png"><img alt="Database Cleanup" class="align-center" src="../../_images/Azureblob02.png" style="width: 400px;" /></a>
+<p>この画面で、左側の <cite>Databases</cite> からは <cite>master</cite> と <cite>web</cite> を選択、右側のタスクから <cite>Cleanup blobs</cite> をチェックして実行してください。</p>
+<a class="reference internal image-reference" href="../../_images/Azureblob03.png"><img alt="Cleanup Blobs" class="align-center" src="../../_images/Azureblob03.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="azure-blob">
+<h3>5.1.1.2. Azure Blob ストレージの準備<a class="headerlink" href="#azure-blob" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Sitecore と接続するための Azure Storage を準備します。リソースの追加から <cite>ストレージ</cite> グループにある <cite>ストレージアカウント</cite> を選択します。：</p>
+<a class="reference internal image-reference" href="../../_images/Azureblob04.png"><img alt="ストレージアカウント" class="align-center" src="../../_images/Azureblob04.png" style="width: 400px;" /></a>
+<p>ここではストレージアカウント名をとデータセンターを設定して作成を実行します。</p>
+<a class="reference internal image-reference" href="../../_images/Azureblob05.png"><img alt="作成" class="align-center" src="../../_images/Azureblob05.png" style="width: 400px;" /></a>
+<p>しばらくすると作成をしたリソースグループに、リソースアカウントが表示されます。作成したリソースアカウントを開き、アクセスキーを選択しあｍす。</p>
+<a class="reference internal image-reference" href="../../_images/Azureblob06.png"><img alt="アクセスキー" class="align-center" src="../../_images/Azureblob06.png" style="width: 400px;" /></a>
+<p>ここにあるアクセスキーは後ほど利用する形となります。</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>5.1.2. モジュールの展開<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>モジュールの展開方法はいくつか用意されています。今回は仮想マシンに構築しているデモ環境を利用するため、Webdeploy を利用せずに手作業で設定していきます。Sitecore のインストールページから、Blob storage のパッケージをダウンロードします。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/93/Sitecore_Experience_Platform_93_Initial_Release.aspx">Download options for Blob Storage</a></p></li>
+</ul>
+<p>ダウンロードした zip ファイルを展開します。</p>
+<a class="reference internal image-reference" href="../../_images/Azureblob07.png"><img alt="ファイルの展開" class="align-center" src="../../_images/Azureblob07.png" style="width: 400px;" /></a>
+<p>展開したフォルダにアクセスして、 <cite>ContentWebSite</cite> を開くことで3つのフォルダが展開されていることがわかります。</p>
+<a class="reference internal image-reference" href="../../_images/Azureblob08.png"><img alt="website を確認" class="align-center" src="../../_images/Azureblob08.png" style="width: 400px;" /></a>
+<p>展開されたファイルを実際の Sitecore の Web サイトにコピーをしていきます。まず、 <cite>App_Config - Modules</cite> の下に <cite>Sitecore.AzureBlobStorage</cite> のフォルダをコピーします。</p>
+<a class="reference internal image-reference" href="../../_images/Azureblob09.png"><img alt="Modules にコピー" class="align-center" src="../../_images/Azureblob09.png" style="width: 400px;" /></a>
+<p>続いて <cite>App_Data</cite> のフォルダに <cite>Migration</cite> と <cite>Transforms</cite> のフォルダをコピーします。</p>
+<a class="reference internal image-reference" href="../../_images/Azureblob10.png"><img alt="App_Data にコピー" class="align-center" src="../../_images/Azureblob10.png" style="width: 400px;" /></a>
+<p>最後に <cite>bin</cite> にある 5 つのファイルをコピーします。</p>
+<a class="reference internal image-reference" href="../../_images/Azureblob11.png"><img alt="bin のファイルをコピー" class="align-center" src="../../_images/Azureblob11.png" style="width: 400px;" /></a>
+<p>ここから接続の設定になります。まず、<cite>App_configConnection.Strings.config</cite> に以下の1行を追加してください。：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">add</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;azureblob&quot;</span> <span class="n">connectionString</span><span class="o">=</span><span class="s2">&quot;&lt;AzureStorageConnectionString&gt;&quot;</span><span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p>ここで設定する <cite>AzureStorageConnectionString</cite> は既に作成をしている Azure Storage の接続文字列となります。</p>
+<p>続いてストレージ名を記載します。この設定は <cite>App_ConfigModulesSitecore.AzureBlobStorageSitecore.AzureBlobStorage.config</cite> が設定ファイルになります。ファイルを開くと以下の記載があります。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">param</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;containerName&quot;</span><span class="o">&gt;</span><span class="n">blobcontainer</span><span class="o">&lt;/</span><span class="n">param</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><cite>containerName</cite> がコンテナの名前となります。今回はデフォルトの名前 <cite>blobcontainer</cite> で作成します。</p>
+<p>Azure の管理画面に戻り、ストレージアカウントを開きます。コンテナーの項目をクリックします。：</p>
+<a class="reference internal image-reference" href="../../_images/Azureblob12.png"><img alt="コンテナーの作成" class="align-center" src="../../_images/Azureblob12.png" style="width: 400px;" /></a>
+<p>コンテナーを作成します。</p>
+<a class="reference internal image-reference" href="../../_images/Azureblob13.png"><img alt="新しいコンテナー" class="align-center" src="../../_images/Azureblob13.png" style="width: 400px;" /></a>
+<p>設定はこれで完了となります。</p>
+</div>
+<div class="section" id="blob">
+<h2>5.1.3. Blob データの移行<a class="headerlink" href="#blob" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ここで紹介している手順は <a class="reference external" href="https://doc.sitecore.com/developers/93/sitecore-experience-manager/en/use-the-blob-migration-tool.html">Use the blob migration tool</a> で紹介している手順となります。</p>
+<p>すでにメディアライブラリで管理しているファイルを Azure Blob Storage に移行していきます。このための PowerShell のスクリプトが、<cite>App_DataMigration</cite> に用意されています。</p>
+<a class="reference internal image-reference" href="../../_images/Azureblob14.png"><img alt="マイグレーションのスクリプト" class="align-center" src="../../_images/Azureblob14.png" style="width: 400px;" /></a>
+<p>PowerShell で処理できるように、AzureRM をインストールします。まず、既に入っているかどうかを確認します。入っていなければ、<cite>Install-Module</cite> コマンドでインストールをします。途中 PSGallery を利用するか？という質問が出てきますので Y を入力して Enter を入れれば AzureRM がインストールされます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span><span class="o">-</span><span class="n">Module</span> <span class="o">-</span><span class="n">Name</span> <span class="n">AzureRm</span> <span class="o">-</span><span class="n">ListAvailable</span>
+<span class="n">Install</span><span class="o">-</span><span class="n">Module</span> <span class="o">-</span><span class="n">Name</span> <span class="n">AzureRM</span>
+</pre></div>
+</div>
+<p>インストールが終わったあと、モジュールのインストールを確認します。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span><span class="o">-</span><span class="n">Module</span> <span class="o">-</span><span class="n">Name</span> <span class="n">AzureRm</span> <span class="o">-</span><span class="n">ListAvailable</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Azureblob15.png"><img alt="AzureRm" class="align-center" src="../../_images/Azureblob15.png" style="width: 400px;" /></a>
+<p>これで準備が完了しました。実際に PowerShell のスクリプトのあるフォルダに移動して、以下の1行を実行してください。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span>\<span class="n">Invoke</span><span class="o">-</span><span class="n">Migration</span><span class="o">.</span><span class="n">ps1</span> <span class="o">-</span><span class="n">SqlDBConnectionNames</span> <span class="o">@</span><span class="p">(</span><span class="s2">&quot;master&quot;</span><span class="p">,</span> <span class="s2">&quot;web&quot;</span><span class="p">)</span> <span class="o">-</span><span class="n">AzureBlobConnectionName</span> <span class="s2">&quot;azureblob&quot;</span> <span class="o">-</span><span class="n">BlobContainerName</span> <span class="s2">&quot;blobcontainer&quot;</span> <span class="o">-</span><span class="n">Force</span> <span class="o">*&gt;&amp;</span><span class="mi">1</span> <span class="o">|</span> <span class="n">Tee</span><span class="o">-</span><span class="n">Object</span> <span class="o">-</span><span class="n">FilePath</span> <span class="n">Invoke</span><span class="o">-</span><span class="n">Migration</span><span class="o">.</span><span class="n">log</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/Azureblob16.png"><img alt="Invoke-Migration" class="align-center" src="../../_images/Azureblob16.png" style="width: 400px;" /></a>
+<p>処理が進むと、Azure Storage のコンテナにファイルがコピーされていることがわかります。</p>
+<a class="reference internal image-reference" href="../../_images/Azureblob17.png"><img alt="ストレージにコピー" class="align-center" src="../../_images/Azureblob17.png" style="width: 400px;" /></a>
+<p>これにより Sitecore のメディアファイルを Azure のストレージに展開することができました。</p>
+</div>
+<div class="section" id="id4">
+<h2>5.1.4. 参考動画<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>ここまでの手順を動画としてまとめました。</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dqm7Tkc2a5g" frameborder="0" allowfullscreen></iframe></div>
+<div class="section" id="id5">
+<h2>5.1.5. 参考サイト<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://doc.sitecore.com/developers/93/sitecore-experience-manager/en/sitecore-blob-storage.html">Sitecore blob storage</a></p></li>
+<li><p><a class="reference external" href="https://www.pine4.net/Memo2/Article/Archive/Use-Azure-Blob-as-Media-Library-Blob-Storage-Migration">Azure BlobをメディアライブラリーのBlobストレージとして使用する - マイグレーション編</a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azuretoolkit.html" class="btn btn-neutral float-right" title="5.2. Sitecore Azure Toolkit 2.4" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="5. 各種設定に関して" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Sitecore Japan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

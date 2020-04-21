@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.5.1. ボディの作成 &mdash; Sitecore クイックスタート  ドキュメント</title>
+  <title>1.3.5. ボディの作成 &mdash; Sitecore クイックスタート  ドキュメント</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="1.5.2. フッターの作成" href="partialdesignfooter.html" />
-    <link rel="prev" title="1.5. パーシャルデザインの作成" href="partialdesign.html" />
+    <link rel="next" title="1.4. ページデザインの作成" href="pagedesign.html" />
+    <link rel="prev" title="1.3.4. フッターの作成" href="partialdesignfooter.html" />
  
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
@@ -96,26 +96,30 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../93/index.html">Sitecore Experience Platform 9.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">オンライン マニュアル</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore Experience Accelerator</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">1. サイトを作る</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="createweb.html">1.1. テナントの作成、サイトの作成</a></li>
-<li class="toctree-l3"><a class="reference internal" href="createtemplate.html">1.2. アイテムの作成</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pagedesign.html">1.3. ページデザインの作成</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pageitem.html">1.4. ページアイテムの作成</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="partialdesign.html">1.5. パーシャルデザインの作成</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">1.5.1. ボディの作成</a></li>
-<li class="toctree-l4"><a class="reference internal" href="partialdesignfooter.html">1.5.2. フッターの作成</a></li>
-<li class="toctree-l4"><a class="reference internal" href="partialdesignheader.html">1.5.3. ヘッダーの作成</a></li>
-<li class="toctree-l4"><a class="reference internal" href="partialdesignsxasiteinfo.html">1.5.4. サイトの構造を確認する</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pageitem.html">1.2. ページアイテムの作成</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="partialdesign.html">1.3. パーシャルデザインの作成</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="openeditor.html">1.3.1. 編集画面の立ち上げ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="partialdesignsxasiteinfo.html">1.3.2. サイトの構造を確認する</a></li>
+<li class="toctree-l4"><a class="reference internal" href="partialdesignheader.html">1.3.3. ヘッダーの作成</a></li>
+<li class="toctree-l4"><a class="reference internal" href="partialdesignfooter.html">1.3.4. フッターの作成</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">1.3.5. ボディの作成</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="pagedesign.html">1.4. ページデザインの作成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="createtemplate.html">1.5. テンプレートの作成</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../modules/index.html">2. SXA モジュールについて</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../json/index.html">3. SXA における JSON の活用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../creativeexchange/index.html">4. Creative Exchange</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Sitecore on Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a></li>
 </ul>
@@ -167,9 +171,9 @@
         
           <li><a href="index.html">1. サイトを作る</a> &raquo;</li>
         
-          <li><a href="partialdesign.html">1.5. パーシャルデザインの作成</a> &raquo;</li>
+          <li><a href="partialdesign.html">1.3. パーシャルデザインの作成</a> &raquo;</li>
         
-      <li>1.5.1. ボディの作成</li>
+      <li>1.3.5. ボディの作成</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -189,34 +193,35 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>1.5.1. ボディの作成<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>1.3.5. ボディの作成<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>ヘッダー、フッターと作成したので、今回はトップページのボディ部分を作成します。まずはベースとなるパーシャルデザインを追加します。</p>
-<p>&lt;img src=&quot;images/body01.png&quot; alt=&quot;パーシャルデザインを追加&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/body01.png"><img alt="パーシャルデザインを追加" class="align-center" src="../../_images/body01.png" style="width: 400px;" /></a>
 <p>今回も同じ手順ですが、アイテム名として <cite>homepage</cite> を設定します。</p>
-<p>&lt;img src=&quot;images/body02.png&quot; alt=&quot;パーシャルデザインを追加&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/body02.png"><img alt="パーシャルデザインを追加" class="align-center" src="../../_images/body02.png" style="width: 400px;" /></a>
 <p>最初に、ページ構造のモジュール「スプリッター（行）」をボディエリアにドラッグ＆ドロップで配置します。</p>
-<p>&lt;img src=&quot;images/body03.png&quot; alt=&quot;スプリッタ行ーの配置&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/body03.png"><img alt="スプリッタ行ーの配置" class="align-center" src="../../_images/body03.png" style="width: 400px;" /></a>
 <p>今回は、ボディエリアが上下２つに分かれました。続いて、下部のエリアに「スプリッター（列）」をドラッグ＆ドロップで配置します。</p>
-<p>&lt;img src=&quot;images/body04.png&quot; alt=&quot;スプリッター列の配置&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/body04.png"><img alt="スプリッター列の配置" class="align-center" src="../../_images/body04.png" style="width: 400px;" /></a>
 <p>今回はスプリッター（列）を利用して、エリアを3つに分けます。まず、カラムを1つ選択すると、以下のようなメニューが表示されます。</p>
-<p>&lt;img src=&quot;images/body05.png&quot; alt=&quot;項目&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/body05.png"><img alt="項目" class="align-center" src="../../_images/body05.png" style="width: 400px;" /></a>
 <p>このアイコンのうち ＋ のアイコンをクリックするとカラムを追加することができます。</p>
-<p>&lt;img src=&quot;images/body06.png&quot; alt=&quot;カラム追加&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/body06.png"><img alt="カラム追加" class="align-center" src="../../_images/body06.png" style="width: 400px;" /></a>
 <p>３つのカラムに関して、エリアのサイズを 6 から 4 にすべて変更をします。</p>
-<p>&lt;img src=&quot;images/body07.png&quot; alt=&quot;3分割に成功&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/body07.png"><img alt="テキストの入力" class="align-center" src="../../_images/body07.png" style="width: 400px;" /></a>
 <p>この３つのエリアに対してはコンテナーをすべてドラッグ＆ドロップで配置します。</p>
-<p>&lt;img src=&quot;images/body08.png&quot; alt=&quot;コンテナー&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/body08.png"><img alt="コンテナー" class="align-center" src="../../_images/body08.png" style="width: 400px;" /></a>
 <p>最後に、スプリッターの上のエリアに対して、複合グループにある「カルーセル」をドラッグ＆ドロップで配置します。</p>
-<p>&lt;img src=&quot;images/body09.png&quot; alt=&quot;カルーセル&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/body09.png"><img alt="カルーセル" class="align-center" src="../../_images/body09.png" style="width: 400px;" /></a>
 <p>カルーセルのアイテムを選択するダイアログが表示されます。この際、まだ作成をしていない場合は、ここで作成をする必要があります。</p>
-<p>&lt;img src=&quot;images/body10.png&quot; alt=&quot;カルーセル作成&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/body10.png"><img alt="カルーセル作成" class="align-center" src="../../_images/body10.png" style="width: 400px;" /></a>
 <p>上のアイテム「Carousels(Curent site)」の右側にある「作成」をクリックします。するとカルーセル作成のダイアログが起動します。今回は「カルーセル」を選択、アイテム名としては Homepage を入力します。</p>
-<p>&lt;img src=&quot;images/body11.png&quot; alt=&quot;カルーセルアイテム作成&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/body11.png"><img alt="カルーセルアイテム作成" class="align-center" src="../../_images/body11.png" style="width: 400px;" /></a>
 <p>OK を押すと、カルーセルモジュールが追加されます。</p>
-<p>&lt;img src=&quot;images/body12.png&quot; alt=&quot;カルーセル配置完了&quot; /&gt;</p>
+<a class="reference internal image-reference" href="../../_images/body12.png"><img alt="カルーセル配置完了" class="align-center" src="../../_images/body12.png" style="width: 400px;" /></a>
 <p>上記で、ボディのアイテム作成は完了しました。保存をして、エクスペリエンスエディターを一度閉じてください。</p>
-<p>---
-[目次に戻る](./)</p>
+<div class="section" id="id2">
+<h2>1.3.5.1. 参考動画<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M4X3oHWw370" frameborder="0" allowfullscreen></iframe></div>
 </div>
 
 
@@ -227,10 +232,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="partialdesignfooter.html" class="btn btn-neutral float-right" title="1.5.2. フッターの作成" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pagedesign.html" class="btn btn-neutral float-right" title="1.4. ページデザインの作成" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="partialdesign.html" class="btn btn-neutral float-left" title="1.5. パーシャルデザインの作成" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="partialdesignfooter.html" class="btn btn-neutral float-left" title="1.3.4. フッターの作成" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -239,7 +244,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Sitecore Japan
+        &copy; Copyright 2020, Sitecore Japan
 
     </p>
   </div>
