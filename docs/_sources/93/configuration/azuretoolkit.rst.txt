@@ -88,7 +88,7 @@ Sitecore Azure Toolkit の展開
   ------       2019/11/25     12:32           1532 version.txt
 
 
-続いて、`Import-Module .\tools\Sitecore.Cloud.Cmdlets.psm1 -Verbose` のコマンドを実行します。
+続いて、`Import-Module .\\tools\\Sitecore.Cloud.Cmdlets.psm1 -Verbose` のコマンドを実行します。
 
 .. code-block::
 
@@ -118,7 +118,7 @@ Sitecore Azure Toolkit の展開
 
 続いて Azure の Blob にすでにダウンロード済のファイルを展開して、アップロードをします。必要なモジュールをアップロードして、インストールの際に利用できるようにしておきます。
 
-.. image:: images/Azureblob.png
+.. image:: images/azureblob.png
    :align: center
    :width: 400px
    :alt: ファイルをアップロード
@@ -193,7 +193,7 @@ xcSingleMsDeployPackageUrl  Sitecore xConnect のパッケージ URL
 
 .. code-block::
 
-  PS C:\projects\sitecoreonazure> .\deploy91.ps1
+  PS C:\projects\sitecoreonazure> .\deploy93.ps1
 
 上記の設定がすべてクリアできていれば、40分ほどで展開が完了します。
 

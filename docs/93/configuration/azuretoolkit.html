@@ -98,7 +98,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore Experience Platform 9.3</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../readme.html">1. はじめに</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../install/index.html">2. インストールガイド</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commerce/index.html">3. インストールガイド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commerce/index.html">3. Commerce インストールガイド</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../modules/index.html">4. モジュールのインストール</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">5. 各種設定に関して</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="azureblob.html">5.1. Sitecore blob storage の設定</a></li>
@@ -241,7 +241,7 @@
 <span class="o">------</span>       <span class="mi">2019</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">25</span>     <span class="mi">12</span><span class="p">:</span><span class="mi">32</span>           <span class="mi">1532</span> <span class="n">version</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
-<p>続いて、<cite>Import-Module .toolsSitecore.Cloud.Cmdlets.psm1 -Verbose</cite> のコマンドを実行します。</p>
+<p>続いて、<cite>Import-Module .\tools\Sitecore.Cloud.Cmdlets.psm1 -Verbose</cite> のコマンドを実行します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PS C:\projects\sitecoreonazure&gt; Import-Module .\tools\Sitecore.Cloud.Cmdlets.psm1 -Verbose
 詳細: パス &#39;C:\projects\sitecoreonazure\tools\Sitecore.Cloud.Cmdlets.psm1&#39; からモジュールを読み込んでいます。
 詳細: コマンドレット &#39;New-SCCargoPayload&#39; をインポートしています。
@@ -264,7 +264,7 @@ PS C:\projects\sitecoreonazure&gt;
 </ul>
 <p>証明書がない場合は、 <a class="reference external" href="https://doc.sitecore.com/developers/93/sitecore-experience-manager/en/the-client-certificate-for-sitecore-deployments.html">自己証明書の作成手順</a> を参考にしてください。</p>
 <p>続いて Azure の Blob にすでにダウンロード済のファイルを展開して、アップロードをします。必要なモジュールをアップロードして、インストールの際に利用できるようにしておきます。</p>
-<a class="reference internal image-reference" href="../../_images/Azureblob.png"><img alt="ファイルをアップロード" class="align-center" src="../../_images/Azureblob.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/azureblob1.png"><img alt="ファイルをアップロード" class="align-center" src="../../_images/azureblob1.png" style="width: 400px;" /></a>
 <p>パラメーターのファイルに関して、今回は XP Single のイメージを利用するため、 C:\projects\Sitecore-Azure-Quickstart-Templates\Sitecore 9.3.0\XPSingle にある azuredeploy.parameters.json をコピーしてください。</p>
 </div>
 <div class="section" id="id6">
@@ -365,7 +365,7 @@ $AzureSubscriptionId = &quot;&quot;
 </pre></div>
 </div>
 <p>続いて作成したスクリプトを実行すれば完了となります。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">sitecoreonazure</span><span class="o">&gt;</span> <span class="o">.</span>\<span class="n">deploy91</span><span class="o">.</span><span class="n">ps1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">sitecoreonazure</span><span class="o">&gt;</span> <span class="o">.</span>\<span class="n">deploy93</span><span class="o">.</span><span class="n">ps1</span>
 </pre></div>
 </div>
 <p>上記の設定がすべてクリアできていれば、40分ほどで展開が完了します。</p>
@@ -400,7 +400,7 @@ $AzureSubscriptionId = &quot;&quot;
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Sitecore Japan
+        &copy; Copyright 2020, Sitecore Japan
 
     </p>
   </div>
