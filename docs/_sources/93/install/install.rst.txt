@@ -2,13 +2,12 @@
 Sitecore Experience Platform のインストール
 #############################################
 
-Sitecore 9.3 で提供する Sitecore Instllation Assistant は Solr も含めて自動的にセットアップをするインストール支援ツールになりました。これにより、 Windows Server と SQL Server がインストールされている環境に対して、簡単にインストールをすることができるようになりました。
+Sitecore Experience Commerce をインストールする最初のステップは、Sitecore Experience Platform 9.3 を事前にインストールしする必要があります。ここでは、Sitecore Instllation Assistant を利用して、まずは関連モジュールをインストールします。
 
 今回は以下の環境にインストールをします。
 
 * Windows Server 2019 Standard
 * SQL Server 2019
-
 
 ****************************************
 Sitecore のインストールプログラムの入手
@@ -62,46 +61,41 @@ Install のボタンをクリックして、必要なモジュールをインス
    :width: 400px
    :alt: Next が有効に
 
+一旦、ウィザードを閉じます
+
 ***********************
 Solr のインストール
 ***********************
 
-Sitecore Install Assistant は 9.3 より Solr のインストールにも対応しています。Java ランタイムなども一緒にインストールされます。なお、Solr を別途インストール済の場合は、スキップできます。
+Sitecore Install Assistant は 9.3 より Solr のインストールにも対応しています。実際には Sitecore Install Framework のツールが sitecore-solr.json ファイルを利用して、Solr のインストールを行います。ここでは、このファイルを利用してインストールを実行します。
+
+.. code-block:
+
+    Install-SitecoreConfiguration .\Solr-SingleDeveloper.json
 
 まず、以下の項目が表示されます。
 
 .. image:: images/solr01.png
    :align: center
    :width: 400px
-   :alt: 設定項目
-
-================================ ============ ======================================
-パラメータ                        入力値      説明 
-================================ ============ ======================================
-Solr port                         8983        Solr が利用するポート番号
-Windows service and path prefix   93          インストールをする Solr の Prefix
-Install path                      c:\solr     インストール先
-================================ ============ ======================================
-
+   :alt: Solr のインストール
 
 
 ********************
 インストールの開始
 ********************
 
-モジュールのインストールが完了すると、次は Sitecore のインストールとなります。
-
-Sitecore Settings 
-=====================
+モジュールのインストールが完了すると、次は Sitecore のインストールとなります。ここではインストールツールに標準で提供されているスクリプトの値を変更します。
 
 インストールをする際の設定を記載します。以下の項目を入力してください。以下の値は例となります。
 
 ============================= ==================== =======================
 パラメータ                     入力値                説明 
 ============================= ==================== =======================
-Installation/Solution prefix  93                   DB 名、サイト名で利用
-Sitecore admin password       P@ssw0rd             管理者のパスワードの設定
-Sitecore license file         license.xml へのパス  ライセンスファイル
+$SitecoreAdminPassword        b                    管理者パスワード
+$SCInstallRoot                C:\projects\sif      インストールのルート
+$SitecoreSiteName             sxa.storefront.com   サイト名
+$SqlAdminPassword             任意                 SQL Server パスワード
 ============================= ==================== =======================
 
 .. image:: images/sia06.png
@@ -109,94 +103,15 @@ Sitecore license file         license.xml へのパス  ライセンスファイ
    :width: 400px
    :alt: インストールの基本設定
 
-SQL Server settings
-=======================
+インストールを実行します。
 
-続いてインストールをしている SQL Server に関する設定を入力します。
+.. code-block:
 
-============================ ======== =======================
-パラメータ                     力値     説明
-============================ ======== =======================
-SQL Server instance          (local)  サーバーのインスタンス名  
-SQL Server admin user name   sa       管理者ユーザー名  
-SQL Server admin password    ******   管理者パスワード 
-============================ ======== =======================
+    .\SC930-SingleDeveloper.ps1
 
 .. image:: images/sia07.png
    :align: center
    :width: 400px
-   :alt: SQL Server の設定
-
-
-Solr の設定
-================
-
-すでにインストールしている Solr の設定を入力していきます。ここでは、[Solr 7.5 のインストール](./solr.md) でインストールしているパラメータを利用しています。
-
-========================== ============================ ===============================
-パラメータ                  入力値                        説明  
-========================== ============================ ===============================
-Solr service URL           https://localhost:8983/solr  Solr の URL
-Solr file system root      C:\Solr\93Solr-8.1.1         Solr インストール先のディレクトリ
-Solr Windows service name  93Solr-8.1.1                  サービスの名前
-========================== ============================ ===============================
-
-.. image:: images/sia08.png
-   :align: center
-   :width: 400px
-   :alt: Solr の設定
-
-
-SXA の設定
-================
-
-Sitecore Experience Accelerator を同時にインストールをするか、確認が表示されます。ここではインストールするためにチェックを入れておきます。
-
-.. image:: images/sia09.png
-   :align: center
-   :width: 400px
-   :alt: SXA 設定
-
-
-インストール最終確認
-=======================
-
-設定をしたパラメーターの確認画面が表示されます。
-
-.. image:: images/sia09.png
-   :align: center
-   :width: 400px
-   :alt: パラメーターの確認
-
-
-また各種ファイルの検証が行われます。
-
-.. image:: images/sia10.png
-   :align: center
-   :width: 400px
-   :alt: パラメーファイルの検証ターの確認
-
-全てっチェックが完了したところで、Install のボタンをクリックしてください。
-
-.. image:: images/sia11.png
-   :align: center
-   :width: 400px
-   :alt: インストールの開始
-
-これでインストールが無事完了します。完了をすると下のような画面が表示されますので、 Launch Sitecore のボタンをクリックしてください。
-
-.. image:: images/sia12.png
-   :align: center
-   :width: 400px
-   :alt: インストールの開始
+   :alt: インストール
 
 ログイン画面が表示されれば、インストールが無事完了します。
-
-
-*************
-参考動画
-*************
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Bcjf2MjWvkk" frameborder="0" allowfullscreen></iframe>
