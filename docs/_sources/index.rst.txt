@@ -16,12 +16,19 @@ Sitecore クイックスタートでは、インストールの手順、モジ�
 
     readme
     93/index
-    manual/index
     sxa/index
     jss/index
     docker/index
     marketplace/index
     versions
+
+********************
+関連サイト
+********************
+
+* `オンラインマニュアル <https://doc.sitecorejp.net>`_
+* `Sitecore Webinar シリーズ <https://www.sitecore.com/ja-jp/company/news-events/events/2020/japan-webinar-series>`_
+* ブログ `Shinichi Haramizu <https://haramizu.com>`_
 
 ***************
 索引とテーブル
@@ -30,9 +37,3 @@ Sitecore クイックスタートでは、インストールの手順、モジ�
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-****************
-To do
-****************
-
-.. todolist::
