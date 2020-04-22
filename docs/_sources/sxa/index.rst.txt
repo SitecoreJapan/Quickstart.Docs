@@ -14,8 +14,8 @@ Sitecore Experience Acceleartor は Sitecore の環境に Web サイトを立ち
     
     firststep/index
     modules/index
-    json/index
     creativeexchange/index
+    json/index
 
 ***************
 基本機能の活用
