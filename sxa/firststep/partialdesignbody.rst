@@ -98,7 +98,27 @@ OK を押すと、カルーセルモジュールが追加されます。
    :align: center
    :width: 400px
    :alt: カルーセル配置完了
-   
+
+３つのエリアには、プロモのアイテムを置いていきます。
+
+.. image:: images/body13.png
+   :align: center
+   :width: 400px
+   :alt: プロモの配置
+
+プロモのアイテムがないため、Create をクリック、新しいアイテムを作成して指定します。
+
+.. image:: images/body14.png
+   :align: center
+   :width: 400px
+   :alt: プロモの作成
+
+プロモに関しては３つアイテムを作成して仕上がりは以下の様になります。
+
+.. image:: images/body15.png
+   :align: center
+   :width: 400px
+   :alt: プロモを追加した
 
 上記で、ボディのアイテム作成は完了しました。保存をして、エクスペリエンスエディターを一度閉じてください。
 

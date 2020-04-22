@@ -10,4 +10,4 @@
     pageitem
     partialdesign
     pagedesign
-    createtemplate
+
