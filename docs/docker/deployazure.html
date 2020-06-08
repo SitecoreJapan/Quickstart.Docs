@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -107,6 +107,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../marketplace/index.html">各種ツールに関して</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">デモ マニュアル</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../versions.html">過去のバージョンに関して</a></li>
 </ul>
 
@@ -155,7 +156,7 @@
         
           <li><a href="index.html">Sitecore on Docker</a> &raquo;</li>
         
-      <li>4. Microsoft Azure への展開</li>
+      <li><span class="section-number">4. </span>Microsoft Azure への展開</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,10 +176,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="microsoft-azure">
-<h1>4. Microsoft Azure への展開<a class="headerlink" href="#microsoft-azure" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">4. </span>Microsoft Azure への展開<a class="headerlink" href="#microsoft-azure" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>Microsoft Azure には Docker のコンテナを管理するためのサービスとして、<a class="reference external" href="https://azure.microsoft.com/ja-jp/services/container-registry/">Container Registry</a> を提供しています。</p>
 <div class="section" id="id1">
-<h2>4.1. Container Registry の作成<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">4.1. </span>Container Registry の作成<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Azure ポータル画面、およびコマンドラインでも作成することができますが、ここでは Visual Studio Code のサイドバーで作業を進めます。まず作成をしたいサブスクリプションを選択して、右クリックしてください。メニューにある <cite>Create Registry...</cite> を選択します。</p>
 <img alt="Azure Account" class="align-center" src="../_images/vscode06.png" />
 <p>画面の上部にダイアログが表示されて、Registry name の入力を促してきます。</p>
@@ -193,7 +194,7 @@
 <img alt="作成されたレジストリを確認" class="align-center" src="../_images/vscode11.png" />
 </div>
 <div class="section" id="id2">
-<h2>4.2. Container Registry にイメージをコピーする<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">4.2. </span>Container Registry にイメージをコピーする<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>ローカルで作成をした Docker イメージを Azure の Container Registry に展開します。まず上記で作成をした Azure Contaner Registry を標準に設定します。Visual Studio Code でレジストリを右クリックして、Set as Default とします。</p>
 <img alt="コンテナレジストリを標準に設定する" class="align-center" src="../_images/acr01.png" />
 <p>以下のイメージをコピーする形で進めていきます。</p>

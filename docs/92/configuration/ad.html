@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -100,6 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Sitecore on Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">デモ マニュアル</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Sitecore Experience Platform 9.2</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../install/index.html">1. インストールガイド</a></li>
@@ -164,9 +165,9 @@
         
           <li><a href="../index.html">Sitecore Experience Platform 9.2</a> &raquo;</li>
         
-          <li><a href="index.html">3. 各種設定に関して</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">3. </span>各種設定に関して</a> &raquo;</li>
         
-      <li>3.2. Azure Active Directory の設定</li>
+      <li><span class="section-number">3.2. </span>Azure Active Directory の設定</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -186,10 +187,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="azure-active-directory">
-<h1>3.2. Azure Active Directory の設定<a class="headerlink" href="#azure-active-directory" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">3.2. </span>Azure Active Directory の設定<a class="headerlink" href="#azure-active-directory" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>Sitecore は Active Directory を利用したシングルサインオンの連携を標準で利用することできるようになっています。ここでは、その手順に関して紹介をしています。</p>
 <div class="section" id="id1">
-<h2>3.2.1. Azure Active Directory の準備<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">3.2.1. </span>Azure Active Directory の準備<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>ここでは検証用の Active Directory を Microsoft Azure 上で準備します。なお、テスト・検証用程度で利用するのであれば無料で利用することが可能です。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://portal.azure.com">Azure Portal</a> へアクセス、ログインします</p></li>
@@ -208,7 +209,7 @@
 </ul>
 </div>
 <div class="section" id="ad">
-<h2>3.2.2. アプリの登録（AD の設定）<a class="headerlink" href="#ad" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">3.2.2. </span>アプリの登録（AD の設定）<a class="headerlink" href="#ad" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>作成した AD のポータルに移動します。ウィンドウの右側に表示されている「作成」エリアにある「アプリの登録」をクリックします。</p>
 <a class="reference internal image-reference" href="../../_images/azure01.png"><img alt="アプリケーションの登録" class="align-center" src="../../_images/azure01.png" style="width: 400px;" /></a>
 <p>アプリケーションの登録では、<cite>アプリケーション名`を入力、`シングルテナント`を選択します。リダイレクト URI には Sitecore Identity Server のドメイン名に対して、 `/signin-oidc</cite> 追加した URI を設定します。</p>
@@ -223,7 +224,7 @@
 <a class="reference internal image-reference" href="../../_images/azure05.png"><img alt="パラメータの確認" class="align-center" src="../../_images/azure05.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="sitecore">
-<h2>3.2.3. Sitecore の設定<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">3.2.3. </span>Sitecore の設定<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>続いて Sitecore の設定を進めていきます。まず、Sitecore Identity Server の設定ファイル、 <cite>sitecoreSitecore.Plugin.IdentityProvider.AzureAdConfig</cite> のフォルダの中にある <cite>Sitecore.Plugin.IdentityProvider.AzureAd.xml</cite> を編集します。</p>
 <a class="reference internal image-reference" href="../../_images/azure06.png"><img alt="設定ファイルの確認" class="align-center" src="../../_images/azure06.png" style="width: 400px;" /></a>
 <p>このファイルの項目のうち、Settings : Sitecore : ExternalIdentityProviders : IdentityProviders : AzureAd にある3つの項目を変更してください。ID に関しては Azure AD の概要の項目になります。</p>
@@ -261,7 +262,7 @@
 <a class="reference internal image-reference" href="../../_images/azure10.png"><img alt="Azure AD のボタンが表示される" class="align-center" src="../../_images/azure10.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="id2">
-<h2>3.2.4. ログインの検証<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">3.2.4. </span>ログインの検証<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Azure AD にログインできるユーザーを作成します。メニューの「管理」－「ユーザー」をクリックして、メニューに表示される「新しいユーザー」をクリックして作成をします。</p>
 <p>続いて、現在管理画面を開いているブラウザとは別のブラウザ、もしくはプライベートモードで別のウィンドウを開いてください。この手順を実施する理由としては、AD 管理画面に入っている場合、マイクロソフトアカウントとしてログインをしている状態となるためテストができないためです。</p>
 <p>新しく開いたブラウザでログイン画面を開き「Azure AD」のボタンをクリックしてください。</p>
@@ -270,7 +271,7 @@
 <a class="reference internal image-reference" href="../../_images/azure12.png"><img alt="エラー画面" class="align-center" src="../../_images/azure12.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="id3">
-<h2>3.2.5. ロールのマッピング<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">3.2.5. </span>ロールのマッピング<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Sitecore のロールと AD のグループを紐づけることで、シングルサインオンをした後、使うことができる権限を設定することができます。</p>
 <p>まず Active Directory にグループを作成します。今回は、SitecoreAuthor というグループを作成しました。</p>
 <a class="reference internal image-reference" href="../../_images/azure13.png"><img alt="グループの作成" class="align-center" src="../../_images/azure13.png" style="width: 400px;" /></a>

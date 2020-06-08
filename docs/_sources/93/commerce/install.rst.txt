@@ -93,9 +93,9 @@ Sitecore Install Assistant は 9.3 より Solr のインストールにも対応
 パラメータ                     入力値                説明 
 ============================= ==================== =======================
 $SitecoreAdminPassword        b                    管理者パスワード
-$SCInstallRoot                C:\projects\sif      インストールのルート
+$SCInstallRoot                C:\\projects\\sif    インストールのルート
 $SitecoreSiteName             sxa.storefront.com   サイト名
-$SqlAdminPassword             任意                 SQL Server パスワード
+$SqlAdminPassword             任意                  SQL Server パスワード
 ============================= ==================== =======================
 
 .. image:: images/sia06.png

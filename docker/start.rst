@@ -8,7 +8,7 @@ Sitecore の起動
 ライセンスファイルの設定
 **************************
 
-Docker で Sitecore を立ち上げる際に、ライセンスファイルを適用する必要があります。今回、ライセンスファイルは `C:\projects\docker-images\license.xml` に配置していることを前提とします。
+Docker で Sitecore を立ち上げる際に、ライセンスファイルを適用する必要があります。今回、ライセンスファイルは `C:\\projects\\docker-images\\license.xml` に配置していることを前提とします。
 
 .. code-block:: 
 
@@ -23,7 +23,7 @@ Docker で Sitecore を立ち上げる際に、ライセンスファイルを適
 イメージを選択して起動
 **************************
 
-今回は Sitecore Experience Platform に Sitecore Experience Accelerator がインストールされている構成を起動します。動作確認用のファイルは、 `docker-images\windows\tests\9.3.x` のフォルダに展開されています。
+今回は Sitecore Experience Platform に Sitecore Experience Accelerator がインストールされている構成を起動します。動作確認用のファイルは、 `docker-images\\windows\\tests\\9.3.x` のフォルダに展開されています。
 
 .. image:: images/start02.png
    :align: center
