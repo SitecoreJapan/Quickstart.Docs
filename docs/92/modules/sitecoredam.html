@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -100,6 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Sitecore on Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">デモ マニュアル</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Sitecore Experience Platform 9.2</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../install/index.html">1. インストールガイド</a></li>
@@ -169,9 +170,9 @@
         
           <li><a href="../index.html">Sitecore Experience Platform 9.2</a> &raquo;</li>
         
-          <li><a href="index.html">2. モジュールのインストール</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">2. </span>モジュールのインストール</a> &raquo;</li>
         
-      <li>2.7. Sitecore Connect for Sitecore DAM</li>
+      <li><span class="section-number">2.7. </span>Sitecore Connect for Sitecore DAM</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -191,10 +192,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="sitecore-connect-for-sitecore-dam">
-<h1>2.7. Sitecore Connect for Sitecore DAM<a class="headerlink" href="#sitecore-connect-for-sitecore-dam" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">2.7. </span>Sitecore Connect for Sitecore DAM<a class="headerlink" href="#sitecore-connect-for-sitecore-dam" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>Sitecore Connect for Sitecore DAM 2.0.0  を利用することで、Sitecore の管理画面から直接 Content Hub で管理している画像を指定するようになります。ここではモジュールのインストールと動作検証まで紹介をします。</p>
 <div class="section" id="id1">
-<h2>2.7.1. 必要システム<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.7.1. </span>必要システム<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Sitecore Connect for Sitecore DAM 2.0.0 は以下のシステムで利用することができます。</p>
 <ul class="simple">
 <li><p>Sitecore Experience Platform 9.2</p></li>
@@ -203,7 +204,7 @@
 <p>なお、Sitecore Experience Manager、 Sitecore Experience Commerce でも上記のバージョンであればご利用いただけます。</p>
 </div>
 <div class="section" id="sitecore-content-hub">
-<h2>2.7.2. Sitecore Content Hub の設定<a class="headerlink" href="#sitecore-content-hub" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.7.2. </span>Sitecore Content Hub の設定<a class="headerlink" href="#sitecore-content-hub" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>まず最初に、Sitecore Experience Platform と Sitecore Content Hub の接続ができるように、設定を Sitecore Content Hub に追加していきます。</p>
 <ul class="simple">
 <li><p>管理者の権限を持っているアカウントで Sitecore Content Hub にアクセスをして、「管理」―「設定」を開きます。</p></li>
@@ -244,7 +245,7 @@
 <p>変更しているのは2か所です、確認をして保存します。</p>
 </div>
 <div class="section" id="sitecore-experience-platform">
-<h2>2.7.3. Sitecore Experience Platform の設定<a class="headerlink" href="#sitecore-experience-platform" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.7.3. </span>Sitecore Experience Platform の設定<a class="headerlink" href="#sitecore-experience-platform" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>モジュールのダウンロード</p>
 <p>続いて Sitecore の設定を開始します。まず、以下のページからモジュールのダウンロードをします。</p>
 <ul class="simple">
@@ -252,7 +253,7 @@
 </ul>
 <p>この解説では <cite>Sitecore Connect for Sitecore DAM</cite> をダウンロードしてインストールを進めます。</p>
 <div class="section" id="id2">
-<h3>2.7.3.1. モジュールのインストール<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><span class="section-number">2.7.3.1. </span>モジュールのインストール<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>モジュールのインストールは、「コントロールパネル」－「パッケージをインストールする」を開いてください。</p>
 <a class="reference internal image-reference" href="../../_images/chdam01.png"><img alt="ファイルを指定する" class="align-center" src="../../_images/chdam01.png" style="width: 400px;" /></a>
 <p>次へ、をクリックすると以下のような警告が出ます。</p>
@@ -262,7 +263,7 @@
 <p>続いて以下の手続きを実行します。</p>
 </div>
 <div class="section" id="id3">
-<h3>2.7.3.2. 日本語リソースの追加<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><span class="section-number">2.7.3.2. </span>日本語リソースの追加<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>日本語リソースは標準で入っていないため、以下から <cite>20-damtoolbar-ja-jp.xml</cite> をダウンロードしてください。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/SitecoreJapan/InstallScript/tree/master/ContentHub/DAM">https://github.com/SitecoreJapan/InstallScript/tree/master/ContentHub/DAM</a></p></li>
@@ -270,7 +271,7 @@
 <p>このリソースは、 Core データベースに追加することで、日本語の表記を修正する形となります。</p>
 </div>
 <div class="section" id="id4">
-<h3>2.7.3.3. モジュールの設定<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><span class="section-number">2.7.3.3. </span>モジュールの設定<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>コンテンツエディターを開いて、<cite>/sitecore/system/Modules/DAM/Config/DAM connector</cite> のアイテムを選択します。</p>
 <a class="reference internal image-reference" href="../../_images/chdam06.png"><img alt="アイテムの選択" class="align-center" src="../../_images/chdam06.png" style="width: 400px;" /></a>
 <p>日本語バージョンを追加して（共有リソースのため、英語で設定しても同じです）、DAM のインスタンス、検索ページ、Content Hub の Authentication で設定をした ExternalRedirectKeys のキーを設定します。</p>
@@ -279,7 +280,7 @@
 </div>
 </div>
 <div class="section" id="id5">
-<h2>2.7.4. 動作確認<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">2.7.4. </span>動作確認<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>リッチテキストエディタを利用して、Sitecore Content Hub にアクセスできるか確認をします。</p>
 <ol class="arabic simple">
 <li><p>インストールすると標準で用意されている <cite>/sitecore/content/Home</cite> のアイテムをコンテンツエディタで選択します。</p></li>

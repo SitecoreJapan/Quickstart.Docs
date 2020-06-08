@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3.1. 基本設定 &mdash; Sitecore クイックスタート  ドキュメント</title>
+  <title>3.3. @sxa/CLI &mdash; Sitecore クイックスタート  ドキュメント</title>
   
 
   
@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="検索" href="../../search.html" />
-    <link rel="next" title="4. SXA における JSON の活用" href="../json/index.html" />
-    <link rel="prev" title="3. Creative Exchange" href="index.html" />
+    <link rel="next" title="3.4. テーマの追加、設定" href="addtheme.html" />
+    <link rel="prev" title="3.2. パッケージのインポート" href="importtheme.html" />
  
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
@@ -100,7 +100,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../firststep/index.html">1. サイトを作る</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../modules/index.html">2. SXA モジュールについて</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">3. Creative Exchange</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">3.1. 基本設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exporttheme.html">3.1. パッケージのエクスポート</a></li>
+<li class="toctree-l3"><a class="reference internal" href="importtheme.html">3.2. パッケージのインポート</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3.3. &#64;sxa/CLI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="addtheme.html">3.4. テーマの追加、設定</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../json/index.html">4. SXA における JSON の活用</a></li>
@@ -109,6 +112,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Sitecore on Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">デモ マニュアル</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a></li>
 </ul>
 
@@ -157,9 +161,9 @@
         
           <li><a href="../index.html">Sitecore Experience Accelerator</a> &raquo;</li>
         
-          <li><a href="index.html">3. Creative Exchange</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">3. </span>Creative Exchange</a> &raquo;</li>
         
-      <li>3.1. 基本設定</li>
+      <li><span class="section-number">3.3. </span>&#64;sxa/CLI</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -178,9 +182,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>3.1. 基本設定<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>作成中</p>
+  <div class="section" id="sxa-cli">
+<h1><span class="section-number">3.3. </span>&#64;sxa/CLI<a class="headerlink" href="#sxa-cli" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>テーマに関して、Creative Exchange Live を有効にするために、設定ファイルを変更します。環境として、Node.js が必要となりますので、すでにインストール済みとしてください。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>ここで紹介をする設定は Sitecore Experience Platform 9.3 、および Sitecore Experience Accelerator 9.3 の環境を想定しています。gulp のバージョンは 3.9.x を利用します。</p>
+</div>
+<p>Sitecore がインストールされているフォルダの、 App_ConfigIncludez.Feature.Overrides のフォルダにある z.SPE.Sync.Enabler.Gulp.config.disabled のファイルを有効にします。</p>
+<a class="reference internal image-reference" href="../../_images/sxacxl01.png"><img alt="ファイルの変更" class="align-center" src="../../_images/sxacxl01.png" style="width: 400px;" /></a>
+<p>続いてコマンドとして利用する SXA CLI をインストールします。インストールの際には Windows のコマンドライン、もしくは Windows Termial から以下の２行を実行します。</p>
+<div class="highlight-Batch notranslate"><div class="highlight"><pre><span></span>npm config set @sxa:registry https://sitecore.myget.org/F/sc-npm-packages/npm/
+npm i -g @sxa/CLI
+</pre></div>
+</div>
+<p>インストールの画面は以下の通りです。</p>
+<a class="reference internal image-reference" href="../../_images/sxacxl02.gif"><img alt="コマンドのインストール" class="align-center" src="../../_images/sxacxl02.gif" style="width: 400px;" /></a>
+<p>事前準備は完了しました。次のステップではインストールをしたコマンドを利用してテーマを作成します。</p>
 </div>
 
 
@@ -191,10 +209,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../json/index.html" class="btn btn-neutral float-right" title="4. SXA における JSON の活用" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="addtheme.html" class="btn btn-neutral float-right" title="3.4. テーマの追加、設定" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="3. Creative Exchange" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="importtheme.html" class="btn btn-neutral float-left" title="3.2. パッケージのインポート" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

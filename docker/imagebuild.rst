@@ -76,7 +76,7 @@ Docker の環境が整った次のステップとして、Github に公開され
 
 * `Sitecore/docker-images <https://github.com/Sitecore/docker-images>`_
 
-今回は Github Desktop を利用して、 `c:\projects\docker-images` のディレクトリにリポジトリのクローンを展開します。
+今回は Github Desktop を利用して、 `c:\\projects\\docker-images` のディレクトリにリポジトリのクローンを展開します。
 
 .. image:: images/docker08.png
    :align: center
