@@ -20,6 +20,7 @@ Sitecore クイックスタートでは、インストールの手順、モジ�
     jss/index
     docker/index
     marketplace/index
+    manual/index
     versions
 
 ********************

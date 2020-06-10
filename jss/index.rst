@@ -16,6 +16,7 @@ Sitecore JavaScript Services
     quickstart/index
     stepbystep/index
     graphql/index
+    deploy/index
 
 ********************************
 Sitecore JSS 関連サイト

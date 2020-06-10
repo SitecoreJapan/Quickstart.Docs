@@ -1,32 +1,33 @@
-
 ########################
-基本設定
+@sxa/CLI
 ########################
 
-作成中
+テーマに関して、Creative Exchange Live を有効にするために、設定ファイルを変更します。環境として、Node.js が必要となりますので、すでにインストール済みとしてください。
 
+.. note::
 
-.. テーマを変更する
+    ここで紹介をする設定は Sitecore Experience Platform 9.3 、および Sitecore Experience Accelerator 9.3 の環境を想定しています。gulp のバージョンは 3.9.x を利用します。
 
+Sitecore がインストールされているフォルダの、 App_Config\Include\z.Feature.Overrides のフォルダにある z.SPE.Sync.Enabler.Gulp.config.disabled のファイルを有効にします。
 
-.. App_Config\Include\z.Feature.Overrides
+.. image:: images/sxacxl01.png
+   :align: center
+   :width: 400px
+   :alt: ファイルの変更
 
-.. z.SPE.Sync.Enabler.Gulp.config.disabled
+続いてコマンドとして利用する SXA CLI をインストールします。インストールの際には Windows のコマンドライン、もしくは Windows Termial から以下の２行を実行します。
 
-.. ファイルを有効にする 
+.. code-block:: Batch
 
-.. Export する
+    npm config set @sxa:registry https://sitecore.myget.org/F/sc-npm-packages/npm/
+    npm i -g @sxa/CLI
 
-.. フォルダに以降する
+インストールの画面は以下の通りです。
 
-.. npm install
-.. npm install -g gulp-cli 
+.. image:: images/sxacxl02.gif
+   :align: center
+   :width: 400px
+   :alt: コマンドのインストール
 
+事前準備は完了しました。次のステップではインストールをしたコマンドを利用してテーマを作成します。
 
-.. gulp を実行する
-
-
-
-.. https://www.awareweb.com/blog/a-quick-start-guide-to-setup-creative-exchange-live-in-sxa-1-4
-.. https://isaadansari.wordpress.com/2019/07/18/how-to-use-sxa-creative-exchange-live-how-to-implement-series/
-.. https://doc.sitecore.com/developers/sxa/93/sitecore-experience-accelerator/en/modify-your-site-design-with-creative-exchange-live.html

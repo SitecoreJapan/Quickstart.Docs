@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -108,10 +108,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../stepbystep/index.html">2. Step by Step ガイド</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../graphql/index.html">3. Sitecore GraphQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../deploy/index.html">4. ヘッドレスモードでの展開</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Sitecore on Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">デモ マニュアル</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a></li>
 </ul>
 
@@ -160,9 +162,9 @@
         
           <li><a href="../index.html">Sitecore JavaScript Services</a> &raquo;</li>
         
-          <li><a href="index.html">1. クイックスタート</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">1. </span>クイックスタート</a> &raquo;</li>
         
-      <li>1.3. 最初のコンポーネントの追加</li>
+      <li><span class="section-number">1.3. </span>最初のコンポーネントの追加</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -182,9 +184,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>1.3. 最初のコンポーネントの追加<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">1.3. </span>最初のコンポーネントの追加<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="section" id="scaffolding">
-<h2>1.3.1. Scaffolding<a class="headerlink" href="#scaffolding" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">1.3.1. </span>Scaffolding<a class="headerlink" href="#scaffolding" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>コンポーネントを追加する際、Scaffolding というコマンドを利用してコンポーネント追加に必要なデータをプロジェクトに追加することができます。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jss</span> <span class="n">scaffold</span> <span class="o">&lt;</span><span class="n">componentName</span><span class="o">&gt;</span>
 </pre></div>
@@ -207,7 +209,7 @@
 </div>
 <p>実行結果に表示されているように、コマンドを実行することで ２つのファイルが追加されています。</p>
 <div class="section" id="myfirstcomponent-sitecore-js">
-<h3>1.3.1.1. MyFirstComponent.sitecore.js<a class="headerlink" href="#myfirstcomponent-sitecore-js" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><span class="section-number">1.3.1.1. </span>MyFirstComponent.sitecore.js<a class="headerlink" href="#myfirstcomponent-sitecore-js" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>コンポーネントとなるファイルを確認します。対象となるファイルは <cite>sitecoredefinitionscomponentsMyFirstComponent.sitecore.js</cite> となります。コードでポイントとなるのは、フィールドの定義となります。</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// eslint-disable-next-line no-unused-vars</span>
 <span class="kr">import</span> <span class="p">{</span> <span class="nx">CommonFieldTypes</span><span class="p">,</span> <span class="nx">SitecoreIcon</span><span class="p">,</span> <span class="nx">Manifest</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@sitecore-jss/sitecore-jss-manifest&#39;</span><span class="p">;</span>
@@ -236,7 +238,7 @@
 <p>Sitecore の開発でテンプレートでデータ定義を設定することができますが、Sitecore JSS では Component で定義をします。</p>
 </div>
 <div class="section" id="myfirstcomponentindex-js">
-<h3>1.3.1.2. MyFirstComponentindex.js<a class="headerlink" href="#myfirstcomponentindex-js" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><span class="section-number">1.3.1.2. </span>MyFirstComponentindex.js<a class="headerlink" href="#myfirstcomponentindex-js" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>上記のコンポーネントファイルと合わせて作成されているファイルが <cite>srccomponentsMyFirstComponentindex.js</cite> となります。実際にファイルの内容を確認すると以下のようになっています。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">React</span> <span class="kn">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
 <span class="kn">import</span> <span class="p">{</span> <span class="n">Text</span> <span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;@sitecore-jss/sitecore-jss-react&#39;</span><span class="p">;</span>
@@ -255,7 +257,7 @@
 </div>
 </div>
 <div class="section" id="id2">
-<h2>1.3.2. コンポーネントの追加<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">1.3.2. </span>コンポーネントの追加<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>作成したコンポーネントを追加します。サンプルはあまりコンテンツとして揃っていないため、サンプルのトップページに作成したコンポーネントを追加します。</p>
 <p>対象となるファイルは <cite>/data/routes/en.yml</cite> です。</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">placeholders</span><span class="p">:</span>
@@ -287,7 +289,7 @@
 <p>これを Sitecore JSS のレイアウトエンジンが Web ページとして表示している形となります。</p>
 </div>
 <div class="section" id="id3">
-<h2>1.3.3. 関連サイト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">1.3.3. </span>関連サイト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://jss.sitecore.com/docs/getting-started/first-component">Building your first JSS component</a></p></li>
 </ul>

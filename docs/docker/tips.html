@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -107,6 +107,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../marketplace/index.html">各種ツールに関して</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manual/index.html">デモ マニュアル</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../versions.html">過去のバージョンに関して</a></li>
 </ul>
 
@@ -155,7 +156,7 @@
         
           <li><a href="index.html">Sitecore on Docker</a> &raquo;</li>
         
-      <li>5. Docker Tips</li>
+      <li><span class="section-number">5. </span>Docker Tips</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,9 +176,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="docker-tips">
-<h1>5. Docker Tips<a class="headerlink" href="#docker-tips" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">5. </span>Docker Tips<a class="headerlink" href="#docker-tips" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="section" id="id1">
-<h2>5.1. ネットワークの変更<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">5.1. </span>ネットワークの変更<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>仮想マシンで Docker を利用している場合、再起動するなどで network の再設定が必要となる場合があります。この場合、以下のコマンドでネットワークの再設定をしてください。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">network</span> <span class="n">create</span> <span class="o">-</span><span class="n">d</span> <span class="n">nat</span> <span class="o">&lt;</span><span class="n">network</span> <span class="n">name</span><span class="o">&gt;</span>
 <span class="n">docker</span> <span class="n">network</span> <span class="n">connect</span> <span class="o">&lt;</span><span class="n">network</span> <span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">container</span> <span class="n">name</span><span class="o">&gt;</span>
@@ -190,7 +191,7 @@
 </div>
 </div>
 <div class="section" id="id2">
-<h2>5.2. ダウンロードに失敗する<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">5.2. </span>ダウンロードに失敗する<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>イメージを build しているときに必要なモジュールのダウンロードに失敗をすることがあります。</p>
 <a class="reference internal image-reference" href="../_images/tips01.png"><img alt="エラー画面" class="align-center" src="../_images/tips01.png" style="width: 400px;" /></a>
 <p>この場合は、Docker の設定に、以下の dns の項目を追加することで解決します。</p>
@@ -211,7 +212,7 @@
 </ul>
 </div>
 <div class="section" id="build">
-<h2>5.3. Build に失敗をする<a class="headerlink" href="#build" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">5.3. </span>Build に失敗をする<a class="headerlink" href="#build" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>エラーメッセージで以下のメッセージが出る場合があります。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hcsshim</span><span class="p">::</span><span class="n">PrepareLayer</span> <span class="o">-</span> <span class="n">failed</span> <span class="n">failed</span> <span class="ow">in</span> <span class="n">Win32</span><span class="p">:</span> <span class="n">Incorrect</span> <span class="n">function</span><span class="o">.</span> <span class="p">(</span><span class="mh">0x1</span><span class="p">)</span> <span class="n">Windows</span> <span class="n">Containers</span>
 </pre></div>
