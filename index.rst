@@ -15,10 +15,9 @@ Sitecore クイックスタートでは、インストールの手順、モジ�
     :maxdepth: 1
 
     readme
-    93/index
+    100/index
     sxa/index
     jss/index
-    docker/index
     marketplace/index
     manual/index
     versions
