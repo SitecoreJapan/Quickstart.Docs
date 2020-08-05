@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
-        <script src="../../_static/translations.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -95,7 +95,7 @@
               <p class="caption"><span class="caption-text">目次</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../93/index.html">Sitecore Experience Platform 9.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../100/index.html">Sitecore Experience Platform 10.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore JavaScript Services</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">1. クイックスタート</a><ul class="current">
@@ -111,7 +111,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../deploy/index.html">4. ヘッドレスモードでの展開</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Sitecore on Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">デモ マニュアル</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a></li>
@@ -162,9 +161,9 @@
         
           <li><a href="../index.html">Sitecore JavaScript Services</a> &raquo;</li>
         
-          <li><a href="index.html"><span class="section-number">1. </span>クイックスタート</a> &raquo;</li>
+          <li><a href="index.html">1. クイックスタート</a> &raquo;</li>
         
-      <li><span class="section-number">1.5. </span>作成したアプリの展開</li>
+      <li>1.5. 作成したアプリの展開</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -184,10 +183,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1><span class="section-number">1.5. </span>作成したアプリの展開<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>1.5. 作成したアプリの展開<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>ここでは実際に作成をした React で作った JavaScript のアプリを Sitecore に展開する手続きを進めます。</p>
 <div class="section" id="jss">
-<h2><span class="section-number">1.5.1. </span>JSS アプリの準備<a class="headerlink" href="#jss" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>1.5.1. JSS アプリの準備<a class="headerlink" href="#jss" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>サンプルのアプリを作成した際には、 <cite>sitecoreconfig&lt;appname&gt;.config</cite> という形で設定ファイルが作成されています。今回動作させるホスト名を <cite>hostName</cite> に設定します。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;site</span> <span class="na">patch:before=</span><span class="s">&quot;site[@name=&#39;website&#39;]&quot;</span>
       <span class="na">inherits=</span><span class="s">&quot;website&quot;</span>
@@ -206,7 +205,7 @@
 <a class="reference internal image-reference" href="../../_images/hostname01.png"><img alt="ホスト名を追加する" class="align-center" src="../../_images/hostname01.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="sitecore">
-<h2><span class="section-number">1.5.2. </span>Sitecore の準備<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>1.5.2. Sitecore の準備<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>作成したアプリを展開するにあたり、API Key を Sitecore 側で準備をする必要があります。API Key の作成は以下の手順でできます。</p>
 <ol class="arabic simple">
 <li><p>Sitecore に管理者権限でログインをします。</p></li>
@@ -245,7 +244,7 @@
 <a class="reference internal image-reference" href="../../_images/apikey05.png"><img alt="設定の最終確認" class="align-center" src="../../_images/apikey05.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="jss-sitecore">
-<h2><span class="section-number">1.5.3. </span>JSS アプリと Sitecore の接続<a class="headerlink" href="#jss-sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>1.5.3. JSS アプリと Sitecore の接続<a class="headerlink" href="#jss-sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>設定が完了したので、接続をする手順と接続を実施します。まず、コマンドとして <cite>jss setup</cite> を実行してください。</p>
 <ol class="arabic simple">
 <li><p>最初にインスタンスの状態を聞いてきます。ここでは y を選択します。</p></li>
@@ -441,7 +440,7 @@ PS C:\Users\Sitecore\sample-app&gt;
 <p>展開されたメッセージが表示されれば、インポートは完了となります。</p>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">1.5.4. </span>Sitecore における動作確認<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>1.5.4. Sitecore における動作確認<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>実際にインポートされたサイトに関して、ブラウザ経由でアクセスします。今回は <cite>http://sample-app.dev.local/</cite> にアクセスをすると以下のようにページが表示されます。</p>
 <a class="reference internal image-reference" href="../../_images/jsssample04.png"><img alt="ページが表示される" class="align-center" src="../../_images/jsssample04.png" style="width: 400px;" /></a>
 <p>管理画面にログインをして、コンテンツエディタを開いてください。下記のように新しいコンテンツツリーが作成されていることがわかります。</p>
@@ -450,7 +449,7 @@ PS C:\Users\Sitecore\sample-app&gt;
 <p>もう少し Sitecore JSS に関して学ぶ場合は、 <a class="reference internal" href="../stepbystep/index.html"><span class="doc">Step by Step ガイド</span></a> を参考にしてください。</p>
 </div>
 <div class="section" id="id3">
-<h2><span class="section-number">1.5.5. </span>関連サイト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>1.5.5. 関連サイト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://jss.sitecore.com/docs/getting-started/app-deployment">App Deployment</a></p></li>
 </ul>

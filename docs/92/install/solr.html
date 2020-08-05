@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
-        <script src="../../_static/translations.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -95,13 +95,13 @@
               <p class="caption"><span class="caption-text">目次</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../93/index.html">Sitecore Experience Platform 9.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../100/index.html">Sitecore Experience Platform 10.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../docker/index.html">Sitecore on Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">デモ マニュアル</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../93/index.html">Sitecore Experience Platform 9.3</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Sitecore Experience Platform 9.2</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">1. インストールガイド</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="sysreq.html">1.1. 必要システム</a></li>
@@ -168,9 +168,9 @@
         
           <li><a href="../index.html">Sitecore Experience Platform 9.2</a> &raquo;</li>
         
-          <li><a href="index.html"><span class="section-number">1. </span>インストールガイド</a> &raquo;</li>
+          <li><a href="index.html">1. インストールガイド</a> &raquo;</li>
         
-      <li><span class="section-number">1.3. </span>Solr のインストール</li>
+      <li>1.3. Solr のインストール</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -190,11 +190,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="solr">
-<h1><span class="section-number">1.3. </span>Solr のインストール<a class="headerlink" href="#solr" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>1.3. Solr のインストール<a class="headerlink" href="#solr" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>Sitecore Experience Platform は検索エンジンとして Solr を利用しています。インストールの前に、サービスとして起動している必要があります。</p>
 <p>Solr をサービスとして立ち上げるためにはいくつか手順がありますが、今回はなるべく少ない手間でインストールすることができるように、PowerShell のスクリプトを利用します。</p>
 <div class="section" id="java">
-<h2><span class="section-number">1.3.1. </span>Java のインストール<a class="headerlink" href="#java" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>1.3.1. Java のインストール<a class="headerlink" href="#java" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>今回は OpenJDK をダウンロードしてインストールします。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://openjdk.java.net/">OpenJDK</a> にアクセス</p></li>
@@ -239,7 +239,7 @@
 <a class="reference internal image-reference" href="../../_images/jdk09.png"><img alt="フォルダ名の変更" class="align-center" src="../../_images/jdk09.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="openssl">
-<h2><span class="section-number">1.3.2. </span>OpenSSL のインストール<a class="headerlink" href="#openssl" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>1.3.2. OpenSSL のインストール<a class="headerlink" href="#openssl" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>以下のサイトから OpenSSL をダウンロードします。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://slproweb.com/products/Win32OpenSSL.html">Shining Light Productions</a></p></li>
@@ -248,7 +248,7 @@
 <p>この文書では、Win64 OpenSSL v1.1.1d のバージョンをダウンロード、インストールしました。特別な手順はありません。最後に寄付のお願いが表示されますので、任意で寄付をしていただくと喜ばれると思います。</p>
 </div>
 <div class="section" id="path">
-<h2><span class="section-number">1.3.3. </span>Path の調整<a class="headerlink" href="#path" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>1.3.3. Path の調整<a class="headerlink" href="#path" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Java および OpenSSL をインストールした後、実際にコマンドラインで実行できるように Path を追加します。Path の情報はシステムから書き込むことができます。ここでは以下のような手順で進めていきます。</p>
 <ul class="simple">
 <li><p>検索ボックスで「システムの詳細設定」と入力し、右側に表示されているツールの下の「開く」をクリックします。</p></li>
@@ -279,7 +279,7 @@
 </ul>
 </div>
 <div class="section" id="powershell">
-<h2><span class="section-number">1.3.4. </span>PowerShell の実行権限の変更<a class="headerlink" href="#powershell" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>1.3.4. PowerShell の実行権限の変更<a class="headerlink" href="#powershell" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Solr をインストールするために、PowerShell の実行権限を確認します。検索ボックスで「PowerShell」と入力して、Windows PowerShell のツールを「管理者として実行する」を選択して起動します。</p>
 <a class="reference internal image-reference" href="../../_images/solr02.png"><img alt="PowerShell の起動" class="align-center" src="../../_images/solr02.png" style="width: 400px;" /></a>
 <p>続いて、<cite>Get-ExecutionPolicy</cite> のコマンドを実行します。</p>
@@ -312,7 +312,7 @@ PS C:\Windows\system32&gt;
 <p>これでダウンロードをした PowerShell のファイルを実行できるようになりました。</p>
 </div>
 <div class="section" id="id1">
-<h2><span class="section-number">1.3.5. </span>Solr スクリプトの実行<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>1.3.5. Solr スクリプトの実行<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Solr のインストールスクリプトを SitecoreJapan の GitHub からダウンロードをして、<cite>c:projectssolr</cite> のフォルダにコピーをします。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/SitecoreJapan/InstallScript/tree/master/solr">SitecoreJapan/InstallScript</a></p></li>
