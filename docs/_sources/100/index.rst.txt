@@ -11,6 +11,7 @@ Sitecore Experience Platform 10.0
 
     readme
     install/index
+    commerce/index
     docker/index
     modules/index
 
