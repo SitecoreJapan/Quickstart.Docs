@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -173,9 +173,9 @@
         
           <li><a href="../index.html">Sitecore Experience Platform 9.3</a> &raquo;</li>
         
-          <li><a href="index.html">4. モジュールのインストール</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">4. </span>モジュールのインストール</a> &raquo;</li>
         
-      <li>4.5. Sitecore Connect for SFMC - Content Exchange</li>
+      <li><span class="section-number">4.5. </span>Sitecore Connect for SFMC - Content Exchange</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -195,14 +195,14 @@
            <div itemprop="articleBody">
             
   <div class="section" id="sitecore-connect-for-sfmc-content-exchange">
-<h1>4.5. Sitecore Connect for SFMC - Content Exchange<a class="headerlink" href="#sitecore-connect-for-sfmc-content-exchange" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">4.5. </span>Sitecore Connect for SFMC - Content Exchange<a class="headerlink" href="#sitecore-connect-for-sfmc-content-exchange" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>この文書では、 Sitecore Connect for Salesforce Marketing Cloud 4.0 のモジュールのうち、Content Exchange に関するセットアップ手順を紹介しています。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>Sitecore Connect for Salesforce Marketing Cloud 4.0 は Sitecore Experience Platform 9.3 向けのモジュールとなります。Sitecore 9.0, 9.0.1, 9.1, 9.2 を利用されている方は、別のバージョンのモジュールをご利用ください。</p>
 </div>
 <div class="section" id="id1">
-<h2>4.5.1. 必要システム<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">4.5.1. </span>必要システム<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>モジュールのインストールには、以下のバージョンが必須となります。</p>
 <ul class="simple">
 <li><p>Sitecore Experience Platform 9.3 もしくは Sitecore Experience Manager 9.3</p></li>
@@ -210,7 +210,7 @@
 </ul>
 </div>
 <div class="section" id="id2">
-<h2>4.5.2. モジュールのインストール<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">4.5.2. </span>モジュールのインストール<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>以下の手順でインストールを進めていきます。</p>
 <ol class="arabic simple">
 <li><p>モジュールを <a class="reference external" href="https://dev.sitecore.net/Downloads/Sitecore_Connect_software_for_Salesforce_Marketing_Cloud/1x/Sitecore_Connect_software_for_Salesforce_Marketing_Cloud_40.aspx">Sitecore Connect for Salesforce Marketing Cloud 4.0</a> にある Content Exchange の Installation Package をクリックしてダウンロードをします。</p></li>
@@ -228,7 +228,7 @@
 <p>これでモジュールのインストールは完了となります。</p>
 </div>
 <div class="section" id="salesforce-marketing-cloud">
-<h2>4.5.3. Salesforce Marketing Cloud の設定<a class="headerlink" href="#salesforce-marketing-cloud" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">4.5.3. </span>Salesforce Marketing Cloud の設定<a class="headerlink" href="#salesforce-marketing-cloud" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Salesforce Marketing Cloud の設定手順として、セットアップの権限のあるユーザーでログインをします。ログインをすると、右上のユーザーアイコンにマウスカーソルを合わせると、セットアップのメニューが表示されますので、クリックしてください。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
@@ -309,7 +309,7 @@
 <p>上記の設定で Salesforce 側の設定が完了しました。作成したパッケージの情報を利用して、Sitecore と接続するための設定を実施します。</p>
 </div>
 <div class="section" id="sitecore">
-<h2>4.5.4. Sitecore の設定<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">4.5.4. </span>Sitecore の設定<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Sitecore の設定としては、Salesforce Marketing Cloud で作成をしたパッケージを利用して接続文字列を作る必要があります。接続文字列のサンプルは以下の通りです。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;add</span> <span class="na">name=</span><span class="s">&quot;sfmc&quot;</span> <span class="na">connectionString=</span><span class="s">&quot;client id=&lt;Client Id&gt;;</span>
 <span class="s">  client secret=&lt;Client Secret&gt;;</span>
@@ -350,10 +350,10 @@
 <p>ConnectionString の変更が終わったタイミングで、Sitecore のインスタンスを再起動して反映させます。</p>
 </div>
 <div class="section" id="id3">
-<h2>4.5.5. 画像ファイルの公開テスト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">4.5.5. </span>画像ファイルの公開テスト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>ここでは Salesforce Marketing Cloud と連携させるフォルダを Sitecore のメディアライブラリに作成し、連携、同期させます。</p>
 <div class="section" id="id4">
-<h3>4.5.5.1. Sitecore の追加設定<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><span class="section-number">4.5.5.1. </span>Sitecore の追加設定<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>まず連携をさせるためのフォルダを指定ます。今回は、 <cite>/sitecore/media library/SFMC Demo</cite> のフォルダを作成しました。</p>
 <img alt="フォルダの作成" class="align-center" src="../../_images/sfmcce121.png" />
 <p>続いてシステムにフォルダの同期をするためのアイテムを作成します。 <cite>/sitecore/system/Settings/SFMC Connector/Configuration</cite> のアイテムを選択し、 <cite>SFMC 設定</cite> のボタンをクリックします。</p>
@@ -365,7 +365,7 @@
 <p>これで設定は完了です。</p>
 </div>
 <div class="section" id="id5">
-<h3>4.5.5.2. ファイルの同期のテスト<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><span class="section-number">4.5.5.2. </span>ファイルの同期のテスト<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>デフォルトの設定では 10 時間に一度同期する設定になっています（設定は　<cite>App_Config\Modules\Connector.Sfmc\Sitecore.Connector.Sfmc.config</cite> で変更が可能です）。
 今回はマニュアルで同期させます。</p>
 <p>まず Salesforce Marketing Cloud の画面で、「Content Builder」－「Content builder」を選択してください。</p>

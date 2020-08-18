@@ -2,7 +2,7 @@
 Sitecore Experience Platform のインストール
 #############################################
 
-Sitecore Experience Commerce をインストールする最初のステップは、Sitecore Experience Platform 9.3 を事前にインストールしする必要があります。ここでは、Sitecore Instllation Assistant を利用して、まずは関連モジュールをインストールします。
+Sitecore Experience Platform 9.3 をインストールしために、Sitecore Instllation Assistant を利用して、まずは関連モジュールをインストールします。
 
 今回は以下の環境にインストールをします。
 
@@ -54,24 +54,20 @@ Install のボタンをクリックして、必要なモジュールをインス
    :width: 400px
    :alt: インストール中
 
-インストールが完了すると、`Next` のボタンが有効になります。
+インストールが完了すると、`Close` のボタンが有効になります。
 
 .. image:: images/sia05.png
    :align: center
    :width: 400px
-   :alt: Next が有効に
+   :alt: Close が有効に
 
-一旦、ウィザードを閉じます
+続いて Solr のセットアップに進みます。
 
 ***********************
 Solr のインストール
 ***********************
 
 Sitecore Install Assistant は 9.3 より Solr のインストールにも対応しています。実際には Sitecore Install Framework のツールが sitecore-solr.json ファイルを利用して、Solr のインストールを行います。ここでは、このファイルを利用してインストールを実行します。
-
-.. code-block:
-
-    Install-SitecoreConfiguration .\Solr-SingleDeveloper.json
 
 まず、以下の項目が表示されます。
 
@@ -80,23 +76,15 @@ Sitecore Install Assistant は 9.3 より Solr のインストールにも対応
    :width: 400px
    :alt: Solr のインストール
 
+インストールを実行することで、Solr がサービスとして起動します。
 
 ********************
 インストールの開始
 ********************
 
-モジュールのインストールが完了すると、次は Sitecore のインストールとなります。ここではインストールツールに標準で提供されているスクリプトの値を変更します。
+モジュールのインストールが完了すると、次は Sitecore のインストールとなります。
 
-インストールをする際の設定を記載します。以下の項目を入力してください。以下の値は例となります。
-
-============================= ==================== =======================
-パラメータ                     入力値                説明 
-============================= ==================== =======================
-$SitecoreAdminPassword        b                    管理者パスワード
-$SCInstallRoot                C:\projects\sif      インストールのルート
-$SitecoreSiteName             sxa.storefront.com   サイト名
-$SqlAdminPassword             任意                 SQL Server パスワード
-============================= ==================== =======================
+まず最初に、Sitecore をインストールする時の Prefix、管理者のパスワードおよびライセンスファイルを指定します。
 
 .. image:: images/sia06.png
    :align: center
@@ -105,13 +93,45 @@ $SqlAdminPassword             任意                 SQL Server パスワード
 
 インストールを実行します。
 
-.. code-block:
-
-    .\SC930-SingleDeveloper.ps1
+続いて、SQL Server の設定を記入します。
 
 .. image:: images/sia07.png
    :align: center
    :width: 400px
    :alt: インストール
 
-ログイン画面が表示されれば、インストールが無事完了します。
+インストールした Solr に関する設定があっているか確認をします。
+
+.. image:: images/sia08.png
+   :align: center
+   :width: 400px
+   :alt: インストール
+
+SXA のモジュールも一緒にインストールするか確認をします。
+
+.. image:: images/sia09.png
+   :align: center
+   :width: 400px
+   :alt: インストール
+
+インストールに関する設定項目の最終確認をします。
+
+.. image:: images/sia10.png
+   :align: center
+   :width: 400px
+   :alt: インストール
+
+設定が正しいか、検証が実行されます。
+
+.. image:: images/sia11.png
+   :align: center
+   :width: 400px
+   :alt: インストール
+
+以下の画面が表示されれば、インストールが無事完了します。
+
+.. image:: images/sia12.png
+   :align: center
+   :width: 400px
+   :alt: インストール
+

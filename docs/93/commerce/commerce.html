@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -171,9 +171,9 @@
         
           <li><a href="../index.html">Sitecore Experience Platform 9.3</a> &raquo;</li>
         
-          <li><a href="index.html">3. Commerce インストールガイド</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">3. </span>Commerce インストールガイド</a> &raquo;</li>
         
-      <li>3.4. Commerce モジュールのインストール</li>
+      <li><span class="section-number">3.4. </span>Commerce モジュールのインストール</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -193,29 +193,29 @@
            <div itemprop="articleBody">
             
   <div class="section" id="commerce">
-<h1>3.4. Commerce モジュールのインストール<a class="headerlink" href="#commerce" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">3.4. </span>Commerce モジュールのインストール<a class="headerlink" href="#commerce" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="section" id="redis">
-<h2>3.4.1. Redis のインストール<a class="headerlink" href="#redis" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">3.4.1. </span>Redis のインストール<a class="headerlink" href="#redis" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Redis のモジュールをダウンロード、インストールしてください。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/microsoftarchive/redis/releases/tag/win-3.0.504">Redis</a></p></li>
 </ul>
-<a class="reference internal image-reference" href="../../_images/redis01.png"><img alt="Redis インストール" class="align-center" src="../../_images/redis01.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/redis011.png"><img alt="Redis インストール" class="align-center" src="../../_images/redis011.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="id2">
-<h2>3.4.2. インストールの準備<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">3.4.2. </span>インストールの準備<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>モジュールを Sitecore のダウンロードサイトからダウンロードします。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://dev.sitecore.net/Downloads/Sitecore_Commerce/93/Sitecore_Experience_Commerce_93_Initial_Release.aspx">Sitecore Experience Commerce 9.3 Initial Release</a></p></li>
 </ul>
 <p>ダウンロードしたファイルを、今回は <cite>c:\projects\sc930</cite> に展開をします。</p>
-<a class="reference internal image-reference" href="../../_images/commerce01.png"><img alt="ファイルの展開" class="align-center" src="../../_images/commerce01.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/commerce011.png"><img alt="ファイルの展開" class="align-center" src="../../_images/commerce011.png" style="width: 400px;" /></a>
 <p><cite>SIF.Sitecore.Commerce.zip</cite> のファイルを展開します。</p>
-<a class="reference internal image-reference" href="../../_images/commerce02.png"><img alt="SIF.Sitecore.Commerce.zip の展開" class="align-center" src="../../_images/commerce02.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/commerce021.png"><img alt="SIF.Sitecore.Commerce.zip の展開" class="align-center" src="../../_images/commerce021.png" style="width: 400px;" /></a>
 <p>SXA のコンポーネント <cite>Sitecore.PowerShell.Extensions-6.0.zip</cite> と <cite>Sitecore.PowerShell.Extensions-6.0.zip</cite> を同じフォルダにコピーします。</p>
 <p>Nuget サイトから <a class="reference external" href="https://www.nuget.org/packages/MSBuild.Microsoft.VisualStudio.Web.targets/">MSBuild Microsoft Visual Studio Web targets</a> のページ、右側から <cite>Download package</cite> から zip ファイルをダウンロードします。</p>
 <p>ダウンロード後、ファイル名を <cite>msbuild.microsoft.visualstudio.web.targets.14.0.0.3.nupkg</cite> から <cite>msbuild.microsoft.visualstudio.web.targets.14.0.0.3.zip</cite> に変更し、解凍します。</p>
-<a class="reference internal image-reference" href="../../_images/commerce03.png"><img alt="ダウンロード後解凍" class="align-center" src="../../_images/commerce03.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/commerce031.png"><img alt="ダウンロード後解凍" class="align-center" src="../../_images/commerce031.png" style="width: 400px;" /></a>
 <p>展開されたフォルダは以下のようになります。</p>
 <p>PS C:projectssc930&gt; dir</p>
 <blockquote>
@@ -254,7 +254,7 @@
 </div>
 </div>
 <div class="section" id="id3">
-<h2>3.4.3. インストールスクリプトの調整<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">3.4.3. </span>インストールスクリプトの調整<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>すでに展開されている <cite>C:\projects\sc930\SIF.Sitecore.Commerce.4.0.31</cite> に入っている <cite>Deploy-Sitecore-Commerce.ps1</cite> のファイルを開きます。</p>
 <p>ファイルの中にある以下の項目を確認、変更してください。サイト名などを変えている場合は、その値を変更する必要があります。</p>
 <table class="docutils align-default">
@@ -335,7 +335,7 @@
 <p>上記のパラメータの変更をした後、スクリプトの保存をします。</p>
 </div>
 <div class="section" id="id4">
-<h2>3.4.4. インストール開始<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">3.4.4. </span>インストール開始<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
 </div>
 </div>
 

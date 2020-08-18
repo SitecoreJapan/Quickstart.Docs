@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -168,9 +168,9 @@
         
           <li><a href="../index.html">Sitecore Experience Platform 9.2</a> &raquo;</li>
         
-          <li><a href="index.html">1. インストールガイド</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">1. </span>インストールガイド</a> &raquo;</li>
         
-      <li>1.4. Sitecore Experience Platform のインストール</li>
+      <li><span class="section-number">1.4. </span>Sitecore Experience Platform のインストール</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -190,11 +190,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="sitecore-experience-platform">
-<h1>1.4. Sitecore Experience Platform のインストール<a class="headerlink" href="#sitecore-experience-platform" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">1.4. </span>Sitecore Experience Platform のインストール<a class="headerlink" href="#sitecore-experience-platform" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>Sitecore 9.2 以降では Sitecore Instllation Assistant というインストール支援ツールの提供を開始しました。これにより、必要なモジュールのダウンロードなど全てツールが展開をするため、簡単にインストールをすることができるようになりました。</p>
 <p>ここでは、すでに SQL Server 2017, Solr 7.5 がインストールされていることを前提として、このツールを利用してインストールを進めていきます。</p>
 <div class="section" id="sitecore">
-<h2>1.4.1. Sitecore のインストールプログラムの入手<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">1.4.1. </span>Sitecore のインストールプログラムの入手<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>今回は Sitecore Install Assistant を利用してインストールを進めていきます。このため、以下の Web サイトからインストールファイルをダウンロードしてください。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/92/Sitecore_Experience_Platform_92_Initial_Release.aspx">Sitecore Experience Platform 9.2 Initial Release</a></p></li>
@@ -202,26 +202,26 @@
 <p><cite>Download options for On Premises deployment</cite> のグループにある <cite>Graphical setup package for XP Single</cite> をダウンロードしてください。インストールファイルのダウンロードが完了した、ファイルを展開して次のステップに進みます。</p>
 </div>
 <div class="section" id="id1">
-<h2>1.4.2. モジュールのダウンロード<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">1.4.2. </span>モジュールのダウンロード<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>この手順に関しては、１つの環境で初回のみ実行してください。すでに Sitecore をインストールしている環境の場合は、モジュールはインストールしてあるため、スキップしてください。</p>
 <p>Sitecore Install Assistant を立ち上げます。これはダウンロードをしたファイルを展開してください。</p>
-<a class="reference internal image-reference" href="../../_images/sia01.png"><img alt="フォルダ" class="align-center" src="../../_images/sia01.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia011.png"><img alt="フォルダ" class="align-center" src="../../_images/sia011.png" style="width: 400px;" /></a>
 <p><cite>setup.exe</cite> を右クリックして、管理者としてをします。</p>
 <a class="reference internal image-reference" href="../../_images/sia15.png"><img alt="管理者として実行" class="align-center" src="../../_images/sia15.png" style="width: 400px;" /></a>
 <p>インストーラーが立ち上がると以下のような画面となります。</p>
-<a class="reference internal image-reference" href="../../_images/sia02.png"><img alt="起動画面" class="align-center" src="../../_images/sia02.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia021.png"><img alt="起動画面" class="align-center" src="../../_images/sia021.png" style="width: 400px;" /></a>
 <p>Start のボタンをクリックすると、モジュールのインストール画面になります。</p>
-<a class="reference internal image-reference" href="../../_images/sia03.png"><img alt="モジュールインストール" class="align-center" src="../../_images/sia03.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia031.png"><img alt="モジュールインストール" class="align-center" src="../../_images/sia031.png" style="width: 400px;" /></a>
 <p>Install のボタンをクリックして、必要なモジュールをインストールしてください。</p>
 <a class="reference internal image-reference" href="../../_images/sia04.png"><img alt="インストール中" class="align-center" src="../../_images/sia04.png" style="width: 400px;" /></a>
 <p>インストールが完了すると、<cite>Next</cite> のボタンが有効になります。</p>
 <a class="reference internal image-reference" href="../../_images/sia05.png"><img alt="Next が有効に" class="align-center" src="../../_images/sia05.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="id2">
-<h2>1.4.3. インストールの開始<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">1.4.3. </span>インストールの開始<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>モジュールのインストールが完了すると、次は Sitecore のインストールとなります。</p>
 <div class="section" id="sitecore-settings">
-<h3>1.4.3.1. Sitecore Settings<a class="headerlink" href="#sitecore-settings" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><span class="section-number">1.4.3.1. </span>Sitecore Settings<a class="headerlink" href="#sitecore-settings" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>インストールをする際の設定を記載します。以下の項目を入力してください。以下の値は例となります。</p>
 <table class="docutils align-default">
 <colgroup>
@@ -250,10 +250,10 @@
 </tr>
 </tbody>
 </table>
-<a class="reference internal image-reference" href="../../_images/sia06.png"><img alt="インストールの基本設定" class="align-center" src="../../_images/sia06.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia061.png"><img alt="インストールの基本設定" class="align-center" src="../../_images/sia061.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="sql-server-settings">
-<h3>1.4.3.2. SQL Server settings<a class="headerlink" href="#sql-server-settings" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><span class="section-number">1.4.3.2. </span>SQL Server settings<a class="headerlink" href="#sql-server-settings" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>続いてインストールをしている SQL Server に関する設定を入力します。</p>
 <table class="docutils align-default">
 <colgroup>
@@ -282,10 +282,10 @@
 </tr>
 </tbody>
 </table>
-<a class="reference internal image-reference" href="../../_images/sia07.png"><img alt="SQL Server の設定" class="align-center" src="../../_images/sia07.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia071.png"><img alt="SQL Server の設定" class="align-center" src="../../_images/sia071.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="solr">
-<h3>1.4.3.3. Solr の設定<a class="headerlink" href="#solr" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><span class="section-number">1.4.3.3. </span>Solr の設定<a class="headerlink" href="#solr" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>すでにインストールしている Solr の設定を入力していきます。ここでは、[Solr 7.5 のインストール](./solr.md) でインストールしているパラメータを利用しています。</p>
 <table class="docutils align-default">
 <colgroup>
@@ -317,7 +317,7 @@
 <a class="reference internal image-reference" href="../../_images/sia08.png"><img alt="Solr の設定" class="align-center" src="../../_images/sia08.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="id3">
-<h3>1.4.3.4. インストール最終確認<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><span class="section-number">1.4.3.4. </span>インストール最終確認<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>設定をしたパラメーターの確認画面が表示されます。</p>
 <a class="reference internal image-reference" href="../../_images/sia09.png"><img alt="パラメーターの確認" class="align-center" src="../../_images/sia09.png" style="width: 400px;" /></a>
 <p>また各種ファイルの検証が行われます。</p>
@@ -328,7 +328,7 @@
 </div>
 </div>
 <div class="section" id="id4">
-<h2>1.4.4. インスタンスの確認<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">1.4.4. </span>インスタンスの確認<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>インストールをした Sitecore のインスタンスを確認します。検索ボックスで <cite>IIS</cite> と入力すると、以下のように管理ツールが表示されます。</p>
 <a class="reference internal image-reference" href="../../_images/iis01.png"><img alt="IIS 管理ツール" class="align-center" src="../../_images/iis01.png" style="width: 400px;" /></a>
 <p>サイトの一覧を確認します。</p>

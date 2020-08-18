@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -173,9 +173,9 @@
         
           <li><a href="../index.html">Sitecore Experience Platform 9.3</a> &raquo;</li>
         
-          <li><a href="index.html">4. モジュールのインストール</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">4. </span>モジュールのインストール</a> &raquo;</li>
         
-      <li>4.7. Data Exchange Framework Tenant Service</li>
+      <li><span class="section-number">4.7. </span>Data Exchange Framework Tenant Service</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -195,10 +195,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="data-exchange-framework-tenant-service">
-<h1>4.7. Data Exchange Framework Tenant Service<a class="headerlink" href="#data-exchange-framework-tenant-service" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">4.7. </span>Data Exchange Framework Tenant Service<a class="headerlink" href="#data-exchange-framework-tenant-service" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>ここでは Data Exchange Framework を利用する上で、モジュール連携などで活用する Tenant Service の設定方法を紹介します。</p>
 <div class="section" id="id1">
-<h2>4.7.1. モジュールのダウンロード<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">4.7.1. </span>モジュールのダウンロード<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>以下のページから、Tenant Service の分類に記載されている 2 つのモジュールをインストールしてください。</p>
 <ul>
 <li><p><a class="reference external" href="https://dev.sitecore.net/Downloads/Data_Exchange_Framework/4x/Data_Exchange_Framework_400.aspx">Data Exchange Framework 4.0.0</a></p>
@@ -213,7 +213,7 @@
 <p>インストールをするためには、Sitecore Install Framework がセットアップされている必要があります。</p>
 </div>
 <div class="section" id="tenant-service">
-<h2>4.7.2. Tenant Service のインストール<a class="headerlink" href="#tenant-service" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">4.7.2. </span>Tenant Service のインストール<a class="headerlink" href="#tenant-service" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Tenant Web Service をインストールする手順は以下の通りです。まず、SIF installation scripts for Tenant Service を展開してください。ここでは、 c:projects 配下に展開しました。</p>
 <a class="reference internal image-reference" href="../../_images/dxftws01.png"><img alt="ファイルを展開する" class="align-center" src="../../_images/dxftws01.png" style="width: 400px;" /></a>
 <p>同じフォルダに Data Exchange Framework Tenant Web Service のパッケージを展開します。ディレクトリ構成は以下の通りとなります。</p>
@@ -251,10 +251,10 @@
 <a class="reference internal image-reference" href="../../_images/dxftws03.png"><img alt="サイトの追加" class="align-center" src="../../_images/dxftws03.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="id2">
-<h2>4.7.3. 接続情報の更新<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">4.7.3. </span>接続情報の更新<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Tenant Service および Sitecore のインスタンスで利用している ConnectionStrings.config を変更する必要があります。</p>
 <div class="section" id="id3">
-<h3>4.7.3.1. Tenant Service の変更<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><span class="section-number">4.7.3.1. </span>Tenant Service の変更<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>Tenant service がインストールされているディレクトリ、 <cite>App_ConfigConnectionStrings.config</cite> に関して、利用している環境に合わせて以下の項目を変更してください。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;connectionStrings&gt;</span>
     <span class="nt">&lt;add</span> <span class="na">name=</span><span class="s">&quot;sitecore&quot;</span> <span class="na">connectionString=</span><span class="s">&quot;database=master;tenant id={841B0E94-4348-494DB32D-CA5E94F26ACC};host=my-sitecore;password=b;user name=sitecore\admin;timeout=20&quot;</span> <span class="nt">/&gt;</span>
@@ -263,7 +263,7 @@
 </div>
 </div>
 <div class="section" id="sitecore">
-<h3>4.7.3.2. Sitecore の変更<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3><span class="section-number">4.7.3.2. </span>Sitecore の変更<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>Sitecore がインストールされている環境 ( <cite>App_Configconnectionstring.config</cite> 、および Marketing Automation ( xConnect の <cite>App_DatajobscontinuousAutomationEngineApp_Configconnectionstrings.config</cite> ) のインスタンスに対して、以下の接続情報を追加してください（環境に合わせてパラメーターを変更してください）。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;connectionStrings&gt;</span>
     <span class="nt">&lt;add</span> <span class="na">name=</span><span class="s">&quot;my-tenant&quot;</span> <span class="na">connectionString=</span><span class="s">&quot;https://sitecore.service&quot;</span><span class="nt">/&gt;</span>
@@ -273,7 +273,7 @@
 </div>
 </div>
 <div class="section" id="id4">
-<h2>4.7.4. 参考動画<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">4.7.4. </span>参考動画<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/obdX5BQJWQE" frameborder="0" allowfullscreen></iframe></div>
 </div>
 
