@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.3. Sitecore Experience Platform のインストール &mdash; Sitecore クイックスタート  ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="2.4. 日本語リソースのインポート" href="japanese.html" />
+    <link rel="prev" title="2.2. 関連ツールのインストール" href="tools.html" />
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153234118-1');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Sitecore クイックスタート
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目次</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore Experience Platform 10.0</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../readme.html">1. はじめに</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">2. Sitecore XP インストール</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sysreq.html">2.1. 必要システム</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools.html">2.2. 関連ツールのインストール</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">2.3. Sitecore Experience Platform のインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="japanese.html">2.4. 日本語リソースのインポート</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rebuild.html">2.5. インデックスの再構築</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../commerce/index.html">3. Sitecore Commerce インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docker/index.html">4. Sitecore Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">5. モジュールのインストール</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">デモ マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sitecore クイックスタート</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Sitecore Experience Platform 10.0</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">2. </span>Sitecore XP インストール</a> &raquo;</li>
+        
+      <li><span class="section-number">2.3. </span>Sitecore Experience Platform のインストール</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/100/install/install.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sitecore-experience-platform">
+<h1><span class="section-number">2.3. </span>Sitecore Experience Platform のインストール<a class="headerlink" href="#sitecore-experience-platform" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Sitecore Experience Platform 10.0 をインストールするために、Sitecore Instllation Assistant を利用して、まずは関連モジュールをインストールします。</p>
+<p>今回は以下の環境にインストールをします。</p>
+<ul class="simple">
+<li><p>Windows Server 2019 Standard</p></li>
+<li><p>SQL Server 2019</p></li>
+</ul>
+<div class="section" id="sitecore">
+<h2><span class="section-number">2.3.1. </span>Sitecore のインストールプログラムの入手<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>今回は Sitecore Install Assistant を利用してインストールを進めていきます。このため、以下の Web サイトからインストールファイルをダウンロードしてください。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/100/Sitecore_Experience_Platform_100.aspx">Sitecore Experience Platform 10.0</a></p></li>
+</ul>
+<p><cite>Download options for On Premises deployment</cite> のグループにある <cite>Graphical setup package for XP Single</cite> をダウンロードしてください。インストールファイルのダウンロードが完了した、ファイルを展開して次のステップに進みます。</p>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">2.3.2. </span>モジュールのインストール<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>この手順に関しては、１つの環境で初回のみ実行するだけで完了です。すでに別の Sitecore をインストールしている場合は、スキップしてください。</p>
+<p>Sitecore Install Assistant を立ち上げます。これはダウンロードをしたファイルを展開してください。ここでは、 <cite>c:\projects\sif</cite> に展開します。</p>
+<a class="reference internal image-reference" href="../../_images/sia014.png"><img alt="フォルダ" class="align-center" src="../../_images/sia014.png" style="width: 400px;" /></a>
+<p><cite>setup.exe</cite> をダブルクリックすると、インストーラーが立ち上がり以下のような画面となります。</p>
+<a class="reference internal image-reference" href="../../_images/sia024.png"><img alt="起動画面" class="align-center" src="../../_images/sia024.png" style="width: 400px;" /></a>
+<p>Start のボタンをクリックすると、モジュールのインストール画面になります。</p>
+<a class="reference internal image-reference" href="../../_images/sia034.png"><img alt="モジュールインストール" class="align-center" src="../../_images/sia034.png" style="width: 400px;" /></a>
+<p>Install のボタンをクリックして、必要なモジュールをインストールしてください。</p>
+<a class="reference internal image-reference" href="../../_images/sia044.png"><img alt="インストール中" class="align-center" src="../../_images/sia044.png" style="width: 400px;" /></a>
+<p>インストールが完了すると、<cite>Close</cite> のボタンが有効になります。</p>
+<a class="reference internal image-reference" href="../../_images/sia053.png"><img alt="Close が有効に" class="align-center" src="../../_images/sia053.png" style="width: 400px;" /></a>
+<p>再起動が必要となるため、インストーラーを閉じて、再起動します。</p>
+<a class="reference internal image-reference" href="../../_images/sia0511.png"><img alt="再起動" class="align-center" src="../../_images/sia0511.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="solr">
+<h2><span class="section-number">2.3.3. </span>Solr のインストール<a class="headerlink" href="#solr" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>改めてインストールアシスタントを起動します。インストールコンポーネントの手順はスキップして、Solr のインストールの画面に進みます。</p>
+<p>ここでは Solr の prefix およびインストールパスを指定してください。</p>
+<a class="reference internal image-reference" href="../../_images/solr013.png"><img alt="Solr のインストール" class="align-center" src="../../_images/solr013.png" style="width: 400px;" /></a>
+<p>インストールを実行します。</p>
+<a class="reference internal image-reference" href="../../_images/solr021.png"><img alt="Solr のインストール" class="align-center" src="../../_images/solr021.png" style="width: 400px;" /></a>
+<p>インストールが完了すると、Solr がサービスとして起動します。</p>
+<a class="reference internal image-reference" href="../../_images/solr031.png"><img alt="Solr のインストール" class="align-center" src="../../_images/solr031.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">2.3.4. </span>インストールの開始<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>モジュールのインストールが完了すると、次は Sitecore のインストールとなります。</p>
+<p>まず最初に、Sitecore をインストールする時の Prefix、管理者のパスワードおよびライセンスファイルを指定します。</p>
+<a class="reference internal image-reference" href="../../_images/sia064.png"><img alt="インストールの基本設定" class="align-center" src="../../_images/sia064.png" style="width: 400px;" /></a>
+<p>インストールを実行します。</p>
+<p>続いて、SQL Server の設定を記入します。</p>
+<a class="reference internal image-reference" href="../../_images/sia074.png"><img alt="インストール" class="align-center" src="../../_images/sia074.png" style="width: 400px;" /></a>
+<p>インストールした Solr に関する設定があっているか確認をします。</p>
+<a class="reference internal image-reference" href="../../_images/sia082.png"><img alt="インストール" class="align-center" src="../../_images/sia082.png" style="width: 400px;" /></a>
+<p>SXA のモジュールも一緒にインストールするか確認をします。</p>
+<a class="reference internal image-reference" href="../../_images/sia092.png"><img alt="インストール" class="align-center" src="../../_images/sia092.png" style="width: 400px;" /></a>
+<p>インストールに関する設定項目の最終確認をします。</p>
+<a class="reference internal image-reference" href="../../_images/sia102.png"><img alt="インストール" class="align-center" src="../../_images/sia102.png" style="width: 400px;" /></a>
+<p>設定が正しいか、検証が実行されます。</p>
+<a class="reference internal image-reference" href="../../_images/sia112.png"><img alt="インストール" class="align-center" src="../../_images/sia112.png" style="width: 400px;" /></a>
+<p>以下の画面が表示されれば、インストールが無事完了します。</p>
+<a class="reference internal image-reference" href="../../_images/sia121.png"><img alt="インストール" class="align-center" src="../../_images/sia121.png" style="width: 400px;" /></a>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="japanese.html" class="btn btn-neutral float-right" title="2.4. 日本語リソースのインポート" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tools.html" class="btn btn-neutral float-left" title="2.2. 関連ツールのインストール" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Sitecore Japan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

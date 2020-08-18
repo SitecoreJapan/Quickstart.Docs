@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -168,9 +168,9 @@
         
           <li><a href="../index.html">Sitecore Experience Platform 9.2</a> &raquo;</li>
         
-          <li><a href="index.html">1. インストールガイド</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">1. </span>インストールガイド</a> &raquo;</li>
         
-      <li>1.1. 必要システム</li>
+      <li><span class="section-number">1.1. </span>必要システム</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -190,9 +190,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>1.1. 必要システム<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">1.1. </span>必要システム<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="section" id="id2">
-<h2>1.1.1. インストール環境の確認<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">1.1.1. </span>インストール環境の確認<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Sitecore Experience Platform をインストールする際に必要システムは以下の通りです。</p>
 <ul class="simple">
 <li><p>Windows Server 2019 / Windows 10 Professional</p></li>
@@ -202,33 +202,33 @@
 <p>ここでは、Windows 10 Professional で提供されている Hyper-V の環境で作業を進めていきます。</p>
 </div>
 <div class="section" id="windows-10-professional">
-<h2>1.1.2. Windows 10 Professional のインストール<a class="headerlink" href="#windows-10-professional" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">1.1.2. </span>Windows 10 Professional のインストール<a class="headerlink" href="#windows-10-professional" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Hyper-V マネージャを起動して、右側に表示されている操作から、「新規」－「仮想マシン」を選択します。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq01.png"><img alt="仮想マシン" class="align-center" src="../../_images/sysreq01.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq011.png"><img alt="仮想マシン" class="align-center" src="../../_images/sysreq011.png" style="width: 400px;" /></a>
 <p>仮想マシンの名前を決めます。ここでは QuickStart という名前にします（特にこの名前には制限はありません）。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq02.png"><img alt="マシン名" class="align-center" src="../../_images/sysreq02.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq021.png"><img alt="マシン名" class="align-center" src="../../_images/sysreq021.png" style="width: 400px;" /></a>
 <p>今回作成する仮想マシンの世代は「第１世代」を選択します。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq03.png"><img alt="世代の指定" class="align-center" src="../../_images/sysreq03.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq031.png"><img alt="世代の指定" class="align-center" src="../../_images/sysreq031.png" style="width: 400px;" /></a>
 <p>仮想マシンのメモリを設定します。PC の容量に合わせて設定をしてください（推奨としては 8GB 以上）</p>
-<a class="reference internal image-reference" href="../../_images/sysreq04.png"><img alt="メモリの指定" class="align-center" src="../../_images/sysreq04.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq041.png"><img alt="メモリの指定" class="align-center" src="../../_images/sysreq041.png" style="width: 400px;" /></a>
 <p>ネットワークの構成では、接続先を Default Switch にします。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq05.png"><img alt="ネットワークの構成" class="align-center" src="../../_images/sysreq05.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq051.png"><img alt="ネットワークの構成" class="align-center" src="../../_images/sysreq051.png" style="width: 400px;" /></a>
 <p>仮想ハードディスクを作成しますが、標準の設定のままここでは進めていきます。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq06.png"><img alt="仮想ハードディスクの接続" class="align-center" src="../../_images/sysreq06.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq061.png"><img alt="仮想ハードディスクの接続" class="align-center" src="../../_images/sysreq061.png" style="width: 400px;" /></a>
 <p>インストールオプションで、Windows 10 Professional の ISO ファイルを指定します。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq07.png"><img alt="Windows 10 Professional の ISO ファイルを指定" class="align-center" src="../../_images/sysreq07.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq071.png"><img alt="Windows 10 Professional の ISO ファイルを指定" class="align-center" src="../../_images/sysreq071.png" style="width: 400px;" /></a>
 <p>完了ボタンを押します。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq08.png"><img alt="最終確認" class="align-center" src="../../_images/sysreq08.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq081.png"><img alt="最終確認" class="align-center" src="../../_images/sysreq081.png" style="width: 400px;" /></a>
 <p>作成した仮想マシンを右クリックで選択、接続します。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq09.png"><img alt="接続" class="align-center" src="../../_images/sysreq09.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq091.png"><img alt="接続" class="align-center" src="../../_images/sysreq091.png" style="width: 400px;" /></a>
 <p>マシンを起動します（起動をクリック）</p>
-<a class="reference internal image-reference" href="../../_images/sysreq10.png"><img alt="起動" class="align-center" src="../../_images/sysreq10.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq101.png"><img alt="起動" class="align-center" src="../../_images/sysreq101.png" style="width: 400px;" /></a>
 <p>Windows 10 のインストールを進めていきます。途中、エディションが表示される場合は、Windows 10 Pro を選択してください。</p>
-<a class="reference internal image-reference" href="../../_images/sysreq11.png"><img alt="Edition の選択" class="align-center" src="../../_images/sysreq11.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sysreq111.png"><img alt="Edition の選択" class="align-center" src="../../_images/sysreq111.png" style="width: 400px;" /></a>
 <p>あとは Windows 10 のインストールを進めていきます。Windows update を適用して完了します。</p>
 </div>
 <div class="section" id="sql-server-2017">
-<h2>1.1.3. SQL Server 2017 のインストール<a class="headerlink" href="#sql-server-2017" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">1.1.3. </span>SQL Server 2017 のインストール<a class="headerlink" href="#sql-server-2017" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>SQL Server を今回は ISO ファイルからインストールを進めます。仮想マシンのコンソールのメニューから「メディア」－「DVD ドライブ」-「ディスクの挿入」を選択して、SQL Server の ISO ファイルを選択します。</p>
 <a class="reference internal image-reference" href="../../_images/sql01.png"><img alt="ISO の挿入" class="align-center" src="../../_images/sql01.png" style="width: 400px;" /></a>
 <p>SQL Server 2017 インストールセンターの左メニューから「インストール」をクリックして、「SQL Server の新規スタンドアロンインストールを実行するか、既存のインストールに起動を追加」からインストールを開始します。</p>
@@ -253,18 +253,18 @@
 <p>あとは標準の設定で進めていき、SQL Server のインストールを完了させてください。</p>
 </div>
 <div class="section" id="sql-server-management-studio">
-<h2>1.1.4. SQL Server Management Studio のインストール<a class="headerlink" href="#sql-server-management-studio" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">1.1.4. </span>SQL Server Management Studio のインストール<a class="headerlink" href="#sql-server-management-studio" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>SQL Server Management Studio は、マイクロソフトのサイトからダウンロードをすることができます。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.microsoft.com/ja-jp/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio</a></p></li>
 </ul>
-<a class="reference internal image-reference" href="../../_images/ssms01.png"><img alt="ダウンロード" class="align-center" src="../../_images/ssms01.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/ssms011.png"><img alt="ダウンロード" class="align-center" src="../../_images/ssms011.png" style="width: 400px;" /></a>
 <p>モジュールをダウンロードしたら、ダウンロードしたファイルをダブルクリックして、インストールを開始します。</p>
-<a class="reference internal image-reference" href="../../_images/ssms02.png"><img alt="インストール" class="align-center" src="../../_images/ssms02.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/ssms021.png"><img alt="インストール" class="align-center" src="../../_images/ssms021.png" style="width: 400px;" /></a>
 <p>暫くするとインストールが完了します。</p>
-<a class="reference internal image-reference" href="../../_images/ssms03.png"><img alt="インストール中" class="align-center" src="../../_images/ssms03.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/ssms031.png"><img alt="インストール中" class="align-center" src="../../_images/ssms031.png" style="width: 400px;" /></a>
 <p>インストールが完了したあと、SQL Server Management Studio を起動します。ログイン画面が出てきますので、SQL Server をインストールしたときのパスワードを利用して、ログインしてください。</p>
-<a class="reference internal image-reference" href="../../_images/ssms04.png"><img alt="ログイン" class="align-center" src="../../_images/ssms04.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/ssms041.png"><img alt="ログイン" class="align-center" src="../../_images/ssms041.png" style="width: 400px;" /></a>
 <p>インストールをする前に、SQL Server の設定を1か所だけ変更をします。データベースサーバーを右クリックして、「プロパティ」を選択してください。</p>
 <a class="reference internal image-reference" href="../../_images/ssms05.png"><img alt="プロパティ" class="align-center" src="../../_images/ssms05.png" style="width: 400px;" /></a>
 <p>左側のメニューの「ページの選択」の中から「詳細設定」を選択し、右側に表示される「包含」の項目から、「包含データベースの有効化」を True に変更します。</p>
@@ -272,7 +272,7 @@
 <p>これでデータベースのインストール、設定が終了しました。</p>
 </div>
 <div class="section" id="id4">
-<h2>1.1.5. オプション<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">1.1.5. </span>オプション<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>今後ファイルの拡張子が見えているほうが作業をしやすいので、「エクスプローラ」を起動して「表示」から「ファイル名拡張子」をチェックします。</p>
 <a class="reference internal image-reference" href="../../_images/explore01.png"><img alt="拡張子" class="align-center" src="../../_images/explore01.png" style="width: 400px;" /></a>
 </div>

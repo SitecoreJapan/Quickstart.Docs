@@ -21,11 +21,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -170,9 +170,9 @@
         
           <li><a href="../index.html">Sitecore Experience Platform 9.3</a> &raquo;</li>
         
-          <li><a href="index.html">6. Sitecore on Docker</a> &raquo;</li>
+          <li><a href="index.html"><span class="section-number">6. </span>Sitecore on Docker</a> &raquo;</li>
         
-      <li>6.2. Sitecore の起動</li>
+      <li><span class="section-number">6.2. </span>Sitecore の起動</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -192,10 +192,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="sitecore">
-<h1>6.2. Sitecore の起動<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1><span class="section-number">6.2. </span>Sitecore の起動<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>ここでは作成をしたイメージを利用して、Sitecore を起動する手順を紹介しています。</p>
 <div class="section" id="id1">
-<h2>6.2.1. ライセンスファイルの設定<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">6.2.1. </span>ライセンスファイルの設定<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Docker で Sitecore を立ち上げる際に、ライセンスファイルを適用する必要があります。今回、ライセンスファイルは <cite>C:\projects\docker-images\license.xml</cite> に配置していることを前提とします。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Set</span><span class="o">-</span><span class="n">LicenseEnvironmentVariable</span><span class="o">.</span><span class="n">ps1</span> <span class="o">-</span><span class="n">Path</span> <span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">docker</span><span class="o">-</span><span class="n">images</span>\<span class="n">license</span><span class="o">.</span><span class="n">xml</span>
 </pre></div>
@@ -203,7 +203,7 @@
 <a class="reference internal image-reference" href="../../_images/start01.png"><img alt="ライセンスファイルの適用" class="align-center" src="../../_images/start01.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="id2">
-<h2>6.2.2. イメージを選択して起動<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">6.2.2. </span>イメージを選択して起動<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>今回は Sitecore Experience Platform に Sitecore Experience Accelerator がインストールされている構成を起動します。動作確認用のファイルは、 <cite>docker-images\windows\tests\9.3.x</cite> のフォルダに展開されています。</p>
 <a class="reference internal image-reference" href="../../_images/start02.png"><img alt="テスト用の compopse ファイルを確認" class="align-center" src="../../_images/start02.png" style="width: 400px;" /></a>
 <p>対象となるファイルは、 <cite>docker-compose.xp.xsa.yml</cite> ファイルです。Docker のコマンドを実行します。</p>
@@ -220,7 +220,7 @@
 <a class="reference internal image-reference" href="../../_images/start04.png"><img alt="コンテナ一覧" class="align-center" src="../../_images/start04.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="id3">
-<h2>6.2.3. 動作検証<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">6.2.3. </span>動作検証<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>コンテナを起動するときに利用した <cite>docker-compose.xp.sxa.yml</cite> のファイルを見ると以下の記載があります。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cm:
 image: ${REGISTRY}sitecore-xp-sxa-standalone:${SITECORE_VERSION}-windowsservercore-${WINDOWSSERVERCORE_VERSION}
@@ -240,7 +240,7 @@ ports:
 <a class="reference internal image-reference" href="../../_images/start08.png"><img alt="コンテナの停止" class="align-center" src="../../_images/start08.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="id4">
-<h2>6.2.4. 参考動画<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2><span class="section-number">6.2.4. </span>参考動画<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>上記の手順を実行している YouTube の動画をご覧ください。</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KvO458_PMxI" frameborder="0" allowfullscreen></iframe></div>
 </div>
