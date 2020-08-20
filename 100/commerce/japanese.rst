@@ -4,14 +4,13 @@
 
 ここでは Sitecore に日本語リソースをインポートする方法を紹介しています。
 
-
 ******************************
 日本語リソースファイルの準備
 ******************************
 
 日本語リソースに関しては、Sitecore のダウンロードサイトからリソースファイルのダウンロードが可能です。
 
-* `Sitecore Experience Platform 9.3 Initial Release <https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/92/Sitecore_Experience_Platform_93_Initial_Release.aspx>`_
+* `Sitecore Experience Platform 10.0 <https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/100/Sitecore_Experience_Platform_100.aspx>`_
 
 ページの下のほうにある、`Client translations` の一覧にある `Japanese (ja-JP)` のファイルをダウンロードしてください。
 
@@ -75,7 +74,6 @@
 
 これでデータベースとして日本語のデータを扱うことができるようになりました。
 
-
 ***************************
 日本語リソースのインポート
 ***************************
@@ -96,7 +94,7 @@
 
 Web サーバのディレクトリが表示されます。この画面からアップロードをすることができますが、今回は手間を省くために以下のような作業を実施します。
 
-* インストール先の `C:\\inetpub\\wwwroot\\93sc.dev.local\\temp` のフォルダを開きます
+* インストール先の `C:\\inetpub\\wwwroot\\sxa.strorefront.com\\temp` のフォルダを開きます
 * ここにダウンロード済のファイルを展開します（ Sitecore 9.3.0 rev. 003498 (ja-JP).zip のファイルの中にある ja-jp.xml を temp にコピー）
 * ディレクトリに2つのファイルが入っているのを確認します
 
@@ -135,6 +133,8 @@ Web サーバのディレクトリが表示されます。この画面からア�
    :alt: Core データベースの選択
 
 * 上記の手続きを、`ja-jp-update.xml` に対しても同じ手続きでインポートをします。
+
+* Commerce のページで提供されている、Business Tools translations 、SXA Storefront translations、Commerce Connect translations の日本語リソースもインポートします。
 
 *************
 参考動画
