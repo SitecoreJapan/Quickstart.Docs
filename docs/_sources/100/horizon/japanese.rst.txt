@@ -1,0 +1,18 @@
+#####################
+日本語リソースの準備
+#####################
+
+Horizon エディターに関しては、標準では英語の UI のみを提供しています。ここでは、日本語リソースをダウンロードして、インストール後に日本語の UI で利用できるようにします（言語切り替え機能は将来のバージョンで提供予定）。
+英語の UI のままで進める場合は、このステップはスキップできます。
+
+手順は以下の通りです。
+
+* https://github.com/SitecoreJapan/InstallScript/tree/master/100 から en.json ファイルをダウンロードします
+* C:\\projects\\Horizon\\Resources にある zip ファイル HorizonHost.1.36.0.zip を開きます（展開せずエクスプローラーで参照）
+* zip ファイルの中にある \\sitecore\\Sitecore.Horizon.Client\\Client\\dist\\assets\\i18n のフォルダに移動
+* en.json ファイルを入れ替えます
+
+.. image:: images/enjson.gif
+   :align: center
+   :width: 400px
+   :alt: ファイルのアップデート

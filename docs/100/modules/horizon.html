@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.1. Horizon エディター &mdash; Sitecore クイックスタート  ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="5.2. Sitecore Experience Accelerator" href="sxa.html" />
+    <link rel="prev" title="5. モジュールのインストール" href="index.html" />
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153234118-1');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Sitecore クイックスタート
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目次</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore Experience Platform 10.0</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../readme.html">1. はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/index.html">2. Sitecore XP インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commerce/index.html">3. Sitecore Commerce インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docker/index.html">4. Sitecore Container</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">5. モジュールのインストール</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5.1. Horizon エディター</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sxa.html">5.2. Sitecore Experience Accelerator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">デモ マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sitecore クイックスタート</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Sitecore Experience Platform 10.0</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">5. </span>モジュールのインストール</a> &raquo;</li>
+        
+      <li><span class="section-number">5.1. </span>Horizon エディター</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/100/modules/horizon.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="horizon">
+<h1><span class="section-number">5.1. </span>Horizon エディター<a class="headerlink" href="#horizon" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Sitecore Experience Platform で利用できる新しい編集ツール、Horizon エディターのインストール方法に関して紹介をしています。</p>
+<div class="section" id="id1">
+<h2><span class="section-number">5.1.1. </span>システムの追加機能<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Horizon エディターは、 ASP.NET Core 2.1.18 以降のランタイムが必要となります。ランタイムが入っていない場合は、以下のページから該当モジュールをダウンロード、インストールしてください。</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference external" href="https://dotnet.microsoft.com/download/dotnet-core/2.1">https://dotnet.microsoft.com/download/dotnet-core/2.1</a></dt><dd><ul>
+<li><p>ASP.NET Core 2.1 Runtime (v2.1.18) - Windows Hosting Bundle</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Horizon エディターを利用するにあたって、WebSocket プロトコルを IIS にインストールする必要があります。インストールの手順は以下の通りです。</p>
+<ul class="simple">
+<li><p>サーバーマネージャーを起動します</p></li>
+<li><p>メニューから 「管理」ー「役割と機能の追加」を選択します</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/servermanager01.png"><img alt="役割と機能の追加" class="align-center" src="../../_images/servermanager01.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><p>サーバーの役割まで進めて、「Web サーバー（IIS)」 - 「Web サーバー」 - 「アプリケーション開発」 - 「WebSocket プロトコル」を選択します。</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/servermanager02.png"><img alt="役割と機能の追加" class="align-center" src="../../_images/servermanager02.png" style="width: 400px;" /></a>
+<p>ウィザードを実行して環境の設定に関しては終了となります。</p>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">5.1.2. </span>モジュールの展開<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Horizon エディターのモジュールをダウンロードし、Sitecore Horizon 10.0.0.zip のファイルを C:\projects\horizon に展開します</p>
+<a class="reference internal image-reference" href="../../_images/unzip.png"><img alt="モジュールの展開" class="align-center" src="../../_images/unzip.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="id3">
+<h2><span class="section-number">5.1.3. </span>日本語リソースの準備<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Horizon エディターに関しては、標準では英語の UI のみを提供しています。ここでは、日本語リソースをダウンロードして、インストール後に日本語の UI で利用できるようにします（言語切り替え機能は将来のバージョンで提供予定）。
+英語の UI のままで進める場合は、このステップはスキップできます。</p>
+<p>手順は以下の通りです。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/SitecoreJapan/InstallScript/tree/master/100">https://github.com/SitecoreJapan/InstallScript/tree/master/100</a> から en.json ファイルをダウンロードします</p></li>
+<li><p>C:\projects\Horizon\Resources にある zip ファイル HorizonHost.1.36.0.zip を開きます（展開せずエクスプローラーで参照）</p></li>
+<li><p>zip ファイルの中にある \sitecore\Sitecore.Horizon.Client\Client\dist\assets\i18n のフォルダに移動</p></li>
+<li><p>en.json ファイルを入れ替えます</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/enjson.gif"><img alt="ファイルのアップデート" class="align-center" src="../../_images/enjson.gif" style="width: 400px;" /></a>
+</div>
+<div class="section" id="id4">
+<h2><span class="section-number">5.1.4. </span>インストールの手順<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id5">
+<h3><span class="section-number">5.1.4.1. </span>スクリプトの調整<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>サイトに関する情報、ファイル名などを記載する必要があります。Horizon の展開されたフォルダにある InstallHorizon.ps1 スクリプトを変更します。</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="k">param</span> <span class="p">(</span>
+<span class="no">[string]</span><span class="nv">$horizonInstanceName</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$horizonPhysicalPath</span> <span class="p">=</span> <span class="s2">&quot;C:\inetpub\wwwroot\$horizonInstanceName&quot;</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$horizonAppUrl</span> <span class="p">=</span> <span class="s2">&quot;https://$horizonInstanceName&quot;</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$sitecoreCmInstanceName</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$sitecoreCmInstanceUrl</span> <span class="p">=</span> <span class="s2">&quot;https://$sitecoreCmInstanceName&quot;</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$sitecoreCmInstansePath</span> <span class="p">=</span> <span class="s2">&quot;C:\inetpub\wwwroot\$sitecoreCmInstanceName&quot;</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$identityServerPoolName</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$identityServerUrl</span> <span class="p">=</span> <span class="s2">&quot;https://$identityServerPoolName&quot;</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$identityServerPhysicalPath</span> <span class="p">=</span> <span class="s2">&quot;C:\inetpub\wwwroot\$identityServerPoolName&quot;</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$licensePath</span><span class="p">,</span>
+<span class="no">[bool]</span><span class="nv">$enableContentHub</span><span class="p">,</span>
+<span class="p">[</span><span class="k">ValidateSet</span><span class="p">(</span><span class="s2">&quot;XP&quot;</span><span class="p">,</span> <span class="s2">&quot;XM&quot;</span><span class="p">)]</span>
+<span class="no">[string]</span><span class="nv">$topology</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>変更する項目は以下の通りです。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 59%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>パラメーター</p></td>
+<td><p>設定値</p></td>
+</tr>
+<tr class="row-even"><td><p>horizonInstanceName</p></td>
+<td><p>Horizon エディターのインスタンス</p></td>
+</tr>
+<tr class="row-odd"><td><p>sitecoreCmInstanceName</p></td>
+<td><p>CM サーバーのインスタンス</p></td>
+</tr>
+<tr class="row-even"><td><p>identityServerPoolName</p></td>
+<td><p>Identity Server のインスタンス</p></td>
+</tr>
+<tr class="row-odd"><td><p>licensePath</p></td>
+<td><p>ライセンスファイルへのパス</p></td>
+</tr>
+<tr class="row-even"><td><p>topology</p></td>
+<td><p>XP もしくは XM の設定</p></td>
+</tr>
+</tbody>
+</table>
+<p>今回は以下のように設定をしました。</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="k">param</span> <span class="p">(</span>
+<span class="no">[string]</span><span class="nv">$horizonInstanceName</span> <span class="p">=</span> <span class="s2">&quot;horizon.dev.local&quot;</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$horizonPhysicalPath</span> <span class="p">=</span> <span class="s2">&quot;C:\inetpub\wwwroot\$horizonInstanceName&quot;</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$horizonAppUrl</span> <span class="p">=</span> <span class="s2">&quot;https://$horizonInstanceName&quot;</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$sitecoreCmInstanceName</span> <span class="p">=</span> <span class="s2">&quot;XP0.dev.local&quot;</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$sitecoreCmInstanceUrl</span> <span class="p">=</span> <span class="s2">&quot;https://$sitecoreCmInstanceName&quot;</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$sitecoreCmInstansePath</span> <span class="p">=</span> <span class="s2">&quot;C:\inetpub\wwwroot\$sitecoreCmInstanceName&quot;</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$identityServerPoolName</span> <span class="p">=</span> <span class="s2">&quot;XP0.identityserver&quot;</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$identityServerUrl</span> <span class="p">=</span> <span class="s2">&quot;https://$identityServerPoolName&quot;</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$identityServerPhysicalPath</span> <span class="p">=</span> <span class="s2">&quot;C:\inetpub\wwwroot\$identityServerPoolName&quot;</span><span class="p">,</span>
+<span class="no">[string]</span><span class="nv">$licensePath</span> <span class="p">=</span> <span class="s2">&quot;c:\projects\sif\license.xml&quot;</span><span class="p">,</span>
+<span class="no">[bool]</span><span class="nv">$enableContentHub</span><span class="p">,</span>
+<span class="p">[</span><span class="k">ValidateSet</span><span class="p">(</span><span class="s2">&quot;XP&quot;</span><span class="p">,</span> <span class="s2">&quot;XM&quot;</span><span class="p">)]</span>
+<span class="no">[string]</span><span class="nv">$topology</span> <span class="p">=</span> <span class="s2">&quot;XP&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>サンプルのソースコードは、<a class="reference external" href="https://github.com/SitecoreJapan/InstallScript/tree/master/100">https://github.com/SitecoreJapan/InstallScript/tree/master/100</a> にて参照可能です。</p>
+</div>
+<div class="section" id="id6">
+<h3><span class="section-number">5.1.4.2. </span>スクリプトの実行<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>準備が整ったところで、更新したスクリプトを実行します。</p>
+<a class="reference internal image-reference" href="../../_images/install.png"><img alt="Horizon のインストール" class="align-center" src="../../_images/install.png" style="width: 400px;" /></a>
+</div>
+<div class="section" id="id7">
+<h3><span class="section-number">5.1.4.3. </span>日本語リソースの追加<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>インストール後、<a class="reference external" href="https://github.com/SitecoreJapan/InstallScript/tree/master/100">https://github.com/SitecoreJapan/InstallScript/tree/master/100</a> にある horizon-ja-jp.xml ファイルをインポートしてください。</p>
+<p>スタート画面から Horizon を起動してください。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sxa.html" class="btn btn-neutral float-right" title="5.2. Sitecore Experience Accelerator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="5. モジュールのインストール" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Sitecore Japan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
