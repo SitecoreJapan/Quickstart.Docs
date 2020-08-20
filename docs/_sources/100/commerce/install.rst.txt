@@ -68,11 +68,11 @@ Solr のインストール
 
 今回は、インストールモジュールに付属している Solr-SingleDeveloper.json ファイルを利用してインストールを実行します。以下のようにコマンドを実行してください。
 
-.. code-block:
+.. code-block:: powershell
 
     Install-SitecoreConfiguration .\Solr-SingleDeveloper.json
 
-まず、以下の項目が表示されます。
+以下のように表示されます。
 
 .. image:: images/solr01.png
    :align: center
@@ -105,9 +105,9 @@ $SqlAdminPassword             任意                  SQL Server パスワード
 
 インストールを実行します。
 
-.. code-block:
+.. code-block:: powershell
 
-    .\SC930-SingleDeveloper.ps1
+    .\XC100-SingleDeveloper.ps1
 
 .. image:: images/sia07.png
    :align: center

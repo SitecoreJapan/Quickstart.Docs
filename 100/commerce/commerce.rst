@@ -15,6 +15,22 @@ Redis のモジュールをダウンロード、インストールしてくだ�
    :width: 400px
    :alt: Redis インストール
 
+*********************************
+.NET Core 3.1.6 のインストール
+*********************************
+
+Sitecore Experience Commerce 10.0 は .NET Core 3.1.6 のモジュールが必要となります。以下のサイトから、Hosting Bundle を選択してインストールしてください。
+
+* https://dotnet.microsoft.com/download/dotnet-core/3.1
+
+**********************
+.NET Core 2.1 の更新
+**********************
+
+Sitecore Experience Platform 10.0 のインストールアシスタントを利用している場合、.NET Core のランタイムとして 2.1.15 がインストールされています。Sitecore Experience Commerce 10.0 では .NET Core 2.1.18 以上が必要となりますので、以下のサイトから、Hosting Bundle を選択してダウンロード、インストールしたあと、再起動してください。
+
+* https://dotnet.microsoft.com/download/dotnet-core/2.1
+
 **********************
 インストールの準備
 **********************
@@ -126,7 +142,28 @@ $BraintreePrivateKey   Private Key
 $BraintreeEnvironment  sandbox
 ====================== ============ 
 
-上記のパラメータの変更をした後、スクリプトの保存をします。
+CommerceEngineConnectClientSecret のパラメーターに Client Secret を設定する必要がります。
+ClientSecret の値を取得するために、以下のスクリプトを実行してください。
+
+.. code-block:: powershell
+
+   $bytes = New-Object Byte[] 32
+   $rand = [System.Security.Cryptography.RandomNumberGenerator]::Create()
+   $rand.GetBytes($bytes)
+   $rand.Dispose()
+   $newClientSecret = [System.Convert]::ToBase64String($bytes)
+
+   Write-Host $newClientSecret
+
+サンプルのファイルは、 https://github.com/SitecoreJapan/InstallScript/blob/master/XC100/GenerateClientSecret.ps1 に展開しています。
+
+
+.. image:: images/ClientSecret.png
+   :align: center
+   :width: 400px
+   :alt: ClientSecret の取得
+
+上記のパラメータを反映させて、スクリプトの保存をします。
 
 **********************
 インストール開始
@@ -134,3 +171,6 @@ $BraintreeEnvironment  sandbox
 
 編集をしたスクリプトを実行します。
 
+.. code-block:: powershell
+
+    .\XC100-Sitecore-Commerce.ps1
