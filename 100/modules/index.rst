@@ -9,3 +9,5 @@
     :maxdepth: 1
     :titlesonly:
 
+    horizon
+    sxa

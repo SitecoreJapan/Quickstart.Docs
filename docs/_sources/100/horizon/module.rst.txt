@@ -1,0 +1,10 @@
+#####################
+モジュールの展開
+#####################
+
+Horizon エディターのモジュールをダウンロードし、Sitecore Horizon 10.0.0.zip のファイルを C:\\projects\\horizon に展開します
+
+.. image:: images/unzip.png
+   :align: center
+   :width: 400px
+   :alt: モジュールの展開
