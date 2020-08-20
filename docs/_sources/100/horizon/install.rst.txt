@@ -1,0 +1,81 @@
+#####################
+インストールの手順
+#####################
+
+************************
+スクリプトの調整
+************************
+
+サイトに関する情報、ファイル名などを記載する必要があります。Horizon の展開されたフォルダにある InstallHorizon.ps1 スクリプトを変更します。
+
+.. code-block:: powershell
+
+    param (
+    [string]$horizonInstanceName,
+    [string]$horizonPhysicalPath = "C:\inetpub\wwwroot\$horizonInstanceName",
+    [string]$horizonAppUrl = "https://$horizonInstanceName",
+    [string]$sitecoreCmInstanceName,
+    [string]$sitecoreCmInstanceUrl = "https://$sitecoreCmInstanceName",
+    [string]$sitecoreCmInstansePath = "C:\inetpub\wwwroot\$sitecoreCmInstanceName",
+    [string]$identityServerPoolName,
+    [string]$identityServerUrl = "https://$identityServerPoolName",
+    [string]$identityServerPhysicalPath = "C:\inetpub\wwwroot\$identityServerPoolName",
+    [string]$licensePath,
+    [bool]$enableContentHub,
+    [ValidateSet("XP", "XM")]
+    [string]$topology
+    )
+
+変更する項目は以下の通りです。
+
++------------------------+----------------------------------+
+| パラメーター           | 設定値                           |
++------------------------+----------------------------------+
+| horizonInstanceName    | Horizon エディターのインスタンス |
++------------------------+----------------------------------+
+| sitecoreCmInstanceName | CM サーバーのインスタンス        |
++------------------------+----------------------------------+
+| identityServerPoolName | Identity Server のインスタンス   |
++------------------------+----------------------------------+
+| licensePath            | ライセンスファイルへのパス       |
++------------------------+----------------------------------+
+| topology               | XP もしくは XM の設定            |
++------------------------+----------------------------------+
+
+今回は以下のように設定をしました。
+
+.. code-block:: powershell
+
+    param (
+    [string]$horizonInstanceName = "horizon.dev.local",
+    [string]$horizonPhysicalPath = "C:\inetpub\wwwroot\$horizonInstanceName",
+    [string]$horizonAppUrl = "https://$horizonInstanceName",
+    [string]$sitecoreCmInstanceName = "XP0.dev.local",
+    [string]$sitecoreCmInstanceUrl = "https://$sitecoreCmInstanceName",
+    [string]$sitecoreCmInstansePath = "C:\inetpub\wwwroot\$sitecoreCmInstanceName",
+    [string]$identityServerPoolName = "XP0.identityserver",
+    [string]$identityServerUrl = "https://$identityServerPoolName",
+    [string]$identityServerPhysicalPath = "C:\inetpub\wwwroot\$identityServerPoolName",
+    [string]$licensePath = "c:\projects\sif\license.xml",
+    [bool]$enableContentHub,
+    [ValidateSet("XP", "XM")]
+    [string]$topology = "XP"
+    )
+
+サンプルのソースコードは、https://github.com/SitecoreJapan/InstallScript/tree/master/100 にて参照可能です。
+
+************************
+スクリプトの実行
+************************
+
+準備が整ったところで、更新したスクリプトを実行します。
+
+
+
+
+************************
+日本語リソースの追加
+************************
+
+インストール後、https://github.com/SitecoreJapan/InstallScript/tree/master/100 にある horizon-ja-jp.xml ファイルをインポートしてください。
+

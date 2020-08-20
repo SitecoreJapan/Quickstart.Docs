@@ -1,0 +1,15 @@
+###################################################
+Horizon エディターのインストール
+###################################################
+
+Sitecore Experience Platform で利用できる新しい編集ツール、Horizon エディターのインストール方法に関して紹介をしています。
+
+.. toctree::
+    :caption: 目次
+    :maxdepth: 1
+    :titlesonly:
+    
+    sysreq
+    module
+    japanese
+    install
