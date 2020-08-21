@@ -12,8 +12,8 @@ Sitecore Experience Platform 10.0
     readme
     install/index
     commerce/index
-    docker/index
     modules/index
+    Container/index
 
 
 .. note:: 特に記載がない場合は Sitecore Experience Platform 10.0 Initial Release を対象とした文書となっています。
