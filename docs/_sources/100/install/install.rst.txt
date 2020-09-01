@@ -60,13 +60,20 @@ Install のボタンをクリックして、必要なモジュールをインス
    :width: 400px
    :alt: Close が有効に
 
-再起動が必要となるため、インストーラーを閉じて、再起動します。
+一度ダイアログを閉じてください。
 
-.. image:: images/sia051.png
+インストールアシスタントでインストールをする場合、.NET Core 2.1.15 のライブラリがインストールされます。
+Sitecore 10.0 では .NET Core 2.1.18 以降を利用することが推奨されているため、
+ここでモジュールをダウンロード、インストールしてください。2.1.18 以降で Hosting Bundle を選択します。
+
+* `.NET Core 2.1.18  <https://dotnet.microsoft.com/download/dotnet-core/2.1>`_
+
+.. image:: images/netcore2118.png
    :align: center
    :width: 400px
-   :alt: 再起動
+   :alt: .NET Core 2.1.18 hosting Bundle
 
+インストールが完了したあと、先ほど一度再起動が必要となっていますので、再起動します。
 
 ***********************
 Solr のインストール
