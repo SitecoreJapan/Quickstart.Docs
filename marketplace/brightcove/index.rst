@@ -5,10 +5,10 @@ Brightcove Connector for Sitecore
 
 動画配信サービスの Brightcove Video Cloud と連携することができます。公式サイトは以下の通りです。
 
-* `Getting Started with Brightcove Video Connect for the Sitecore Experience Platform <https://support.brightcove.com/getting-started-brightcove-video-connect-sitecore-experience-platform>`_
+* `Getting Started with Brightcove Video Connect for the Sitecore Experience Platform <https://integrations.support.brightcove.com/sitecore/getting-started-brightcove-video-connect-sitecore-experience-platform.html>`_
 * `BrightcoveOS/Sitecore-Connector <https://github.com/BrightcoveOS/Sitecore-Connector>`_
 
-.. note:: 本記事執筆の時点（2019年11月05日）において、Sitecore 9.1.1 向けのモジュールが提供されています 。Sitecore 9.2.0 ではモジュールのインストールができませんので、9.2.0 の環境での検証はできません。
+.. note:: 本記事執筆の時点（2020年09月01日）において、Sitecore 9.3 までの向けのモジュールが提供されています。
 
 *************************
 モジュールのインストール
