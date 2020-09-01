@@ -29,7 +29,7 @@ Docker を利用するにあたって、以下の２つのツールは便利で�
 
 続いて、以下のサイトから Docker for Windows をダウンロードしてインストールしてください。
 
-* `docker for windows <https://docs.docker.com>`_ 
+* `Docker for Windows <https://docs.docker.com>`_ 
 
 インストールが完了すると、以下のようにダイアログが表示されます。
 
