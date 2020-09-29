@@ -1,0 +1,525 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.2. Sitecore Containers を利用してインストール &mdash; Sitecore クイックスタート  ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="5.3. Docker コマンド一覧" href="dockercommand.html" />
+    <link rel="prev" title="5.1. Docker for Windows のインストール" href="docker.html" />
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153234118-1');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Sitecore クイックスタート
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目次</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Sitecore Experience Platform 10.0</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../readme.html">1. はじめに</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../install/index.html">2. Sitecore XP インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commerce/index.html">3. Sitecore Commerce インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules/index.html">4. モジュールのインストール</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">5. Sitecore Containers</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="docker.html">5.1. Docker for Windows のインストール</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5.2. Sitecore Containers を利用してインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dockercommand.html">5.3. Docker コマンド一覧</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">デモ マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sitecore クイックスタート</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Sitecore Experience Platform 10.0</a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">5. </span>Sitecore Containers</a> &raquo;</li>
+        
+      <li><span class="section-number">5.2. </span>Sitecore Containers を利用してインストール</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/100/Container/sitecorecontainer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sitecore-containers">
+<h1><span class="section-number">5.2. </span>Sitecore Containers を利用してインストール<a class="headerlink" href="#sitecore-containers" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2><span class="section-number">5.2.1. </span>ファイルのダウンロード<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Sitecore を Docker に展開するための定義ファイルを Sitecore Download にて提供しています。</p>
+<p>ページの項目で、Download options for Sitecore Container deployments にある Container Deployment Package のファイルをダウンロードしてください。</p>
+<a class="reference internal image-reference" href="../../_images/container011.png"><img alt="ファイルのダウンロード" class="align-center" src="../../_images/container011.png" style="width: 400px;" /></a>
+<p>ファイル名は SitecoreContainerDeployment 10.0.0 rev. 004346-027.zip になります。</p>
+<p>ファイルをダウンロードしたら、以下のディレクトリに展開をします。</p>
+<p>c:\projectscontainer</p>
+<p>展開したディレクトリに作成された、以下のディレクトリに PowerSHell で移動します。</p>
+<p>C:\projects\container\ltsc2019\sitecore-xp0</p>
+</div>
+<div class="section" id="env">
+<h2><span class="section-number">5.2.2. </span>.env ファイルの編集<a class="headerlink" href="#env" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>インストールをする環境定義ファイルとなる .env ファイルを編集する必要があります。デフォルトでは以下のようになっています。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">COMPOSE_PROJECT_NAME</span><span class="o">=</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span>
+<span class="n">SITECORE_DOCKER_REGISTRY</span><span class="o">=</span><span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span>
+<span class="n">SITECORE_VERSION</span><span class="o">=</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span>
+<span class="n">SITECORE_ADMIN_PASSWORD</span><span class="o">=</span>
+<span class="n">SQL_SA_PASSWORD</span><span class="o">=</span>
+<span class="n">TELERIK_ENCRYPTION_KEY</span><span class="o">=</span>
+<span class="n">SITECORE_IDSECRET</span><span class="o">=</span>
+<span class="n">SITECORE_ID_CERTIFICATE</span><span class="o">=</span>
+<span class="n">SITECORE_ID_CERTIFICATE_PASSWORD</span><span class="o">=</span>
+<span class="n">SITECORE_LICENSE</span><span class="o">=</span>
+<span class="n">CM_HOST</span><span class="o">=</span><span class="n">xp0cm</span><span class="o">.</span><span class="n">localhost</span>
+<span class="n">ID_HOST</span><span class="o">=</span><span class="n">xp0id</span><span class="o">.</span><span class="n">localhost</span>
+<span class="n">TRAEFIK_IMAGE</span><span class="o">=</span><span class="n">traefik</span><span class="p">:</span><span class="n">v2</span><span class="o">.</span><span class="mf">2.0</span><span class="o">-</span><span class="n">windowsservercore</span><span class="o">-</span><span class="mi">1809</span>
+<span class="n">TRAEFIK_ISOLATION</span><span class="o">=</span><span class="n">hyperv</span>
+<span class="n">ISOLATION</span><span class="o">=</span><span class="n">default</span>
+</pre></div>
+</div>
+<p>サーバー名となる CM_HOST および ID_HOST を変更する場合は、このファイルから直接変更をしてください。</p>
+<p>続いて PowerShell で一括で変更することができる init.ps1 のファイルを Github からダウンロードしてください。</p>
+<p><a class="reference external" href="https://github.com/Sitecore/docker-examples/blob/develop/getting-started/init.ps1">https://github.com/Sitecore/docker-examples/blob/develop/getting-started/init.ps1</a></p>
+<p>ダウンロードした init.ps1 ファイルを展開したフォルダの中にコピーしてください。</p>
+<p>C:\projects\container\ltsc2019\sitecore-xp0</p>
+<a class="reference internal image-reference" href="../../_images/container021.png"><img alt="ファイルのダウンロード" class="align-center" src="../../_images/container021.png" style="width: 400px;" /></a>
+<p>続いて、init.ps1 のファイルに記載されている $SitecoreAdminPassword と $SqlSaPassword を変更します。</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="k">CmdletBinding</span><span class="p">()]</span>
+<span class="k">Param</span> <span class="p">(</span>
+    <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$true</span><span class="p">)]</span>
+    <span class="no">[string]</span>
+    <span class="p">[</span><span class="n">ValidateNotNullOrEmpty</span><span class="p">()]</span>
+    <span class="nv">$LicenseXmlPath</span><span class="p">,</span>
+
+    <span class="c"># We do not need to use [SecureString] here since the value will be stored unencrypted in .env,</span>
+    <span class="c"># and used only for transient local example environment.</span>
+    <span class="no">[string]</span>
+    <span class="nv">$SitecoreAdminPassword</span> <span class="p">=</span> <span class="s2">&quot;Pleasechang3p@ssword&quot;</span><span class="p">,</span>
+
+    <span class="c"># We do not need to use [SecureString] here since the value will be stored unencrypted in .env,</span>
+    <span class="c"># and used only for transient local example environment.</span>
+    <span class="no">[string]</span>
+    <span class="nv">$SqlSaPassword</span> <span class="p">=</span> <span class="s2">&quot;Pleasechang3p@ssword&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>必要な変更がをしたあと、PowerShell の管理者権限で init.ps1 を実行してください。</p>
+<p>ライセンスファイルの場所を指定する必要があるため、事前に同じフォルダにファイルをコピーしておき、ファイルを指定してください。</p>
+<a class="reference internal image-reference" href="../../_images/container031.png"><img alt="init.ps1 実行" class="align-center" src="../../_images/container031.png" style="width: 400px;" /></a>
+<p>処理が終わったタイミングで、 .env ファイルには必要となる更新が完了しています。</p>
+</div>
+<div class="section" id="docker-compose">
+<h2><span class="section-number">5.2.3. </span>docker-compose の実行<a class="headerlink" href="#docker-compose" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>設定が完了した段階で、以下のコマンドを実行してください。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="o">.</span><span class="n">exe</span> <span class="n">up</span> <span class="o">--</span><span class="n">detach</span>
+</pre></div>
+</div>
+<p>自動的にイメージのダウンロードをして、Docker イメージが構成されていきます。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">container</span>\<span class="n">ltsc2019</span>\<span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">&gt;</span> <span class="nb">dir</span>
+
+
+    <span class="n">Directory</span><span class="p">:</span> <span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">container</span>\<span class="n">ltsc2019</span>\<span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span>
+
+<span class="n">Mode</span>                 <span class="n">LastWriteTime</span>         <span class="n">Length</span> <span class="n">Name</span>
+<span class="o">----</span>                 <span class="o">-------------</span>         <span class="o">------</span> <span class="o">----</span>
+<span class="n">d</span><span class="o">----</span>          <span class="mi">2020</span><span class="o">/</span><span class="mi">09</span><span class="o">/</span><span class="mi">29</span>    <span class="mi">13</span><span class="p">:</span><span class="mi">53</span>                <span class="n">mssql</span><span class="o">-</span><span class="n">data</span>
+<span class="n">d</span><span class="o">----</span>          <span class="mi">2020</span><span class="o">/</span><span class="mi">09</span><span class="o">/</span><span class="mi">29</span>    <span class="mi">13</span><span class="p">:</span><span class="mi">52</span>                <span class="n">solr</span><span class="o">-</span><span class="n">data</span>
+<span class="n">d</span><span class="o">----</span>          <span class="mi">2020</span><span class="o">/</span><span class="mi">09</span><span class="o">/</span><span class="mi">29</span>    <span class="mi">12</span><span class="p">:</span><span class="mi">45</span>                <span class="n">traefik</span>
+<span class="o">-</span><span class="n">a</span><span class="o">---</span>          <span class="mi">2020</span><span class="o">/</span><span class="mi">09</span><span class="o">/</span><span class="mi">29</span>    <span class="mi">13</span><span class="p">:</span><span class="mi">30</span>          <span class="mi">17730</span> <span class="o">.</span><span class="n">env</span>
+<span class="o">-----</span>          <span class="mi">2020</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="mi">15</span>     <span class="mi">8</span><span class="p">:</span><span class="mi">57</span>          <span class="mi">11507</span> <span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="o">.</span><span class="n">yml</span>
+<span class="o">-</span><span class="n">a</span><span class="o">---</span>          <span class="mi">2020</span><span class="o">/</span><span class="mi">09</span><span class="o">/</span><span class="mi">29</span>    <span class="mi">13</span><span class="p">:</span><span class="mi">23</span>           <span class="mi">4690</span> <span class="n">init</span><span class="o">.</span><span class="n">ps1</span>
+<span class="o">-</span><span class="n">a</span><span class="o">---</span>          <span class="mi">2020</span><span class="o">/</span><span class="mi">09</span><span class="o">/</span><span class="mi">29</span>    <span class="mi">12</span><span class="p">:</span><span class="mi">44</span>          <span class="mi">66651</span> <span class="n">license</span><span class="o">.</span><span class="n">xml</span>
+
+<span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">container</span>\<span class="n">ltsc2019</span>\<span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">&gt;</span> <span class="n">docker</span><span class="o">-</span><span class="n">compose</span> <span class="n">up</span> <span class="o">--</span><span class="n">detach</span>
+<span class="n">Creating</span> <span class="n">network</span> <span class="s2">&quot;sitecore-xp0_default&quot;</span> <span class="k">with</span> <span class="n">the</span> <span class="n">default</span> <span class="n">driver</span>
+<span class="n">Pulling</span> <span class="n">mssql</span> <span class="p">(</span><span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">mssql</span><span class="p">:</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span><span class="p">)</span><span class="o">...</span>
+<span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span><span class="p">:</span> <span class="n">Pulling</span> <span class="kn">from</span> <span class="nn">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">mssql</span>
+<span class="mi">4612</span><span class="n">f6d0b889</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">c3aff4450246</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">f25a846c89c4</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">a8175160a4e0</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">3</span><span class="n">adb3523ea68</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">d251d4ad07b2</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">654</span><span class="n">c7fa7df7f</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">b023f816c51e</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">886</span><span class="n">b229f408e</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">8185</span><span class="n">df2c7f9f</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">42720</span><span class="n">c3faf2f</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mf">4e20</span><span class="n">a857bb9c</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">e49f1d84993a</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">115</span><span class="n">a3a76ba55</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">bfad2c0ba839</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">Digest</span><span class="p">:</span> <span class="n">sha256</span><span class="p">:</span><span class="mi">849</span><span class="n">a1bf63d780307e460d4612e719fdf563a1ca3a14e57c676fcc31df25b7286</span>
+<span class="n">Status</span><span class="p">:</span> <span class="n">Downloaded</span> <span class="n">newer</span> <span class="n">image</span> <span class="k">for</span> <span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">mssql</span><span class="p">:</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span>
+<span class="n">Pulling</span> <span class="n">solr</span> <span class="p">(</span><span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">solr</span><span class="p">:</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span><span class="p">)</span><span class="o">...</span>
+<span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span><span class="p">:</span> <span class="n">Pulling</span> <span class="kn">from</span> <span class="nn">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">solr</span>
+<span class="mi">4612</span><span class="n">f6d0b889</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">c3aff4450246</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mi">036</span><span class="n">ef77a41df</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">2</span><span class="n">d2bc021b8bc</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">613818764</span><span class="n">b2c</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">fb0c6cd70749</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mf">6e0</span><span class="n">b10f4ff30</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">47</span><span class="n">fb72851813</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">bf0f7dd4b8ea</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mf">73e7</span><span class="n">adaa7cbc</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">db590c2afa39</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">44</span><span class="n">fa4b680467</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">c73555995572</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">8909</span><span class="n">a83cf450</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">a20aeb2af3bd</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">3</span><span class="n">c3d01093816</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">4</span><span class="n">fc2886ee582</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">70347</span><span class="n">b9c3b60</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">24</span><span class="n">de3d09a6a4</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">071</span><span class="n">fbcae1fb9</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">48</span><span class="n">be54735626</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">Digest</span><span class="p">:</span> <span class="n">sha256</span><span class="p">:</span><span class="mi">52</span><span class="n">d9c54e01617b6c01c3a01dd16b0330c7148faa827d6c63e7fbb3407f9457f8</span>
+<span class="n">Status</span><span class="p">:</span> <span class="n">Downloaded</span> <span class="n">newer</span> <span class="n">image</span> <span class="k">for</span> <span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">solr</span><span class="p">:</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span>
+<span class="n">Pulling</span> <span class="nb">id</span> <span class="p">(</span><span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="nb">id</span><span class="p">:</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span><span class="p">)</span><span class="o">...</span>
+<span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span><span class="p">:</span> <span class="n">Pulling</span> <span class="kn">from</span> <span class="nn">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="nb">id</span>
+<span class="mi">4612</span><span class="n">f6d0b889</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">c3aff4450246</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mi">5</span><span class="n">ed7d395f4c8</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">95</span><span class="n">c8d26c53de</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">4</span><span class="n">ffb72f38d5c</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mf">2e26</span><span class="n">b932189f</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">790583</span><span class="n">a0dfa6</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">448</span><span class="n">d86a5eb7e</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">cd48f3ddbc76</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">2</span><span class="n">ca50424880f</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">48</span><span class="n">c17923e002</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">Digest</span><span class="p">:</span> <span class="n">sha256</span><span class="p">:</span><span class="mi">86</span><span class="n">d7f54f9e880bdc881aa8924b1249efef6b4fb436fbeab6371bb94fe44f3fd9</span>
+<span class="n">Status</span><span class="p">:</span> <span class="n">Downloaded</span> <span class="n">newer</span> <span class="n">image</span> <span class="k">for</span> <span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="nb">id</span><span class="p">:</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span>
+<span class="n">Pulling</span> <span class="n">xconnect</span> <span class="p">(</span><span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">xconnect</span><span class="p">:</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span><span class="p">)</span><span class="o">...</span>
+<span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span><span class="p">:</span> <span class="n">Pulling</span> <span class="kn">from</span> <span class="nn">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">xconnect</span>
+<span class="mi">4612</span><span class="n">f6d0b889</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">c3aff4450246</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mi">4</span><span class="n">c646724ced3</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">a015adbfa3ae</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">2</span><span class="n">ce9c006723e</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">ddc80c76fa1f</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">2905264</span><span class="n">c6711</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">117</span><span class="n">f087febe4</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">dbeba73a7c0e</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">fdef365f897e</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mf">2535e77</span><span class="n">c62f3</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mf">7824e01</span><span class="n">a413c</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">bf566e7179dd</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">1307</span><span class="n">c637cda7</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">0647043</span><span class="n">bb157</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">f0d1a8e33742</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mf">83e23</span><span class="n">ebab808</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">c694b1753132</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">5742</span><span class="n">a8fdc92a</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">0</span><span class="n">d6fe6b819ba</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">57817727438</span><span class="n">e</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">Digest</span><span class="p">:</span> <span class="n">sha256</span><span class="p">:</span><span class="mi">8</span><span class="n">cc836c3bc7fe563b5b3b33cdb9f8b5dc723b9aeb39f4c6e9016e90e24dfe8b2</span>
+<span class="n">Status</span><span class="p">:</span> <span class="n">Downloaded</span> <span class="n">newer</span> <span class="n">image</span> <span class="k">for</span> <span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">xconnect</span><span class="p">:</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span>
+<span class="n">Pulling</span> <span class="n">cm</span> <span class="p">(</span><span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">cm</span><span class="p">:</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span><span class="p">)</span><span class="o">...</span>
+<span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span><span class="p">:</span> <span class="n">Pulling</span> <span class="kn">from</span> <span class="nn">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">cm</span>
+<span class="mi">4612</span><span class="n">f6d0b889</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">c3aff4450246</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mi">4</span><span class="n">c646724ced3</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">a015adbfa3ae</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mi">2</span><span class="n">ce9c006723e</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">ddc80c76fa1f</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mi">2905264</span><span class="n">c6711</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mi">117</span><span class="n">f087febe4</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">dbeba73a7c0e</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">fdef365f897e</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mf">2535e77</span><span class="n">c62f3</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mf">7824e01</span><span class="n">a413c</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">c371566dbb08</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">0</span><span class="n">fa991b4b94d</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">92</span><span class="n">b4351e507c</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mf">57e637</span><span class="n">ca808e</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">673668</span><span class="n">d01687</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">639159</span><span class="n">dbabc1</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mf">371995e293</span><span class="n">ee</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">72</span><span class="n">a2e294b6fe</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mf">114703e4</span><span class="n">df9d</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">9</span><span class="n">b1467a8cb90</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">bcff52cd103c</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">e3cfbf43db0e</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">Digest</span><span class="p">:</span> <span class="n">sha256</span><span class="p">:</span><span class="mi">194</span><span class="n">bb5324497eadeadb24bf9fe72bc9ee0578cdd162199a86be4427f01e4edac</span>
+<span class="n">Status</span><span class="p">:</span> <span class="n">Downloaded</span> <span class="n">newer</span> <span class="n">image</span> <span class="k">for</span> <span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">cm</span><span class="p">:</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span>
+<span class="n">Pulling</span> <span class="n">traefik</span> <span class="p">(</span><span class="n">traefik</span><span class="p">:</span><span class="n">v2</span><span class="o">.</span><span class="mf">2.0</span><span class="o">-</span><span class="n">windowsservercore</span><span class="o">-</span><span class="mi">1809</span><span class="p">)</span><span class="o">...</span>
+<span class="n">v2</span><span class="o">.</span><span class="mf">2.0</span><span class="o">-</span><span class="n">windowsservercore</span><span class="o">-</span><span class="mi">1809</span><span class="p">:</span> <span class="n">Pulling</span> <span class="kn">from</span> <span class="nn">library</span><span class="o">/</span><span class="n">traefik</span>
+<span class="mi">65014</span><span class="n">b3c3121</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">eac6fba788c9</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">edc29de22414</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">4</span><span class="n">b6882ac7e42</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">423691</span><span class="n">ba5ecc</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">84</span><span class="n">a00a51e357</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">e0d82edeef84</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">Digest</span><span class="p">:</span> <span class="n">sha256</span><span class="p">:</span><span class="mi">5</span><span class="n">cd37215ff336d5088132aa1b7ab5181672cc9cfb98449c8939d9e76527d5b38</span>
+<span class="n">Status</span><span class="p">:</span> <span class="n">Downloaded</span> <span class="n">newer</span> <span class="n">image</span> <span class="k">for</span> <span class="n">traefik</span><span class="p">:</span><span class="n">v2</span><span class="o">.</span><span class="mf">2.0</span><span class="o">-</span><span class="n">windowsservercore</span><span class="o">-</span><span class="mi">1809</span>
+<span class="n">Pulling</span> <span class="n">xdbsearchworker</span> <span class="p">(</span><span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">xdbsearchworker</span><span class="p">:</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span><span class="p">)</span><span class="o">...</span>
+<span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span><span class="p">:</span> <span class="n">Pulling</span> <span class="kn">from</span> <span class="nn">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">xdbsearchworker</span>
+<span class="mi">4612</span><span class="n">f6d0b889</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">c3aff4450246</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mi">4</span><span class="n">c646724ced3</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">a015adbfa3ae</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mi">2</span><span class="n">ce9c006723e</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">ddc80c76fa1f</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">cd4e4ea07ed8</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">710</span><span class="n">c0b9b64ec</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">8</span><span class="n">edbeed8c3fc</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">75</span><span class="n">d324fa03be</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">0711</span><span class="n">c8e4ad0b</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">dbab781c751b</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">fc87e8c69355</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">fe3dce4d03d0</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">Digest</span><span class="p">:</span> <span class="n">sha256</span><span class="p">:</span><span class="n">b0e6c2aeeeb843326da7a593a614bcfb9d600de965ed92efa0dd6792d6eb2100</span>
+<span class="n">Status</span><span class="p">:</span> <span class="n">Downloaded</span> <span class="n">newer</span> <span class="n">image</span> <span class="k">for</span> <span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">xdbsearchworker</span><span class="p">:</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span>
+<span class="n">Pulling</span> <span class="n">xdbautomationworker</span> <span class="p">(</span><span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">xdbautomationworker</span><span class="p">:</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span><span class="p">)</span><span class="o">...</span>
+<span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span><span class="p">:</span> <span class="n">Pulling</span> <span class="kn">from</span> <span class="nn">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">xdbautomationworker</span>
+<span class="mi">4612</span><span class="n">f6d0b889</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">c3aff4450246</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mi">4</span><span class="n">c646724ced3</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">a015adbfa3ae</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mi">2</span><span class="n">ce9c006723e</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">ddc80c76fa1f</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mi">7</span><span class="n">f40a0ec8982</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">f6522ea410a2</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">b6fb2bdb322b</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mf">0423e8</span><span class="n">e80e8c</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">bb06431258a8</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">82</span><span class="n">cc4d81b243</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">e37b2afaa4f3</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">65</span><span class="n">ca38493dc8</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">Digest</span><span class="p">:</span> <span class="n">sha256</span><span class="p">:</span><span class="mi">409</span><span class="n">de3e289bbfa76b79f151be23360067639f3808dc6cc373601b78816ebaeda</span>
+<span class="n">Status</span><span class="p">:</span> <span class="n">Downloaded</span> <span class="n">newer</span> <span class="n">image</span> <span class="k">for</span> <span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">xdbautomationworker</span><span class="p">:</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span>
+<span class="n">Pulling</span> <span class="n">cortexprocessingworker</span> <span class="p">(</span><span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">cortexprocessingworker</span><span class="p">:</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span><span class="p">)</span><span class="o">...</span>
+<span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span><span class="p">:</span> <span class="n">Pulling</span> <span class="kn">from</span> <span class="nn">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">cortexprocessingworker</span>
+<span class="mi">4612</span><span class="n">f6d0b889</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">c3aff4450246</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mi">4</span><span class="n">c646724ced3</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">a015adbfa3ae</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mi">2</span><span class="n">ce9c006723e</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">ddc80c76fa1f</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mi">7</span><span class="n">f40a0ec8982</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="n">f6522ea410a2</span><span class="p">:</span> <span class="n">Already</span> <span class="n">exists</span>
+<span class="mi">9</span><span class="n">fedb7832b20</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">937</span><span class="n">fb10c5004</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">8293</span><span class="n">a43afdbc</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">749</span><span class="n">bec3c9138</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">a03fdcb99582</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="mi">281</span><span class="n">a5d7ebc45</span><span class="p">:</span> <span class="n">Pull</span> <span class="n">complete</span>
+<span class="n">Digest</span><span class="p">:</span> <span class="n">sha256</span><span class="p">:</span><span class="n">fd7dd84363ecab6bd18f9acf760ded9fa13ab742400f7cf290795ae03776c41c</span>
+<span class="n">Status</span><span class="p">:</span> <span class="n">Downloaded</span> <span class="n">newer</span> <span class="n">image</span> <span class="k">for</span> <span class="n">scr</span><span class="o">.</span><span class="n">sitecore</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">sxp</span><span class="o">/</span><span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">-</span><span class="n">cortexprocessingworker</span><span class="p">:</span><span class="mf">10.0</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">ltsc2019</span>
+<span class="n">Creating</span> <span class="n">sitecore</span><span class="o">-</span><span class="n">xp0_solr_1</span>  <span class="o">...</span> <span class="n">done</span>
+<span class="n">Creating</span> <span class="n">sitecore</span><span class="o">-</span><span class="n">xp0_mssql_1</span> <span class="o">...</span> <span class="n">done</span>
+<span class="n">Creating</span> <span class="n">sitecore</span><span class="o">-</span><span class="n">xp0_id_1</span>       <span class="o">...</span> <span class="n">done</span>
+<span class="n">Creating</span> <span class="n">sitecore</span><span class="o">-</span><span class="n">xp0_xconnect_1</span> <span class="o">...</span> <span class="n">done</span>
+<span class="n">Creating</span> <span class="n">sitecore</span><span class="o">-</span><span class="n">xp0_cm_1</span>       <span class="o">...</span> <span class="n">done</span>
+<span class="n">Creating</span> <span class="n">sitecore</span><span class="o">-</span><span class="n">xp0_cortexprocessingworker_1</span> <span class="o">...</span> <span class="n">done</span>
+<span class="n">Creating</span> <span class="n">sitecore</span><span class="o">-</span><span class="n">xp0_xdbsearchworker_1</span>        <span class="o">...</span> <span class="n">done</span>
+<span class="n">Creating</span> <span class="n">sitecore</span><span class="o">-</span><span class="n">xp0_xdbautomationworker_1</span>    <span class="o">...</span> <span class="n">done</span>
+<span class="n">Creating</span> <span class="n">sitecore</span><span class="o">-</span><span class="n">xp0_traefik_1</span>                <span class="o">...</span> <span class="n">done</span>
+<span class="n">PS</span> <span class="n">C</span><span class="p">:</span>\<span class="n">projects</span>\<span class="n">container</span>\<span class="n">ltsc2019</span>\<span class="n">sitecore</span><span class="o">-</span><span class="n">xp0</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>PowerShell で実行しているイメージは以下のような形です。</p>
+<a class="reference internal image-reference" href="../../_images/container041.png"><img alt="docker-compose" class="align-center" src="../../_images/container041.png" style="width: 400px;" /></a>
+<p>done が表示された後、Docker のツールに含まれるダッシュボードを開くと、コンテナが稼働していることがわかります。</p>
+<a class="reference internal image-reference" href="../../_images/container051.png"><img alt="docker dashboard" class="align-center" src="../../_images/container051.png" style="width: 400px;" /></a>
+<p>.env ファイルで定義していたドメイン <a class="reference external" href="https://xp0cm.localhost/">https://xp0cm.localhost/</a> にアクセスをします。以下のようにサンプルのサイトが起動しています。</p>
+<a class="reference internal image-reference" href="../../_images/container061.png"><img alt="Sitecore の Welcome ページ" class="align-center" src="../../_images/container061.png" style="width: 400px;" /></a>
+<p>既に init.ps1 にて定義した管理者のパスワードを利用してログインをします。</p>
+<a class="reference internal image-reference" href="../../_images/container071.png"><img alt="Sitecore の管理画面" class="align-center" src="../../_images/container071.png" style="width: 400px;" /></a>
+<p>無事、Container で Sitecore 10.0 を起動することができました。</p>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">5.2.4. </span>参考動画<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/todOvW4FX1Y" frameborder="0" allowfullscreen></iframe></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="dockercommand.html" class="btn btn-neutral float-right" title="5.3. Docker コマンド一覧" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="docker.html" class="btn btn-neutral float-left" title="5.1. Docker for Windows のインストール" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Sitecore Japan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
