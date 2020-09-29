@@ -11,6 +11,7 @@ Sitecore 10.0 からコンテナで動かすことができるように、Siteco
     :maxdepth: 1
 
     docker
+    sitecorecontainer
     dockercommand
 
 ********************************
