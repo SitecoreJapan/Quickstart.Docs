@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sitecore Experience Platform のインストール &mdash; Sitecore クイックスタート  ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153234118-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153234118-1');
+</script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Sitecore クイックスタート
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目次</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Sitecore Experience Platform 10.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">デモ マニュアル</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Sitecore クイックスタート</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Sitecore Experience Platform のインストール</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/101/install/install.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sitecore-experience-platform">
+<h1>Sitecore Experience Platform のインストール<a class="headerlink" href="#sitecore-experience-platform" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Sitecore Experience Platform 10.1 をインストールするために、Sitecore Instllation Assistant を利用して、まずは関連モジュールをインストールします。</p>
+<p>今回は以下の環境にインストールをします。</p>
+<ul class="simple">
+<li><p>Windows Server 2019 Standard</p></li>
+<li><p>SQL Server 2019</p></li>
+</ul>
+<div class="section" id="sitecore">
+<h2>Sitecore のインストールプログラムの入手<a class="headerlink" href="#sitecore" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>今回は Sitecore Install Assistant を利用してインストールを進めていきます。このため、以下の Web サイトからインストールファイルをダウンロードしてください。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/101/Sitecore_Experience_Platform_101.aspx">Sitecore Experience Platform 10.1</a></p></li>
+</ul>
+<p><cite>Download options for On Premises deployment</cite> のグループにある <cite>Graphical setup package for XP Single</cite> をダウンロードしてください。インストールファイルのダウンロードが完了した、ファイルを展開して次のステップに進みます。</p>
+</div>
+<div class="section" id="id1">
+<h2>モジュールのインストール<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>この手順に関しては、１つの環境で初回のみ実行するだけで完了です。すでに別の Sitecore をインストールしている場合は、スキップしてください。</p>
+<p>Sitecore Install Assistant を立ち上げます。これはダウンロードをしたファイルを展開してください。ここでは、 <cite>c:\projects\sif</cite> に展開します。</p>
+<a class="reference internal image-reference" href="../../_images/sia012.png"><img alt="フォルダ" class="align-center" src="../../_images/sia012.png" style="width: 400px;" /></a>
+<p><cite>setup.exe</cite> をダブルクリックすると、インストーラーが立ち上がり以下のような画面となります。</p>
+<a class="reference internal image-reference" href="../../_images/sia022.png"><img alt="起動画面" class="align-center" src="../../_images/sia022.png" style="width: 400px;" /></a>
+<p>Start のボタンをクリックすると、モジュールのインストール画面になります。</p>
+<a class="reference internal image-reference" href="../../_images/sia032.png"><img alt="モジュールインストール" class="align-center" src="../../_images/sia032.png" style="width: 400px;" /></a>
+<p>Install のボタンをクリックして、必要なモジュールをインストールしてください。</p>
+<a class="reference internal image-reference" href="../../_images/sia042.png"><img alt="インストール中" class="align-center" src="../../_images/sia042.png" style="width: 400px;" /></a>
+<p>インストールが完了すると、<cite>Close</cite> のボタンが有効になります。</p>
+<a class="reference internal image-reference" href="../../_images/sia052.png"><img alt="Close が有効に" class="align-center" src="../../_images/sia052.png" style="width: 400px;" /></a>
+<p>一度ダイアログを閉じてください。</p>
+<p>インストールが完了したあと、先ほど一度再起動が必要となっていますので、再起動します。</p>
+</div>
+<div class="section" id="solr">
+<h2>Solr のインストール<a class="headerlink" href="#solr" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>今回は、インストールモジュールに付属している Solr-SingleDeveloper.json ファイルを利用してインストールを実行します。以下のようにコマンドを実行してください。</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">Install-SitecoreConfiguration</span> <span class="p">.\</span><span class="n">Solr-SingleDeveloper</span><span class="p">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>以下のように表示されます。</p>
+<a class="reference internal image-reference" href="../../_images/solr012.png"><img alt="Solr のインストール" class="align-center" src="../../_images/solr012.png" style="width: 400px;" /></a>
+<p>インストールが完了すると、Solr のサービスが起動します。</p>
+</div>
+<div class="section" id="id2">
+<h2>インストールの開始<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>モジュールのインストールが完了すると、次は Sitecore のインストールとなります。ここではインストールツールに標準で提供されているスクリプトの値を変更します。</p>
+<p>インストールをする際の設定を記載します。以下の項目を入力してください。以下の値は例となります。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 28%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>パラメータ</p></th>
+<th class="head"><p>入力値</p></th>
+<th class="head"><p>説明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>$SitecoreAdminPassword</p></td>
+<td><p>b</p></td>
+<td><p>管理者パスワード</p></td>
+</tr>
+<tr class="row-odd"><td><p>$SCInstallRoot</p></td>
+<td><p>C:\projects\sif</p></td>
+<td><p>インストールのルート</p></td>
+</tr>
+<tr class="row-even"><td><p>$SitecoreSiteName</p></td>
+<td><p>任意   サイト名</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>$SqlAdminPassword</p></td>
+<td><p>任意</p></td>
+<td><p>SQL Server パスワード</p></td>
+</tr>
+</tbody>
+</table>
+<a class="reference internal image-reference" href="../../_images/sia062.png"><img alt="インストールの基本設定" class="align-center" src="../../_images/sia062.png" style="width: 400px;" /></a>
+<p>インストールを実行します。</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="p">.\</span><span class="n">XP0-SingleDeveloper</span><span class="p">.</span><span class="n">ps1</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../_images/sia072.png"><img alt="インストール" class="align-center" src="../../_images/sia072.png" style="width: 400px;" /></a>
+<p>しばらくするとインストールが完了します。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Sitecore Japan
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
