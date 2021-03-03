@@ -95,12 +95,13 @@
               <p class="caption"><span class="caption-text">目次</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../readme.html">はじめに</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../100/index.html">Sitecore Experience Platform 10.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../101/index.html">Sitecore Experience Platform 10.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../sxa/index.html">Sitecore Experience Accelerator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../jss/index.html">Sitecore JavaScript Services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../marketplace/index.html">各種ツールに関して</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../manual/index.html">デモ マニュアル</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../versions.html">過去のバージョンに関して</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../100/index.html">Sitecore Experience Platform 10.0</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Sitecore Experience Platform 9.3</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../readme.html">1. はじめに</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">2. インストールガイド</a><ul class="current">
@@ -211,42 +212,42 @@
 <h2><span class="section-number">2.3.2. </span>モジュールのインストール<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>この手順に関しては、１つの環境で初回のみ実行するだけで完了です。すでに別の Sitecore をインストールしている場合は、スキップしてください。</p>
 <p>Sitecore Install Assistant を立ち上げます。これはダウンロードをしたファイルを展開してください。ここでは、 <cite>c:\projects\sif</cite> に展開します。</p>
-<a class="reference internal image-reference" href="../../_images/sia013.png"><img alt="フォルダ" class="align-center" src="../../_images/sia013.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia015.png"><img alt="フォルダ" class="align-center" src="../../_images/sia015.png" style="width: 400px;" /></a>
 <p><cite>setup.exe</cite> をダブルクリックすると、インストーラーが立ち上がり以下のような画面となります。</p>
-<a class="reference internal image-reference" href="../../_images/sia023.png"><img alt="起動画面" class="align-center" src="../../_images/sia023.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia025.png"><img alt="起動画面" class="align-center" src="../../_images/sia025.png" style="width: 400px;" /></a>
 <p>Start のボタンをクリックすると、モジュールのインストール画面になります。</p>
-<a class="reference internal image-reference" href="../../_images/sia033.png"><img alt="モジュールインストール" class="align-center" src="../../_images/sia033.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia035.png"><img alt="モジュールインストール" class="align-center" src="../../_images/sia035.png" style="width: 400px;" /></a>
 <p>Install のボタンをクリックして、必要なモジュールをインストールしてください。</p>
-<a class="reference internal image-reference" href="../../_images/sia042.png"><img alt="インストール中" class="align-center" src="../../_images/sia042.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia045.png"><img alt="インストール中" class="align-center" src="../../_images/sia045.png" style="width: 400px;" /></a>
 <p>インストールが完了すると、<cite>Close</cite> のボタンが有効になります。</p>
-<a class="reference internal image-reference" href="../../_images/sia052.png"><img alt="Close が有効に" class="align-center" src="../../_images/sia052.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia055.png"><img alt="Close が有効に" class="align-center" src="../../_images/sia055.png" style="width: 400px;" /></a>
 <p>続いて Solr のセットアップに進みます。</p>
 </div>
 <div class="section" id="solr">
 <h2><span class="section-number">2.3.3. </span>Solr のインストール<a class="headerlink" href="#solr" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Sitecore Install Assistant は 9.3 より Solr のインストールにも対応しています。実際には Sitecore Install Framework のツールが sitecore-solr.json ファイルを利用して、Solr のインストールを行います。ここでは、このファイルを利用してインストールを実行します。</p>
 <p>まず、以下の項目が表示されます。</p>
-<a class="reference internal image-reference" href="../../_images/solr012.png"><img alt="Solr のインストール" class="align-center" src="../../_images/solr012.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/solr015.png"><img alt="Solr のインストール" class="align-center" src="../../_images/solr015.png" style="width: 400px;" /></a>
 <p>インストールを実行することで、Solr がサービスとして起動します。</p>
 </div>
 <div class="section" id="id2">
 <h2><span class="section-number">2.3.4. </span>インストールの開始<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>モジュールのインストールが完了すると、次は Sitecore のインストールとなります。</p>
 <p>まず最初に、Sitecore をインストールする時の Prefix、管理者のパスワードおよびライセンスファイルを指定します。</p>
-<a class="reference internal image-reference" href="../../_images/sia063.png"><img alt="インストールの基本設定" class="align-center" src="../../_images/sia063.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia065.png"><img alt="インストールの基本設定" class="align-center" src="../../_images/sia065.png" style="width: 400px;" /></a>
 <p>インストールを実行します。</p>
 <p>続いて、SQL Server の設定を記入します。</p>
-<a class="reference internal image-reference" href="../../_images/sia073.png"><img alt="インストール" class="align-center" src="../../_images/sia073.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia075.png"><img alt="インストール" class="align-center" src="../../_images/sia075.png" style="width: 400px;" /></a>
 <p>インストールした Solr に関する設定があっているか確認をします。</p>
-<a class="reference internal image-reference" href="../../_images/sia081.png"><img alt="インストール" class="align-center" src="../../_images/sia081.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia083.png"><img alt="インストール" class="align-center" src="../../_images/sia083.png" style="width: 400px;" /></a>
 <p>SXA のモジュールも一緒にインストールするか確認をします。</p>
-<a class="reference internal image-reference" href="../../_images/sia091.png"><img alt="インストール" class="align-center" src="../../_images/sia091.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia093.png"><img alt="インストール" class="align-center" src="../../_images/sia093.png" style="width: 400px;" /></a>
 <p>インストールに関する設定項目の最終確認をします。</p>
-<a class="reference internal image-reference" href="../../_images/sia101.png"><img alt="インストール" class="align-center" src="../../_images/sia101.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia103.png"><img alt="インストール" class="align-center" src="../../_images/sia103.png" style="width: 400px;" /></a>
 <p>設定が正しいか、検証が実行されます。</p>
-<a class="reference internal image-reference" href="../../_images/sia111.png"><img alt="インストール" class="align-center" src="../../_images/sia111.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia113.png"><img alt="インストール" class="align-center" src="../../_images/sia113.png" style="width: 400px;" /></a>
 <p>以下の画面が表示されれば、インストールが無事完了します。</p>
-<a class="reference internal image-reference" href="../../_images/sia12.png"><img alt="インストール" class="align-center" src="../../_images/sia12.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../_images/sia122.png"><img alt="インストール" class="align-center" src="../../_images/sia122.png" style="width: 400px;" /></a>
 </div>
 </div>
 
