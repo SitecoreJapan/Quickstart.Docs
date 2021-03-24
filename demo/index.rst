@@ -18,6 +18,7 @@ Sitecore デモ環境
 
     sysreq
     setup
+    customize
 
 *************************************
 Sitecore.Demo.Platform リポジトリ
