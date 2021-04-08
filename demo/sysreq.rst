@@ -87,20 +87,18 @@ Github のリポジトリを利用するため、最初に git for Windows を�
    :width: 400px
    :alt: git for Windows
 
-続いて、今回は Docker を利用するので Docker Desktop をインストールします。
+Dokcer を利用するためのコマンド、 docker-compose を有効にするために、以下のコマンドを実行します。
 
 .. code-block:: powershell
 
-    choco install docker-desktop
+   choco install docker-compose
 
 .. image:: images/choco04.png
    :align: center
    :width: 400px
-   :alt: docker-desktop
+   :alt: docker-compose
 
-Docker Desktop のインストールが完了すると再起動を促す画面が表示されます。ここで一度再起動します。
-
-再起動が完了すると、コードの変更などで便利なので、Visual Studio Code をインストールします。
+続いてコードの変更などで便利なので、Visual Studio Code をインストールします。
 
 .. code-block:: powershell
 
@@ -128,3 +126,7 @@ Github Desktop をインストールしておくと便利なので、これは�
 
     choco install github-desktop
 
+.. image:: images/choco07.png
+   :align: center
+   :width: 400px
+   :alt: Github Desktop
