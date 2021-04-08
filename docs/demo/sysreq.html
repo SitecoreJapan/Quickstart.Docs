@@ -99,6 +99,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Sitecore デモ環境</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">1. 必要システム</a></li>
 <li class="toctree-l2"><a class="reference internal" href="setup.html">2. セットアップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customize.html">3. 環境の変更</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../sxa/index.html">Sitecore Experience Accelerator</a></li>
@@ -217,13 +218,12 @@
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/choco03.png"><img alt="git for Windows" class="align-center" src="../_images/choco03.png" style="width: 400px;" /></a>
-<p>続いて、今回は Docker を利用するので Docker Desktop をインストールします。</p>
-<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">choco</span> <span class="n">install</span> <span class="n">docker-desktop</span>
+<p>Dokcer を利用するためのコマンド、 docker-compose を有効にするために、以下のコマンドを実行します。</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">choco</span> <span class="n">install</span> <span class="n">docker-compose</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/choco04.png"><img alt="docker-desktop" class="align-center" src="../_images/choco04.png" style="width: 400px;" /></a>
-<p>Docker Desktop のインストールが完了すると再起動を促す画面が表示されます。ここで一度再起動します。</p>
-<p>再起動が完了すると、コードの変更などで便利なので、Visual Studio Code をインストールします。</p>
+<a class="reference internal image-reference" href="../_images/choco04.png"><img alt="docker-compose" class="align-center" src="../_images/choco04.png" style="width: 400px;" /></a>
+<p>続いてコードの変更などで便利なので、Visual Studio Code をインストールします。</p>
 <div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">choco</span> <span class="n">install</span> <span class="n">vscode</span>
 </pre></div>
 </div>
@@ -237,6 +237,7 @@
 <div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">choco</span> <span class="n">install</span> <span class="n">github-desktop</span>
 </pre></div>
 </div>
+<a class="reference internal image-reference" href="../_images/choco07.png"><img alt="Github Desktop" class="align-center" src="../_images/choco07.png" style="width: 400px;" /></a>
 </div>
 </div>
 

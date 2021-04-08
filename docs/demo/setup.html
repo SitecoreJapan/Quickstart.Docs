@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
-    <link rel="next" title="Sitecore Experience Accelerator" href="../sxa/index.html" />
+    <link rel="next" title="3. 環境の変更" href="customize.html" />
     <link rel="prev" title="1. 必要システム" href="sysreq.html" />
  
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -99,6 +99,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Sitecore デモ環境</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="sysreq.html">1. 必要システム</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">2. セットアップ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customize.html">3. 環境の変更</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../sxa/index.html">Sitecore Experience Accelerator</a></li>
@@ -176,7 +177,7 @@
 <h1><span class="section-number">2. </span>セットアップ<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="section" id="id2">
 <h2><span class="section-number">2.1. </span>セットアップの準備<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>今回は projects\sitecore.demo.platform のフォルダを作成して、リポジトリのクローンを準備します。 C:\Projects に移動をして</p>
+<p>今回は c:\projects\sitecore.demo.platform のフォルダを作成して、リポジトリのクローンを準備します。 C:\Projects に移動をして</p>
 <div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/Sitecore/Sitecore.Demo.Platform.git
 </pre></div>
 </div>
@@ -187,55 +188,71 @@
 </div>
 <div class="section" id="docker">
 <h2><span class="section-number">2.2. </span>Docker の環境を整える<a class="headerlink" href="#docker" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Switch to Windows Containers</p>
-<a class="reference internal image-reference" href="../_images/docker011.png"><img alt="Windows コンテナに切り替える" class="align-center" src="../_images/docker011.png" style="width: 400px;" /></a>
-<a class="reference internal image-reference" href="../_images/docker021.png"><img alt="Windows コンテナに切り替える" class="align-center" src="../_images/docker021.png" style="width: 400px;" /></a>
-<p>Setting を開く</p>
-<p>Docker Engine を選択して、以下のような設定とします。</p>
+<p>Windows Server で Docker を動かすための手順は、マイクロソフトの以下のサイトが参考になります。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.microsoft.com/ja-jp/virtualization/windowscontainers/quick-start/set-up-environment?tabs=Windows-Server">作業の開始:コンテナー用の Windows を準備する</a></p></li>
+</ul>
+<p>PowerShell を管理者の権限で開き、PowerShell のギャラリーから、Docker-Microsoft PackageManagement Provider をインストールします。</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">DockerMsftProvider</span> <span class="n">-Repository</span> <span class="n">PSGallery</span> <span class="n">-Force</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/docker011.png"><img alt="DockerMsftProvider" class="align-center" src="../_images/docker011.png" style="width: 400px;" /></a>
+<p>PackageManagement PowerShell モジュールを使用して、最新バージョンの Docker をインストールします。</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">Install-Package</span> <span class="n">-Name</span> <span class="n">docker</span> <span class="n">-ProviderName</span> <span class="n">DockerMsftProvider</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/docker021.png"><img alt="docker install" class="align-center" src="../_images/docker021.png" style="width: 400px;" /></a>
+<p>Sitecore のデモでは Linux のイメージも利用するため、LinuxKit をインストールします。まず、以下のサイトから release.zip をダウンロードします。</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/linuxkit/lcow/releases">LinuxKit</a></p></li>
+</ul>
+<p>ダウンロードしたファイルは、 C:\Program Files\Linux Containers のフォルダを作成して展開します。コピーしたファイルはダウンロード後ブロックされているため、ファイルのプロパティを開いて、ダイアログの一番下のチェックボックスをチェックして適用して、ブロックを解除してください。</p>
+<a class="reference internal image-reference" href="../_images/docker031.png"><img alt="release.zip" class="align-center" src="../_images/docker031.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/linuxkit01.png"><img alt="linuxkit" class="align-center" src="../_images/linuxkit01.png" style="width: 400px;" /></a>
+<p>Windows コンテナと Linux コンテナを同時に動かすために、Experimental の設定を変更します。この設定は、 C:ProgramDatadockerconfigdaemon.json のファイルを新規作成して、以下のコードを書き込んでください。ProgramData のフォルダは隠しフォルダになっていますので、</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="nt">&quot;registry-mirrors&quot;</span><span class="p">:</span> <span class="p">[],</span>
-<span class="nt">&quot;insecure-registries&quot;</span><span class="p">:</span> <span class="p">[],</span>
-<span class="nt">&quot;debug&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-<span class="nt">&quot;experimental&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="nt">&quot;dns&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;8.8.8.8&quot;</span>
-<span class="p">]</span>
+   <span class="nt">&quot;experimental&quot;</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/docker031.png"><img alt="experimental を有効にする" class="align-center" src="../_images/docker031.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/docker041.png"><img alt="experimental を有効にする" class="align-center" src="../_images/docker041.png" style="width: 400px;" /></a>
+<p>Docker の必要なモジュールのインストールが完了した段階で、一度再起動してください。</p>
 </div>
 <div class="section" id="id3">
 <h2><span class="section-number">2.3. </span>デモ環境を展開する<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>PowerShell は管理者権限で実行。</p>
-<p>ライセンスファイルを指定してセットアップに必要な値を自動的に設定する。</p>
+<p>Docker で展開するために便利な SitecoreDockerTools のインストール、ライセンスファイルの準備を進めていく形となりますが、デモの中に init.ps1 という形で一気に設定を変更するスクリプトを提供しています。</p>
+<p>まずリポジトリをコピーしたディレクトリに移動して、以下のコマンドを実行してください。ライセンスファイルのパスは別のパスにする場合は、書き換えて実行してください。</p>
 <div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>.\init.ps1 -InitEnv -LicenseXmlPath C:\license\license.xml -AdminPassword b
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/docker041.png"><img alt="init.ps1 を実行する" class="align-center" src="../_images/docker041.png" style="width: 400px;" /></a>
-<p>イメージをダウンロードします。</p>
+<a class="reference internal image-reference" href="../_images/docker051.png"><img alt="init.ps1 を実行する" class="align-center" src="../_images/docker051.png" style="width: 400px;" /></a>
+<p>途中で mkcert のコマンドを実行するにあたり、ダイアログが表示されます。今回は はい をクリックしてください。しばらくすると、スクリプトの実行が完了となります。</p>
+<p>これでデモ環境を立ち上げるための基本的な設定が完了したことになります。</p>
+<p>実際に実行するための手順に入ります。まず、Docker のイメージをダウンロードします。</p>
 <div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">docker-compose</span> <span class="n">pull</span>
 </pre></div>
 </div>
-<a class="reference internal image-reference" href="../_images/docker051.png"><img alt="docker-compose pull" class="align-center" src="../_images/docker051.png" style="width: 400px;" /></a>
-<p>エラーが出た場合も、もう一度 pull を実行することで完了させることができます。</p>
-<p>続いて、コンテナを起動します。</p>
+<a class="reference internal image-reference" href="../_images/docker071.png"><img alt="docker-compose pull" class="align-center" src="../_images/docker071.png" style="width: 400px;" /></a>
+<p>エラーが出た場合も、もう一度 pull を実行することで完了させてください。</p>
+<p>続いて、コンテナを起動します。以下のコマンドでコンテナが動きます。</p>
 <div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">docker-compose</span> <span class="n">up</span> <span class="n">-d</span>
 </pre></div>
 </div>
-<p>エラーが出た場合も、もう一度実行することで全てのコンテナが動くようになることがあります。</p>
-<a class="reference internal image-reference" href="../_images/docker061.png"><img alt="docker-compose up -d" class="align-center" src="../_images/docker061.png" style="width: 400px;" /></a>
+<p>エラーが出た場合も、もう一度実行することで全てのコンテナが動くようになります。</p>
+<a class="reference internal image-reference" href="../_images/docker081.png"><img alt="docker-compose up -d" class="align-center" src="../_images/docker081.png" style="width: 400px;" /></a>
 <p>初回起動に関しては、データをインポートするのに時間がかかります。以下のコマンドで、インポートの状況を確認してください。</p>
 <div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">docker-compose</span> <span class="n">logs</span> <span class="o">-f</span> <span class="n">init</span>
 </pre></div>
 </div>
 <p>最後に以下の行が表示されれば、インポートが完了となります。</p>
-<p>init_1                 |       3/3/2021 9:02:51 AM No jobs are running. Monitoring stopped.</p>
-<a class="reference internal image-reference" href="../_images/docker071.png"><img alt="Monitoring stopped." class="align-center" src="../_images/docker071.png" style="width: 400px;" /></a>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">init_1</span>                 <span class="o">|</span>       <span class="mi">3</span><span class="o">/</span><span class="mi">3</span><span class="o">/</span><span class="mi">2021</span> <span class="mi">9</span><span class="p">:</span><span class="mi">02</span><span class="p">:</span><span class="mi">51</span> <span class="n">AM</span> <span class="n">No</span> <span class="n">jobs</span> <span class="n">are</span> <span class="n">running</span><span class="o">.</span> <span class="n">Monitoring</span> <span class="n">stopped</span><span class="o">.</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/docker091.png"><img alt="Monitoring stopped." class="align-center" src="../_images/docker091.png" style="width: 400px;" /></a>
 </div>
 <div class="section" id="id4">
 <h2><span class="section-number">2.4. </span>デモ環境にアクセスする<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Web サイトの URL は標準では以下のようになっています。</p>
+<p>Web サイトの URL は標準では以下のようになっています。 cm サーバーにログインをするパスワードは、 init.ps1 で設定したパスワードとなります。</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://cd.lighthouse.localhost">https://cd.lighthouse.localhost</a></p></li>
 <li><p><a class="reference external" href="https://cm.lighthouse.localhost/sitecore">https://cm.lighthouse.localhost/sitecore</a></p></li>
@@ -251,7 +268,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../sxa/index.html" class="btn btn-neutral float-right" title="Sitecore Experience Accelerator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="customize.html" class="btn btn-neutral float-right" title="3. 環境の変更" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="sysreq.html" class="btn btn-neutral float-left" title="1. 必要システム" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
